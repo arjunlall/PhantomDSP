@@ -11,7 +11,10 @@ Channel: RL RR
 Convolution: IRs\JBL LSR305 RL 4_RR 4.wav
 Channel: RL
 Delay: 0.08 ms
-# Include: Channel EQ.txt
-Copy: L=LL+RL R=LR+RR
+Include: Channel Balance EQ.txt
+Include: EQ to JBL M2.txt
 Channel: ALL
-Preamp: 7 dB
+Copy: L=LL+RL R=LR+RR
+# Oddly this significantly reduces the calculated latency in the EqualizerAPO editor analysis panel
+Filter: ON HS Fc 22400 Hz Gain 40 dB
+Preamp: 5 dB

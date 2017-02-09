@@ -1,0 +1,3 @@
+Channel: all
+Filter: ON LSC 9 dB Fc 100 Hz Gain 5 dB
+# 

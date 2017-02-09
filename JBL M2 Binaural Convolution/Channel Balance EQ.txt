@@ -1,0 +1,20 @@
+Channel: all
+# EQ for the Right speaker
+Channel: RR RL
+Filter: ON PK Fc 63 Hz Gain -8 dB Q 6
+# EQ for Left speaker
+Channel: LL LR
+Filter: ON PK Fc 50.8 Hz Gain -4 dB Q 10
+# For Right Speaker Right Ear only
+Channel: RR
+Filter: ON LS Fc 4000 Hz Gain -2 dB
+Filter: ON PK Fc 600 Hz Gain 4 dB Q 10
+Filter: ON LS Fc 40 Hz Gain 7 dB
+Filter: ON PK Fc 38 Hz Gain 10 dB Q 10
+Filter: ON PK Fc 95 Hz Gain 3 dB Q 6
+Channel: LL
+Filter: ON LSC 22 dB Fc 15 Hz Gain 5 dB
+Filter: ON LS Fc 20 Hz Gain 12 dB
+Filter: ON PK Fc 28 Hz Gain 15 dB Q 10
+# Todo bring up 630hz dip in RL
+Channel: all

@@ -19,5 +19,6 @@ Filter: ON PK Fc 17020 Hz Gain -6 dB Q 4
 # Tweaks to left channel
 Channel: L
 Filter: ON PK Fc 3000 Hz Gain 0.5 dB Q 8
+Filter: ON PK Fc 6930 Hz Gain -1 dB Q 10
 # Make sure we are back to operating on all channels (this may not be necessary if the scope of channel slection is only within a file)
 Channel: 

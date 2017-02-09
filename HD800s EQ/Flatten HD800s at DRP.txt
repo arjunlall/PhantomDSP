@@ -1,0 +1,25 @@
+# At this point both the L and R channels of the HD800s should be equal
+# 
+Filter  1: ON  LS 12dB  Fc    25.0 Hz  Gain   1.0 dB
+Filter  2: ON  LS 12dB  Fc    60.0 Hz  Gain   2.7 dB
+Filter  3: ON  PK       Fc    1135 Hz  Gain  -0.4 dB  Q  3.00
+Filter  4: ON  PK       Fc    1507 Hz  Gain   0.4 dB  Q 10.00
+Filter  5: ON  PK       Fc    1548 Hz  Gain   0.6 dB  Q  2.00
+Filter  6: ON  PK       Fc    2380 Hz  Gain   2.6 dB  Q  1.50
+Filter  7: ON  PK       Fc    2570 Hz  Gain  -0.7 dB  Q  8.00
+Filter  8: ON  PK       Fc    3000 Hz  Gain  -0.4 dB  Q  3.00
+Filter  9: ON  PK       Fc    3650 Hz  Gain  -4.0 dB  Q  2.00
+Filter 10: ON  PK       Fc    3850 Hz  Gain   1.9 dB  Q  6.00
+Filter 11: ON  PK       Fc    5179 Hz  Gain   3.7 dB  Q  4.57
+Filter: ON PK Fc 6000 Hz Gain 1 dB Q 15
+Filter 12: ON  HS 12dB  Fc    6500 Hz  Gain -22.0 dB
+Filter 13: ON  PK       Fc    6630 Hz  Gain  -2.8 dB  Q  9.93
+Filter 14: ON  PK       Fc    7662 Hz  Gain   4.1 dB  Q  6.43
+Filter 15: ON  PK       Fc    8501 Hz  Gain   4.5 dB  Q  3.00
+Filter 16: ON  PK       Fc    8570 Hz  Gain   6.0 dB  Q 20.00
+Filter: ON PK Fc 9280 Hz Gain 4.4 dB Q 6
+Filter: ON PK Fc 10142 Hz Gain -4 dB Q 6
+Filter 18: ON  HS 12dB  Fc   10000 Hz  Gain  12.2 dB
+Filter 19: ON  PK       Fc   11084 Hz  Gain -11.4 dB  Q  4.00
+Filter 20: ON  HS 12dB  Fc   12000 Hz  Gain  20.0 dB
+Filter: ON HS 20 dB Fc 11000 Hz Gain -2 dB

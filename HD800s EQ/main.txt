@@ -1,0 +1,3 @@
+# Main EQ file to flatten HD800s EQ for the DRP - This should be after any binaural convolution since the transfer function has to apply to both main and cross channels
+Include: Personal Left to Right Balancing.txt
+Include: Flatten HD800s at DRP.txt

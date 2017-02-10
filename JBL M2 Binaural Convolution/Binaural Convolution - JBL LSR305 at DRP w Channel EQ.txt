@@ -1,0 +1,22 @@
+# Copy: L=0*L
+# Copy: R=0*R
+Channel: L
+Channel: all
+Copy: LL=L LR=L RL=R RR=R
+Channel: LL LR
+Convolution: IRs\JBL LSR305 LL 4_LR 4.wav
+Channel: LR
+Delay: 0.08 ms
+Channel: RL RR
+Convolution: IRs\JBL LSR305 RL 4_RR 4.wav
+Channel: RL
+Delay: 0.09 ms
+Include: Channel Balance EQ.txt
+Include: EQ to JBL M2.txt
+Channel: ALL
+Copy: L=LL+RL R=LR+RR
+# Oddly this significantly reduces the calculated latency in the EqualizerAPO editor analysis panel
+Filter: ON HS Fc 22400 Hz Gain 40 dB
+Channel: R
+Filter: ON HS Fc 22400 Hz Gain 4 dB
+Channel: all

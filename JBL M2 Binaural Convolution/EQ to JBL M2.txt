@@ -1,5 +1,4 @@
 Channel: all
-# Filter: ON LSC 9 dB Fc 100 Hz Gain 5 dB
 Filter: ON HP Fc 15 Hz
 Filter: ON HP Fc 20 Hz
 Filter: ON LS Fc 20 Hz Gain 50 dB
@@ -7,8 +6,6 @@ Filter: ON PK Fc 25 Hz Gain 10 dB Q 2
 Filter: ON PK Fc 31 Hz Gain 8 dB Q 4
 Filter: ON PK Fc 41 Hz Gain -7 dB Q 15
 Filter: ON PK Fc 50 Hz Gain -10 dB Q 1
-# Filter: ON PK Fc 65 Hz Gain -3 dB Q 10
-# Filter: ON PK Fc 77 Hz Gain 3 dB Q 18
 Filter: ON PK Fc 135 Hz Gain -8 dB Q 5
 Filter: ON PK Fc 136 Hz Gain -2 dB Q 16
 Filter: ON PK Fc 186 Hz Gain 3 dB Q 10
@@ -17,3 +14,6 @@ Filter: ON PK Fc 240 Hz Gain 3 dB Q 10
 Filter: ON PK Fc 150 Hz Gain -5 dB Q 4
 Filter: ON PK Fc 224.4 Hz Gain -3 dB Q 2
 Filter: ON LS Fc 900 Hz Gain 3 dB
+Channel: LR RL
+Filter: ON PK Fc 26 Hz Gain 7 dB Q 3
+Channel: all

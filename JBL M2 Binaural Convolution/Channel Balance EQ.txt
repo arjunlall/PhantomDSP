@@ -52,18 +52,30 @@ Filter: ON PK Fc 38 Hz Gain 2 dB Q 10
 Filter: ON PK Fc 49 Hz Gain -2 dB Q 10
 Filter: ON LSC 20 dB Fc 30 Hz Gain 3 dB
 Filter: ON LSC 20 dB Fc 80 Hz Gain 1 dB
+Filter: ON PK Fc 100 Hz Gain 3 dB Q 8
+Filter: ON PK Fc 395 Hz Gain 1 dB Q 10
 Filter: ON PK Fc 428 Hz Gain 4 dB Q 6
 Filter: ON PK Fc 611 Hz Gain 8 dB Q 15
-Filter: ON HS Fc 1200 Hz Gain 4 dB
-Filter: ON HS Fc 1200 Hz Gain 1.5 dB
+Filter: ON PK Fc 713 Hz Gain -1 dB Q 10
+Filter: ON PK Fc 833 Hz Gain 1.5 dB Q 10
+Filter: ON PK Fc 946 Hz Gain -1 dB Q 10
+Filter: ON PK Fc 1046 Hz Gain 2 dB Q 10
+Filter: ON HS Fc 1200 Hz Gain 3.5 dB
+Filter: ON PK Fc 1498 Hz Gain -1 dB Q 5
 Filter: ON PK Fc 1820 Hz Gain -3 dB Q 8
+Filter: ON PK Fc 2660 Hz Gain 2.5 dB Q 5
+Filter: ON PK Fc 3000 Hz Gain 1.5 dB Q 10
+Filter: ON PK Fc 3300 Hz Gain -3.5 dB Q 10
 Filter: ON PK Fc 4000 Hz Gain -3 dB Q 3
-Filter: ON PK Fc 2660 Hz Gain 2 dB Q 5
-Filter: ON PK Fc 3300 Hz Gain -3 dB Q 10
+Filter: ON PK Fc 4100 Hz Gain 2 dB Q 10
 Filter: ON PK Fc 9070 Hz Gain -4 dB Q 10
 # For Left speaker in Right Ear only
 Channel: LR
 Filter: ON PK Fc 27 Hz Gain 15 dB Q 10
 Filter: ON PK Fc 66 Hz Gain -4 dB Q 10
 Filter: ON PK Fc 117 Hz Gain 8 dB Q 10
+Filter: ON PK Fc 564 Hz Gain 3 dB Q 10
+Filter: ON PK Fc 810 Hz Gain -5 dB Q 16
+Filter: ON PK Fc 862 Hz Gain 5 dB Q 10
+Filter: ON PK Fc 1428 Hz Gain -3 dB Q 16
 Channel: all

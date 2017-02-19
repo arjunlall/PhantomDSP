@@ -1,0 +1,8 @@
+# Todo - move these into EQ to JBL M2 file once fully tested
+Filter: ON LS Fc 60 Hz Gain 4 dB
+Filter: ON PK Fc 200 Hz Gain 4 dB Q 8
+Filter: ON PK Fc 826 Hz Gain 3 dB Q 10
+Filter: ON PK Fc 4200 Hz Gain 2 dB Q 6
+Filter: ON PK Fc 4800 Hz Gain 1 dB Q 6
+# Bad
+# Filter: ON PK Fc 2000 Hz Gain 2 dB Q 2

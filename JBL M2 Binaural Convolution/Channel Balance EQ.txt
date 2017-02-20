@@ -52,6 +52,8 @@ Filter: ON HSC 25 dB Fc 8000 Hz Gain -5 dB
 Filter: ON PK Fc 2910 Hz Gain 2 dB Q 8
 Filter: ON PK Fc 3520 Hz Gain -1 dB Q 15
 Filter: ON PK Fc 6420 Hz Gain 3 dB Q 6
+Filter: ON PK Fc 7370 Hz Gain -3 dB Q 10
+Filter: ON PK Fc 8060 Hz Gain 2 dB Q 10
 Filter: ON PK Fc 8700 Hz Gain -8 dB Q 6
 # For Right speaker in Left Ear only
 Channel: RL
@@ -76,6 +78,7 @@ Filter: ON PK Fc 3000 Hz Gain 1.5 dB Q 10
 Filter: ON PK Fc 3300 Hz Gain -3.5 dB Q 10
 Filter: ON PK Fc 4000 Hz Gain -3 dB Q 3
 Filter: ON PK Fc 4100 Hz Gain 2 dB Q 10
+Filter: ON PK Fc 7370 Hz Gain -2 dB Q 10
 Filter: ON PK Fc 9070 Hz Gain -4 dB Q 10
 # For Left speaker in Right Ear only
 Channel: LR

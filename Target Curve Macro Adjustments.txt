@@ -11,4 +11,11 @@ Filter: ON PK Fc 57.4 Hz Gain 4 dB Q 10
 Filter: ON PK Fc 80.6 Hz Gain 4 dB Q 8
 Filter: ON PK Fc 124 Hz Gain 4 dB Q 12
 # Bad
-# Filter: ON PK Fc 2000 Hz Gain 2 dB Q 2
+# Test
+Filter: ON PK Fc 2000 Hz Gain 1 dB Q 2
+Filter: ON PK Fc 1050 Hz Gain 6 dB Q 6
+Filter: ON PK Fc 1300 Hz Gain 4 dB Q 10
+# Preamp: 3 dB
+Filter: ON HS Fc 4000 Hz Gain -2 dB
+Filter: ON LS Fc 100 Hz Gain -1 dB
+Filter: ON HS Fc 12000 Hz Gain -2 dB

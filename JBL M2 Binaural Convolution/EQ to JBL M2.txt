@@ -1,5 +1,5 @@
 Channel: all
-Filter: ON HS Fc 4000 Hz Gain 3 dB
+Filter: ON HS Fc 4000 Hz Gain 2 dB
 Filter: ON HS Fc 7000 Hz Gain 3 dB
 Filter: ON HP Fc 15 Hz
 Filter: ON HP Fc 20 Hz

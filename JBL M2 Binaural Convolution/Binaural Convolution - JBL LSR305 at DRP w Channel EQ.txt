@@ -17,6 +17,7 @@ Channel: ALL
 Copy: L=LL+RL R=LR+RR
 # Oddly this significantly reduces the calculated latency in the EqualizerAPO editor analysis panel
 Filter: ON HS Fc 22400 Hz Gain 40 dB
-Channel: R
-Filter: ON HS Fc 22400 Hz Gain 8.2 dB
+Filter: ON HS Fc 22400 Hz Gain 20 dB
+Channel: L
+Filter: ON HS Fc 22400 Hz Gain -7 dB
 Channel: all

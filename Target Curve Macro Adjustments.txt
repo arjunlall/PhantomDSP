@@ -1,25 +1,5 @@
 Channel: all
-# Todo - move these into EQ to JBL M2 file once fully tested
-Filter: ON LS Fc 60 Hz Gain 4 dB
-Filter: ON PK Fc 200 Hz Gain 4 dB Q 8
-Filter: ON PK Fc 826 Hz Gain 3 dB Q 10
-Filter: ON PK Fc 4200 Hz Gain 2 dB Q 6
-Filter: ON PK Fc 4800 Hz Gain 1 dB Q 6
-# Fixing some notches
-Filter: ON PK Fc 44 Hz Gain 3 dB Q 15
-Filter: ON PK Fc 57.4 Hz Gain 4 dB Q 10
-Filter: ON PK Fc 80.6 Hz Gain 4 dB Q 8
-Filter: ON PK Fc 124 Hz Gain 4 dB Q 12
-Filter: ON PK Fc 2000 Hz Gain 1 dB Q 2
-Filter: ON PK Fc 1050 Hz Gain 6 dB Q 6
-Filter: ON PK Fc 1300 Hz Gain 4 dB Q 10
-# Test
-Filter: ON PK Fc 13200 Hz Gain -3 dB Q 2
-Filter: ON PK Fc 15000 Hz Gain -3 dB Q 2
-Preamp: 2 dB
+# Uncomment and adjust to tweak treble
 # Filter: ON HS Fc 4000 Hz Gain -1 dB
-Filter: ON LS Fc 100 Hz Gain -2 dB
-Filter: ON HS Fc 12000 Hz Gain -2 dB
-Filter: ON PK Fc 150 Hz Gain 1 dB Q 2
-Filter: ON PK Fc 230 Hz Gain 1 dB Q 3
-# Bad
+# Uncomment and adjust to tweak bass
+# Filter: ON LS Fc 100 Hz Gain -1 dB

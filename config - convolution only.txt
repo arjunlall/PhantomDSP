@@ -1,0 +1,4 @@
+# This config file has only generic adjustments for the main binaural convolution 
+Include: JBL M2 Binaural Convolution\main.txt
+Include: Target Curve Macro Adjustments.txt
+Include: HD800s EQ\main - generic.txt

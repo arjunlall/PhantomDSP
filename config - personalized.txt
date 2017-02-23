@@ -1,0 +1,4 @@
+# This config file includes personalized left/right ear balancing for the HD800s
+Include: JBL M2 Binaural Convolution\main.txt
+Include: Target Curve Macro Adjustments.txt
+Include: HD800s EQ\main - personalized.txt

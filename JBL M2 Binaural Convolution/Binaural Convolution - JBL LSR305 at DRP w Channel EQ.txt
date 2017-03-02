@@ -28,5 +28,5 @@ Copy: L=LL+RL+LLLOW+RLLOW R=LR+RR+LRLOW+RRLOW
 Filter: ON HS Fc 22400 Hz Gain 40 dB
 Filter: ON HS Fc 22400 Hz Gain 20 dB
 Channel: L
-Filter: ON HS Fc 22400 Hz Gain -7 dB
+Filter: ON HS Fc 22400 Hz Gain -14 dB
 Channel: all

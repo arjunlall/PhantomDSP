@@ -10,7 +10,7 @@ Delay: 0.09 ms
 Channel: RL RR
 Convolution: IRs\JBL LSR305 RL 4_RR 4 5-500.wav
 Channel: RL RLLOW
-Delay: 0.09 ms
+Delay: 1 samples
 Include: Channel Balance EQ.txt
 Include: EQ to JBL M2.txt
 Channel: LL LR RL RR

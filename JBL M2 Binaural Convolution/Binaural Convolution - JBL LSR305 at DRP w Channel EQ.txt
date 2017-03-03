@@ -5,11 +5,11 @@ Channel: all
 Copy: LL=L LR=L RL=R RR=R LLLOW=L LRLOW=L RLLOW=R RRLOW=R
 Channel: LL LR
 Convolution: IRs\JBL LSR305 LL 4_LR 4 5-500.wav
-Channel: LR LRLOW
-Delay: 0.09 ms
 Channel: RL RR
 Convolution: IRs\JBL LSR305 RL 4_RR 4 5-500.wav
-Channel: RL RLLOW
+Channel: LR
+Delay: 13 samples
+Channel: RL
 Delay: 1 samples
 Include: Channel Balance EQ.txt
 Include: EQ to JBL M2.txt

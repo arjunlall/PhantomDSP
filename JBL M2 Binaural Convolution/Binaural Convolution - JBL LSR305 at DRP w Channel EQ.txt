@@ -4,9 +4,11 @@ Channel: L
 Channel: all
 Copy: LL=L LR=L RL=R RR=R LLLOW=L LRLOW=L RLLOW=R RRLOW=R
 Channel: LL LR
+Convolution: IRs\JBL LSR305 LL 4_LR 4 5-500.wav
 Channel: LR LRLOW
 Delay: 0.09 ms
 Channel: RL RR
+Convolution: IRs\JBL LSR305 RL 4_RR 4 5-500.wav
 Channel: RL RLLOW
 Delay: 0.09 ms
 Include: Channel Balance EQ.txt
@@ -16,6 +18,7 @@ Filter: ON HP Fc 80 Hz
 Channel: LLLOW LRLOW RLLOW RRLOW
 Filter: ON LP Fc 80 Hz
 Preamp: -15 dB
+Delay: 5 ms
 Channel: L R
 Copy: L=LL+RL+LLLOW+RLLOW R=LR+RR+LRLOW+RRLOW
 # Next two lines for debug purposes

@@ -18,7 +18,7 @@ Filter: ON HP Fc 80 Hz
 Channel: LLLOW LRLOW RLLOW RRLOW
 Filter: ON LP Fc 80 Hz
 Preamp: -15 dB
-Delay: 21 ms
+Delay: 20 ms
 Channel: L R
 Copy: L=LL+RL+LLLOW+RLLOW R=LR+RR+LRLOW+RRLOW
 # Next two lines for debug purposes

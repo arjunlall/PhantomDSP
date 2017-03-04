@@ -11,8 +11,8 @@ Channel: RR
 Delay: 1 samples
 Channel: LR
 Delay: 1 samples
-# Delay: 13 samples
-Delay: 16 samples
+Delay: 13 samples
+# Delay: 15 samples
 Channel: RL
 Delay: 1 samples
 Include: Channel Balance EQ.txt

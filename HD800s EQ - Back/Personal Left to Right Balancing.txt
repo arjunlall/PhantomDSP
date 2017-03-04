@@ -1,0 +1,30 @@
+# This file is to balance out the left and right channel for my ears at the drum reference point (DRP) given different shapes of both ears
+# Apply only to Right channel and balance it to the left
+Channel: R
+Filter: ON LS Fc 40 Hz Gain 1.8 dB
+Filter: ON LS Fc 250 Hz Gain 0.8 dB
+Filter: ON HSC 0.1 dB Fc 200 Hz Gain -1.6 dB
+Filter: ON PK Fc 1500 Hz Gain -0.3 dB Q 10
+Filter: ON PK Fc 3000 Hz Gain -0.4 dB Q 10
+Filter: ON PK Fc 3250 Hz Gain -0.4 dB Q 10
+Filter: ON HS Fc 4000 Hz Gain 1 dB
+Filter: ON PK Fc 4000 Hz Gain 1 dB Q 6
+Filter: ON PK Fc 4560 Hz Gain 0.5 dB Q 5
+Filter: ON PK Fc 8110 Hz Gain -5 dB Q 4
+Filter: ON PK Fc 9000 Hz Gain 8 dB Q 15
+Filter: ON PK Fc 11272.8 Hz Gain 3 dB Q 6
+Filter: ON HS Fc 13773 Hz Gain -2 dB
+Filter: ON PK Fc 14000 Hz Gain -3.1 dB Q 5
+Filter: ON PK Fc 17020 Hz Gain -6 dB Q 4
+# Tweaks to left channel
+Channel: L
+Filter: ON LS Fc 40 Hz Gain 1 dB
+Filter: ON PK Fc 2466.21 Hz Gain 1 dB Q 2
+Filter: ON PK Fc 3412.16 Hz Gain 1.4 dB Q 8
+Filter: ON PK Fc 4083.48 Hz Gain -0.8 dB Q 4
+Filter: ON PK Fc 5688.92 Hz Gain 2 dB Q 10
+Filter: ON PK Fc 6223.43 Hz Gain -3.5 dB Q 9.4813
+Filter: ON PK Fc 6700 Hz Gain 1 dB Q 16
+Filter: ON HSC 19.2696 dB Fc 17062 Hz Gain 3 dB
+# Make sure we are back to operating on all channels (this may not be necessary if the scope of channel slection is only within a file)
+Channel: ALL

@@ -1,0 +1,45 @@
+No window:
+LL: 47988
+LR: 47993
+RL: 47994
+RR: 47989
+
+RL - LL = 6
+LR - RR = 4
+RR - LL = 1
+RL - LR = 1
+
+5-500 Window:
+LL: 230
+LR: 224
+RL: 239
+RR: 229
+
+RL - LL = 9
+LR - RR = -5
+RR - LL = -1
+RL - LR = 15
+
+In adjustment file:
+
+LL: 230 = 230
+LR: 224 + 1 + 13 = 238
+RL: 239 + 1 = 240
+RR: 229 + 1 = 230
+
+RL - LL = 10
+LR - RR = 8
+RR - LL = 0
+RL - LR = 2
+
+new ir timings test:
+
+LL: 230 = 230 + 3 = 233 | +3
+LR: 224 (+ 1 + 13) = 238 + 1 - 4 = 235 + 3 = 238 | +14
+RL: 239 (+ 1) = 240 - 4 = 236 + 3 = 239 | +0
+RR: 229 (+ 1) + 1 = 231 + 3 = 234 | +4
+
+RL - LL = 10 - 4 = 6
+LR - RR = 8 - 4 = 4
+RR - LL = 0 + 1 = 1
+RL - LR = 2 - 1 = 1

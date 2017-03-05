@@ -25,10 +25,10 @@ Channel: LLLOW LRLOW RLLOW RRLOW
 Filter: ON LP Fc 80 Hz
 Preamp: -16 dB
 # Give the crossover bass the same delay as the IR adds
-Delay: 230 samples
+Delay: 233 samples
 Channel: LRLOW RLLOW
 # Give the cross channels additional delay to match non crossover delay
-Delay: 10 samples
+Delay: 5 samples
 Channel: L R
 Copy: L=LL+RL+LLLOW+RLLOW R=LR+RR+LRLOW+RRLOW
 # Next two lines for debug purposes

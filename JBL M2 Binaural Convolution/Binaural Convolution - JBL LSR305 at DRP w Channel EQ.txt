@@ -7,16 +7,18 @@ Channel: LL LR
 Convolution: IRs\JBL LSR305 LL 4_LR 4 5-500.wav
 Channel: RL RR
 Convolution: IRs\JBL LSR305 RL 4_RR 4 5-500.wav
+Channel: LL
+Delay: 3 samples
 Channel: RR
 # Both IRs from the right ear measurement are 1 sample ahead of the left - this corrects this to be even
-Delay: 1 samples
+Delay: 4 samples
 Channel: LR
 # Both IRs from the right ear measurement are 1 sample ahead of the left - this corrects this to be even
-Delay: 1 samples
+# Delay: 1 samples
 # The LR sample is ahead of the RR sample, we need to move it to the correct 10 sample delay behind (technically the calculation yelds 15, but 13 yelds the correct frequency response)
-Delay: 13 samples
+Delay: 14 samples
 Channel: RL
-Delay: 1 samples
+Delay: 0 samples
 Include: Channel Balance EQ.txt
 Include: EQ to JBL M2.txt
 # Cross over low signals to a clean non-convoluted signal

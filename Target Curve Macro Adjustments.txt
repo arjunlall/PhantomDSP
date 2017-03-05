@@ -1,4 +1,6 @@
 Channel: all
+# Get EQ as close to 0db as possible without clipping so we dont loose resolution - this may need to be adjusted depending on the headphone EQ and treble/bass tweaks below
+Preamp: 2 dB
 # Uncomment and adjust to tweak treble
 # Filter: ON HS Fc 4000 Hz Gain 1 dB
 # Uncomment and adjust to tweak bass

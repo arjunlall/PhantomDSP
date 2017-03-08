@@ -26,6 +26,7 @@ Filter: ON PK Fc 420 Hz Gain 1 dB Q 15
 Filter: ON PK Fc 450 Hz Gain 1 dB Q 5
 Filter: ON PK Fc 571 Hz Gain 1 dB Q 8
 Filter: ON PK Fc 855 Hz Gain -1 dB Q 10
+Filter: ON PK Fc 944 Hz Gain 2 dB Q 20
 Filter: ON PK Fc 1449 Hz Gain -2 dB Q 10
 Filter: ON PK Fc 1497 Hz Gain -1 dB Q 10
 Filter: ON HS Fc 1700 Hz Gain -1.5 dB
@@ -34,6 +35,7 @@ Filter: ON PK Fc 2610 Hz Gain 3 dB Q 20
 Filter: ON PK Fc 2920 Hz Gain -1.5 dB Q 5
 Filter: ON PK Fc 4050 Hz Gain -1 dB Q 20
 Filter: ON HS Fc 4000 Hz Gain 4 dB
+Filter: ON PK Fc 12000 Hz Gain 2 dB Q 10
 Filter: ON PK Fc 17360 Hz Gain -6 dB Q 3
 Filter: ON HSC 20 dB Fc 18000 Hz Gain -3 dB
 # For Left Speaker Left Ear only

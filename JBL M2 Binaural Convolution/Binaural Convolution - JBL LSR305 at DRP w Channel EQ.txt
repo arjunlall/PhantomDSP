@@ -9,13 +9,13 @@ Channel: RL RR
 Convolution: IRs\JBL LSR305 RL 4_RR 4 5-500.wav
 # Delays below are calculated based on IR Timings.txt file
 Channel: LL
-Delay: 3 samples
-Channel: RR
-Delay: 4 samples
-Channel: LR
-Delay: 14 samples
-Channel: RL
 Delay: 0 samples
+Channel: RR
+Delay: 2 samples
+Channel: LR
+Delay: 22 samples
+Channel: RL
+Delay: 7 samples
 Include: Channel Balance EQ.txt
 Include: EQ to JBL M2.txt
 # Cross over low signals to a clean non-convoluted signal
@@ -25,10 +25,10 @@ Channel: LLLOW LRLOW RLLOW RRLOW
 Filter: ON LP Fc 80 Hz
 Preamp: -16 dB
 # Give the crossover bass the same delay as the IR adds
-Delay: 233 samples
+Delay: 230 samples
 Channel: LRLOW RLLOW
 # Give the cross channels additional delay to match non crossover delay
-Delay: 5 samples
+Delay: 15 samples
 Channel: L R
 Copy: L=LL+RL+LLLOW+RLLOW R=LR+RR+LRLOW+RRLOW
 # Next two lines for debug purposes

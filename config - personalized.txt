@@ -2,6 +2,7 @@
 Include: JBL M2 Binaural Convolution\main.txt
 Include: Target Curve Macro Adjustments.txt
 # Include: HD800s EQ\main - personalized.txt
-Include: HD800s EQ\main - generic.txt
+# Include: HD800s EQ\main - generic.txt
 # Include: HD800s EQ - Back\main - personalized.txt
 # Include: HD800s EQ - Back\main - generic.txt
+Include: LCD-2 Rev 2 No Fazor\Flatten LCD-2 at DRP.txt

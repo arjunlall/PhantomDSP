@@ -94,3 +94,17 @@ RL - LL = 16
 LR - RR = 15
 RR - LL = 1
 RL - LR = 0
+
+Measured Equal with equal timing in l and r
+
+LL: 230 + 0 = 230 | +0
+LR: 224 + 21 = 245 | +21
+RL: 239 + 7 = 246 | +7
+RR: 229 + + 1 = 230 | +1
+
+LR - LL = 15
+RL - RR = 16
+RL - LL = 16
+LR - RR = 15
+RR - LL = 0
+RL - LR = 1

@@ -11,9 +11,9 @@ Convolution: IRs\JBL LSR305 RL 4_RR 4 5-500.wav
 Channel: LL
 Delay: 0 samples
 Channel: RR
-Delay: 2 samples
+Delay: 1 samples
 Channel: LR
-Delay: 22 samples
+Delay: 21 samples
 Channel: RL
 Delay: 7 samples
 Include: Channel Balance EQ.txt

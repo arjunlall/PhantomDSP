@@ -3,6 +3,13 @@ Include: JBL M2 Binaural Convolution\main.txt
 Include: Target Curve Macro Adjustments.txt
 # Include: HD800s EQ\main - personalized.txt
 # Include: HD800s EQ\main - generic.txt
-# Include: HD800s EQ - Back\main - personalized.txt
-# Include: HD800s EQ - Back\main - generic.txt
-Include: LCD-2 Rev 2 No Fazor\Flatten LCD-2 at DRP.txt
+# Include: HD800s EQ - Back\Personal Left to Right Balancing.txt
+# Include: HD800s EQ - Back\Flatten HD800s at DRP - Smooth.txt
+# Include: HD800s EQ - Back\Flatten HD800s at DRP.txt
+# Include: IE800\Flatten IE800 at DRP.txt
+# Include: LCD-2 Rev 2 No Fazor\Flatten LCD-2 at DRP.txt
+# Include: LCD-2.2F 2016\Flatten LCD2.2f at DRP.txt
+Include: LCD-2.2F 2016\Flatten LCD2.2f at DRP v2.txt
+Include: LCD-2.2F 2016\LCD2.2f LR Balance.txt
+# Include: personal all headphone Left Right balancing.txt
+# Include: equalize measurements test.txt

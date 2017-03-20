@@ -5,6 +5,6 @@ Preamp: -1 dB
 # Uncomment and adjust to tweak treble
 # Filter: ON HS Fc 5000 Hz Gain 1 dB
 # Uncomment and adjust to tweak bass
-Filter: ON LS Fc 100 Hz Gain 1 dB
+Filter: ON LS Fc 100 Hz Gain 2 dB
 # Cuts the bass below audible frequencies
 Filter: ON HP Fc 15 Hz

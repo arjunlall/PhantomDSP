@@ -1,0 +1,13 @@
+# This file is to balance out the left and right channel for my ears at the drum reference point (DRP) given different shapes of both ears
+# Apply only to Right channel and balance it to the left
+Channel: R
+Filter: ON LS 12 dB Fc 60 Hz Gain 2 dB
+Filter: ON HS 6 dB Fc 700 Hz Gain -1 dB
+Filter: ON LS 12 dB Fc 3000 Hz Gain -0.3 dB
+Filter  4: ON  PK       Fc    3000 Hz  Gain  -2.1 dB  Q  3.00
+Filter  5: ON  PK       Fc    4100 Hz  Gain   1.6 dB  Q  3.00
+Filter  6: ON  PK       Fc    6000 Hz  Gain   0.6 dB  Q  1.00
+Filter  7: ON  PK       Fc    6760 Hz  Gain   1.9 dB  Q 10.00
+# Tweaks to left channel
+Channel: L
+Channel: 

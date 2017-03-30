@@ -1,0 +1,5 @@
+Channel: R
+Preamp: -0.7 dB
+Filter: ON PK Fc 4400 Hz Gain 2.7 dB Q 6
+Filter: ON HSC 12 dB Fc 14000 Hz Gain 1 dB
+Channel: all

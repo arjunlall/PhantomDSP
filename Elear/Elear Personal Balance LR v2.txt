@@ -1,5 +1,6 @@
 Channel: R
 Preamp: 0.2 dB
+Filter: ON LS 12 dB Fc 150 Hz Gain -0.5 dB
 # Filter: ON LS 12 dB Fc 150 Hz Gain -0.4 dB
 Filter  2: ON  PK       Fc    1200 Hz  Gain   0.8 dB  Q  1.50
 Filter: ON PK Fc 1600 Hz Gain 0.5 dB Q 3

@@ -10,5 +10,7 @@ Include: Target Curve Macro Adjustments.txt
 # Include: LCD-2.2F 2016\Flatten LCD2.2f at DRP.txt
 # Include: LCD-2.2F 2016\Flatten LCD2.2f at DRP v2.txt
 # Include: LCD-2.2F 2016\LCD2.2f LR Balance v2.txt
-Include: Elear\Elear Flatten EQ at DRP v2.txt
-Include: Elear\Elear Personal Balance LR v2.txt
+# Include: Elear\Elear Flatten EQ at DRP v2.txt
+# Include: Elear\Elear Personal Balance LR v2.txt
+Include: HD650\Flatten HD650 at DRP.txt
+Include: HD650\Balance Channels HD650.txt

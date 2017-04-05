@@ -29,10 +29,10 @@ Channel: LL LR RL RR
 Channel: LLLOW LRLOW RLLOW RRLOW
 Filter: ON LP Fc 90 Hz
 # Needed to get the shape of the bass shelf correct
-Filter: ON PK Fc 110 Hz Gain 3 dB Q 1
+Filter: ON PK Fc 110 Hz Gain 2 dB Q 1
 Preamp: -16 dB
 # The low pass filter adds delay so we dont need to add the full 230 samples to get even with the main channels
-Delay: 90 samples
+Delay: 100 samples
 Channel: LRLOW RLLOW
 # Give the cross channels additional delay to match non crossover delay
 Delay: 15 samples

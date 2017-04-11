@@ -1,7 +1,7 @@
 # At this point both the L and R channels of the HD800s should be equal
 # 
 Preamp: 1 dB
-Filter: ON LS 12 dB Fc 25 Hz Gain 1 dB
+Filter: ON LS 12 dB Fc 25 Hz Gain 2 dB
 Filter  2: ON  LS 12dB  Fc    60.0 Hz  Gain   2.7 dB
 Filter  3: ON  PK       Fc    1135 Hz  Gain  -0.4 dB  Q  3.00
 Filter  4: ON  PK       Fc    1507 Hz  Gain   0.4 dB  Q 10.00

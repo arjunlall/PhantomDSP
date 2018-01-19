@@ -1,4 +1,4 @@
-# HeadphoneEQ
+# Phantom HiFi
 Virtualized audiophile grade studio monitors built on EqualizerAPO
 
 What is it?
@@ -17,12 +17,10 @@ Supported Headphones
 * Audeze LCD-2 (Both pre and post fazor)
 * Focal Elear
 
-show measurements
-
 Things to be aware of
 * HRTF
 
-How to install?
+Installation Instructions
 
 Requirements
 
@@ -32,6 +30,8 @@ Requirements
 How it works
 
 Since each pair of headphones sound different there are two parts to the equalization process. One to balance each set of headphones to a flat baseline and another to emulate the target curve 
+
+show measurements
 
 Read more here:
 
@@ -69,3 +69,4 @@ Liquid Phantom
 Phantom Stage
 Phantom Studio
 Phantom DSP
+Phantom Hifi

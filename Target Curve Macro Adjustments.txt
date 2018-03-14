@@ -8,4 +8,4 @@ Preamp: 2 dB
 Filter: ON LS Fc 100 Hz Gain -2 dB
 # Cuts the bass below audible frequencies to avoid excess SPL on ears
 # Filter: ON HP Fc 15 Hz
-Filter: ON LSC 12 dB Fc 10 Hz Gain -15 dB
+# Filter: ON LSC 12 dB Fc 10 Hz Gain -15 dB

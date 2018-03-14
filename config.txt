@@ -1,4 +1,20 @@
 # This config file has adjustments for the main binaural convolution as well as EQ for the HD800s
 Include: JBL M2 Binaural Convolution\main.txt
 Include: Target Curve Macro Adjustments.txt
-Include: HD800s EQ\main - generic.txt
+
+# Uncomment these lines for the HD800s
+Include: HD800s EQ - Back\Flatten HD800s at DRP v2.txt
+Include: HD800s EQ - Back\Personal Left to Right Balancing v2.txt
+# Uncomment thislines for the IE800
+# Include: IE800\Flatten IE800 at DRP.txt
+# Uncomment this lines for the LCD-2 No Fazor
+# Include: LCD-2 Rev 2 No Fazor\Flatten LCD-2 at DRP.txt
+# Uncomment these lines for the LCD-2 Fazor
+# Include: LCD-2.2F 2016\Flatten LCD2.2f at DRP v2.txt
+# Include: LCD-2.2F 2016\LCD2.2f LR Balance v2.txt
+# Uncomment these lines for the Focal Elear
+# Include: Elear\Elear Flatten EQ at DRP.txt
+# Include: Elear\Elear Personal Balance LR v3.txt
+# Uncomment these lines for the HD650
+# Include: HD650\Flatten HD650 at DRP.txt
+# Include: HD650\Balance Channels HD650.txt

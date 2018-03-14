@@ -43,3 +43,68 @@ RL - LL = 10 - 4 = 6
 LR - RR = 8 - 4 = 4
 RR - LL = 0 + 1 = 1
 RL - LR = 2 - 1 = 1
+
+Measured Timings:
+
+L speaker:
+LL ahead of LR by 10 samples, 9 samples, 14
+
+R speaker
+RR ahead RL by 15 samples, 10 samples, 15 samples
+
+Both:
+R ahead by 1 sample, 3 samples
+
+Second test from measured timings, cross channel 15
+
+LL: 230 + 0 = 230 | +0
+LR: 224 + 21 = 245 | +21
+RL: 239 + 6 = 245 | +6
+RR: 229 + 1 = 230 | +1
+
+RL - LL = 15
+LR - RR = 15
+RR - LL = 0
+RL - LR = 0
+
+Next Test
+
+LL: 230 + 0 = 230 | +0
+LR: 224 + 20 = 244 | +20
+RL: 239 + 5 = 244 | +5
+RR: 229 + 0 = 229 | +0
+
+LR - LL = 14
+RL - RR = 15
+RL - LL = 14
+LR - RR = 14
+RR - LL = -1
+RL - LR = 0
+
+Measured Equal
+
+LL: 230 + 0 = 230 | +0
+LR: 224 + 22 = 246 | +22
+RL: 239 + 7 = 246 | +7
+RR: 229 + + 2 = 231 | +2
+
+LR - LL = 16
+RL - RR = 15
+RL - LL = 16
+LR - RR = 15
+RR - LL = 1
+RL - LR = 0
+
+Measured Equal with equal timing in l and r
+
+LL: 230 + 0 = 230 | +0
+LR: 224 + 21 = 245 | +21
+RL: 239 + 7 = 246 | +7
+RR: 229 + + 1 = 230 | +1
+
+LR - LL = 15
+RL - RR = 16
+RL - LL = 16
+LR - RR = 15
+RR - LL = 0
+RL - LR = 1

@@ -1,0 +1,12 @@
+Channel: R
+Filter  1: ON  LS 12dB  Fc    3500 Hz  Gain  -1.2 dB
+Filter  2: ON  PK       Fc    1200 Hz  Gain   0.8 dB  Q  1.50
+Filter  3: ON  PK       Fc    2550 Hz  Gain  -1.5 dB  Q  6.00
+Filter  4: ON  PK       Fc    3708 Hz  Gain  -0.7 dB  Q 10.00
+Filter  5: ON  PK       Fc    3300 Hz  Gain  -0.4 dB  Q  3.00
+Filter  6: ON  HS 12dB  Fc   13000 Hz  Gain   5.0 dB
+Filter  7: ON  PK       Fc    5600 Hz  Gain  -2.0 dB  Q 10.00
+Filter  8: ON  PK       Fc    6240 Hz  Gain   4.0 dB  Q 16.00
+Filter  9: ON  PK       Fc    7690 Hz  Gain  -1.7 dB  Q 10.00
+Filter 10: ON  HS 12dB  Fc   20000 Hz  Gain  -8.0 dB
+Channel: all

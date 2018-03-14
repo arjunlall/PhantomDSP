@@ -1,13 +1,15 @@
 # Phantom DSP
 Get 3D virtualized studio monitor sound from your headphones.
 
-What is it?
-HeadphoneEQ is a set of digital signal processing (DSP) filters that allow headphones to emulate listening to well tuned near field studio monitor speakers. Put simply, music sounds like it is coming from professional grade speakers in front of you instead of your headphones. The virtual speakers are modeled after measurements of the JBL M2 Reference Monitors and provide authoritative clean bass, well balanced midrange and a revealing high end. The EQ curve has two parts, first to equalize the differences between different headphones and second to adjust the response to match both measurements of the JBL M2 Reference Monitors and the Harman Target Response curve.
+Phantom DSP is a set of digital signal processing (DSP) filters that allow headphones to emulate listening to well tuned near field studio monitor speakers. Put simply, music sounds like it is coming from professional grade speakers in front of you instead of your headphones. The virtual speakers are modeled after measurements of the JBL M2 Reference Monitors and provide authoritative clean bass, well balanced midrange and a revealing high end. The EQ curve has two parts, first to equalize the differences between different headphones and second to adjust the response to match both measurements of the JBL M2 Reference Monitors and the Harman Target Response curve.
 
-HeadphoneEQ works on top of EqualizerAPO, a piece of windows software that allows low level access to system audio. (https://sourceforge.net/projects/equalizerapo/)
+Phantom DSP works on top of EqualizerAPO, a piece of windows software that allows low level access to system audio. (https://sourceforge.net/projects/equalizerapo/)
 
 Features
+* Tunes your headphones to sound like you are in the studio with JBL M2 Reference Monitors
+* Integrates into all system audio
 * Very low audio delay (~5ms)
+* Low resource usage
 * Coherent time domain in bass
 
 Supported Headphones
@@ -27,6 +29,7 @@ Installation Instructions
 * Open the config.txt file and uncomment the lines for your particular headphones. If you do not have any of the headphones I have buit a custom tuning for I suggest you use the HD800s filters, which are on by default, but feel free to try out others if you want to see what might sound best
 * FYI - as soon as you make changes to the config.txt file your audio will change so be careful if you are listening to audio as you make the changes in case things get loud
 * After the filters are on the sound level will probably be lower so you may need to turn your volume up to compensate
+* If you ever want to turn everything off just comment all the lines in config.txt or rename the file to something else
 
 Credits / Thanks
 * Warren Tenbrook

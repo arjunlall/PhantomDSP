@@ -1,2 +1,3 @@
 Include: Binaural Convolution - JBL LSR305 at DRP w Channel EQ.txt
-Include: 2018 Harman Target Testing.txt
+# Include: 2018 Harman Target Testing.txt
+Include: 2018 Harman Target Testing v2.txt

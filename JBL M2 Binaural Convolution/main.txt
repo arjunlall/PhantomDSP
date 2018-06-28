@@ -1,6 +1,1 @@
 Include: Binaural Convolution - JBL LSR305 at DRP w Channel EQ.txt
-# Include: Post Channel Addition EQ.txt
-Include: Post Channel Addition EQ v2.txt
-Include: 2018 Harman Target Testing v3.txt
-Filter: ON PK Fc 997 Hz Gain -8 dB Q 8
-Filter: ON PK Fc 1300 Hz Gain 2 dB Q 8

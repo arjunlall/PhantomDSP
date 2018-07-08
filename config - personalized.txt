@@ -11,7 +11,7 @@ Include: HD800s EQ - Back\Personal Left to Right Balancing v2.txt
 # Include: LCD-2.2F 2016\Flatten LCD2.2f at DRP.txt
 # Include: LCD-2.2F 2016\Flatten LCD2.2f at DRP v2.txt
 # Include: LCD-2.2F 2016\LCD2.2f LR Balance v2.txt
-Device:    Output A2 Voicemeeter
+Device: Output A2 Voicemeeter
 Include: Elear\Elear Flatten EQ at DRP v3.txt
 Include: Elear\Elear Personal Balance LR v3.txt
 Preamp: 2 dB

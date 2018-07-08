@@ -2,6 +2,7 @@
 # Copy: R=0*R
 Channel: L
 Channel: all
+Copy: LL=L LR=L RIL=R RIR=R LLLOW=L LRLOW=L RLLOW=R RRLOW=R
 Channel: LL LR
 # For debugging - add gain when taking out implse response otherwise things get LOUD
 # Preamp: -25 dB
@@ -13,13 +14,16 @@ Convolution: IRs\JBL LSR305 RL 4_RR 4 5-500.wav
 # Delays below are calculated based on IR Timings.txt file
 Channel: LL
 Delay: 0 samples
+Channel: RIR
 Delay: 1 samples
 Channel: LR
 Delay: 21 samples
+Channel: RIL
 Delay: 7 samples
 Include: Channel Balance EQ.txt
 Include: EQ to JBL M2.txt
 # Cross over low signals to a clean non-convoluted signal
+Channel: LL LR RIL RIR
 # Removed the high pass filter because it was causing delay in the bass - now I have just pulled down the gain on the lower octaves in the EQ and am letting it come through anyway
 # Filter: ON HP Fc 80 Hz
 Channel: LLLOW LRLOW RLLOW RRLOW
@@ -33,7 +37,9 @@ Channel: LRLOW RLLOW
 # Give the cross channels additional delay to match non crossover delay
 Delay: 15 samples
 Channel: L R
+Copy: L=LL+RIL+LLLOW+RLLOW R=LR+RIR+LRLOW+RRLOW
 # Next two lines for debug purposes
+# Copy: L=LL+RIL R=LR+RIR
 # Copy: L=LLLOW+RLLOW R=LRLOW+RRLOW
 Channel: all
 Include: Post Channel Addition Channel Balance EQ.txt

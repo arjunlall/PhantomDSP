@@ -1,6 +1,5 @@
 # Adjustments to take the measurements for the JBL LSR305 and match them to the JBL M2
 # Only adjust the channels that go through the binaural convolution
-Channel: LL LR RR RL
 Preamp: 2 dB
 Filter: ON HP Fc 15 Hz
 Filter: ON HP Fc 20 Hz
@@ -44,6 +43,5 @@ Filter: ON PK Fc 12100 Hz Gain -6 dB Q 6
 Filter: ON PK Fc 13200 Hz Gain -3 dB Q 2
 Filter: ON PK Fc 15000 Hz Gain -3 dB Q 2
 # Adjustments for cross channel only
-Channel: LR RL
 # Filter: ON PK Fc 26 Hz Gain 7 dB Q 3
 Channel: all

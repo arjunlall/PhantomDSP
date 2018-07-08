@@ -34,7 +34,8 @@ Filter: ON PK Fc 1019 Hz Gain 1.2 dB Q 30
 Filter: ON PK Fc 1109 Hz Gain 3 dB Q 40
 Filter: ON PK Fc 1337 Hz Gain -1.8 dB Q 50
 Filter: ON PK Fc 1393 Hz Gain -1.2 dB Q 30
-Filter: ON PK Fc 13220 Hz Gain -2.5 dB Q 4
+Filter: ON PK Fc 13220 Hz Gain -4.5 dB Q 4
+Filter: ON PK Fc 14600 Hz Gain -3 dB Q 10
 Channel: L
 # Filter: ON PK Fc 110 Hz Gain 5 dB Q 20
 Filter: ON PK Fc 289 Hz Gain 1.1 dB Q 10

@@ -14,7 +14,7 @@ Include: HD800s EQ - Back\Personal Left to Right Balancing v2.txt
 Device: Output A2 Voicemeeter
 Include: Elear\Elear Flatten EQ at DRP v3.txt
 Include: Elear\Elear Personal Balance LR v3.txt
-Preamp: 2 dB
+Preamp: 3 dB
 Device: Output A3 Voicemeeter
 Include: AirPods\AirPods Flatten EQ at DRP.txt
 # Include: HD650\Flatten HD650 at DRP.txt

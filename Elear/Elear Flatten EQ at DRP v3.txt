@@ -1,4 +1,4 @@
-Channel: all
+# Channel: ALL
 Preamp: -3.5 dB
 Filter  1: ON  LS       Fc     600 Hz  Gain   1.7 dB
 Filter: ON LS 12 dB Fc 35 Hz Gain 4 dB
@@ -20,7 +20,7 @@ Filter 16: ON  PK       Fc    3628 Hz  Gain   0.9 dB  Q  8.00
 Filter: ON PK Fc 8770 Hz Gain 1.5 dB Q 15
 Filter: ON PK Fc 9150 Hz Gain 2 dB Q 10
 Filter: ON PK Fc 9800 Hz Gain 1.5 dB Q 15
-Filter: ON PK Fc 10000 Hz Gain 4 dB Q 5
+# Filter: ON PK Fc 10000 Hz Gain 4 dB Q 5
 # 
 # Filter: ON PK Fc 8900 Hz Gain 3 dB Q 10
-# Filter: ON HS Fc 16000 Hz Gain -4 dB
+Filter: ON HS Fc 16000 Hz Gain -4 dB

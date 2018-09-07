@@ -1,6 +1,6 @@
 Channel: all
 # EQ for the Right speaker
-Channel: RR RL
+Channel: RIR RIL
 Filter: ON PK Fc 63 Hz Gain -8 dB Q 6
 Filter: ON PK Fc 100 Hz Gain 3 dB Q 10
 Filter: ON PK Fc 112 Hz Gain 2 dB Q 10
@@ -12,7 +12,7 @@ Filter: ON PK Fc 109 Hz Gain 3 dB Q 10
 Filter: ON PK Fc 116 Hz Gain 5 dB Q 10
 Filter: ON PK Fc 306 Hz Gain -5 dB Q 15
 # For Right Speaker Right Ear only
-Channel: RR
+Channel: RIR
 Filter: ON LS Fc 4000 Hz Gain -2 dB
 Filter: ON PK Fc 600 Hz Gain 4 dB Q 10
 Filter: ON LS Fc 40 Hz Gain 7 dB
@@ -61,7 +61,7 @@ Filter: ON PK Fc 7370 Hz Gain -3 dB Q 10
 Filter: ON PK Fc 8060 Hz Gain 2 dB Q 10
 Filter: ON PK Fc 8700 Hz Gain -8 dB Q 6
 # For Right speaker in Left Ear only
-Channel: RL
+Channel: RIL
 Filter: ON LSC 25 dB Fc 40 Hz Gain 3 dB
 Filter: ON PK Fc 38 Hz Gain 2 dB Q 10
 Filter: ON PK Fc 49 Hz Gain -2 dB Q 10

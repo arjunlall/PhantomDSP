@@ -1,6 +1,7 @@
 # This file is to balance out the left and right channel for my ears at the drum reference point (DRP) given different shapes of both ears
 # Apply only to Right channel and balance it to the left
 Channel: R
+Preamp: -0.4 dB
 Filter: ON LS 12 dB Fc 60 Hz Gain 2 dB
 Filter: ON HS 6 dB Fc 700 Hz Gain -0.8 dB
 Filter: ON LS 12 dB Fc 3000 Hz Gain -0.3 dB

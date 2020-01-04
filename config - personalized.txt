@@ -1,19 +1,23 @@
 # This config file includes personalized left/right ear balancing for the HD800s
 Include: JBL M2 Binaural Convolution\main.txt
 Include: Target Curve Macro Adjustments.txt
-Device: Output A1 Voicemeeter
+Device: El Amp JDS Labs DAC {6cd31d99-2c86-479e-8762-1e39004f13d8}
 Include: HD800s EQ - Back\Flatten HD800s at DRP v2.txt
 Include: HD800s EQ - Back\Personal Left to Right Balancing v2.txt
+# Preamp: -10 dB
 # Include: HD800s EQ\main - personalized.txt
 # Include: HD800s EQ\main - generic.txt
 # Include: IE800\Flatten IE800 at DRP.txt
+# Include: Fostex TH-X00\Flatten TH-X00 at DRP and Balance.txt
 # Include: LCD-2 Rev 2 No Fazor\Flatten LCD-2 at DRP.txt
-# Include: LCD-2.2F 2016\Flatten LCD2.2f at DRP.txt
-# Include: LCD-2.2F 2016\Flatten LCD2.2f at DRP v2.txt
+# Include: HD650\Flatten HD650 at DRP.txt
+# Include: HD650\Balance Channels HD650.txt
 # Include: LCD-2.2F 2016\LCD2.2f LR Balance v2.txt
 Device: Output A2 Voicemeeter
-Include: Elear\Elear Flatten EQ at DRP v3.txt
-Include: Elear\Elear Personal Balance LR v3.txt
+Include: Elex\Elex Flatten EQ at DRP v3.txt
+Include: Elex\Elex Personal Balance LR v3.txt
+# Include: NAD Viso HP50\Flatten HP50 at DRP.txt
+# Preamp: -10 dB
 Preamp: 3 dB
 Device: Output A3 Voicemeeter
 Include: AirPods\AirPods Flatten EQ at DRP.txt

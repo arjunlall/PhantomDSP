@@ -19,7 +19,7 @@ Include: Elex\Elex Flatten EQ at DRP v3.txt
 Include: Elex\Elex Personal Balance LR v3.txt
 # Include: NAD Viso HP50\Flatten HP50 at DRP.txt
 # Preamp: -10 dB
-Preamp: 4 dB
+Preamp: 6 dB
 Device: Output A3 Voicemeeter
 Include: AirPods\AirPods Flatten EQ at DRP.txt
 # Include: HD650\Flatten HD650 at DRP.txt

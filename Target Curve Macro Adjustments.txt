@@ -4,12 +4,15 @@ Channel: all
 Preamp: -3.5 dB
 # Uncomment and adjust to tweak treble
 # Filter: ON HS Fc 5000 Hz Gain -1 dB
-Filter: ON PK Fc 250 Hz Gain -2.5 dB Q 1.5
-Filter: ON PK Fc 1800 Hz Gain 3 dB Q 3
-Filter: ON HS Fc 2500 Hz Gain -4 dB
-Filter: ON HS Fc 6000 Hz Gain 1 dB
+# Filter: ON PK Fc 250 Hz Gain -2.5 dB Q 1.5
+Filter: ON PK Fc 130 Hz Gain 1.5 dB Q 2
+Filter: ON PK Fc 330 Hz Gain 1 dB Q 5
+Filter: ON PK Fc 530 Hz Gain -1 dB Q 1.5
+# Filter: ON PK Fc 1800 Hz Gain 3 dB Q 3
+Filter: ON HS Fc 2500 Hz Gain -3 dB
+# Filter: ON HS Fc 6000 Hz Gain 1 dB
 # Uncomment and adjust to tweak bass
-Filter: ON LS Fc 80 Hz Gain -1 dB
+Filter: ON LS Fc 80 Hz Gain -2 dB
 Filter: ON LS Fc 20 Hz Gain 5 dB
 # Cuts the bass below audible frequencies to avoid excess SPL on ears
 Filter: ON HP Fc 15 Hz

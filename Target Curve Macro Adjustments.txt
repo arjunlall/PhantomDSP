@@ -6,6 +6,7 @@ Preamp: -2.5 dB
 Filter: ON LS Fc 150 Hz Gain 4 dB
 Filter: ON LS Fc 65 Hz Gain -3 dB
 # Used to be 5k , -1
+# Filter: ON HS Fc 2000 Hz Gain 3 dB
 # experimenting with this to remove muddyness
 Filter: ON PK Fc 250 Hz Gain -2.5 dB Q 1.5
 # had these on

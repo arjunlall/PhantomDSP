@@ -1,7 +1,7 @@
 # This config file includes personalized left/right ear balancing for the HD800s
 Include: JBL M2 Binaural Convolution\main.txt
 Include: Target Curve Macro Adjustments.txt
-# Device: El Amp JDS Labs DAC {f36617c1-732c-4c6c-b24a-c830c87276bc}
+Device:   El Amp JDS Labs DAC {f36617c1-732c-4c6c-b24a-c830c87276bc}
 Include: HD800s EQ - Back\Flatten HD800s at DRP v2.txt
 Include: HD800s EQ - Back\Personal Left to Right Balancing v2.txt
 # Preamp: 9.5 dB

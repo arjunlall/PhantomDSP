@@ -26,16 +26,16 @@ Filter: ON PK Fc 8300 Hz Gain -4 dB Q 5
 # New Tweaks
 Filter: ON PK Fc 5100 Hz Gain -8 dB Q 3
 Filter: ON HS Fc 7000 Hz Gain 1 dB
-Filter: ON HS Fc 12000 Hz Gain -6 dB
+Filter: ON HS Fc 9000 Hz Gain -6 dB
 # To try and match L00 Harman Treble
-Filter: ON HS Fc 6000 Hz Gain 7 dB
+Filter: ON HS Fc 6000 Hz Gain 4 dB
 Filter: ON PK Fc 1600 Hz Gain -3 dB Q 6
 Filter: ON LS Fc 250 Hz Gain -3 dB
-Filter: ON LS Fc 80 Hz Gain 3 dB
+# Filter: ON LS Fc 80 Hz Gain 2 dB
 #
 # Uncomment and adjust to tweak bass
 # Turned off for HD800s but had on for Elex - next line only
-Filter: ON LS Fc 80 Hz Gain -2 dB
+# Filter: ON LS Fc 80 Hz Gain -2 dB
 # Filter: ON LS Fc 20 Hz Gain 5 dB
 # Cuts the bass below audible frequencies to avoid excess SPL on ears
 Filter: ON HP Fc 15 Hz

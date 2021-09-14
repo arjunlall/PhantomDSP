@@ -3,8 +3,8 @@
 Channel: R
 # Preamp: -0.4 dB
 # Filter: ON LS 12 dB Fc 60 Hz Gain 2 dB
-Filter: ON HS 6 dB Fc 700 Hz Gain -0.8 dB
-Filter: ON LS 12 dB Fc 3000 Hz Gain -0.3 dB
+# Filter: ON HS 6 dB Fc 700 Hz Gain -0.8 dB
+# Filter: ON LS 12 dB Fc 3000 Hz Gain -0.3 dB
 # Filter: ON PK Fc 3000 Hz Gain -2.1 dB Q 3
 Filter: ON PK Fc 3549 Hz Gain 1.5 dB Q 5
 Filter: ON PK Fc 4100 Hz Gain 1.6 dB Q 3

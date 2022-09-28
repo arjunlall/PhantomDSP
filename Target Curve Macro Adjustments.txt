@@ -1,8 +1,9 @@
 Channel: all
 # Get EQ as close to 0db as possible without clipping so we dont loose resolution - this may need to be adjusted depending on the headphone EQ and treble/bass tweaks below
 # For every 1db increase in the treble beyond 1db please decrease the preamp by 1db. Bass can get to +5db of headroom before clipping
-Preamp: -4 dB
+# Preamp: -4 dB
 # Uncomment and adjust to tweak treble
+Filter: ON HS Fc 4000 Hz Gain -4 dB
 Filter: ON LS Fc 150 Hz Gain 3 dB
 # Filter: ON LS Fc 65 Hz Gain -3 dB
 # Used to be 5k , -1
@@ -31,7 +32,7 @@ Filter: ON HS Fc 9000 Hz Gain -6 dB
 Filter: ON HS Fc 6000 Hz Gain 4 dB
 Filter: ON PK Fc 1600 Hz Gain -3 dB Q 6
 Filter: ON LS Fc 250 Hz Gain -3 dB
-# Filter: ON LS Fc 80 Hz Gain 2 dB
+Filter: ON LS Fc 80 Hz Gain 2 dB
 #
 # Uncomment and adjust to tweak bass
 # Turned off for HD800s but had on for Elex - next line only

@@ -6,7 +6,7 @@ Include: Target Curve Macro Adjustments.txt
 # Include: HD800s EQ - Back\Personal Left to Right Balancing v2.txt
 Include: Elex\Elex Flatten EQ at DRP v3.txt
 Include: Elex\Elex Personal Balance LR v3.txt
-Preamp: 2 dB
+Preamp: 0 dB
 # Preamp: -3 dB
 # Include: HD800s EQ\main - personalized.txt
 # Include: HD800s EQ\main - generic.txt

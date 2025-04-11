@@ -5,11 +5,11 @@ Channel: ALL
 # Uncomment and adjust to tweak treble
 # Filter: ON HS Fc 4000 Hz Gain -3 dB
 # Filter: ON LS Fc 250 Hz Gain 3 dB
-# Filter: ON LS Fc 200 Hz Gain 4 dB
+Filter: ON LS Fc 150 Hz Gain 2 dB
 # Used to be 5k , -1
-# Filter: ON HS Fc 3000 Hz Gain -1 dB
-# experimenting with this to remove muddyness
-# Filter: ON PK Fc 250 Hz Gain -0.5 dB Q 1.5
+# Filter: ON HS Fc 5000 Hz Gain -1 dB
+# experimenting to match Genelec sound/feeling - not objective
+Filter: ON PK Fc 2700 Hz Gain 8 dB Q 5
 # had these on
 # Filter: ON PK Fc 130 Hz Gain 0.5 dB Q 2
 # Filter: ON PK Fc 330 Hz Gain 1 dB Q 5

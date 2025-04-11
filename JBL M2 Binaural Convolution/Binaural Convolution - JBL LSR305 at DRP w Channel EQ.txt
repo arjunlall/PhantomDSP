@@ -13,13 +13,13 @@ Channel: RIL RIR
 Convolution: IRs\JBL LSR305 RL 4_RR 4 5-500.wav
 # Delays below are calculated based on IR Timings.txt file
 Channel: LL
-Delay: 0 samples
-Channel: RIR
 Delay: 1 samples
-Channel: LR
-Delay: 14 samples
-Channel: RIL
+Channel: RIR
 Delay: 0 samples
+Channel: LR
+Delay: 24 samples
+Channel: RIL
+Delay: 10 samples
 Include: Channel Balance EQ.txt
 Include: EQ to JBL M2.txt
 # Cross over low signals to a clean non-convoluted signal

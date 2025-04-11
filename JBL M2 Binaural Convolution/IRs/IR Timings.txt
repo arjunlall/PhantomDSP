@@ -108,3 +108,57 @@ RL - LL = 16
 LR - RR = 15
 RR - LL = 0
 RL - LR = 1
+
+
+Attempt to calculate on April 10 2025. Opened up JBL LSR305 LL 4_LR 4 5-500 and JBL LSR305 RL 4_RR 4 5-500 in Audacity, did normalize to better see peaks
+JBL LSR305 LL 4_LR 4 5-500
+Channel 1 (Bigger, looks like LL): Peak at 222 samples, start at 211
+Channel 2 (Smaller, LR): Peak 212, start 201
+
+
+JBL LSR305 RL 4_RR 4 5-500
+Channel 1 (Smaller, RL): Peak 225, start 214
+Channel 2 (Bigger, RR): 221, Start 210
+
+To align to 0:
+Fastest is LR
+
+LR: +0
+LL: -10 samples
+RL: -13 samples
+RR: -9 samples
+
+We can only delay, so make sure we have no negatives (+13)
+
+LR: +13
+LL: +3
+RL: 0
+RR: +4
+
+
+Gemini says calcs should add 25 samples to LL and RR
+
+so intermediate:
+LR: +38
+LL: +3
+RL: +25
+RR: +4
+
+take out extra (-3):
+LR: 35
+LL: 0
+RL: 22
+RR: 1
+
+OpenAI says 2 samples:
+LR: +15
+LL: +3
+RL: +2
+RR: +4
+
+-2
+LR: +13
+LL: +1
+RL: 0
+RR: +2
+

@@ -3,7 +3,7 @@
 Channel: LL LR RIR RIL
 Preamp: 2 dB
 Filter: ON HP Fc 15 Hz
-Filter: ON HP Fc 20 Hz
+# Filter: ON HP Fc 20 Hz
 # Filter: ON LS Fc 20 Hz Gain 50 dB
 # Filter: ON PK Fc 25 Hz Gain 10 dB Q 2
 # Filter: ON PK Fc 31 Hz Gain 8 dB Q 4
@@ -30,20 +30,29 @@ Filter: ON PK Fc 224.4 Hz Gain -3 dB Q 2
 # Filter: ON PK Fc 230 Hz Gain 1 dB Q 3
 # Filter: ON PK Fc 250 Hz Gain 2 dB Q 10
 # Filter: ON PK Fc 323 Hz Gain 1 dB Q 2
+Filter: ON PK Fc 528 Hz Gain -5 dB Q 4
 Filter: ON PK Fc 826 Hz Gain 3 dB Q 10
 Filter: ON LS Fc 900 Hz Gain 3 dB
 Filter: ON PK Fc 1050 Hz Gain 6 dB Q 6
 Filter: ON PK Fc 1300 Hz Gain 4 dB Q 10
-Filter: ON PK Fc 2000 Hz Gain 1 dB Q 2
+Filter: ON PK Fc 1917 Hz Gain 5 dB Q 10
+Filter: ON PK Fc 2000 Hz Gain -7 dB Q 2
+Filter: ON PK Fc 3780 Hz Gain 6 dB Q 10
 Filter: ON HS Fc 4000 Hz Gain 2 dB
 Filter: ON PK Fc 4200 Hz Gain 2 dB Q 6
 Filter: ON PK Fc 4800 Hz Gain 1 dB Q 6
-Filter: ON HS Fc 7000 Hz Gain 3 dB
-Filter: ON HS Fc 12000 Hz Gain -2 dB
+Filter: ON PK Fc 5300 Hz Gain -14 dB Q 5
+# Filter: ON HS Fc 7000 Hz Gain 3 dB
+Filter: ON PK Fc 9359 Hz Gain -12 dB Q 5
+# Filter: ON HS Fc 12000 Hz Gain -2 dB
 Filter: ON PK Fc 12100 Hz Gain -6 dB Q 6
 Filter: ON PK Fc 13200 Hz Gain -3 dB Q 2
 Filter: ON PK Fc 15000 Hz Gain -3 dB Q 2
 # Adjustments for cross channel only
 Channel: LR RIL
+Preamp: -2 dB
+Filter: ON PK Fc 1750 Hz Gain 8 dB Q 6
+Filter: ON PK Fc 2500 Hz Gain -12 dB Q 10
+Filter: ON PK Fc 5000 Hz Gain 2 dB Q 4
 # Filter: ON PK Fc 26 Hz Gain 7 dB Q 3
 Channel: all

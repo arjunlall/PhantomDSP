@@ -8,7 +8,7 @@ Channel: ALL
 Filter: ON LS Fc 150 Hz Gain 2 dB
 # Used to be 5k , -1
 # Filter: ON HS Fc 5000 Hz Gain -1 dB
-# experimenting to match Genelec sound/feeling - not objective
+# experimenting to match Genelec sound/feeling - based on HRTF difference in canal between Headphones and speakers, which happens after my measurements since mics were at beginning of canal - moving this to main convolution
 Filter: ON PK Fc 2700 Hz Gain 8 dB Q 5
 # had these on
 # Filter: ON PK Fc 130 Hz Gain 0.5 dB Q 2

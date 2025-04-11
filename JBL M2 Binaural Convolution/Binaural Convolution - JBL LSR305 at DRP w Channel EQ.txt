@@ -17,9 +17,9 @@ Delay: 0 samples
 Channel: RIR
 Delay: 1 samples
 Channel: LR
-Delay: 35 samples
+Delay: 23 samples
 Channel: RIL
-Delay: 22 samples
+Delay: 10 samples
 Include: Channel Balance EQ.txt
 Include: EQ to JBL M2.txt
 # Cross over low signals to a clean non-convoluted signal

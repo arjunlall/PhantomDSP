@@ -162,3 +162,17 @@ LL: +1
 RL: 0
 RR: +2
 
+Gemini says calcs should add 13 samples to LL and RR for equilateral triangle - THIS ONE CORRECT
+
+so intermediate:
+LR: +26
+LL: +3
+RL: +13
+RR: +4
+
+take out extra (-3):
+LR: 23
+LL: 0
+RL: 10
+RR: 1
+

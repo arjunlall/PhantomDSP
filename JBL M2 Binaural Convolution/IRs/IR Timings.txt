@@ -150,7 +150,7 @@ LL: 0
 RL: 22
 RR: 1
 
-OpenAI says 2 samples:
+OpenAI says 2 samples: Tried and this does not sound correct, lose the 3D depth
 LR: +15
 LL: +3
 RL: +2

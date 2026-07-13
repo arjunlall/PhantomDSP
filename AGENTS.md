@@ -4,6 +4,8 @@
 
 PhantomDSP is an EqualizerAPO configuration repository, not a compiled application. Root files such as `config.txt` and `config - personalized.txt` are entry points. Headphone directories (`HD650/`, `Elex/`, `LCD-2.2F 2016/`) contain model-specific equalization and channel-balance presets. `JBL M2 Binaural Convolution/` contains the shared speaker virtualization chain and impulse responses.
 
+`docs/architecture.md` defines the intended transfer-function model and measurement assumptions. `docs/roadmap.md` tracks safety, validation, bass, EQ, and latency work. Update these documents when a change alters the signal-chain meaning or project priorities.
+
 Treat `Include:` order as part of the DSP design: convolution, target-curve adjustment, headphone flattening, and personal balance are not interchangeable stages.
 
 ## Build, Test, and Development Commands

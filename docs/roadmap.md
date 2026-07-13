@@ -1,0 +1,100 @@
+# DSP Roadmap
+
+This roadmap prioritizes safety and reproducibility before changing the sound. The current renderer should remain available as a baseline; experiments should use separate configuration files or generated assets until their behavior is understood.
+
+## Priority 0: Safety and Reproducibility
+
+- [ ] Guard the active renderer for 48 kHz stereo using Equalizer APO runtime conditions.
+- [ ] Provide a controlled-gain fallback when convolution cannot load.
+- [ ] Make the configuration runnable through Equalizer APO Benchmark without editing device selectors for every test.
+- [ ] Capture a baseline 2×2 digital transfer matrix: magnitude, phase, impulse response, energy decay, and worst-case headroom.
+- [ ] Add automated checks for missing includes/WAVs, unsupported sample rates, channel-state leakage, and accidental gain changes.
+- [ ] Record checksums and metadata for the active IRs so later processing remains traceable.
+
+Success means the current sound can be reproduced, measured, and safely bypassed before any corrective DSP is changed.
+
+## Priority 1: Correctness and Closed-Loop Validation
+
+### Redesign the Bass Blend Mathematically
+
+New in-ear measurements are not required for the first pass. The existing BRIR WAVs and Equalizer APO filters contain the complex responses needed to model the handoff.
+
+### Establish the Current Baseline
+
+- [ ] Reproduce Equalizer APO's exact filter coefficients at 48 kHz or export the response through Benchmark.
+- [ ] Isolate the convolved and clean-low branches for `LL`, `LR`, `RL`, and `RR`.
+- [ ] Plot complex magnitude, phase, group delay, and vector sum from 20–300 Hz.
+- [ ] Confirm the preliminary cancellation estimates, including the approximately 118–135 Hz transition problems.
+
+### Evaluate Candidate Designs
+
+- [ ] Optimize clean-branch gain, polarity, and delay against all four BRIR paths rather than one averaged response.
+- [ ] Test a complementary low-pass/high-pass crossover, including Linkwitz–Riley candidates.
+- [ ] Test spectral replacement: `new BRIR = high-frequency BRIR + low-frequency clean model` using complementary windows.
+- [ ] Compare minimum-phase, mixed-phase, and short-FIR crossover implementations.
+- [ ] Determine whether one shared bass handoff is sufficient or whether direct and cross paths require separate alignment.
+
+### Acceptance Criteria
+
+- No narrow cancellation deeper than 3 dB in the intended transition band.
+- Smooth group-delay transition without disturbing the established direct/cross arrival relationship above the crossover.
+- Predictable mono bass and left/right balance.
+- Adequate peak headroom for correlated stereo input.
+- No material latency increase beyond an explicitly chosen budget.
+
+All candidates should remain offline or opt-in until these criteria are met.
+
+### Advance the BRIR Direct Arrival
+
+After the bass model is understood, test a common advance of approximately 192–200 samples across all four active BRIR channels. At 48 kHz, 200 samples represents about 4.17 ms. This should reduce the IR contribution to direct-sound latency while preserving the measured room response and every relative speaker-to-ear delay.
+
+- [ ] Measure the earliest meaningful onset—not only the largest peak—in each raw IR channel.
+- [ ] Render non-circular 192-, 196-, and 200-sample advances into new WAV files; never overwrite the baseline IRs.
+- [ ] Shift every channel by exactly the same amount. Do not independently align or normalize the four peaks.
+- [ ] Preserve sample rate, bit depth, channel order, polarity, amplitude, and trailing room decay.
+- [ ] Confirm that magnitude response and inter-channel phase differences remain unchanged within numerical tolerance.
+- [ ] Confirm that direct/cross peak spacing and the approximately 13-sample cross-ear relationship remain intact.
+- [ ] Recalculate the clean-bass delay and re-run the complete bass acceptance criteria for every candidate.
+- [ ] Compare active and advanced variants through Equalizer APO Benchmark before listening at low volume.
+
+Success means removing only common leading time: no transient truncation, no change to spatial relationships, and no new bass-transition error. This experiment does not address driver, application, or device-buffer latency.
+
+### Close the Acoustic Loop When Practical
+
+New measurements would strengthen validation but are not a blocker for the bass analysis.
+
+- [ ] Re-measure the complete DSP through the physical headphones at the same ear-microphone positions.
+- [ ] Capture left input to both ears and right input to both ears separately.
+- [ ] Repeat several headphone reseats to distinguish stable response features from fit-dependent narrow structure.
+- [ ] Compare the achieved four-path response directly with the speaker BRIR target.
+- [ ] Preserve raw captures, calibration information, and processing notes in a reproducible measurement archive.
+
+## Priority 2: Fidelity and Optimization
+
+### Classify and Simplify Equalization
+
+- [ ] Label filters by role: speaker correction, headphone inverse, personal ear balance, preference target, or spatial experiment.
+- [ ] Ensure physical speaker corrections are common to both ear paths from that speaker.
+- [ ] Treat direct-only and cross-only filters as explicit spatial rendering choices.
+- [ ] Re-evaluate the 2.5–2.7 kHz direct/cross treatment against the closed-loop target rather than the intermediate DSP response.
+- [ ] Identify exact and near-redundant cascades, then prove equivalence using the complete complex transfer matrix before consolidating anything.
+- [ ] Regularize narrow headphone corrections using smoothing and multiple-reseat data where available.
+
+### Room and Renderer Experiments
+
+- [ ] Separate direct sound, early reflections, and late room decay in the active BRIRs.
+- [ ] Quantify which late energy supports externalization and which energy is room-specific coloration.
+- [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
+- [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.
+- [ ] Compare minimum-phase and hybrid renderers with the measured BRIR baseline.
+- [ ] Explore a parametric/no-convolution model only after defining which BRIR cues it must reproduce.
+
+Every latency experiment must re-run the bass-alignment analysis because the clean branch currently depends on the BRIR timing.
+
+## Priority 3: Public Project Clarity
+
+- [ ] Separate a portable example configuration from personalized device and headphone selections.
+- [ ] Mark historical profiles and document their validation status.
+- [ ] Add response plots and a measurement manifest without publishing unnecessary personal measurement details.
+- [ ] Document how to add a headphone profile, including sample rate, seating repetitions, smoothing, gain, and validation expectations.
+- [ ] Keep claims focused on the measured system: personalized speaker virtualization with M2-inspired tonal shaping, not complete physical M2 emulation.

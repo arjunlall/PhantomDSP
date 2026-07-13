@@ -6,8 +6,8 @@ This roadmap prioritizes a reproducible digital baseline before changing the sou
 
 - [ ] Add a simple 48 kHz stereo guard only if it does not complicate the active configuration.
 - [x] Record checksums, channel mappings, timing landmarks, and format metadata in the [active IR manifest](ir-manifest.md).
-- [ ] Capture the active 2×2 digital transfer matrix through Equalizer APO Benchmark using checked-in probes.
-- [ ] Preserve the raw Benchmark outputs and log, then generate magnitude, phase, impulse-response, energy-decay, and practical headroom results.
+- [x] Capture the active 2×2 digital transfer matrix through Equalizer APO Benchmark using checked-in probes.
+- [x] Preserve the raw Benchmark outputs and log, then generate [magnitude, phase, impulse-response, energy-decay, and practical headroom results](../measurements/digital-baseline/analysis/report.md).
 - [ ] Compare each bass or latency candidate with this baseline before auditioning it.
 
 Success means the current digital renderer can be reproduced and candidate differences can be measured without reimplementing Equalizer APO. This baseline does not replace closed-loop acoustic validation through the headphones.
@@ -20,7 +20,7 @@ New in-ear measurements are not required for the first pass. The existing BRIR W
 
 ### Establish the Current Baseline
 
-- [ ] Reproduce Equalizer APO's exact filter coefficients at 48 kHz or export the response through Benchmark.
+- [x] Export the complete active response through Equalizer APO Benchmark at 48 kHz.
 - [ ] Isolate the convolved and clean-low branches for `LL`, `LR`, `RL`, and `RR`.
 - [ ] Plot complex magnitude, phase, group delay, and vector sum from 20–300 Hz.
 - [ ] Confirm the preliminary cancellation estimates, including the approximately 118–135 Hz transition problems.

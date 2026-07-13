@@ -1,3 +1,4 @@
+Device: Output A1 Voicemeeter
 # This config file has adjustments for the main binaural convolution as well as EQ for the HD800s
 Include: config - personalized.txt
 # Include: Target Curve Macro Adjustments.txt

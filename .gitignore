@@ -46,3 +46,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 README-WIP.md
+
+# Local Python tooling
+__pycache__/
+.venv/

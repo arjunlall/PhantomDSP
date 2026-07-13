@@ -1,17 +1,16 @@
 # DSP Roadmap
 
-This roadmap prioritizes safety and reproducibility before changing the sound. The current renderer should remain available as a baseline; experiments should use separate configuration files or generated assets until their behavior is understood.
+This roadmap prioritizes a reproducible digital baseline before changing the sound. The current renderer should remain available as a reference; experiments should use separate configuration files or generated assets until their behavior is understood.
 
-## Priority 0: Safety and Reproducibility
+## Priority 0: Baseline and Traceability
 
-- [ ] Guard the active renderer for 48 kHz stereo using Equalizer APO runtime conditions.
-- [ ] Provide a controlled-gain fallback when convolution cannot load.
-- [ ] Make the configuration runnable through Equalizer APO Benchmark without editing device selectors for every test.
-- [ ] Capture a baseline 2×2 digital transfer matrix: magnitude, phase, impulse response, energy decay, and worst-case headroom.
-- [ ] Add automated checks for missing includes/WAVs, unsupported sample rates, channel-state leakage, and accidental gain changes.
-- [ ] Record checksums and metadata for the active IRs so later processing remains traceable.
+- [ ] Add a simple 48 kHz stereo guard only if it does not complicate the active configuration.
+- [x] Record checksums, channel mappings, timing landmarks, and format metadata in the [active IR manifest](ir-manifest.md).
+- [ ] Capture the active 2×2 digital transfer matrix through Equalizer APO Benchmark using checked-in probes.
+- [ ] Preserve the raw Benchmark outputs and log, then generate magnitude, phase, impulse-response, energy-decay, and practical headroom results.
+- [ ] Compare each bass or latency candidate with this baseline before auditioning it.
 
-Success means the current sound can be reproduced, measured, and safely bypassed before any corrective DSP is changed.
+Success means the current digital renderer can be reproduced and candidate differences can be measured without reimplementing Equalizer APO. This baseline does not replace closed-loop acoustic validation through the headphones.
 
 ## Priority 1: Correctness and Closed-Loop Validation
 

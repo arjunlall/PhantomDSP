@@ -8,6 +8,27 @@ param(
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 
+function Get-CheckoutCommit {
+    param([string]$RepositoryRoot)
+
+    $GitCommand = Get-Command git -ErrorAction SilentlyContinue
+    if ($null -ne $GitCommand) {
+        $GitCommit = & $GitCommand.Source -C $RepositoryRoot rev-parse HEAD 2>$null
+        if (($LASTEXITCODE -eq 0) -and ($GitCommit -match "^[0-9a-fA-F]{40}$")) {
+            return $GitCommit.Trim()
+        }
+    }
+
+    $HeadPath = Join-Path $RepositoryRoot ".git\HEAD"
+    if (-not (Test-Path $HeadPath -PathType Leaf)) { return "unknown" }
+    $Head = (Get-Content $HeadPath -Raw).Trim()
+    if ($Head -match "^[0-9a-fA-F]{40}$") { return $Head }
+    if ($Head -match "^ref:\s+(.+)$") { $RefName = $Matches[1] } else { return "unknown" }
+    $RefPath = Join-Path (Join-Path $RepositoryRoot ".git") $RefName
+    if (Test-Path $RefPath -PathType Leaf) { return (Get-Content $RefPath -Raw).Trim() }
+    return "unknown"
+}
+
 if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
     $OutputDirectory = Join-Path $RepoRoot "measurements\digital-baseline\raw"
 }
@@ -49,10 +70,7 @@ if ((Test-Path $InstalledConfig) -and (Test-Path $RepoConfig)) {
 }
 
 $LogPath = Join-Path $OutputDirectory "benchmark.log"
-$Commit = & git -C $RepoRoot rev-parse HEAD 2>$null
-if ($LASTEXITCODE -ne 0) {
-    $Commit = "unknown"
-}
+$Commit = Get-CheckoutCommit -RepositoryRoot $RepoRoot
 
 @(
     "PhantomDSP commit: $Commit"

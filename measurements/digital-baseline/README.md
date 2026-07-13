@@ -20,7 +20,7 @@ The runner:
 3. Runs a full-scale correlated-stereo sweep for a practical clipping and CPU check.
 4. Writes the retained artifacts under `measurements\digital-baseline\raw`.
 
-The Windows capture step does not require Python.
+The Windows capture step does not require Python or a system-wide Git command. GitHub Desktop is sufficient for updating the checkout; the runner reads the commit ID from the checkout metadata when Git CLI is unavailable.
 
 Override local details when necessary:
 

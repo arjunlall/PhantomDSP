@@ -82,9 +82,9 @@ Filters applied only to direct or cross paths instead modify the synthesized bin
 
 ## Hybrid Bass Path
 
-The clean-bass branch was introduced to reduce undesirable low-frequency behavior in the measured speaker/room response while retaining the BRIR above the crossover region. It currently uses a low-pass filter, gain reduction, and explicit delay, but the convolved branch is not high-passed. The result is an overlapping parallel blend rather than a complementary crossover.
+The clean-bass branch was introduced to reduce undesirable low-frequency behavior in the measured speaker/room response while retaining the BRIR above the crossover region. The legacy implementation uses a 90 Hz low-pass, gain reduction, and explicit delay, but does not high-pass the convolved branch. It is therefore an overlapping parallel blend rather than a complementary crossover. Measured digital captures show destructive summation in its transition region; downstream headphone compensation cannot change that relative branch phase.
 
-Preliminary modeling shows destructive summation in parts of the transition region. This is a structural effect: downstream headphone compensation multiplies the already-summed branches and cannot remove their relative phase cancellation. The bass redesign can therefore be developed from the existing WAVs and filter definitions before any new in-ear measurements are attempted.
+`Bass Crossover A-B.txt` keeps the legacy renderer selected by default and exposes an opt-in candidate. The candidate uses complementary fourth-order Linkwitz-Riley filters at 75 Hz, preserves the existing 100/115-sample clean-path delays, and applies one broad shared post-sum correction to retain the legacy 25–250 Hz tonal balance. It deliberately leaves the narrow measured speaker/room corrections and all direct/cross spatial shaping unchanged. This is a digital model awaiting EqualizerAPO Benchmark and listening validation, not a closed-loop acoustic correction.
 
 ## Validation Boundary
 

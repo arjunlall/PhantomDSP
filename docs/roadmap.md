@@ -28,10 +28,10 @@ New in-ear measurements are not required for the first pass. The existing BRIR W
 ### Evaluate Candidate Designs
 
 - [x] Optimize clean-branch gain, polarity, and delay against all four BRIR paths. The [constrained search](../measurements/bass-branches/optimization/report.md) improves but cannot meet the cancellation criterion without materially changing deep-bass level.
-- [ ] Test a complementary low-pass/high-pass crossover, including Linkwitz–Riley candidates.
+- [x] Model complementary low-pass/high-pass candidates. A shared 75 Hz LR4 handoff with one broad tonal-match filter is now available as an opt-in A/B preset.
 - [ ] Test spectral replacement: `new BRIR = high-frequency BRIR + low-frequency clean model` using complementary windows.
 - [ ] Compare minimum-phase, mixed-phase, and short-FIR crossover implementations.
-- [ ] Determine whether one shared bass handoff is sufficient or whether direct and cross paths require separate alignment.
+- [x] Use one shared bass handoff for the first listening candidate; modeled channel-specific refinements were too small to justify their complexity.
 
 ### Acceptance Criteria
 

@@ -1,0 +1,50 @@
+# Experimental bass handoff; the legacy chain remains available through Bass Crossover A-B.txt.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R LLLOW=L LRLOW=L RLLOW=R RRLOW=R
+
+# Four measured speaker-to-ear paths.
+Channel: LL LR
+Convolution: IRs\JBL LSR305 LL 4_LR 4 5-500.wav
+Channel: RIL RIR
+Convolution: IRs\JBL LSR305 RL 4_RR 4 5-500.wav
+
+# Preserve the measured direct/cross arrival relationships.
+Channel: LL
+Delay: 0 samples
+Channel: RIR
+Delay: 1 samples
+Channel: LR
+Delay: 23 samples
+Channel: RIL
+Delay: 10 samples
+
+Include: Channel Balance EQ.txt
+Include: EQ to JBL M2 - LR4 bass crossover.txt
+
+# Two cascaded second-order Butterworth filters form the 75 Hz LR4 high-pass.
+Channel: LL LR RIL RIR
+Filter: ON HP Fc 75 Hz Q 0.7071
+Filter: ON HP Fc 75 Hz Q 0.7071
+
+# Complementary clean-bass low-pass, using the existing direct/cross delays.
+Channel: LLLOW LRLOW RLLOW RRLOW
+Filter: ON LP Fc 75 Hz Q 0.7071
+Filter: ON LP Fc 75 Hz Q 0.7071
+Preamp: -14.75 dB
+Delay: 100 samples
+Channel: LRLOW RLLOW
+Delay: 15 samples
+
+Channel: L R
+Copy: L=LL+RIL+LLLOW+RLLOW R=LR+RIR+LRLOW+RRLOW
+
+# Measurement-only output selection; normal playback device names do not match.
+Include: ..\tools\measurement\equalizerapo\bass-branch-output.txt
+
+# Broad shared match to preserve the legacy 25-250 Hz tonal balance.
+Channel: L R
+Filter: ON PK Fc 165.2 Hz Gain 6.47 dB Q 1.088
+
+Channel: all
+Include: Post Channel Addition Channel Balance EQ.txt
+Include: Post Channel Addition EQ v3.txt

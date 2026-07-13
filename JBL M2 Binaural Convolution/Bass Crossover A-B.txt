@@ -1,0 +1,6 @@
+# Select exactly one speaker-virtualization bass implementation.
+# Changes apply immediately; lower playback volume before switching.
+# A - legacy baseline (default)
+Include: main.txt
+# B - 75 Hz LR4 candidate with broad tonal matching
+# Include: main - LR4 bass crossover.txt

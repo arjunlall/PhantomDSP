@@ -87,11 +87,27 @@ function Invoke-EapoBenchmark {
         [string[]]$Arguments
     )
 
-    "=== $Name ===" | Tee-Object -FilePath $LogPath -Append
-    & $BenchmarkPath --devicename $DeviceName --nopause --verbose @Arguments 2>&1 |
-        Tee-Object -FilePath $LogPath -Append
-    $ExitCode = $LASTEXITCODE
-    "" | Add-Content -Path $LogPath
+    if ($script:BenchmarkSectionCount -gt 0) {
+        "" | Add-Content -Path $LogPath -Encoding UTF8
+    }
+    $script:BenchmarkSectionCount++
+    $Header = "=== $Name ==="
+    Write-Host $Header
+    $Header | Add-Content -Path $LogPath -Encoding UTF8
+
+    $PreviousErrorActionPreference = $ErrorActionPreference
+    $ErrorActionPreference = "Continue"
+    try {
+        $BenchmarkOutput = & $BenchmarkPath --devicename $DeviceName --nopause --verbose @Arguments 2>&1
+        $ExitCode = $LASTEXITCODE
+    } finally {
+        $ErrorActionPreference = $PreviousErrorActionPreference
+    }
+    foreach ($Line in $BenchmarkOutput) {
+        $Text = $Line.ToString()
+        Write-Host $Text
+        $Text | Add-Content -Path $LogPath -Encoding UTF8
+    }
     if ($ExitCode -ne 0) {
         throw "$Name failed with exit code $ExitCode"
     }
@@ -102,6 +118,7 @@ $RightInput = Join-Path $OutputDirectory "right-input.wav"
 $LeftOutput = Join-Path $OutputDirectory "left-output.wav"
 $RightOutput = Join-Path $OutputDirectory "right-output.wav"
 $HeadroomOutput = Join-Path $env:TEMP "phantomdsp-headroom-output.wav"
+$script:BenchmarkSectionCount = 0
 
 Invoke-EapoBenchmark -Name "left impulse" -Arguments @(
     "--input", $LeftInput,

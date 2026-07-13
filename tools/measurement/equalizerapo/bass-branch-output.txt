@@ -1,0 +1,13 @@
+# Reserved Benchmark device names can replace the normal combined output here.
+# The runner prefixes these names with the active device selector so config.txt still loads.
+Device: PhantomDSP Bass Convolved
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR
+
+Device: PhantomDSP Bass Clean
+Channel: L R
+Copy: L=LLLOW+RLLOW R=LRLOW+RRLOW
+
+# Restore normal matching and channel state for every downstream include.
+Device: all
+Channel: all

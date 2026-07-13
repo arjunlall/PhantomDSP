@@ -70,6 +70,10 @@ The active include order begins in `config.txt` and `config - personalized.txt`:
 
 Because all stages are linear and time invariant, common filters can commute mathematically. Their semantic roles should nevertheless remain distinct so that measurements, experiments, and future simplification remain understandable.
 
+### Measurement-Only Branch Routing
+
+The active sum includes `tools/measurement/equalizerapo/bass-branch-output.txt` immediately before post-sum processing. Its `Device:` selectors match only reserved Benchmark names, so it is a no-op during normal playback. For measurement runs it can replace the normal L/R sum with either the convolved or clean-low branch; downstream target, headphone, and personal-balance filters then remain identical across isolated and combined captures. This makes `combined ≈ convolved + clean` a directly testable complex-response identity.
+
 ## Physical Versus Synthetic Corrections
 
 A tonal correction representing a real loudspeaker prefilter should affect both ear paths from that speaker. An ear-side headphone correction should affect every virtual-speaker contribution sent to that ear.

@@ -38,6 +38,8 @@ Channel: LRLOW RLLOW
 Delay: 15 samples
 Channel: L R
 Copy: L=LL+RIL+LLLOW+RLLOW R=LR+RIR+LRLOW+RRLOW
+# Measurement-only output selection; normal playback device names do not match.
+Include: ..\tools\measurement\equalizerapo\bass-branch-output.txt
 # Next two lines for debug purposes
 # Copy: L=LL+RIL R=LR+RIR
 # Copy: L=LLLOW+RLLOW R=LRLOW+RRLOW

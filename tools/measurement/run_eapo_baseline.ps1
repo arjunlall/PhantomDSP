@@ -2,7 +2,8 @@ param(
     [string]$BenchmarkPath = "$env:ProgramFiles\EqualizerAPO\Benchmark.exe",
     [string]$DeviceName = "Output A1 Voicemeeter",
     [double]$ProbeAmplitudeDbfs = 0.0,
-    [string]$OutputDirectory = ""
+    [string]$OutputDirectory = "",
+    [switch]$SkipHeadroomSweep
 )
 
 $ErrorActionPreference = "Stop"
@@ -128,16 +129,18 @@ Invoke-EapoBenchmark -Name "right impulse" -Arguments @(
     "--input", $RightInput,
     "--output", $RightOutput
 )
-Invoke-EapoBenchmark -Name "correlated stereo sweep" -Arguments @(
-    "--rate", "48000",
-    "--channels", "2",
-    "--length", "10",
-    "--from", "20",
-    "--to", "20000",
-    "--output", $HeadroomOutput
-)
+if (-not $SkipHeadroomSweep) {
+    Invoke-EapoBenchmark -Name "correlated stereo sweep" -Arguments @(
+        "--rate", "48000",
+        "--channels", "2",
+        "--length", "10",
+        "--from", "20",
+        "--to", "20000",
+        "--output", $HeadroomOutput
+    )
 
-Remove-Item $HeadroomOutput -ErrorAction SilentlyContinue
+    Remove-Item $HeadroomOutput -ErrorAction SilentlyContinue
+}
 
 Write-Host ""
 Write-Host "Baseline capture complete: $OutputDirectory"

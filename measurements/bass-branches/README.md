@@ -39,3 +39,13 @@ python3 tools/measurement/analyze_bass_branches.py
 The analyzer verifies that `combined ≈ convolved + clean`, then evaluates all four paths from 20–300 Hz. The report includes branch magnitude, relative phase, group delay, vector-sum interference, combined response relative to the convolved branch, and focused values around 118–135 Hz. Default plots and metrics use 1/24-octave smoothing; machine-readable samples remain in `analysis/summary.json`.
 
 Closure error is a validity check. If the separately captured branches do not reconstruct the combined output well beyond the 16-bit quantization floor, fix the routing or capture before drawing conclusions about cancellation.
+
+## Optimize Gain, Polarity, and Delay
+
+Run the constrained offline search after generating the branch analysis:
+
+```bash
+python3 tools/measurement/optimize_bass_alignment.py
+```
+
+The optimizer tests shared and separate direct/cross controls while requiring every path to preserve the modeled 25–70 Hz output within 1 dB RMS. It also reports the tradeoff at progressively looser preservation limits. Results are written to `measurements/bass-branches/optimization`; they are diagnostic candidates, not active Equalizer APO settings.

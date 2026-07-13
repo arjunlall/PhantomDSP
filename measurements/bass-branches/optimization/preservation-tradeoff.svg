@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550.0" y="32" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="600">Deep-Bass Preservation vs Worst Interference</text>
+<line x1="88.00" y1="62" x2="88.00" y2="548" stroke="#e5e7eb"/>
+<text x="88.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">1.00</text>
+<line x1="284.00" y1="62" x2="284.00" y2="548" stroke="#e5e7eb"/>
+<text x="284.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">2.00</text>
+<line x1="480.00" y1="62" x2="480.00" y2="548" stroke="#e5e7eb"/>
+<text x="480.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">3.00</text>
+<line x1="676.00" y1="62" x2="676.00" y2="548" stroke="#e5e7eb"/>
+<text x="676.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">4.00</text>
+<line x1="872.00" y1="62" x2="872.00" y2="548" stroke="#e5e7eb"/>
+<text x="872.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">5.00</text>
+<line x1="1068.00" y1="62" x2="1068.00" y2="548" stroke="#e5e7eb"/>
+<text x="1068.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">6.00</text>
+<line x1="88" y1="548.00" x2="1068" y2="548.00" stroke="#e5e7eb"/>
+<text x="78" y="552.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-10.0</text>
+<line x1="88" y1="467.00" x2="1068" y2="467.00" stroke="#e5e7eb"/>
+<text x="78" y="471.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-8.33</text>
+<line x1="88" y1="386.00" x2="1068" y2="386.00" stroke="#e5e7eb"/>
+<text x="78" y="390.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-6.67</text>
+<line x1="88" y1="305.00" x2="1068" y2="305.00" stroke="#e5e7eb"/>
+<text x="78" y="309.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-5.00</text>
+<line x1="88" y1="224.00" x2="1068" y2="224.00" stroke="#e5e7eb"/>
+<text x="78" y="228.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-3.33</text>
+<line x1="88" y1="143.00" x2="1068" y2="143.00" stroke="#e5e7eb"/>
+<text x="78" y="147.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-1.67</text>
+<line x1="88" y1="62.00" x2="1068" y2="62.00" stroke="#e5e7eb"/>
+<text x="78" y="66.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">0.00</text>
+<rect x="88" y="62" width="980" height="486" fill="none" stroke="#6b7280"/>
+<text x="578.0" y="602" text-anchor="middle" font-family="sans-serif" font-size="14">Allowed 25–70 Hz RMS change (dB)</text>
+<text x="20" y="305.0" text-anchor="middle" transform="rotate(-90 20 305.0)" font-family="sans-serif" font-size="14">Deepest interference (dB)</text>
+<polyline points="88.00,302.07 284.00,270.89 480.00,243.80 676.00,224.42 872.00,207.27 1068.00,191.71" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,297.69 284.00,264.32 480.00,238.07 676.00,218.95 872.00,202.11 1068.00,187.24" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="100" y1="82" x2="124" y2="82" stroke="#2563eb" stroke-width="3"/>
+<text x="131" y="86" font-family="sans-serif" font-size="13">shared</text>
+<line x1="250" y1="82" x2="274" y2="82" stroke="#dc2626" stroke-width="3"/>
+<text x="281" y="86" font-family="sans-serif" font-size="13">direct/cross</text>
+</svg>

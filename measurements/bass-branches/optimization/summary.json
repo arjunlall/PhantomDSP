@@ -1,0 +1,936 @@
+{
+  "schema_version": 1,
+  "sample_rate_hz": 48000,
+  "nfft": 131072,
+  "capture_commits": {
+    "convolved": "15a841a22b8272041d9295b6d6818021ed84cdfa",
+    "clean": "15a841a22b8272041d9295b6d6818021ed84cdfa"
+  },
+  "search": {
+    "frequency_band_hz": [
+      20.0,
+      300.0
+    ],
+    "transition_band_hz": [
+      50.0,
+      200.0
+    ],
+    "low_bass_preservation_band_hz": [
+      25.0,
+      70.0
+    ],
+    "low_bass_rms_tolerance_db": 1.0,
+    "delay_adjustment_samples": [
+      -100.0,
+      150.0,
+      1.0
+    ],
+    "gain_adjustment_db": [
+      -12.0,
+      6.0,
+      0.25
+    ],
+    "polarities": [
+      1,
+      -1
+    ],
+    "smoothing_fractional_octave": 24,
+    "candidate_count_per_search": 36646,
+    "current_delay_samples": {
+      "direct": 100,
+      "cross": 115
+    }
+  },
+  "configurations": {
+    "current": {
+      "controls": {
+        "direct": {
+          "delay_adjustment_samples": 0.0,
+          "gain_adjustment_db": 0.0,
+          "polarity": 1
+        },
+        "cross": {
+          "delay_adjustment_samples": 0.0,
+          "gain_adjustment_db": 0.0,
+          "polarity": 1
+        }
+      },
+      "metrics": {
+        "deepest_interference_db": -9.22534,
+        "tenth_percentile_interference_db": -3.85033,
+        "maximum_low_bass_rms_change_db": 0.0,
+        "minimum_sum_vs_convolved_db": 0.04777
+      },
+      "paths": {
+        "LL": {
+          "deepest_interference_db": -9.22534,
+          "deepest_interference_frequency_hz": 118.65234,
+          "clean_to_convolved_at_deepest_db": 5.61214,
+          "phase_at_deepest_degrees": -169.77956,
+          "minimum_sum_vs_convolved_db": 0.04777,
+          "minimum_sum_vs_convolved_frequency_hz": 118.65234,
+          "low_bass_rms_change_db": 0.0
+        },
+        "LR": {
+          "deepest_interference_db": -5.19641,
+          "deepest_interference_frequency_hz": 119.38477,
+          "clean_to_convolved_at_deepest_db": 9.75865,
+          "phase_at_deepest_degrees": -165.98236,
+          "minimum_sum_vs_convolved_db": 3.89938,
+          "minimum_sum_vs_convolved_frequency_hz": 161.13281,
+          "low_bass_rms_change_db": 0.0
+        },
+        "RL": {
+          "deepest_interference_db": -6.01662,
+          "deepest_interference_frequency_hz": 134.76562,
+          "clean_to_convolved_at_deepest_db": 7.20565,
+          "phase_at_deepest_degrees": -141.96227,
+          "minimum_sum_vs_convolved_db": 3.71968,
+          "minimum_sum_vs_convolved_frequency_hz": 136.23047,
+          "low_bass_rms_change_db": 0.0
+        },
+        "RR": {
+          "deepest_interference_db": -6.16151,
+          "deepest_interference_frequency_hz": 92.28516,
+          "clean_to_convolved_at_deepest_db": 9.04298,
+          "phase_at_deepest_degrees": -172.47975,
+          "minimum_sum_vs_convolved_db": 3.75572,
+          "minimum_sum_vs_convolved_frequency_hz": 114.25781,
+          "low_bass_rms_change_db": 0.0
+        }
+      }
+    },
+    "shared": {
+      "controls": {
+        "direct": {
+          "delay_adjustment_samples": 80.0,
+          "gain_adjustment_db": -0.25,
+          "polarity": -1
+        },
+        "cross": {
+          "delay_adjustment_samples": 80.0,
+          "gain_adjustment_db": -0.25,
+          "polarity": -1
+        }
+      },
+      "metrics": {
+        "deepest_interference_db": -4.93962,
+        "tenth_percentile_interference_db": -0.98965,
+        "maximum_low_bass_rms_change_db": 0.98328,
+        "minimum_sum_vs_convolved_db": 3.69289
+      },
+      "paths": {
+        "LL": {
+          "deepest_interference_db": -4.9341,
+          "deepest_interference_frequency_hz": 113.8916,
+          "clean_to_convolved_at_deepest_db": 10.06826,
+          "phase_at_deepest_degrees": -165.19236,
+          "minimum_sum_vs_convolved_db": 4.28297,
+          "minimum_sum_vs_convolved_frequency_hz": 194.45801,
+          "low_bass_rms_change_db": 0.98328
+        },
+        "LR": {
+          "deepest_interference_db": -3.1913,
+          "deepest_interference_frequency_hz": 116.82129,
+          "clean_to_convolved_at_deepest_db": 10.87741,
+          "phase_at_deepest_degrees": 179.37261,
+          "minimum_sum_vs_convolved_db": 5.78453,
+          "minimum_sum_vs_convolved_frequency_hz": 164.79492,
+          "low_bass_rms_change_db": 0.63532
+        },
+        "RL": {
+          "deepest_interference_db": -4.93962,
+          "deepest_interference_frequency_hz": 124.51172,
+          "clean_to_convolved_at_deepest_db": 9.5292,
+          "phase_at_deepest_degrees": 171.52346,
+          "minimum_sum_vs_convolved_db": 3.69289,
+          "minimum_sum_vs_convolved_frequency_hz": 191.16211,
+          "low_bass_rms_change_db": 0.62281
+        },
+        "RR": {
+          "deepest_interference_db": -1.57835,
+          "deepest_interference_frequency_hz": 192.62695,
+          "clean_to_convolved_at_deepest_db": 1.72595,
+          "phase_at_deepest_degrees": 66.48976,
+          "minimum_sum_vs_convolved_db": 4.31791,
+          "minimum_sum_vs_convolved_frequency_hz": 190.42969,
+          "low_bass_rms_change_db": 0.9499
+        }
+      }
+    },
+    "direct_cross": {
+      "controls": {
+        "direct": {
+          "delay_adjustment_samples": 70.0,
+          "gain_adjustment_db": -0.25,
+          "polarity": -1
+        },
+        "cross": {
+          "delay_adjustment_samples": -40.0,
+          "gain_adjustment_db": 0.75,
+          "polarity": 1
+        }
+      },
+      "metrics": {
+        "deepest_interference_db": -4.84968,
+        "tenth_percentile_interference_db": -1.87362,
+        "maximum_low_bass_rms_change_db": 0.99926,
+        "minimum_sum_vs_convolved_db": 3.67692
+      },
+      "paths": {
+        "LL": {
+          "deepest_interference_db": -4.84968,
+          "deepest_interference_frequency_hz": 113.15918,
+          "clean_to_convolved_at_deepest_db": 10.32839,
+          "phase_at_deepest_degrees": -178.66325,
+          "minimum_sum_vs_convolved_db": 3.8382,
+          "minimum_sum_vs_convolved_frequency_hz": 195.19043,
+          "low_bass_rms_change_db": 0.99926
+        },
+        "LR": {
+          "deepest_interference_db": -3.9786,
+          "deepest_interference_frequency_hz": 118.65234,
+          "clean_to_convolved_at_deepest_db": 10.79986,
+          "phase_at_deepest_degrees": -152.44427,
+          "minimum_sum_vs_convolved_db": 6.42618,
+          "minimum_sum_vs_convolved_frequency_hz": 162.59766,
+          "low_bass_rms_change_db": 0.72724
+        },
+        "RL": {
+          "deepest_interference_db": -3.9849,
+          "deepest_interference_frequency_hz": 126.34277,
+          "clean_to_convolved_at_deepest_db": 11.826,
+          "phase_at_deepest_degrees": 177.69502,
+          "minimum_sum_vs_convolved_db": 4.73693,
+          "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+          "low_bass_rms_change_db": 0.75074
+        },
+        "RR": {
+          "deepest_interference_db": -2.3685,
+          "deepest_interference_frequency_hz": 192.62695,
+          "clean_to_convolved_at_deepest_db": 1.72595,
+          "phase_at_deepest_degrees": 80.9132,
+          "minimum_sum_vs_convolved_db": 3.67692,
+          "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+          "low_bass_rms_change_db": 0.9718
+        }
+      }
+    }
+  },
+  "preservation_tradeoff": [
+    {
+      "tolerance_db": 1.0,
+      "shared": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 80.0,
+            "gain_adjustment_db": -0.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": 80.0,
+            "gain_adjustment_db": -0.25,
+            "polarity": -1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -4.93962,
+          "tenth_percentile_interference_db": -0.98965,
+          "maximum_low_bass_rms_change_db": 0.98328,
+          "minimum_sum_vs_convolved_db": 3.69289
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -4.9341,
+            "deepest_interference_frequency_hz": 113.8916,
+            "clean_to_convolved_at_deepest_db": 10.06826,
+            "phase_at_deepest_degrees": -165.19236,
+            "minimum_sum_vs_convolved_db": 4.28297,
+            "minimum_sum_vs_convolved_frequency_hz": 194.45801,
+            "low_bass_rms_change_db": 0.98328
+          },
+          "LR": {
+            "deepest_interference_db": -3.1913,
+            "deepest_interference_frequency_hz": 116.82129,
+            "clean_to_convolved_at_deepest_db": 10.87741,
+            "phase_at_deepest_degrees": 179.37261,
+            "minimum_sum_vs_convolved_db": 5.78453,
+            "minimum_sum_vs_convolved_frequency_hz": 164.79492,
+            "low_bass_rms_change_db": 0.63532
+          },
+          "RL": {
+            "deepest_interference_db": -4.93962,
+            "deepest_interference_frequency_hz": 124.51172,
+            "clean_to_convolved_at_deepest_db": 9.5292,
+            "phase_at_deepest_degrees": 171.52346,
+            "minimum_sum_vs_convolved_db": 3.69289,
+            "minimum_sum_vs_convolved_frequency_hz": 191.16211,
+            "low_bass_rms_change_db": 0.62281
+          },
+          "RR": {
+            "deepest_interference_db": -1.57835,
+            "deepest_interference_frequency_hz": 192.62695,
+            "clean_to_convolved_at_deepest_db": 1.72595,
+            "phase_at_deepest_degrees": 66.48976,
+            "minimum_sum_vs_convolved_db": 4.31791,
+            "minimum_sum_vs_convolved_frequency_hz": 190.42969,
+            "low_bass_rms_change_db": 0.9499
+          }
+        }
+      },
+      "direct_cross": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 70.0,
+            "gain_adjustment_db": -0.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": -40.0,
+            "gain_adjustment_db": 0.75,
+            "polarity": 1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -4.84968,
+          "tenth_percentile_interference_db": -1.87362,
+          "maximum_low_bass_rms_change_db": 0.99926,
+          "minimum_sum_vs_convolved_db": 3.67692
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -4.84968,
+            "deepest_interference_frequency_hz": 113.15918,
+            "clean_to_convolved_at_deepest_db": 10.32839,
+            "phase_at_deepest_degrees": -178.66325,
+            "minimum_sum_vs_convolved_db": 3.8382,
+            "minimum_sum_vs_convolved_frequency_hz": 195.19043,
+            "low_bass_rms_change_db": 0.99926
+          },
+          "LR": {
+            "deepest_interference_db": -3.9786,
+            "deepest_interference_frequency_hz": 118.65234,
+            "clean_to_convolved_at_deepest_db": 10.79986,
+            "phase_at_deepest_degrees": -152.44427,
+            "minimum_sum_vs_convolved_db": 6.42618,
+            "minimum_sum_vs_convolved_frequency_hz": 162.59766,
+            "low_bass_rms_change_db": 0.72724
+          },
+          "RL": {
+            "deepest_interference_db": -3.9849,
+            "deepest_interference_frequency_hz": 126.34277,
+            "clean_to_convolved_at_deepest_db": 11.826,
+            "phase_at_deepest_degrees": 177.69502,
+            "minimum_sum_vs_convolved_db": 4.73693,
+            "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+            "low_bass_rms_change_db": 0.75074
+          },
+          "RR": {
+            "deepest_interference_db": -2.3685,
+            "deepest_interference_frequency_hz": 192.62695,
+            "clean_to_convolved_at_deepest_db": 1.72595,
+            "phase_at_deepest_degrees": 80.9132,
+            "minimum_sum_vs_convolved_db": 3.67692,
+            "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+            "low_bass_rms_change_db": 0.9718
+          }
+        }
+      }
+    },
+    {
+      "tolerance_db": 2.0,
+      "shared": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 81.0,
+            "gain_adjustment_db": 1.0,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": 81.0,
+            "gain_adjustment_db": 1.0,
+            "polarity": -1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -4.29821,
+          "tenth_percentile_interference_db": -0.89393,
+          "maximum_low_bass_rms_change_db": 1.84154,
+          "minimum_sum_vs_convolved_db": 4.50451
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -4.29821,
+            "deepest_interference_frequency_hz": 113.8916,
+            "clean_to_convolved_at_deepest_db": 11.31826,
+            "phase_at_deepest_degrees": -166.04682,
+            "minimum_sum_vs_convolved_db": 4.85566,
+            "minimum_sum_vs_convolved_frequency_hz": 194.45801,
+            "low_bass_rms_change_db": 1.84154
+          },
+          "LR": {
+            "deepest_interference_db": -2.81238,
+            "deepest_interference_frequency_hz": 116.82129,
+            "clean_to_convolved_at_deepest_db": 12.12741,
+            "phase_at_deepest_degrees": 178.49643,
+            "minimum_sum_vs_convolved_db": 6.47186,
+            "minimum_sum_vs_convolved_frequency_hz": 164.79492,
+            "low_bass_rms_change_db": 1.37843
+          },
+          "RL": {
+            "deepest_interference_db": -4.29683,
+            "deepest_interference_frequency_hz": 124.51172,
+            "clean_to_convolved_at_deepest_db": 10.7792,
+            "phase_at_deepest_degrees": 170.58992,
+            "minimum_sum_vs_convolved_db": 4.50451,
+            "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+            "low_bass_rms_change_db": 1.46224
+          },
+          "RR": {
+            "deepest_interference_db": -1.46906,
+            "deepest_interference_frequency_hz": 192.62695,
+            "clean_to_convolved_at_deepest_db": 2.97595,
+            "phase_at_deepest_degrees": 65.04741,
+            "minimum_sum_vs_convolved_db": 4.95665,
+            "minimum_sum_vs_convolved_frequency_hz": 190.06348,
+            "low_bass_rms_change_db": 1.76199
+          }
+        }
+      },
+      "direct_cross": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 53.0,
+            "gain_adjustment_db": 1.0,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": -41.0,
+            "gain_adjustment_db": 1.75,
+            "polarity": 1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -4.1629,
+          "tenth_percentile_interference_db": -1.98576,
+          "maximum_low_bass_rms_change_db": 1.89009,
+          "minimum_sum_vs_convolved_db": 2.62848
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -4.1629,
+            "deepest_interference_frequency_hz": 112.79297,
+            "clean_to_convolved_at_deepest_db": 11.60883,
+            "phase_at_deepest_degrees": -175.72213,
+            "minimum_sum_vs_convolved_db": 3.10588,
+            "minimum_sum_vs_convolved_frequency_hz": 195.92285,
+            "low_bass_rms_change_db": 1.89009
+          },
+          "LR": {
+            "deepest_interference_db": -3.55567,
+            "deepest_interference_frequency_hz": 118.65234,
+            "clean_to_convolved_at_deepest_db": 11.79986,
+            "phase_at_deepest_degrees": -151.55337,
+            "minimum_sum_vs_convolved_db": 6.99924,
+            "minimum_sum_vs_convolved_frequency_hz": 162.59766,
+            "low_bass_rms_change_db": 1.7514
+          },
+          "RL": {
+            "deepest_interference_db": -3.56391,
+            "deepest_interference_frequency_hz": 126.34277,
+            "clean_to_convolved_at_deepest_db": 12.826,
+            "phase_at_deepest_degrees": 178.64373,
+            "minimum_sum_vs_convolved_db": 5.24888,
+            "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+            "low_bass_rms_change_db": 1.77715
+          },
+          "RR": {
+            "deepest_interference_db": -4.08336,
+            "deepest_interference_frequency_hz": 192.62695,
+            "clean_to_convolved_at_deepest_db": 2.97595,
+            "phase_at_deepest_degrees": 105.43305,
+            "minimum_sum_vs_convolved_db": 2.62848,
+            "minimum_sum_vs_convolved_frequency_hz": 191.16211,
+            "low_bass_rms_change_db": 1.82913
+          }
+        }
+      }
+    },
+    {
+      "tolerance_db": 3.0,
+      "shared": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 81.0,
+            "gain_adjustment_db": 2.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": 81.0,
+            "gain_adjustment_db": 2.25,
+            "polarity": -1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -3.7408,
+          "tenth_percentile_interference_db": -0.8392,
+          "maximum_low_bass_rms_change_db": 2.9678,
+          "minimum_sum_vs_convolved_db": 5.27358
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -3.73166,
+            "deepest_interference_frequency_hz": 113.8916,
+            "clean_to_convolved_at_deepest_db": 12.56826,
+            "phase_at_deepest_degrees": -166.04682,
+            "minimum_sum_vs_convolved_db": 5.44392,
+            "minimum_sum_vs_convolved_frequency_hz": 194.45801,
+            "low_bass_rms_change_db": 2.9678
+          },
+          "LR": {
+            "deepest_interference_db": -2.47251,
+            "deepest_interference_frequency_hz": 116.82129,
+            "clean_to_convolved_at_deepest_db": 13.37741,
+            "phase_at_deepest_degrees": 178.49643,
+            "minimum_sum_vs_convolved_db": 7.18079,
+            "minimum_sum_vs_convolved_frequency_hz": 164.42871,
+            "low_bass_rms_change_db": 2.55011
+          },
+          "RL": {
+            "deepest_interference_db": -3.7408,
+            "deepest_interference_frequency_hz": 124.51172,
+            "clean_to_convolved_at_deepest_db": 12.0292,
+            "phase_at_deepest_degrees": 170.58992,
+            "minimum_sum_vs_convolved_db": 5.27358,
+            "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+            "low_bass_rms_change_db": 2.63741
+          },
+          "RR": {
+            "deepest_interference_db": -1.41459,
+            "deepest_interference_frequency_hz": 192.62695,
+            "clean_to_convolved_at_deepest_db": 4.22595,
+            "phase_at_deepest_degrees": 65.04741,
+            "minimum_sum_vs_convolved_db": 5.59031,
+            "minimum_sum_vs_convolved_frequency_hz": 190.06348,
+            "low_bass_rms_change_db": 2.88777
+          }
+        }
+      },
+      "direct_cross": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 62.0,
+            "gain_adjustment_db": 2.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": -42.0,
+            "gain_adjustment_db": 2.75,
+            "polarity": 1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -3.62288,
+          "tenth_percentile_interference_db": -1.61991,
+          "maximum_low_bass_rms_change_db": 2.99869,
+          "minimum_sum_vs_convolved_db": 4.29112
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -3.62288,
+            "deepest_interference_frequency_hz": 113.15918,
+            "clean_to_convolved_at_deepest_db": 12.82839,
+            "phase_at_deepest_degrees": -171.87347,
+            "minimum_sum_vs_convolved_db": 4.46218,
+            "minimum_sum_vs_convolved_frequency_hz": 195.19043,
+            "low_bass_rms_change_db": 2.99869
+          },
+          "LR": {
+            "deepest_interference_db": -3.17562,
+            "deepest_interference_frequency_hz": 118.65234,
+            "clean_to_convolved_at_deepest_db": 12.79986,
+            "phase_at_deepest_degrees": -150.66247,
+            "minimum_sum_vs_convolved_db": 7.59382,
+            "minimum_sum_vs_convolved_frequency_hz": 162.96387,
+            "low_bass_rms_change_db": 2.77363
+          },
+          "RL": {
+            "deepest_interference_db": -3.18625,
+            "deepest_interference_frequency_hz": 126.34277,
+            "clean_to_convolved_at_deepest_db": 13.826,
+            "phase_at_deepest_degrees": 179.59244,
+            "minimum_sum_vs_convolved_db": 5.80627,
+            "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+            "low_bass_rms_change_db": 2.80133
+          },
+          "RR": {
+            "deepest_interference_db": -2.92693,
+            "deepest_interference_frequency_hz": 192.62695,
+            "clean_to_convolved_at_deepest_db": 4.22595,
+            "phase_at_deepest_degrees": 92.45195,
+            "minimum_sum_vs_convolved_db": 4.29112,
+            "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+            "low_bass_rms_change_db": 2.92867
+          }
+        }
+      }
+    },
+    {
+      "tolerance_db": 4.0,
+      "shared": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 82.0,
+            "gain_adjustment_db": 3.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": 82.0,
+            "gain_adjustment_db": 3.25,
+            "polarity": -1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -3.3419,
+          "tenth_percentile_interference_db": -0.76308,
+          "maximum_low_bass_rms_change_db": 3.91134,
+          "minimum_sum_vs_convolved_db": 5.98275
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -3.34102,
+            "deepest_interference_frequency_hz": 113.8916,
+            "clean_to_convolved_at_deepest_db": 13.56826,
+            "phase_at_deepest_degrees": -166.90127,
+            "minimum_sum_vs_convolved_db": 5.98275,
+            "minimum_sum_vs_convolved_frequency_hz": 194.45801,
+            "low_bass_rms_change_db": 3.91134
+          },
+          "LR": {
+            "deepest_interference_db": -2.22745,
+            "deepest_interference_frequency_hz": 116.82129,
+            "clean_to_convolved_at_deepest_db": 14.37741,
+            "phase_at_deepest_degrees": 177.62025,
+            "minimum_sum_vs_convolved_db": 7.79837,
+            "minimum_sum_vs_convolved_frequency_hz": 164.42871,
+            "low_bass_rms_change_db": 3.52306
+          },
+          "RL": {
+            "deepest_interference_db": -3.3419,
+            "deepest_interference_frequency_hz": 124.51172,
+            "clean_to_convolved_at_deepest_db": 13.0292,
+            "phase_at_deepest_degrees": 169.65638,
+            "minimum_sum_vs_convolved_db": 6.00379,
+            "minimum_sum_vs_convolved_frequency_hz": 190.42969,
+            "low_bass_rms_change_db": 3.60762
+          },
+          "RR": {
+            "deepest_interference_db": -1.30287,
+            "deepest_interference_frequency_hz": 192.62695,
+            "clean_to_convolved_at_deepest_db": 5.22595,
+            "phase_at_deepest_degrees": 63.60507,
+            "minimum_sum_vs_convolved_db": 6.18157,
+            "minimum_sum_vs_convolved_frequency_hz": 190.06348,
+            "low_bass_rms_change_db": 3.83468
+          }
+        }
+      },
+      "direct_cross": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 61.0,
+            "gain_adjustment_db": 3.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": -42.0,
+            "gain_adjustment_db": 3.75,
+            "polarity": 1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -3.22947,
+          "tenth_percentile_interference_db": -1.5385,
+          "maximum_low_bass_rms_change_db": 3.94176,
+          "minimum_sum_vs_convolved_db": 4.80214
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -3.22947,
+            "deepest_interference_frequency_hz": 113.15918,
+            "clean_to_convolved_at_deepest_db": 13.82839,
+            "phase_at_deepest_degrees": -171.02475,
+            "minimum_sum_vs_convolved_db": 4.91215,
+            "minimum_sum_vs_convolved_frequency_hz": 195.19043,
+            "low_bass_rms_change_db": 3.94176
+          },
+          "LR": {
+            "deepest_interference_db": -2.84929,
+            "deepest_interference_frequency_hz": 118.65234,
+            "clean_to_convolved_at_deepest_db": 13.79986,
+            "phase_at_deepest_degrees": -150.66247,
+            "minimum_sum_vs_convolved_db": 8.20221,
+            "minimum_sum_vs_convolved_frequency_hz": 162.96387,
+            "low_bass_rms_change_db": 3.79395
+          },
+          "RL": {
+            "deepest_interference_db": -2.84655,
+            "deepest_interference_frequency_hz": 126.34277,
+            "clean_to_convolved_at_deepest_db": 14.826,
+            "phase_at_deepest_degrees": 179.59244,
+            "minimum_sum_vs_convolved_db": 6.46814,
+            "minimum_sum_vs_convolved_frequency_hz": 190.42969,
+            "low_bass_rms_change_db": 3.823
+          },
+          "RR": {
+            "deepest_interference_db": -2.90816,
+            "deepest_interference_frequency_hz": 192.26074,
+            "clean_to_convolved_at_deepest_db": 4.43814,
+            "phase_at_deepest_degrees": 92.14825,
+            "minimum_sum_vs_convolved_db": 4.80214,
+            "minimum_sum_vs_convolved_frequency_hz": 190.7959,
+            "low_bass_rms_change_db": 3.87455
+          }
+        }
+      }
+    },
+    {
+      "tolerance_db": 5.0,
+      "shared": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 82.0,
+            "gain_adjustment_db": 4.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": 82.0,
+            "gain_adjustment_db": 4.25,
+            "polarity": -1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -2.98907,
+          "tenth_percentile_interference_db": -0.71774,
+          "maximum_low_bass_rms_change_db": 4.87257,
+          "minimum_sum_vs_convolved_db": 6.51828
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -2.98287,
+            "deepest_interference_frequency_hz": 113.8916,
+            "clean_to_convolved_at_deepest_db": 14.56826,
+            "phase_at_deepest_degrees": -166.90127,
+            "minimum_sum_vs_convolved_db": 6.51828,
+            "minimum_sum_vs_convolved_frequency_hz": 194.0918,
+            "low_bass_rms_change_db": 4.87257
+          },
+          "LR": {
+            "deepest_interference_db": -2.00424,
+            "deepest_interference_frequency_hz": 116.82129,
+            "clean_to_convolved_at_deepest_db": 15.37741,
+            "phase_at_deepest_degrees": 177.62025,
+            "minimum_sum_vs_convolved_db": 8.42374,
+            "minimum_sum_vs_convolved_frequency_hz": 164.42871,
+            "low_bass_rms_change_db": 4.50816
+          },
+          "RL": {
+            "deepest_interference_db": -2.98907,
+            "deepest_interference_frequency_hz": 124.51172,
+            "clean_to_convolved_at_deepest_db": 14.0292,
+            "phase_at_deepest_degrees": 169.65638,
+            "minimum_sum_vs_convolved_db": 6.68511,
+            "minimum_sum_vs_convolved_frequency_hz": 190.42969,
+            "low_bass_rms_change_db": 4.58894
+          },
+          "RR": {
+            "deepest_interference_db": -1.24755,
+            "deepest_interference_frequency_hz": 192.62695,
+            "clean_to_convolved_at_deepest_db": 6.22595,
+            "phase_at_deepest_degrees": 63.60507,
+            "minimum_sum_vs_convolved_db": 6.75646,
+            "minimum_sum_vs_convolved_frequency_hz": 189.69727,
+            "low_bass_rms_change_db": 4.80036
+          }
+        }
+      },
+      "direct_cross": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 61.0,
+            "gain_adjustment_db": 4.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": 147.0,
+            "gain_adjustment_db": 4.75,
+            "polarity": -1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -2.88297,
+          "tenth_percentile_interference_db": -1.5427,
+          "maximum_low_bass_rms_change_db": 4.99207,
+          "minimum_sum_vs_convolved_db": 5.43793
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -2.88297,
+            "deepest_interference_frequency_hz": 113.15918,
+            "clean_to_convolved_at_deepest_db": 14.82839,
+            "phase_at_deepest_degrees": -171.02475,
+            "minimum_sum_vs_convolved_db": 5.47417,
+            "minimum_sum_vs_convolved_frequency_hz": 194.82422,
+            "low_bass_rms_change_db": 4.89968
+          },
+          "LR": {
+            "deepest_interference_db": -2.51554,
+            "deepest_interference_frequency_hz": 159.66797,
+            "clean_to_convolved_at_deepest_db": 8.13949,
+            "phase_at_deepest_degrees": -95.23818,
+            "minimum_sum_vs_convolved_db": 7.29001,
+            "minimum_sum_vs_convolved_frequency_hz": 161.86523,
+            "low_bass_rms_change_db": 4.90548
+          },
+          "RL": {
+            "deepest_interference_db": -2.56723,
+            "deepest_interference_frequency_hz": 126.34277,
+            "clean_to_convolved_at_deepest_db": 15.826,
+            "phase_at_deepest_degrees": -179.71133,
+            "minimum_sum_vs_convolved_db": 6.61065,
+            "minimum_sum_vs_convolved_frequency_hz": 167.72461,
+            "low_bass_rms_change_db": 4.99207
+          },
+          "RR": {
+            "deepest_interference_db": -2.77533,
+            "deepest_interference_frequency_hz": 192.26074,
+            "clean_to_convolved_at_deepest_db": 5.43814,
+            "phase_at_deepest_degrees": 92.14825,
+            "minimum_sum_vs_convolved_db": 5.43793,
+            "minimum_sum_vs_convolved_frequency_hz": 190.42969,
+            "low_bass_rms_change_db": 4.83563
+          }
+        }
+      }
+    },
+    {
+      "tolerance_db": 6.0,
+      "shared": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 83.0,
+            "gain_adjustment_db": 5.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": 83.0,
+            "gain_adjustment_db": 5.25,
+            "polarity": -1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -2.669,
+          "tenth_percentile_interference_db": -0.64635,
+          "maximum_low_bass_rms_change_db": 5.84143,
+          "minimum_sum_vs_convolved_db": 7.1109
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -2.669,
+            "deepest_interference_frequency_hz": 113.8916,
+            "clean_to_convolved_at_deepest_db": 15.56826,
+            "phase_at_deepest_degrees": -167.75572,
+            "minimum_sum_vs_convolved_db": 7.1109,
+            "minimum_sum_vs_convolved_frequency_hz": 194.0918,
+            "low_bass_rms_change_db": 5.84143
+          },
+          "LR": {
+            "deepest_interference_db": -1.80159,
+            "deepest_interference_frequency_hz": 116.82129,
+            "clean_to_convolved_at_deepest_db": 16.37741,
+            "phase_at_deepest_degrees": 176.74408,
+            "minimum_sum_vs_convolved_db": 9.09561,
+            "minimum_sum_vs_convolved_frequency_hz": 164.42871,
+            "low_bass_rms_change_db": 5.49678
+          },
+          "RL": {
+            "deepest_interference_db": -2.66851,
+            "deepest_interference_frequency_hz": 124.51172,
+            "clean_to_convolved_at_deepest_db": 15.0292,
+            "phase_at_deepest_degrees": 168.72285,
+            "minimum_sum_vs_convolved_db": 7.46283,
+            "minimum_sum_vs_convolved_frequency_hz": 190.06348,
+            "low_bass_rms_change_db": 5.57394
+          },
+          "RR": {
+            "deepest_interference_db": -1.13499,
+            "deepest_interference_frequency_hz": 192.62695,
+            "clean_to_convolved_at_deepest_db": 7.22595,
+            "phase_at_deepest_degrees": 62.16273,
+            "minimum_sum_vs_convolved_db": 7.39836,
+            "minimum_sum_vs_convolved_frequency_hz": 189.69727,
+            "low_bass_rms_change_db": 5.77325
+          }
+        }
+      },
+      "direct_cross": {
+        "controls": {
+          "direct": {
+            "delay_adjustment_samples": 62.0,
+            "gain_adjustment_db": 5.25,
+            "polarity": -1
+          },
+          "cross": {
+            "delay_adjustment_samples": 146.0,
+            "gain_adjustment_db": 5.75,
+            "polarity": -1
+          }
+        },
+        "metrics": {
+          "deepest_interference_db": -2.57704,
+          "tenth_percentile_interference_db": -1.40037,
+          "maximum_low_bass_rms_change_db": 5.99159,
+          "minimum_sum_vs_convolved_db": 6.13716
+        },
+        "paths": {
+          "LL": {
+            "deepest_interference_db": -2.57704,
+            "deepest_interference_frequency_hz": 113.15918,
+            "clean_to_convolved_at_deepest_db": 15.82839,
+            "phase_at_deepest_degrees": -171.87347,
+            "minimum_sum_vs_convolved_db": 6.13716,
+            "minimum_sum_vs_convolved_frequency_hz": 194.82422,
+            "low_bass_rms_change_db": 5.86585
+          },
+          "LR": {
+            "deepest_interference_db": -2.28658,
+            "deepest_interference_frequency_hz": 159.66797,
+            "clean_to_convolved_at_deepest_db": 9.13949,
+            "phase_at_deepest_degrees": -94.03951,
+            "minimum_sum_vs_convolved_db": 8.11867,
+            "minimum_sum_vs_convolved_frequency_hz": 161.86523,
+            "low_bass_rms_change_db": 5.90986
+          },
+          "RL": {
+            "deepest_interference_db": -2.29317,
+            "deepest_interference_frequency_hz": 125.97656,
+            "clean_to_convolved_at_deepest_db": 16.46514,
+            "phase_at_deepest_degrees": 170.15485,
+            "minimum_sum_vs_convolved_db": 7.36892,
+            "minimum_sum_vs_convolved_frequency_hz": 168.09082,
+            "low_bass_rms_change_db": 5.99159
+          },
+          "RR": {
+            "deepest_interference_db": -2.5472,
+            "deepest_interference_frequency_hz": 192.26074,
+            "clean_to_convolved_at_deepest_db": 6.43814,
+            "phase_at_deepest_degrees": 90.70838,
+            "minimum_sum_vs_convolved_db": 6.1892,
+            "minimum_sum_vs_convolved_frequency_hz": 190.42969,
+            "low_bass_rms_change_db": 5.80477
+          }
+        }
+      }
+    }
+  ]
+}

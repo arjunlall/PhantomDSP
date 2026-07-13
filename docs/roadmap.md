@@ -27,7 +27,7 @@ New in-ear measurements are not required for the first pass. The existing BRIR W
 
 ### Evaluate Candidate Designs
 
-- [ ] Optimize clean-branch gain, polarity, and delay against all four BRIR paths rather than one averaged response.
+- [x] Optimize clean-branch gain, polarity, and delay against all four BRIR paths. The [constrained search](../measurements/bass-branches/optimization/report.md) improves but cannot meet the cancellation criterion without materially changing deep-bass level.
 - [ ] Test a complementary low-pass/high-pass crossover, including Linkwitz–Riley candidates.
 - [ ] Test spectral replacement: `new BRIR = high-frequency BRIR + low-frequency clean model` using complementary windows.
 - [ ] Compare minimum-phase, mixed-phase, and short-FIR crossover implementations.

@@ -1,4 +1,4 @@
-# Candidate B: 75 Hz handoff prioritizing cancellation reduction.
+# Candidate C: lower handoff intended to retain more BRIR spatial information.
 Channel: all
 Copy: LL=L LR=L RIL=R RIR=R LLLOW=L LRLOW=L RLLOW=R RRLOW=R
 
@@ -21,16 +21,16 @@ Delay: 10 samples
 Include: Channel Balance EQ.txt
 Include: EQ to JBL M2 - LR4 bass crossover.txt
 
-# Two cascaded second-order Butterworth filters form the 75 Hz LR4 high-pass.
+# Two cascaded second-order Butterworth filters form the 65 Hz LR4 high-pass.
 Channel: LL LR RIL RIR
-Filter: ON HP Fc 75 Hz Q 0.7071
-Filter: ON HP Fc 75 Hz Q 0.7071
+Filter: ON HP Fc 65 Hz Q 0.7071
+Filter: ON HP Fc 65 Hz Q 0.7071
 
 # Complementary clean-bass low-pass, using the existing direct/cross delays.
 Channel: LLLOW LRLOW RLLOW RRLOW
-Filter: ON LP Fc 75 Hz Q 0.7071
-Filter: ON LP Fc 75 Hz Q 0.7071
-Preamp: -14.75 dB
+Filter: ON LP Fc 65 Hz Q 0.7071
+Filter: ON LP Fc 65 Hz Q 0.7071
+Preamp: -15 dB
 Delay: 100 samples
 Channel: LRLOW RLLOW
 Delay: 15 samples
@@ -43,7 +43,7 @@ Include: ..\tools\measurement\equalizerapo\bass-branch-output.txt
 
 # Broad shared match to preserve the legacy 25-250 Hz tonal balance.
 Channel: L R
-Filter: ON PK Fc 165.2 Hz Gain 6.47 dB Q 1.088
+Filter: ON PK Fc 145.5 Hz Gain 5.8 dB Q 0.655
 
 Channel: all
 Include: Post Channel Addition Channel Balance EQ.txt

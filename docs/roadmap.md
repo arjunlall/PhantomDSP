@@ -28,7 +28,7 @@ New in-ear measurements are not required for the first pass. The existing BRIR W
 ### Evaluate Candidate Designs
 
 - [x] Optimize clean-branch gain, polarity, and delay against all four BRIR paths. The [constrained search](../measurements/bass-branches/optimization/report.md) improves but cannot meet the cancellation criterion without materially changing deep-bass level.
-- [x] Model complementary low-pass/high-pass candidates. A shared 75 Hz LR4 handoff with one broad tonal-match filter is now available as an opt-in A/B preset.
+- [x] Model complementary low-pass/high-pass candidates. The selector now provides the legacy reference, a 75 Hz LR4 cancellation-focused candidate, and a 65 Hz LR4 candidate intended to retain more BRIR spatial information.
 - [ ] Test spectral replacement: `new BRIR = high-frequency BRIR + low-frequency clean model` using complementary windows.
 - [ ] Compare minimum-phase, mixed-phase, and short-FIR crossover implementations.
 - [x] Use one shared bass handoff for the first listening candidate; modeled channel-specific refinements were too small to justify their complexity.

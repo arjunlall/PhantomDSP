@@ -1,5 +1,5 @@
 # This config file includes personalized left/right ear balancing for the HD800s
-Include: JBL M2 Binaural Convolution\Bass Crossover A-B.txt
+Include: JBL M2 Binaural Convolution\Bass Crossover Selector.txt
 Include: Target Curve Macro Adjustments.txt
 # Device: Speakers JDS Labs DAC {2b6e4e78-a1ba-483a-9c56-8db31029a000}
 # Include: HD800s EQ - Back\Flatten HD800s at DRP v2.txt

@@ -2,15 +2,21 @@ param(
     [string]$BenchmarkPath = "$env:ProgramFiles\EqualizerAPO\Benchmark.exe",
     [string]$BaseDeviceName = "Output A1 Voicemeeter",
     [double]$ProbeAmplitudeDbfs = 0.0,
-    [string]$OutputRoot = ""
+    [string]$OutputRoot = "",
+    [string]$CombinedReferenceDirectory = "",
+    [string]$CaptureLabel = ""
 )
 
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $CaptureScript = Join-Path $PSScriptRoot "run_eapo_baseline.ps1"
+$ReferenceWasExplicit = -not [string]::IsNullOrWhiteSpace($CombinedReferenceDirectory)
 
 if ([string]::IsNullOrWhiteSpace($OutputRoot)) {
     $OutputRoot = Join-Path $RepoRoot "measurements\bass-branches\raw"
+}
+if ([string]::IsNullOrWhiteSpace($CombinedReferenceDirectory)) {
+    $CombinedReferenceDirectory = Join-Path $RepoRoot "measurements\digital-baseline\raw"
 }
 
 $Captures = @(
@@ -22,6 +28,10 @@ $Captures = @(
 foreach ($Capture in $Captures) {
     $OutputDirectory = Join-Path $OutputRoot $Capture.Name
     $DeviceName = "$BaseDeviceName $($Capture.Suffix)"
+    $BranchCaptureLabel = "bass branches: $($Capture.Name)"
+    if (-not [string]::IsNullOrWhiteSpace($CaptureLabel)) {
+        $BranchCaptureLabel = "$CaptureLabel / $($Capture.Name)"
+    }
 
     Write-Host ""
     Write-Host "Capturing $($Capture.Name) branch with device name: $DeviceName"
@@ -30,31 +40,33 @@ foreach ($Capture in $Captures) {
         -DeviceName $DeviceName `
         -ProbeAmplitudeDbfs $ProbeAmplitudeDbfs `
         -OutputDirectory $OutputDirectory `
+        -CaptureLabel $BranchCaptureLabel `
         -SkipHeadroomSweep
 }
 
-$BaselineDirectory = Join-Path $RepoRoot "measurements\digital-baseline\raw"
 $CombinedDirectory = Join-Path $OutputRoot "combined"
-$BaselineCompared = $true
+$ReferenceCompared = $true
 foreach ($OutputFile in @("left-output.wav", "right-output.wav")) {
-    $BaselineFile = Join-Path $BaselineDirectory $OutputFile
+    $ReferenceFile = Join-Path $CombinedReferenceDirectory $OutputFile
     $CombinedFile = Join-Path $CombinedDirectory $OutputFile
-    if ((Test-Path $BaselineFile -PathType Leaf) -and (Test-Path $CombinedFile -PathType Leaf)) {
-        $BaselineHash = (Get-FileHash $BaselineFile -Algorithm SHA256).Hash
+    if ((Test-Path $ReferenceFile -PathType Leaf) -and (Test-Path $CombinedFile -PathType Leaf)) {
+        $ReferenceHash = (Get-FileHash $ReferenceFile -Algorithm SHA256).Hash
         $CombinedHash = (Get-FileHash $CombinedFile -Algorithm SHA256).Hash
-        if ($BaselineHash -ne $CombinedHash) {
-            throw "Combined $OutputFile does not match the checked-in digital baseline. Do not commit this capture until the configuration difference is understood."
+        if ($ReferenceHash -ne $CombinedHash) {
+            throw "Combined $OutputFile does not match the reference capture at $CombinedReferenceDirectory. Do not commit this capture until the configuration difference is understood."
         }
     } else {
-        $BaselineCompared = $false
+        $ReferenceCompared = $false
     }
 }
 
 Write-Host ""
 Write-Host "Bass branch capture complete: $OutputRoot"
-if ($BaselineCompared) {
-    Write-Host "The combined capture matches the checked-in digital baseline."
+if ($ReferenceCompared) {
+    Write-Host "The combined capture matches the reference capture at $CombinedReferenceDirectory."
+} elseif ($ReferenceWasExplicit) {
+    throw "The explicit reference capture at $CombinedReferenceDirectory is incomplete or unavailable."
 } else {
-    Write-Warning "The checked-in digital baseline was unavailable, so the combined capture was not compared."
+    Write-Warning "The reference capture was unavailable, so the combined capture was not compared."
 }
 Write-Host "Commit the raw directory, then run analyze_bass_branches.py on macOS."

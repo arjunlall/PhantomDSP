@@ -64,7 +64,8 @@ The runner and analyzer accept alternate directories, allowing bass and latency 
 
 ```powershell
 .\tools\measurement\run_eapo_baseline.ps1 `
-  -OutputDirectory ".\measurements\candidates\advance-196\raw"
+  -OutputDirectory ".\measurements\candidates\advance-196\raw" `
+  -CaptureLabel "advance-196"
 ```
 
 ```bash
@@ -72,3 +73,5 @@ python3 tools/measurement/analyze_baseline.py \
   --input-dir measurements/candidates/advance-196/raw \
   --output-dir measurements/candidates/advance-196/analysis
 ```
+
+When present, the runner copies the active `Bass Crossover Selector.txt` into the raw directory and records its SHA-256 hash in `benchmark.log`. This preserves the exact temporary A/B/C selection even when the selector is restored before committing the capture.

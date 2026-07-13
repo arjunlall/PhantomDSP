@@ -3,6 +3,7 @@ param(
     [string]$DeviceName = "Output A1 Voicemeeter",
     [double]$ProbeAmplitudeDbfs = 0.0,
     [string]$OutputDirectory = "",
+    [string]$CaptureLabel = "",
     [switch]$SkipHeadroomSweep
 )
 
@@ -70,14 +71,33 @@ if ((Test-Path $InstalledConfig) -and (Test-Path $RepoConfig)) {
     }
 }
 
+$RecordedCaptureLabel = "unspecified"
+if (-not [string]::IsNullOrWhiteSpace($CaptureLabel)) {
+    $RecordedCaptureLabel = $CaptureLabel
+}
+$InstalledConfigHash = "missing"
+if (Test-Path $InstalledConfig -PathType Leaf) {
+    $InstalledConfigHash = (Get-FileHash $InstalledConfig -Algorithm SHA256).Hash
+}
+$SelectorPath = Join-Path (Split-Path -Parent $InstalledConfig) "JBL M2 Binaural Convolution\Bass Crossover Selector.txt"
+$SelectorHash = "missing"
+if (Test-Path $SelectorPath -PathType Leaf) {
+    $SelectorHash = (Get-FileHash $SelectorPath -Algorithm SHA256).Hash
+    Copy-Item -Force $SelectorPath (Join-Path $OutputDirectory "active-bass-selector.txt")
+}
+
 $LogPath = Join-Path $OutputDirectory "benchmark.log"
 $Commit = Get-CheckoutCommit -RepositoryRoot $RepoRoot
 
 @(
     "PhantomDSP commit: $Commit"
+    "Capture label: $RecordedCaptureLabel"
     "Benchmark: $BenchmarkPath"
     "Device name: $DeviceName"
     "Installed config: $InstalledConfig"
+    "Installed config SHA256: $InstalledConfigHash"
+    "Bass selector: $SelectorPath"
+    "Bass selector SHA256: $SelectorHash"
     "Probe set: $ProbeSetName ($ProbeAmplitudeDbfs dBFS)"
     ""
 ) | Set-Content -Path $LogPath -Encoding UTF8

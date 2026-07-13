@@ -474,6 +474,8 @@ def write_report(path, summary):
         PATHS, key=lambda label: metrics[label]["deepest_interference_db"]
     )
     worst = metrics[worst_label]
+    clean_difference = worst["clean_to_convolved_at_deepest_interference_db"]
+    clean_relation = "above" if clean_difference >= 0.0 else "below"
     closure_values = [item["closure_rms_error_db"] for item in metrics.values()]
     minimum_sum = min(item["minimum_sum_vs_convolved_db"] for item in metrics.values())
     lines.extend(
@@ -481,8 +483,8 @@ def write_report(path, summary):
             "",
             "## Interpretation",
             "",
-            f"- {len(problem_paths)} of {len(PATHS)} paths exceed the planned 3 dB cancellation limit in the transition band, so the current bass blend does not meet the acceptance criterion.",
-            f"- The strongest cancellation is `{worst_label}` at {worst['deepest_interference_frequency_hz']:.1f} Hz: the clean branch is {worst['clean_to_convolved_at_deepest_interference_db']:.2f} dB above the convolved branch and their phase difference is {worst['phase_at_deepest_interference_degrees']:.1f}°.",
+            f"- {len(problem_paths)} of {len(PATHS)} paths exceed the planned 3 dB cancellation limit in the transition band, so the measured bass blend does not meet the acceptance criterion.",
+            f"- The strongest cancellation is `{worst_label}` at {worst['deepest_interference_frequency_hz']:.1f} Hz: the clean branch is {abs(clean_difference):.2f} dB {clean_relation} the convolved branch and their phase difference is {worst['phase_at_deepest_interference_degrees']:.1f}°.",
             f"- Vector-sum closure is {min(closure_values):.1f} to {max(closure_values):.1f} dB RMS, which supports the branch routing and cancellation diagnosis at the available 16-bit precision.",
         ]
     )

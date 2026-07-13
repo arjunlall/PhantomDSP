@@ -23,7 +23,7 @@ Interference compares the complex sum with the sum of branch magnitudes; 0 dB is
 
 ## Interpretation
 
-- 4 of 4 paths exceed the planned 3 dB cancellation limit in the transition band, so the current bass blend does not meet the acceptance criterion.
+- 4 of 4 paths exceed the planned 3 dB cancellation limit in the transition band, so the measured bass blend does not meet the acceptance criterion.
 - The strongest cancellation is `LL` at 118.7 Hz: the clean branch is 5.61 dB above the convolved branch and their phase difference is -169.8°.
 - Vector-sum closure is -36.8 to -33.9 dB RMS, which supports the branch routing and cancellation diagnosis at the available 16-bit precision.
 - After smoothing, the combined output remains above the convolved branch alone across the transition band. The issue is therefore lost and path-dependent boost, not necessarily a net notch below the original convolved response.

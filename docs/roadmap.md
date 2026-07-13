@@ -8,7 +8,7 @@ This roadmap prioritizes a reproducible digital baseline before changing the sou
 - [x] Record checksums, channel mappings, timing landmarks, and format metadata in the [active IR manifest](ir-manifest.md).
 - [x] Capture the active 2×2 digital transfer matrix through Equalizer APO Benchmark using checked-in probes.
 - [x] Preserve the raw Benchmark outputs and log, then generate [magnitude, phase, impulse-response, energy-decay, and practical headroom results](../measurements/digital-baseline/analysis/report.md).
-- [ ] Compare each bass or latency candidate with this baseline before auditioning it.
+- [x] Compare the 75 Hz and 65 Hz LR4 bass candidates with the digital baseline in the [candidate comparison](../measurements/candidates/bass-crossover-comparison.md).
 
 Success means the current digital renderer can be reproduced and candidate differences can be measured without reimplementing Equalizer APO. This baseline does not replace closed-loop acoustic validation through the headphones.
 

@@ -21,9 +21,9 @@ New in-ear measurements are not required for the first pass. The existing BRIR W
 ### Establish the Current Baseline
 
 - [x] Export the complete active response through Equalizer APO Benchmark at 48 kHz.
-- [ ] Isolate the convolved and clean-low branches for `LL`, `LR`, `RL`, and `RR`.
-- [ ] Plot complex magnitude, phase, group delay, and vector sum from 20–300 Hz.
-- [ ] Confirm the preliminary cancellation estimates, including the approximately 118–135 Hz transition problems.
+- [x] Isolate the convolved and clean-low branches for `LL`, `LR`, `RL`, and `RR`.
+- [x] Plot complex magnitude, phase, group delay, and vector sum from 20–300 Hz in the [bass branch analysis](../measurements/bass-branches/analysis/report.md).
+- [x] Confirm the preliminary cancellation estimates, including the approximately 118–135 Hz transition problems.
 
 ### Evaluate Candidate Designs
 

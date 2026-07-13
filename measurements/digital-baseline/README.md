@@ -15,10 +15,12 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 The runner:
 
-1. Generates deterministic 24-bit left-only and right-only impulse probes.
+1. Copies checked-in deterministic 24-bit left-only and right-only impulse probes.
 2. Passes both probes through `Benchmark.exe` using the device name `Output A1 Voicemeeter`.
 3. Runs a full-scale correlated-stereo sweep for a practical clipping and CPU check.
 4. Writes the retained artifacts under `measurements\digital-baseline\raw`.
+
+The Windows capture step does not require Python.
 
 Override local details when necessary:
 
@@ -28,7 +30,7 @@ Override local details when necessary:
   -BenchmarkPath "C:\Program Files\EqualizerAPO\Benchmark.exe"
 ```
 
-The default probe is effectively 0 dBFS to maximize signal-to-noise ratio in Benchmark's 16-bit output. This is offline processing and is not played through the audio device. If either impulse run reports clipped samples, repeat the capture with `-ProbeAmplitudeDbfs -6` or a lower value.
+The default probe is effectively 0 dBFS to maximize signal-to-noise ratio in Benchmark's 16-bit output. This is offline processing and is not played through the audio device. If either impulse run reports clipped samples, repeat the capture with `-ProbeAmplitudeDbfs -6` to select the included fallback probe. The runner accepts only the checked-in 0 and -6 dBFS sets.
 
 If the repository is not the installed Equalizer APO configuration, the script warns which `config.txt` Benchmark will actually process. Do not commit a capture until that path and the commit recorded in `benchmark.log` are correct.
 
@@ -53,6 +55,8 @@ The analyzer writes `measurements/digital-baseline/analysis/` containing:
 The four paths are `LL` and `LR` from the left-input capture, plus `RL` and `RR` from the right-input capture. All timing is reported relative to the known probe impulse at sample 1024.
 
 Equalizer APO Benchmark writes 16-bit output. The analyzer therefore reports −40 and −50 dB relative onsets; deeper low-level timing and decay can be quantization-limited on the quieter cross paths. Use the original 24-bit WAV analysis in `docs/ir-manifest.md` when deciding how much leading BRIR content can be removed.
+
+`tools/measurement/generate_probes.py` is retained for reproducibly rebuilding the checked-in probe assets during development; it is not needed for capture.
 
 ## Candidate Captures
 

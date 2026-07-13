@@ -7,7 +7,6 @@ param(
 
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-$Generator = Join-Path $PSScriptRoot "generate_probes.py"
 
 if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
     $OutputDirectory = Join-Path $RepoRoot "measurements\digital-baseline\raw"
@@ -17,21 +16,26 @@ if (-not (Test-Path $BenchmarkPath -PathType Leaf)) {
     throw "Equalizer APO Benchmark was not found at: $BenchmarkPath"
 }
 
-$Python = Get-Command py -ErrorAction SilentlyContinue
-$PythonArgs = @("-3")
-if ($null -eq $Python) {
-    $Python = Get-Command python -ErrorAction SilentlyContinue
-    $PythonArgs = @()
+if ($ProbeAmplitudeDbfs -eq 0.0) {
+    $ProbeSetName = "0dbfs"
+} elseif ($ProbeAmplitudeDbfs -eq -6.0) {
+    $ProbeSetName = "minus-6dbfs"
+} else {
+    throw "Checked-in probes support only 0 or -6 dBFS. Use -ProbeAmplitudeDbfs 0 or -ProbeAmplitudeDbfs -6."
 }
-if ($null -eq $Python) {
-    throw "Python 3 was not found. Install Python or run generate_probes.py on another machine first."
+
+$ProbeDirectory = Join-Path $PSScriptRoot "probes\$ProbeSetName"
+$ProbeFiles = @("left-input.wav", "right-input.wav", "probe-metadata.json")
+foreach ($ProbeFile in $ProbeFiles) {
+    $ProbePath = Join-Path $ProbeDirectory $ProbeFile
+    if (-not (Test-Path $ProbePath -PathType Leaf)) {
+        throw "Checked-in probe file was not found: $ProbePath"
+    }
 }
-$PythonPath = $Python.Source
 
 New-Item -ItemType Directory -Force -Path $OutputDirectory | Out-Null
-& $PythonPath @PythonArgs $Generator --output-dir $OutputDirectory --amplitude-dbfs $ProbeAmplitudeDbfs
-if ($LASTEXITCODE -ne 0) {
-    throw "Probe generation failed with exit code $LASTEXITCODE"
+foreach ($ProbeFile in $ProbeFiles) {
+    Copy-Item -Force (Join-Path $ProbeDirectory $ProbeFile) (Join-Path $OutputDirectory $ProbeFile)
 }
 
 $InstalledConfig = Join-Path (Split-Path -Parent $BenchmarkPath) "config\config.txt"
@@ -55,6 +59,7 @@ if ($LASTEXITCODE -ne 0) {
     "Benchmark: $BenchmarkPath"
     "Device name: $DeviceName"
     "Installed config: $InstalledConfig"
+    "Probe set: $ProbeSetName ($ProbeAmplitudeDbfs dBFS)"
     ""
 ) | Set-Content -Path $LogPath -Encoding UTF8
 

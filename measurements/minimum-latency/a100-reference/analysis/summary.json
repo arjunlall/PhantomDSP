@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "sample_rate_hz": 48000,
+  "response_length_samples": 94976,
+  "nfft": 131072,
+  "downstream_crosstalk_db": -180.0,
+  "deembedded_branch_closure_rms_db": -38.937677,
+  "deembedded_branch_closure_rms_db_by_band": {
+    "20_80_hz": -30.647828,
+    "20_300_hz": -29.792354,
+    "20_20000_hz": -38.937677
+  },
+  "paths": {
+    "LL": {
+      "peak_sample": 142,
+      "peak_time_ms": 2.958333,
+      "onset_minus_40_db_sample": 34,
+      "onset_minus_60_db_sample": 2
+    },
+    "LR": {
+      "peak_sample": 154,
+      "peak_time_ms": 3.208333,
+      "onset_minus_40_db_sample": 21,
+      "onset_minus_60_db_sample": 16
+    },
+    "RL": {
+      "peak_sample": 155,
+      "peak_time_ms": 3.229167,
+      "onset_minus_40_db_sample": 21,
+      "onset_minus_60_db_sample": 16
+    },
+    "RR": {
+      "peak_sample": 141,
+      "peak_time_ms": 2.9375,
+      "onset_minus_40_db_sample": 32,
+      "onset_minus_60_db_sample": 2
+    }
+  },
+  "capture_headers": {
+    "combined": {
+      "commit": "dbdf5d17b125034c50d977935ca9854287f70f1f",
+      "device_name": "Output A1 Voicemeeter PhantomDSP Bass Combined",
+      "installed_config": "C:\\Program Files\\EqualizerAPO\\config\\config.txt",
+      "probe_set": "minus-6dbfs (-6 dBFS)"
+    },
+    "convolved": {
+      "commit": "dbdf5d17b125034c50d977935ca9854287f70f1f",
+      "device_name": "Output A1 Voicemeeter PhantomDSP Bass Convolved",
+      "installed_config": "C:\\Program Files\\EqualizerAPO\\config\\config.txt",
+      "probe_set": "minus-6dbfs (-6 dBFS)"
+    },
+    "clean": {
+      "commit": "dbdf5d17b125034c50d977935ca9854287f70f1f",
+      "device_name": "Output A1 Voicemeeter PhantomDSP Bass Clean",
+      "installed_config": "C:\\Program Files\\EqualizerAPO\\config\\config.txt",
+      "probe_set": "minus-6dbfs (-6 dBFS)"
+    },
+    "downstream": {
+      "commit": "dbdf5d17b125034c50d977935ca9854287f70f1f",
+      "device_name": "Output A1 Voicemeeter PhantomDSP Bass Downstream",
+      "installed_config": "C:\\Program Files\\EqualizerAPO\\config\\config.txt",
+      "probe_set": "minus-6dbfs (-6 dBFS)"
+    }
+  },
+  "capture_runtime": {
+    "combined": {
+      "clipped_samples": 0,
+      "maximum_cpu_load_one_core_percent": 3.27
+    },
+    "convolved": {
+      "clipped_samples": 0,
+      "maximum_cpu_load_one_core_percent": 3.29
+    },
+    "clean": {
+      "clipped_samples": 0,
+      "maximum_cpu_load_one_core_percent": 3.28
+    },
+    "downstream": {
+      "clipped_samples": 0,
+      "maximum_cpu_load_one_core_percent": 0.43
+    }
+  }
+}

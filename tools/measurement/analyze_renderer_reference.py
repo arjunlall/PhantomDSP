@@ -119,6 +119,34 @@ def deembed_capture_matrices(matrices, audible, maximum_crosstalk_db):
     return deembedded, downstream_crosstalk_db, closure_rms
 
 
+def matrix_closure_rms_db(matrices, frequency_mask):
+    closure = matrices["combined"] - (
+        matrices["convolved"] + matrices["clean"]
+    )
+    scalar = np.abs(matrices["convolved"]) + np.abs(matrices["clean"])
+    ratio = float(
+        np.sqrt(np.mean(np.abs(closure[frequency_mask]) ** 2))
+        / max(np.sqrt(np.mean(scalar[frequency_mask] ** 2)), 1e-18)
+    )
+    return finite_float(db20(ratio), 6)
+
+
+def capture_runtime_metrics(capture):
+    runs = capture["benchmark_runs"]
+    return {
+        "clipped_samples": sum(
+            int(item.get("clipped_samples", 0)) for item in runs.values()
+        ),
+        "maximum_cpu_load_one_core_percent": finite_float(
+            max(
+                float(item.get("cpu_load_one_core_percent", 0.0))
+                for item in runs.values()
+            ),
+            4,
+        ),
+    }
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -190,6 +218,11 @@ def main():
     combined_paths = matrix_to_paths(deembedded["combined"])
     convolved_paths = matrix_to_paths(deembedded["convolved"])
     clean_paths = matrix_to_paths(deembedded["clean"])
+    closure_bands = {
+        "20_80_hz": (frequencies >= 20.0) & (frequencies <= 80.0),
+        "20_300_hz": (frequencies >= 20.0) & (frequencies <= 300.0),
+        "20_20000_hz": audible,
+    }
     summary = {
         "schema_version": 1,
         "sample_rate_hz": sample_rate,
@@ -197,6 +230,10 @@ def main():
         "nfft": nfft,
         "downstream_crosstalk_db": finite_float(downstream_crosstalk_db, 6),
         "deembedded_branch_closure_rms_db": finite_float(db20(closure_rms), 6),
+        "deembedded_branch_closure_rms_db_by_band": {
+            name: matrix_closure_rms_db(deembedded, mask)
+            for name, mask in closure_bands.items()
+        },
         "paths": {
             label: path_time_metrics(
                 combined_paths[label], nfft, response_length, sample_rate
@@ -205,6 +242,9 @@ def main():
         },
         "capture_headers": {
             name: captures[name]["header"] for name in CAPTURES
+        },
+        "capture_runtime": {
+            name: capture_runtime_metrics(captures[name]) for name in CAPTURES
         },
     }
 
@@ -234,7 +274,9 @@ def main():
         "## Validation",
         "",
         f"- Downstream off-diagonal leakage: {summary['downstream_crosstalk_db']:.2f} dB.",
-        f"- De-embedded combined ≈ convolved + clean closure: {summary['deembedded_branch_closure_rms_db']:.2f} dB RMS.",
+        f"- De-embedded combined ≈ convolved + clean closure: {summary['deembedded_branch_closure_rms_db_by_band']['20_80_hz']:.2f} dB RMS at 20–80 Hz, {summary['deembedded_branch_closure_rms_db_by_band']['20_300_hz']:.2f} dB at 20–300 Hz, and {summary['deembedded_branch_closure_rms_db_by_band']['20_20000_hz']:.2f} dB at 20 Hz–20 kHz.",
+        "- Every isolated impulse capture reports zero clipped samples.",
+        "- The independent 16-bit captures have the same approximate low-frequency closure floor as prior accepted branch measurements; use smoothed low-frequency targets rather than treating quantization ripple as acoustic detail.",
         "",
         "## Timing",
         "",

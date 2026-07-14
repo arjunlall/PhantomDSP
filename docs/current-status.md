@@ -33,9 +33,8 @@ Select exactly one uncommented `Include:` line and lower playback volume before 
 Resume sequence:
 
 1. Keep A100 as the daily renderer and A0 as the reference fallback.
-2. On Windows, run `tools\measurement\run_eapo_renderer_reference.ps1`. It captures A100 plus a renderer-bypassed downstream matrix so target/headphone/personal EQ can be removed from the design reference.
-3. Commit and push `measurements\minimum-latency\a100-reference\raw`, then run `tools/measurement/analyze_renderer_reference.py` on macOS.
-4. Build a single 2×2 hybrid BRIR: clean room-regularized extension below the transition, original BRIR spatial information through upper bass and above, and a common 200-sample advance with no parallel clean branch.
-5. Benchmark the complete candidate before comparing bass placement, extension, resonance, phantom-speaker stability, and finger-drumming latency against A100.
+2. Use the checked-in de-embedded A100 renderer reference under `measurements/minimum-latency/a100-reference/analysis`; do not infer the target from headphone-compensated output.
+3. Build a single 2×2 hybrid BRIR: clean room-regularized extension below the transition, original BRIR spatial information through upper bass and above, and a common 200-sample advance with no parallel clean branch.
+4. Benchmark the complete candidate before comparing bass placement, extension, resonance, phantom-speaker stability, and finger-drumming latency against A100.
 
 The accepted 2.08 ms saving is only the BRIR direct-arrival contribution. It does not reduce application, driver, convolution-engine, or device-buffer latency.

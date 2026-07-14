@@ -114,7 +114,9 @@ The opt-in [Synthetic Reference Room](synthetic-reference-room.md) is a parallel
 
 Candidate C keeps B's direct sound and adds four distinct personal early-reflection residuals from +4 to +30 ms. Each residual is aligned relative to B's theoretical direct peak, preserving measured reflection spacing without restoring old absolute latency. A reflection-only fourth-order high-pass at 250 Hz protects the synthetic low bass; measured late energy remains excluded. C is an empirical control for identifying the binaural room cues that B lacks, not the proposed final room.
 
-Below 300 Hz, B uses only the active renderer's broad magnitude as a bass-quantity calibration; the resulting bass phase and impulse are synthesized anew. Root target, headphone compensation, and personal balance remain downstream exactly as in production. If C externalizes successfully, future stages will replace its measured residual with theoretical early reflections and add a shared synthetic late field without changing this separation of responsibilities.
+Candidate D preserves C through +25 ms, uses a complementary +25 to +30 ms transition, and restores the complete measured four-path decay. It retains C's room-only high-pass, gain, and theoretical direct alignment. D exists only to test whether the late binaural field supplies the apparent distance that B and C lack; it does not propose retaining the original room.
+
+Below 300 Hz, B uses only the active renderer's broad magnitude as a bass-quantity calibration; the resulting bass phase and impulse are synthesized anew. Root target, headphone compensation, and personal balance remain downstream exactly as in production. If D restores distance, future stages will replace its measured decay with a shared synthetic late field and replace C's measured early residual with theoretical reflections without changing this separation of responsibilities.
 
 ## Validation Boundary
 

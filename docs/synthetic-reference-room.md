@@ -1,6 +1,6 @@
 # Synthetic Reference Room
 
-This experiment works toward a speaker renderer that does not depend on the original JBL room response. The production `Speaker Virtualization.txt` remains the default and listening reference; candidate C temporarily reuses a short personal room residual as a diagnostic control.
+This experiment works toward a speaker renderer that does not depend on the original JBL room response. The production `Speaker Virtualization.txt` remains the default and listening reference; candidates C and D temporarily reuse measured room segments as diagnostic controls.
 
 ## Design Boundary
 
@@ -10,7 +10,7 @@ The renderer is divided into three independently testable stages:
 2. **Synthetic early reflections:** geometrically generated arrivals filtered for their incident directions.
 3. **Shared late field:** diffuse binaural decay with controlled interaural coherence and no copied room modes.
 
-Prototype B implements only stage 1. Candidate C adds a deliberately limited personal early-room control before fully theoretical reflections are attempted.
+Prototype B implements only stage 1. Candidate C adds a deliberately limited personal early-room control. Candidate D adds the complementary late field to determine whether sustained binaural decay supplies the missing apparent distance.
 
 ## Personal Direct Prototype
 
@@ -36,7 +36,20 @@ The generated 48 kHz, 24-bit IRs contain 8,192 samples and live under `Synthetic
 
 C is an empirical control, not the final synthetic room. It tests whether the missing externalization comes from personalized early binaural structure. Its checked-in parameters, hashes, plots, and A/B/C metrics are in the [candidate C analysis](../measurements/synthetic-reference-room/personal-early/analysis/summary.json).
 
-## A/B/C Listening
+Listening found that C remained perceptually close to B: sources were frontal but immediately in front of the listener, while switching to A moved them back several feet. C already has A-like +4 to +30 ms energy and comb density, so increasing its early-reflection level would confound the experiment without addressing the missing late field.
+
+## Measured Late-Field Diagnostic
+
+`tools/measurement/render_synthetic_late_room.py` constructs candidate D by changing one variable relative to C:
+
+- C is preserved bit-for-bit through +25 ms relative to each theoretical direct peak.
+- A window complementary to C fades in from +25 to +30 ms, then retains the complete measured decay.
+- The same four distinct paths, 250 Hz reflection high-pass, gain, and alignment are retained without normalization.
+- D's 20–80 Hz change from C is 0.005 dB RMS. Its above-250 Hz decay closely tracks A, while direct arrival remains unchanged.
+
+D is a mechanism test, not a proposed final room. If it restores A's apparent distance, replace the measured decay with a clean synthetic binaural late field. If it remains close, restore the complex personal direct response next. Exact closure, decay, response, headroom, and asset hashes are in the [candidate D analysis](../measurements/synthetic-reference-room/personal-late-control/analysis/summary.json).
+
+## A/B/C/D Listening
 
 In `config - personalized.txt`, select exactly one renderer:
 
@@ -45,24 +58,33 @@ In `config - personalized.txt`, select exactly one renderer:
 Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
 # Include: Synthetic Reference Room\Personal Direct Renderer.txt
 # Include: Synthetic Reference Room\Personal Early Room Renderer.txt
+# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
 
 # B — direct-only control
 # Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
 Include: Synthetic Reference Room\Personal Direct Renderer.txt
 # Include: Synthetic Reference Room\Personal Early Room Renderer.txt
+# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
 
 # C — personal early-room candidate
 # Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
 # Include: Synthetic Reference Room\Personal Direct Renderer.txt
 Include: Synthetic Reference Room\Personal Early Room Renderer.txt
+# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
+
+# D — measured late-field diagnostic
+# Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
+# Include: Synthetic Reference Room\Personal Direct Renderer.txt
+# Include: Synthetic Reference Room\Personal Early Room Renderer.txt
+Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. Compare frontal distance, phantom-speaker stability, image width, bass cleanliness, and whether C sounds like a room or merely added reverb. B established that direct HRTF and theoretical ITD alone sound like ordinary headphones. The key C question is whether personalized early structure restores a front image without A's unwanted room character.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. Benchmark D before normal-volume listening because its modeled correlated gain is 2.65 dB higher than C, although it remains 0.28 dB below A. Compare C to D for distance, then D to A for room character. A D that moves the image backward but sounds too reverberant is a successful mechanism result.
 
 ## Next Stages
 
-- Benchmark and listen to C before changing its reflection level or timing.
+- Benchmark and listen to D without changing its tail level or decay.
 - Add a direct-only generic-HRTF control to reveal which benefits are actually personal.
-- If C succeeds, replace its measured room residual with sparse image-source reflections using theoretical path lengths and directional filtering.
-- Add a shared late reverberation network, tuned only from broad room-decay preferences.
+- If D restores distance, replace its measured decay with a shared synthetic binaural late field.
+- Replace measured early energy with sparse image-source reflections using theoretical path lengths and directional filtering.
 - Validate each stage through Equalizer APO Benchmark and controlled listening before promotion.

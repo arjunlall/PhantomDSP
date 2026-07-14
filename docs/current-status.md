@@ -4,15 +4,15 @@ This file is the short resume point for active experiments. Detailed measurement
 
 ## Synthetic Reference Room Experiment
 
-Three mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production, B is synthetic direct-only, and C is synthetic direct plus a personal early-room control. Production remains enabled by default.
+Four mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production, B is synthetic direct-only, C adds personal early reflections, and D adds the complementary measured late field. Production remains enabled by default.
 
-B was benchmarked cleanly on Windows and sounded like ordinary headphones despite its theoretical ITD and personal direct-HRTF magnitude. This identifies the missing early/room field as the next variable. C adds the four distinct LL/LR/RL/RR residuals from +4 to +30 ms, aligns them to B's low-latency direct peaks, high-passes only the residual at 250 Hz, and discards the measured late tail. Its 500 Hz–8 kHz unsmoothed ripple is close to A while its 20–80 Hz response is effectively unchanged from B.
+B was benchmarked cleanly on Windows and sounded like ordinary headphones despite its theoretical ITD and personal direct-HRTF magnitude. C restored four distinct +4 to +30 ms paths and A-like comb density, but sounded perceptually like B: frontal yet immediately in front of the listener. Switching either B or C to A moved the image back several feet. Offline analysis confirms C's early energy is already comparable to A; its decisive difference is the absence of energy after 30 ms.
 
-Resume by benchmarking C on Windows, then compare A/B/C at matched downstream settings. Listen for frontal distance and stable phantom speakers, not for “more reverb.” If C restores externalization, use it to infer the required reflection density and binaural differences before replacing its measured room residual with theoretical image-source taps.
+D preserves C bit-for-bit through 25 ms, adds a complementary 25–30 ms fade into the full measured decay, and keeps C's 250 Hz room high-pass, gain, direct timing, and bass. Its above-250 Hz decay closely follows A and its 20–80 Hz response changes by only 0.005 dB RMS. Resume by benchmarking D at low volume: renderer-only correlated gain is +3.93 dB, versus +1.28 dB for C and +4.21 dB for A. If D restores distance, replace its measured tail with a synthetic binaural late field; if not, restore the complex personal direct response.
 
 ## Historical Bass Crossover Listening Decision
 
-These historical labels belong only to the completed bass experiment; they are unrelated to the synthetic-room A/B/C conditions above.
+These historical labels belong only to the completed bass experiment; they are unrelated to the synthetic-room A/B/C/D conditions above.
 
 - **Legacy topology (historical A):** preferred historical reference. It places bass with the phantom speakers and sounds less muddy or bloated; A100 retains this topology as the fallback.
 - **LR4 75 Hz (historical B):** sounded clearer, slightly louder, and wider, but moved bass toward the headphones and weakened the frontal phantom speakers. The runnable candidate was removed.

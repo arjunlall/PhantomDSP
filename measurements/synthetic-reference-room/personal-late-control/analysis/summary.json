@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "status": "opt-in measured late-field diagnostic",
+  "design": {
+    "sample_rate_hz": 48000,
+    "late_window": {
+      "complementary_fade_start_ms": 25.0,
+      "full_level_start_ms": 30.0,
+      "end": "measured source end"
+    },
+    "reflection_highpass": {
+      "type": "cascaded RBJ Butterworth biquads (Linkwitz-Riley fourth order)",
+      "cutoff_hz": 250.0,
+      "q": 0.7071067811865475,
+      "sections": 2
+    },
+    "reflection_gain": "identical to candidate C",
+    "output_length_samples": 32768,
+    "nfft": 65536
+  },
+  "candidate_C_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Left Speaker.wav",
+      "sha256": "4b461d3571de03d95d6aee7c954ca2449bd20c777f18e1259f212eb4681af3a2",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Right Speaker.wav",
+      "sha256": "d108e03a66079b95f70da432c461def831d5a170acef10d29fb87739bfacb9e7",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "candidate_C_summary": "measurements/synthetic-reference-room/personal-early/analysis/summary.json",
+  "source_files": {
+    "left": {
+      "path": "JBL M2 Binaural Convolution/IRs/JBL LSR305 LL 4_LR 4 5-500.wav",
+      "sha256": "4f6aa5b21cd94a075904573f56d7b4ade24ebf6737405984a34d41a956aa386b",
+      "frames": 32768,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "JBL M2 Binaural Convolution/IRs/JBL LSR305 RL 4_RR 4 5-500.wav",
+      "sha256": "f733870e8ff87c578d57a30d5f898fea6f1d1cefe4aa15962fbe8912b1125efb",
+      "frames": 32768,
+      "sample_width_bits": 24
+    }
+  },
+  "production_reference_files": {
+    "left": {
+      "path": "JBL M2 Binaural Convolution/IRs/active/Left Speaker to Both Ears.wav",
+      "sha256": "a87f182328216360bf7f0455bd4948f1d0b104c39a49b1ad25e31b59acb7eef6",
+      "frames": 32768,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "JBL M2 Binaural Convolution/IRs/active/Right Speaker to Both Ears.wav",
+      "sha256": "6d21739c7885588f0f9bd9b7f2e575cd550462e83417f68cda35f3f4c0e21da5",
+      "frames": 32768,
+      "sample_width_bits": 24
+    }
+  },
+  "measured_absolute_timing_retained": false,
+  "measured_relative_late_timing_retained": true,
+  "left_right_room_asymmetry_retained": true,
+  "reflection_gain_db": 1.632428,
+  "response_delta_D_minus_C": {
+    "bass_20_80_hz": {
+      "mean_delta_db": 0.000779,
+      "rms_delta_db": 0.005488,
+      "maximum_absolute_delta_db": 0.016094
+    },
+    "handoff_80_200_hz": {
+      "mean_delta_db": -0.000583,
+      "rms_delta_db": 0.079543,
+      "maximum_absolute_delta_db": 0.214049
+    },
+    "upper_bass_200_300_hz": {
+      "mean_delta_db": 0.113941,
+      "rms_delta_db": 0.330357,
+      "maximum_absolute_delta_db": 1.217871
+    },
+    "room_band_300_10000_hz": {
+      "mean_delta_db": 1.167343,
+      "rms_delta_db": 1.393799,
+      "maximum_absolute_delta_db": 2.715617
+    }
+  },
+  "renderer_only_correlated_input_maximum_gain_db": {
+    "A_production": 4.209414,
+    "D_late_control": 3.931904
+  },
+  "paths": {
+    "LL": {
+      "source_peak_sample": 242,
+      "synthetic_direct_peak_sample": 9,
+      "nominal_late_fade_start_sample": 1209,
+      "late_branch_first_nonzero_sample": 1210,
+      "rendered_first_difference_from_C_sample": 1214,
+      "maximum_absolute_difference_from_C_through_25_ms": 0.0,
+      "late_to_C_energy_db": -11.341811,
+      "late_input_raw_energy_percent": 8.036362,
+      "energy_distribution_above_250_hz": {
+        "A_production": {
+          "through_4_ms": -0.806471,
+          "4_30_ms": -10.278789,
+          "30_80_ms": -12.993412,
+          "after_80_ms": -15.935025
+        },
+        "C_early_only": {
+          "through_4_ms": -0.354893,
+          "4_30_ms": -11.053224,
+          "30_80_ms": -56.799002,
+          "after_80_ms": -76.764368
+        },
+        "D_late_control": {
+          "through_4_ms": -0.670607,
+          "4_30_ms": -11.133025,
+          "30_80_ms": -13.455081,
+          "after_80_ms": -16.795958
+        }
+      },
+      "hair": {
+        "A_production": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 3.906421,
+          "peak_to_peak_db": 44.040406
+        },
+        "C_early_only": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 3.225054,
+          "peak_to_peak_db": 33.747898
+        },
+        "D_late_control": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 3.841265,
+          "peak_to_peak_db": 44.312605
+        }
+      }
+    },
+    "LR": {
+      "source_peak_sample": 231,
+      "synthetic_direct_peak_sample": 15,
+      "nominal_late_fade_start_sample": 1215,
+      "late_branch_first_nonzero_sample": 1216,
+      "rendered_first_difference_from_C_sample": 1217,
+      "maximum_absolute_difference_from_C_through_25_ms": 0.0,
+      "late_to_C_energy_db": -2.787025,
+      "late_input_raw_energy_percent": 30.914111,
+      "energy_distribution_above_250_hz": {
+        "A_production": {
+          "through_4_ms": -3.597332,
+          "4_30_ms": -5.812964,
+          "30_80_ms": -6.97269,
+          "after_80_ms": -9.991831
+        },
+        "C_early_only": {
+          "through_4_ms": -2.210404,
+          "4_30_ms": -3.991622,
+          "30_80_ms": -52.089874,
+          "after_80_ms": -69.87383
+        },
+        "D_late_control": {
+          "through_4_ms": -4.161764,
+          "4_30_ms": -5.418783,
+          "30_80_ms": -6.537375,
+          "after_80_ms": -9.692535
+        }
+      },
+      "hair": {
+        "A_production": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 5.290008,
+          "peak_to_peak_db": 46.862619
+        },
+        "C_early_only": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 4.894924,
+          "peak_to_peak_db": 53.85331
+        },
+        "D_late_control": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 5.431816,
+          "peak_to_peak_db": 47.2622
+        }
+      }
+    },
+    "RL": {
+      "source_peak_sample": 245,
+      "synthetic_direct_peak_sample": 15,
+      "nominal_late_fade_start_sample": 1215,
+      "late_branch_first_nonzero_sample": 1216,
+      "rendered_first_difference_from_C_sample": 1218,
+      "maximum_absolute_difference_from_C_through_25_ms": 0.0,
+      "late_to_C_energy_db": -3.054778,
+      "late_input_raw_energy_percent": 35.261425,
+      "energy_distribution_above_250_hz": {
+        "A_production": {
+          "through_4_ms": -3.483886,
+          "4_30_ms": -7.718708,
+          "30_80_ms": -6.189687,
+          "after_80_ms": -8.473816
+        },
+        "C_early_only": {
+          "through_4_ms": -1.03664,
+          "4_30_ms": -6.729786,
+          "30_80_ms": -49.975233,
+          "after_80_ms": -68.700066
+        },
+        "D_late_control": {
+          "through_4_ms": -2.885383,
+          "4_30_ms": -7.78296,
+          "30_80_ms": -6.799116,
+          "after_80_ms": -9.592938
+        }
+      },
+      "hair": {
+        "A_production": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 5.23804,
+          "peak_to_peak_db": 48.69871
+        },
+        "C_early_only": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 4.255733,
+          "peak_to_peak_db": 46.191636
+        },
+        "D_late_control": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 5.205113,
+          "peak_to_peak_db": 54.848571
+        }
+      }
+    },
+    "RR": {
+      "source_peak_sample": 240,
+      "synthetic_direct_peak_sample": 9,
+      "nominal_late_fade_start_sample": 1209,
+      "late_branch_first_nonzero_sample": 1210,
+      "rendered_first_difference_from_C_sample": 1210,
+      "maximum_absolute_difference_from_C_through_25_ms": 0.0,
+      "late_to_C_energy_db": -12.084108,
+      "late_input_raw_energy_percent": 4.697611,
+      "energy_distribution_above_250_hz": {
+        "A_production": {
+          "through_4_ms": -0.47292,
+          "4_30_ms": -12.557972,
+          "30_80_ms": -14.93276,
+          "after_80_ms": -18.077193
+        },
+        "C_early_only": {
+          "through_4_ms": -0.259482,
+          "4_30_ms": -12.3659,
+          "30_80_ms": -64.117915,
+          "after_80_ms": -76.668957
+        },
+        "D_late_control": {
+          "through_4_ms": -0.532886,
+          "4_30_ms": -12.220223,
+          "30_80_ms": -14.310918,
+          "after_80_ms": -17.343316
+        }
+      },
+      "hair": {
+        "A_production": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 3.156288,
+          "peak_to_peak_db": 35.913585
+        },
+        "C_early_only": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 2.94431,
+          "peak_to_peak_db": 54.052652
+        },
+        "D_late_control": {
+          "band_hz": [
+            500.0,
+            8000.0
+          ],
+          "rms_db": 3.732494,
+          "peak_to_peak_db": 45.891243
+        }
+      }
+    }
+  },
+  "rendered_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/personal-late-control/Personal Late Room Left Speaker.wav",
+      "sha256": "45784c6e93b0d1839ad1265cde80d69bc4c86535e1fb1f8382126d4f35e6a9c0",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080082
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/personal-late-control/Personal Late Room Right Speaker.wav",
+      "sha256": "4d533f4710675ae70f1dad47a742ab34eb25ec8732a4ec132a563bc2552cf839",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080082
+    }
+  },
+  "plots": [
+    "ll-a-c-d-magnitude.svg",
+    "late-field-impulse-response.svg",
+    "ll-energy-decay.svg",
+    "bass-preservation.svg"
+  ]
+}

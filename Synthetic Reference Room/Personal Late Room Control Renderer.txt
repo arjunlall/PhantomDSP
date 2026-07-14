@@ -1,0 +1,15 @@
+# Experimental candidate D; not the production default.
+# Candidate C plus the measured binaural late field after 25-30 ms.
+# This is a diagnostic for apparent distance, not the proposed final room.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\personal-late-control\Personal Late Room Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\personal-late-control\Personal Late Room Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR
+Channel: all

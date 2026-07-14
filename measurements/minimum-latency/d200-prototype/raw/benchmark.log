@@ -1,0 +1,426 @@
+﻿PhantomDSP commit: 83d53739b525b48bfa7e615553d108bdc1253be6
+Capture label: minimum-latency prototype: D200 unified
+Benchmark: C:\Program Files\EqualizerAPO\Benchmark.exe
+Device name: Output A1 Voicemeeter PhantomDSP D200 Prototype
+Installed config: C:\Program Files\EqualizerAPO\config\config.txt
+Installed config SHA256: 09C10E2759498834F84EC752DE261156B07AE430BC91D653C18E90E52833AD02
+Bass selector: C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+Bass selector SHA256: A9B50D05EE9BC4E6212392840DE4B51509AEB92436F2402B172F4EE3FC29474A
+Probe set: 0dbfs (0 dBFS)
+Capture output gain: 0 dB
+
+=== left impulse ===
+(TRACE) 2 channels for this device: L R
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config.txt
+(TRACE) Matching pattern "Output A1 Voicemeeter" with device "Output A1 Voicemeeter PhantomDSP D200 Prototype File output "
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config - personalized.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+(TRACE) If(regexSearch("PhantomDSP Bass Downstream", deviceName)) evaluated to  (false)
+(TRACE) If(regexSearch("PhantomDSP D200 Prototype", deviceName)) evaluated to "PhantomDSP D200 Prototype" (true)
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\main - D200 unified prototype.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Binaural Convolution - D200 Unified Prototype.txt
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel LL from channel L with factor 1, to channel LR from channel L with factor 1, to channel RIL from channel R with factor 1, to channel RIR from channel R with factor 1
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified LL_LR.wav
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified RL_RR.wav
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LL with factor 1, from channel RIL with factor 1, to channel R from channel LR with factor 1, from channel RIR with factor 1
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Target Curve Macro Adjustments.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 2 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Flatten EQ at DRP v3.txt
+(TRACE) Adjusting preamp by -3.5 dB
+(TRACE) Adding low-shelf filter with frequency 35 Hz and gain 5 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 650 Hz, gain 1.3 dB and Q 1
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -1.5 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3730 Hz, gain -8.8 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 14000 Hz and gain 12 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 2719 Hz, gain -1.4 dB and Q 2.5
+(TRACE) Adding peaking filter with frequency 5400 Hz, gain 3.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 7730 Hz, gain 5.2 dB and Q 5
+(TRACE) Adding peaking filter with frequency 11200 Hz, gain -6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 12950 Hz, gain -3.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 11100 Hz, gain -4.4 dB and Q 4
+(TRACE) Adding peaking filter with frequency 4450 Hz, gain -3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4792 Hz, gain 2.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 5690 Hz, gain 0.6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3628 Hz, gain 0.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 8770 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 9150 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9800 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -4 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 0.8 dB and Q 0.7
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -0.8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 8
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Personal Balance LR v3.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adjusting preamp by -0.5 dB
+(TRACE) Adding low-shelf filter with frequency 150 Hz and gain -0.3 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 2550 Hz, gain -1.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 3640 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4400 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6240 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 13000 Hz, gain 5 dB and Q 2
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -6 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 3900 Hz, gain 0.5 dB and Q 7
+(TRACE) Adding peaking filter with frequency 5100 Hz, gain 0.9 dB and Q 9
+(TRACE) Adding peaking filter with frequency 1754 Hz, gain -0.5 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8500 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 4060 Hz, gain 1.5 dB and Q 8
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain -3 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4410 Hz, gain -1 dB and Q 6
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 0 dB
+(TRACE) Finished loading configuration after 15.354000 milliseconds
+(TRACE) Successfully created directory change notification thread 31128 for C:\Program Files\EqualizerAPO\config and its subtree
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config.txt
+(TRACE) Matching pattern "Output A1 Voicemeeter" with device "Output A1 Voicemeeter PhantomDSP D200 Prototype File output "
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config - personalized.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+(TRACE) If(regexSearch("PhantomDSP Bass Downstream", deviceName)) evaluated to  (false)
+(TRACE) If(regexSearch("PhantomDSP D200 Prototype", deviceName)) evaluated to "PhantomDSP D200 Prototype" (true)
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\main - D200 unified prototype.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Binaural Convolution - D200 Unified Prototype.txt
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel LL from channel L with factor 1, to channel LR from channel L with factor 1, to channel RIL from channel R with factor 1, to channel RIR from channel R with factor 1
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified LL_LR.wav
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified RL_RR.wav
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LL with factor 1, from channel RIL with factor 1, to channel R from channel LR with factor 1, from channel RIR with factor 1
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Target Curve Macro Adjustments.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 2 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Flatten EQ at DRP v3.txt
+(TRACE) Adjusting preamp by -3.5 dB
+(TRACE) Adding low-shelf filter with frequency 35 Hz and gain 5 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 650 Hz, gain 1.3 dB and Q 1
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -1.5 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3730 Hz, gain -8.8 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 14000 Hz and gain 12 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 2719 Hz, gain -1.4 dB and Q 2.5
+(TRACE) Adding peaking filter with frequency 5400 Hz, gain 3.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 7730 Hz, gain 5.2 dB and Q 5
+(TRACE) Adding peaking filter with frequency 11200 Hz, gain -6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 12950 Hz, gain -3.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 11100 Hz, gain -4.4 dB and Q 4
+(TRACE) Adding peaking filter with frequency 4450 Hz, gain -3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4792 Hz, gain 2.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 5690 Hz, gain 0.6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3628 Hz, gain 0.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 8770 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 9150 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9800 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -4 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 0.8 dB and Q 0.7
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -0.8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 8
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Personal Balance LR v3.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adjusting preamp by -0.5 dB
+(TRACE) Adding low-shelf filter with frequency 150 Hz and gain -0.3 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 2550 Hz, gain -1.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 3640 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4400 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6240 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 13000 Hz, gain 5 dB and Q 2
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -6 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 3900 Hz, gain 0.5 dB and Q 7
+(TRACE) Adding peaking filter with frequency 5100 Hz, gain 0.9 dB and Q 9
+(TRACE) Adding peaking filter with frequency 1754 Hz, gain -0.5 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8500 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 4060 Hz, gain 1.5 dB and Q 8
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain -3 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4410 Hz, gain -1 dB and Q 6
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 0 dB
+(TRACE) Finished loading configuration after 5.478300 milliseconds
+(TRACE) Successfully terminated directory change notification thread
+Benchmark 1.3
+Run "C:\Program Files\EqualizerAPO\Benchmark.exe -h" to show usage info
+
+Reading sound data from C:\Program Files\EqualizerAPO\config\measurements\minimum-latency\d200-prototype\raw\left-input.wav
+Reading input file took 0.0041963 seconds
+
+Processing 96000 frames from 2 channel(s)
+192000 samples processed in 0.013304 seconds
+This is equivalent to 0.67% CPU load (one core) when processing in real time
+Max output level: 0.041378 (-27.664644 dB)
+
+Writing output to C:\Program Files\EqualizerAPO\config\measurements\minimum-latency\d200-prototype\raw\left-output.wav
+
+=== right impulse ===
+(TRACE) 2 channels for this device: L R
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config.txt
+(TRACE) Matching pattern "Output A1 Voicemeeter" with device "Output A1 Voicemeeter PhantomDSP D200 Prototype File output "
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config - personalized.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+(TRACE) If(regexSearch("PhantomDSP Bass Downstream", deviceName)) evaluated to  (false)
+(TRACE) If(regexSearch("PhantomDSP D200 Prototype", deviceName)) evaluated to "PhantomDSP D200 Prototype" (true)
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\main - D200 unified prototype.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Binaural Convolution - D200 Unified Prototype.txt
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel LL from channel L with factor 1, to channel LR from channel L with factor 1, to channel RIL from channel R with factor 1, to channel RIR from channel R with factor 1
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified LL_LR.wav
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified RL_RR.wav
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LL with factor 1, from channel RIL with factor 1, to channel R from channel LR with factor 1, from channel RIR with factor 1
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Target Curve Macro Adjustments.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 2 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Flatten EQ at DRP v3.txt
+(TRACE) Adjusting preamp by -3.5 dB
+(TRACE) Adding low-shelf filter with frequency 35 Hz and gain 5 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 650 Hz, gain 1.3 dB and Q 1
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -1.5 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3730 Hz, gain -8.8 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 14000 Hz and gain 12 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 2719 Hz, gain -1.4 dB and Q 2.5
+(TRACE) Adding peaking filter with frequency 5400 Hz, gain 3.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 7730 Hz, gain 5.2 dB and Q 5
+(TRACE) Adding peaking filter with frequency 11200 Hz, gain -6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 12950 Hz, gain -3.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 11100 Hz, gain -4.4 dB and Q 4
+(TRACE) Adding peaking filter with frequency 4450 Hz, gain -3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4792 Hz, gain 2.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 5690 Hz, gain 0.6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3628 Hz, gain 0.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 8770 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 9150 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9800 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -4 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 0.8 dB and Q 0.7
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -0.8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 8
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Personal Balance LR v3.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adjusting preamp by -0.5 dB
+(TRACE) Adding low-shelf filter with frequency 150 Hz and gain -0.3 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 2550 Hz, gain -1.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 3640 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4400 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6240 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 13000 Hz, gain 5 dB and Q 2
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -6 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 3900 Hz, gain 0.5 dB and Q 7
+(TRACE) Adding peaking filter with frequency 5100 Hz, gain 0.9 dB and Q 9
+(TRACE) Adding peaking filter with frequency 1754 Hz, gain -0.5 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8500 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 4060 Hz, gain 1.5 dB and Q 8
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain -3 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4410 Hz, gain -1 dB and Q 6
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 0 dB
+(TRACE) Finished loading configuration after 8.063700 milliseconds
+(TRACE) Successfully created directory change notification thread 10708 for C:\Program Files\EqualizerAPO\config and its subtree
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config.txt
+(TRACE) Matching pattern "Output A1 Voicemeeter" with device "Output A1 Voicemeeter PhantomDSP D200 Prototype File output "
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config - personalized.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+(TRACE) If(regexSearch("PhantomDSP Bass Downstream", deviceName)) evaluated to  (false)
+(TRACE) If(regexSearch("PhantomDSP D200 Prototype", deviceName)) evaluated to "PhantomDSP D200 Prototype" (true)
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\main - D200 unified prototype.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Binaural Convolution - D200 Unified Prototype.txt
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel LL from channel L with factor 1, to channel LR from channel L with factor 1, to channel RIL from channel R with factor 1, to channel RIR from channel R with factor 1
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified LL_LR.wav
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified RL_RR.wav
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LL with factor 1, from channel RIL with factor 1, to channel R from channel LR with factor 1, from channel RIR with factor 1
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Target Curve Macro Adjustments.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 2 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Flatten EQ at DRP v3.txt
+(TRACE) Adjusting preamp by -3.5 dB
+(TRACE) Adding low-shelf filter with frequency 35 Hz and gain 5 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 650 Hz, gain 1.3 dB and Q 1
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -1.5 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3730 Hz, gain -8.8 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 14000 Hz and gain 12 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 2719 Hz, gain -1.4 dB and Q 2.5
+(TRACE) Adding peaking filter with frequency 5400 Hz, gain 3.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 7730 Hz, gain 5.2 dB and Q 5
+(TRACE) Adding peaking filter with frequency 11200 Hz, gain -6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 12950 Hz, gain -3.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 11100 Hz, gain -4.4 dB and Q 4
+(TRACE) Adding peaking filter with frequency 4450 Hz, gain -3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4792 Hz, gain 2.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 5690 Hz, gain 0.6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3628 Hz, gain 0.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 8770 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 9150 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9800 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -4 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 0.8 dB and Q 0.7
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -0.8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 8
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Personal Balance LR v3.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adjusting preamp by -0.5 dB
+(TRACE) Adding low-shelf filter with frequency 150 Hz and gain -0.3 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 2550 Hz, gain -1.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 3640 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4400 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6240 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 13000 Hz, gain 5 dB and Q 2
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -6 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 3900 Hz, gain 0.5 dB and Q 7
+(TRACE) Adding peaking filter with frequency 5100 Hz, gain 0.9 dB and Q 9
+(TRACE) Adding peaking filter with frequency 1754 Hz, gain -0.5 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8500 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 4060 Hz, gain 1.5 dB and Q 8
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain -3 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4410 Hz, gain -1 dB and Q 6
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 0 dB
+(TRACE) Finished loading configuration after 5.942900 milliseconds
+(TRACE) Successfully terminated directory change notification thread
+Benchmark 1.3
+Run "C:\Program Files\EqualizerAPO\Benchmark.exe -h" to show usage info
+
+Reading sound data from C:\Program Files\EqualizerAPO\config\measurements\minimum-latency\d200-prototype\raw\right-input.wav
+Reading input file took 0.0043087 seconds
+
+Processing 96000 frames from 2 channel(s)
+192000 samples processed in 0.013422 seconds
+This is equivalent to 0.67% CPU load (one core) when processing in real time
+Max output level: 0.038157 (-28.368464 dB)
+
+Writing output to C:\Program Files\EqualizerAPO\config\measurements\minimum-latency\d200-prototype\raw\right-output.wav
+
+=== correlated stereo sweep ===
+(TRACE) 2 channels for this device: L R
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config.txt
+(TRACE) Matching pattern "Output A1 Voicemeeter" with device "Output A1 Voicemeeter PhantomDSP D200 Prototype File output "
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config - personalized.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+(TRACE) If(regexSearch("PhantomDSP Bass Downstream", deviceName)) evaluated to  (false)
+(TRACE) If(regexSearch("PhantomDSP D200 Prototype", deviceName)) evaluated to "PhantomDSP D200 Prototype" (true)
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\main - D200 unified prototype.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Binaural Convolution - D200 Unified Prototype.txt
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel LL from channel L with factor 1, to channel LR from channel L with factor 1, to channel RIL from channel R with factor 1, to channel RIR from channel R with factor 1
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified LL_LR.wav
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\minimum-latency\D200 Unified RL_RR.wav
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LL with factor 1, from channel RIL with factor 1, to channel R from channel LR with factor 1, from channel RIR with factor 1
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Target Curve Macro Adjustments.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 2 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Flatten EQ at DRP v3.txt
+(TRACE) Adjusting preamp by -3.5 dB
+(TRACE) Adding low-shelf filter with frequency 35 Hz and gain 5 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 650 Hz, gain 1.3 dB and Q 1
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -1.5 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3730 Hz, gain -8.8 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 14000 Hz and gain 12 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 2719 Hz, gain -1.4 dB and Q 2.5
+(TRACE) Adding peaking filter with frequency 5400 Hz, gain 3.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 7730 Hz, gain 5.2 dB and Q 5
+(TRACE) Adding peaking filter with frequency 11200 Hz, gain -6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 12950 Hz, gain -3.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 11100 Hz, gain -4.4 dB and Q 4
+(TRACE) Adding peaking filter with frequency 4450 Hz, gain -3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4792 Hz, gain 2.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 5690 Hz, gain 0.6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3628 Hz, gain 0.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 8770 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 9150 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9800 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -4 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 0.8 dB and Q 0.7
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -0.8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 8
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Personal Balance LR v3.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adjusting preamp by -0.5 dB
+(TRACE) Adding low-shelf filter with frequency 150 Hz and gain -0.3 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 2550 Hz, gain -1.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 3640 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4400 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6240 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 13000 Hz, gain 5 dB and Q 2
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -6 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 3900 Hz, gain 0.5 dB and Q 7
+(TRACE) Adding peaking filter with frequency 5100 Hz, gain 0.9 dB and Q 9
+(TRACE) Adding peaking filter with frequency 1754 Hz, gain -0.5 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8500 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 4060 Hz, gain 1.5 dB and Q 8
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain -3 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4410 Hz, gain -1 dB and Q 6
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6
+(TRACE) Adjusting preamp by 0 dB
+(TRACE) Finished loading configuration after 8.141300 milliseconds
+(TRACE) Successfully created directory change notification thread 27600 for C:\Program Files\EqualizerAPO\config and its subtree
+(TRACE) Successfully terminated directory change notification thread
+Benchmark 1.3
+Run "C:\Program Files\EqualizerAPO\Benchmark.exe -h" to show usage info
+
+No input file given, so generating linear sine sweep from 20 to 20000 Hz over 10 seconds
+Generating sweep took 0.0027223 seconds
+
+Processing 480000 frames from 2 channel(s)
+960000 samples processed in 0.058073 seconds
+This is equivalent to 0.58% CPU load (one core) when processing in real time
+Max output level: 0.530103 (-5.512796 dB)
+
+Writing output to C:\Users\arjun\AppData\Local\Temp\phantomdsp-headroom-output.wav

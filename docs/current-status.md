@@ -33,9 +33,9 @@ Select exactly one uncommented `Include:` line and lower playback volume before 
 Resume sequence:
 
 1. Keep A100 as the daily renderer and A0 as the reference fallback.
-2. Use the checked-in de-embedded A100 renderer reference under `measurements/minimum-latency/a100-reference/analysis`; do not infer the target from headphone-compensated output.
-3. Recapture the isolated convolved and clean source branches with the calibrated [precision workflow](../measurements/minimum-latency/README.md#precision-branch-recapture); the quiet 16-bit clean capture is a target reference, not a safe production-IR source.
-4. Build a single 2×2 hybrid BRIR: clean room-regularized extension below the transition, original BRIR spatial information through upper bass and above, and a common 200-sample advance with no parallel clean branch.
-5. Benchmark the complete candidate before comparing bass placement, extension, resonance, phantom-speaker stability, and finger-drumming latency against A100.
+2. Use the precision de-embedded A100 renderer reference under `measurements/minimum-latency/a100-reference/analysis`; do not infer the target from headphone-compensated output.
+3. Treat the generated [D200 unified renderer](../measurements/minimum-latency/d200-prototype/analysis/report.md) as an offline prototype. A100 remains the normal playback default.
+4. Capture D200 through the reserved Windows Benchmark route and compare the complete response, headroom, and CPU with A100.
+5. Only after the digital comparison passes, expose A100/D200 as a controlled listening pair and compare bass placement, extension, resonance, phantom-speaker stability, and finger-drumming latency.
 
 The accepted 2.08 ms saving is only the BRIR direct-arrival contribution. It does not reduce application, driver, convolution-engine, or device-buffer latency.

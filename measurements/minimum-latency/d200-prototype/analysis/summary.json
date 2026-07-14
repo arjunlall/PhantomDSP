@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "status": "offline prototype; not the active renderer",
+  "reference": {
+    "path": "measurements/minimum-latency/a100-reference/analysis/deembedded-reference.npz",
+    "sha256": "2b4bf21d35a27e6a837017ecabada11a4330efd5101e4b82b74397c5fb8a3616",
+    "precision_branches_used": true
+  },
+  "design": {
+    "lowpass_cutoff_hz": 80.0,
+    "lowpass_order": 6,
+    "low_gain_db": -0.75,
+    "highpass_cutoff_hz": 5.0,
+    "highpass_order": 2,
+    "cross_delay_samples": 15,
+    "additional_high_advance_samples": 100,
+    "output_length_samples": 32768,
+    "nfft": 65536
+  },
+  "deep_target_level_db_before_calibration": {
+    "left": -15.922195,
+    "right": -15.873665
+  },
+  "low_tail_energy_beyond_output_db": {
+    "left": -136.604188,
+    "right": -136.604188
+  },
+  "paths": {
+    "LL": {
+      "onset_minus_60_db_sample": 6,
+      "onset_minus_40_db_sample": 25,
+      "peak_sample": 42,
+      "peak_time_ms": 0.875
+    },
+    "LR": {
+      "onset_minus_60_db_sample": 2,
+      "onset_minus_40_db_sample": 38,
+      "peak_sample": 54,
+      "peak_time_ms": 1.125
+    },
+    "RL": {
+      "onset_minus_60_db_sample": 5,
+      "onset_minus_40_db_sample": 42,
+      "peak_sample": 55,
+      "peak_time_ms": 1.145833
+    },
+    "RR": {
+      "onset_minus_60_db_sample": 9,
+      "onset_minus_40_db_sample": 28,
+      "peak_sample": 41,
+      "peak_time_ms": 0.854167
+    }
+  },
+  "evaluation": {
+    "lowpass_cutoff_hz": 80.0,
+    "lowpass_order": 6,
+    "low_gain_db": -0.75,
+    "tail_energy_beyond_output_db": {
+      "left": -136.60419,
+      "right": -136.60419
+    },
+    "deep_target_level_db": {
+      "left": -15.92219,
+      "right": -15.87367
+    },
+    "aggregate": {
+      "bass_rms_delta_db": 0.77751,
+      "transition_rms_delta_db": 3.44158,
+      "worst_low_to_high_at_200_db": -21.99142,
+      "low_spatial_ipd_rms_degrees": 2.63036,
+      "upper_spatial_ipd_rms_degrees": 9.74967,
+      "ranking_score": 6.82552
+    },
+    "paths": {
+      "LL": {
+        "bass_20_80_rms_magnitude_delta_db": 0.77505,
+        "bass_20_80_mean_magnitude_delta_db": 0.10761,
+        "transition_80_180_rms_vs_blended_target_db": 2.65396,
+        "transition_80_180_max_abs_vs_blended_target_db": 4.56666,
+        "candidate_vs_high_180_250_rms_db": 0.0659,
+        "low_to_high_db_at_150_hz": -17.71082,
+        "low_to_high_db_at_200_hz": -34.54629
+      },
+      "LR": {
+        "bass_20_80_rms_magnitude_delta_db": 0.75178,
+        "bass_20_80_mean_magnitude_delta_db": -0.15772,
+        "transition_80_180_rms_vs_blended_target_db": 3.9818,
+        "transition_80_180_max_abs_vs_blended_target_db": 7.74496,
+        "candidate_vs_high_180_250_rms_db": 0.27294,
+        "low_to_high_db_at_150_hz": -15.64535,
+        "low_to_high_db_at_200_hz": -21.99142
+      },
+      "RL": {
+        "bass_20_80_rms_magnitude_delta_db": 0.66115,
+        "bass_20_80_mean_magnitude_delta_db": -0.05664,
+        "transition_80_180_rms_vs_blended_target_db": 3.63782,
+        "transition_80_180_max_abs_vs_blended_target_db": 6.87918,
+        "candidate_vs_high_180_250_rms_db": 0.19334,
+        "low_to_high_db_at_150_hz": -14.21479,
+        "low_to_high_db_at_200_hz": -23.1795
+      },
+      "RR": {
+        "bass_20_80_rms_magnitude_delta_db": 0.92208,
+        "bass_20_80_mean_magnitude_delta_db": 0.24716,
+        "transition_80_180_rms_vs_blended_target_db": 3.49274,
+        "transition_80_180_max_abs_vs_blended_target_db": 6.82485,
+        "candidate_vs_high_180_250_rms_db": 0.09526,
+        "low_to_high_db_at_150_hz": -15.44257,
+        "low_to_high_db_at_200_hz": -34.6356
+      }
+    },
+    "low_spatial_error_vs_a100": {
+      "left_speaker": {
+        "ild_rms_error_db": 0.42983,
+        "ipd_rms_error_degrees": 3.56724
+      },
+      "right_speaker": {
+        "ild_rms_error_db": 0.43976,
+        "ipd_rms_error_degrees": 1.69349
+      }
+    },
+    "upper_spatial_error_vs_advanced_brir": {
+      "left_speaker": {
+        "ild_rms_error_db": 0.93004,
+        "ipd_rms_error_degrees": 5.57126
+      },
+      "right_speaker": {
+        "ild_rms_error_db": 0.98238,
+        "ipd_rms_error_degrees": 13.92808
+      }
+    }
+  },
+  "files": {
+    "left_speaker": {
+      "path": "JBL M2 Binaural Convolution/IRs/minimum-latency/D200 Unified LL_LR.wav",
+      "sha256": "14a73ff1b418b0ca8e579e14677d9ff55a59e1a8fe51bb24e434bdc85485207c",
+      "sample_rate_hz": 48000,
+      "sample_width_bits": 24,
+      "channels": 2,
+      "frames": 32768,
+      "peak_linear": 0.057428837,
+      "quantization_error_rms_db": -87.226322
+    },
+    "right_speaker": {
+      "path": "JBL M2 Binaural Convolution/IRs/minimum-latency/D200 Unified RL_RR.wav",
+      "sha256": "ff187e32a75d4b60da9267429aa38b1ea25878fee29a9fa06924403691a013b7",
+      "sample_rate_hz": 48000,
+      "sample_width_bits": 24,
+      "channels": 2,
+      "frames": 32768,
+      "peak_linear": 0.057846308,
+      "quantization_error_rms_db": -88.247046
+    }
+  }
+}

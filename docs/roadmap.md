@@ -59,8 +59,9 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [x] Add A0, A100, and diagnostic A200 playback configurations for controlled comparison.
 - [x] Adopt A100 as the default after listening confirmed the original A bass placement and tonality were retained.
 - [x] Reject the current A200 topology after listening confirmed the predicted severe bass failure.
-- [ ] If pursuing more than 100 samples, replace the clean branch with an equally advanced short 2×2 low-frequency renderer or complementary spectral replacement.
-- [ ] Capture accepted A100 through Equalizer APO Benchmark; benchmark any redesigned 200-sample candidate before listening.
+- [x] Replace the clean branch offline with a unified causal 2×2 low-frequency renderer for the D200 prototype.
+- [x] Capture accepted A100 through Equalizer APO Benchmark.
+- [ ] Benchmark the D200 prototype before listening.
 
 ### Build the Minimum-Latency 2×2 Renderer
 
@@ -68,11 +69,11 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [x] Add an A100 reference runner and de-embedding analyzer.
 - [x] Capture A100 `combined`, `convolved`, `clean`, and `downstream` matrices on Windows.
 - [x] Recover the speaker-renderer-only A100 matrix and verify branch closure after de-embedding.
-- [ ] Recapture the isolated convolved and clean branches at calibrated gains so 16-bit Benchmark quantization is not baked into generated IRs.
-- [ ] Derive smooth low-frequency interaural level and timing targets without copying room resonances.
-- [ ] Extend the base response flat to 20 Hz or lower, with a protective subsonic roll-off and a separate common preference shelf.
-- [ ] Merge synthesized bass into the original BRIR over a broad complex transition that preserves upper-bass harmonics and onset cues.
-- [ ] Render causal 200-sample-advanced stereo IR pairs; remove the parallel clean branch in the opt-in candidate only.
+- [x] Recapture the isolated convolved and clean branches at calibrated gains so 16-bit Benchmark quantization is not baked into generated IRs.
+- [x] Derive smooth low-frequency interaural level and timing targets without copying room resonances.
+- [x] Extend the base response flat through 20 Hz with a protective 5 Hz roll-off; keep overall bass quantity matched to A100.
+- [x] Merge synthesized bass into the original BRIR over a causal 80–200 Hz transition that preserves upper-bass harmonics and onset cues.
+- [x] Render causal 200-sample-advanced stereo IR pairs; remove the parallel clean branch in the opt-in candidate only.
 - [ ] Validate response, interaural phase, timing, decay, peak headroom, and Equalizer APO CPU before listening.
 
 Success means removing only common leading time: no transient truncation, no change to spatial relationships, and no new bass-transition error. This experiment does not address driver, application, or device-buffer latency.

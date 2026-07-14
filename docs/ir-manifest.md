@@ -52,3 +52,14 @@ The checked-in script `tools/measurement/render_ir_advances.py` verifies the par
 | 200 samples | `JBL LSR305 RL 4_RR 4 5-500.wav` | `9045fd83647956e76122967050860fedb190b90ce57462ed9d3147b9a0bf8dd9` |
 
 All six files are stereo 48 kHz, 24-bit PCM with 32,768 frames. They reside in `IRs/advanced/`. See the [BRIR advance analysis](../measurements/ir-advance/report.md) for prefix loss, transfer error, and the clean-bass integration constraint.
+
+## D200 Unified Prototype
+
+These generated files bake the precision de-embedded speaker renderer and the synthetic low-frequency model into one causal 2×2 matrix. They are derived from `measurements/minimum-latency/a100-reference/analysis/deembedded-reference.npz` with SHA-256 `2b4bf21d35a27e6a837017ecabada11a4330efd5101e4b82b74397c5fb8a3616`. They are not normalized and are not the active playback renderer.
+
+| File | Channel 1 | Channel 2 | SHA-256 |
+| --- | --- | --- | --- |
+| `D200 Unified LL_LR.wav` | `LL`: left speaker to left ear | `LR`: left speaker to right ear | `14a73ff1b418b0ca8e579e14677d9ff55a59e1a8fe51bb24e434bdc85485207c` |
+| `D200 Unified RL_RR.wav` | `RL`: right speaker to left ear | `RR`: right speaker to right ear | `ff187e32a75d4b60da9267429aa38b1ea25878fee29a9fa06924403691a013b7` |
+
+Both files are stereo 48 kHz, 24-bit PCM with 32,768 frames under `IRs/minimum-latency/`. The locked operation is documented in the [D200 offline report](../measurements/minimum-latency/d200-prototype/analysis/report.md) and reproduced by `tools/measurement/render_minimum_latency_renderer.py`.

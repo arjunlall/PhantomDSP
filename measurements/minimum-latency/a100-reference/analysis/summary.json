@@ -1,14 +1,27 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "sample_rate_hz": 48000,
   "response_length_samples": 94976,
   "nfft": 131072,
   "downstream_crosstalk_db": -180.0,
-  "deembedded_branch_closure_rms_db": -38.937677,
+  "deembedded_branch_closure_rms_db": -33.719163,
   "deembedded_branch_closure_rms_db_by_band": {
-    "20_80_hz": -30.647828,
-    "20_300_hz": -29.792354,
-    "20_20000_hz": -38.937677
+    "20_80_hz": -37.841468,
+    "20_300_hz": -33.390879,
+    "20_20000_hz": -33.719163
+  },
+  "precision_branches_used": true,
+  "capture_output_gain_db": {
+    "combined": 0.0,
+    "convolved": 24.0,
+    "clean": 48.0,
+    "downstream": 0.0
+  },
+  "capture_source": {
+    "combined": "reference",
+    "convolved": "precision",
+    "clean": "precision",
+    "downstream": "reference"
   },
   "paths": {
     "LL": {
@@ -44,16 +57,18 @@
       "probe_set": "minus-6dbfs (-6 dBFS)"
     },
     "convolved": {
-      "commit": "dbdf5d17b125034c50d977935ca9854287f70f1f",
-      "device_name": "Output A1 Voicemeeter PhantomDSP Bass Convolved",
+      "commit": "0ace7803cbd9cc3fa4b7dd2f098563d5f4bb5bb7",
+      "device_name": "Output A1 Voicemeeter PhantomDSP Precision Convolution",
       "installed_config": "C:\\Program Files\\EqualizerAPO\\config\\config.txt",
-      "probe_set": "minus-6dbfs (-6 dBFS)"
+      "probe_set": "minus-6dbfs (-6 dBFS)",
+      "capture_output_gain": "24 dB"
     },
     "clean": {
-      "commit": "dbdf5d17b125034c50d977935ca9854287f70f1f",
-      "device_name": "Output A1 Voicemeeter PhantomDSP Bass Clean",
+      "commit": "0ace7803cbd9cc3fa4b7dd2f098563d5f4bb5bb7",
+      "device_name": "Output A1 Voicemeeter PhantomDSP Precision CleanLow",
       "installed_config": "C:\\Program Files\\EqualizerAPO\\config\\config.txt",
-      "probe_set": "minus-6dbfs (-6 dBFS)"
+      "probe_set": "minus-6dbfs (-6 dBFS)",
+      "capture_output_gain": "48 dB"
     },
     "downstream": {
       "commit": "dbdf5d17b125034c50d977935ca9854287f70f1f",
@@ -69,11 +84,11 @@
     },
     "convolved": {
       "clipped_samples": 0,
-      "maximum_cpu_load_one_core_percent": 3.29
+      "maximum_cpu_load_one_core_percent": 3.25
     },
     "clean": {
       "clipped_samples": 0,
-      "maximum_cpu_load_one_core_percent": 3.28
+      "maximum_cpu_load_one_core_percent": 3.2
     },
     "downstream": {
       "clipped_samples": 0,

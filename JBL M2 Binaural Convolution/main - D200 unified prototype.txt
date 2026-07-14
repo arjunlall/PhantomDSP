@@ -1,0 +1,2 @@
+# Opt-in D200 prototype: one causal 2x2 convolution, no parallel clean-bass branch.
+Include: Binaural Convolution - D200 Unified Prototype.txt

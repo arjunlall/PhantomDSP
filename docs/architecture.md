@@ -105,6 +105,10 @@ Each new path will combine room-regularized, extended low bass with the original
 
 The target is a common 200-sample advance, minimum-phase or mixed-phase low-frequency synthesis, no explicit bass delay, and no runtime branch crossover. A causal renderer cannot have absolute zero latency; this design minimizes the IR direct-arrival contribution while retaining the measured direct/cross relationships. See [Minimum-Latency 2×2 Renderer](../measurements/minimum-latency/README.md).
 
+The first D200 prototype implements that structure as two generated 24-bit stereo IRs. Its deep-bass level is the smoothed A100 20–45 Hz level averaged by output ear, with a common −0.75 dB calibration, a second-order 5 Hz protective high-pass, and a sixth-order 80 Hz Butterworth low-pass. Direct and cross low-frequency paths share the same ear target while retaining A's 15-sample cross offset. The measured convolved paths are advanced another 100 samples and dominate through upper bass and above. Speaker-renderer EQ is baked into these IRs; root target, headphone, and personal-balance stages remain separate.
+
+This is intentionally an opt-in prototype. Its smooth magnitude and interaural metrics are encouraging, but a Windows Benchmark capture must confirm runtime routing, headroom, and CPU before listening, and listening must still confirm phantom-speaker stability.
+
 ## Validation Boundary
 
 The definitive validation is a closed-loop acoustic measurement:

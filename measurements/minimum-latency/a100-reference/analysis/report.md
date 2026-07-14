@@ -4,10 +4,11 @@ This analysis removes the measured downstream target, headphone, and personal EQ
 
 ## Validation
 
+- Gain-calibrated precision captures were used for the convolved and clean branches (+24 dB and +48 dB respectively); stored spectra have those measurement gains removed.
 - Downstream off-diagonal leakage: -180.00 dB.
-- De-embedded combined ≈ convolved + clean closure: -30.65 dB RMS at 20–80 Hz, -29.79 dB at 20–300 Hz, and -38.94 dB at 20 Hz–20 kHz.
+- De-embedded combined ≈ convolved + clean closure: -37.84 dB RMS at 20–80 Hz, -33.39 dB at 20–300 Hz, and -33.72 dB at 20 Hz–20 kHz.
 - Every isolated impulse capture reports zero clipped samples.
-- The independent 16-bit captures have the same approximate low-frequency closure floor as prior accepted branch measurements; use smoothed low-frequency targets rather than treating quantization ripple as acoustic detail.
+- The combined reference remains a separate 16-bit capture, so use smoothed low-frequency targets rather than treating residual closure or quantization ripple as acoustic detail.
 
 ## Timing
 

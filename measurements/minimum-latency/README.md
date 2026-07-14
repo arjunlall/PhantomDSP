@@ -48,3 +48,15 @@ Equalizer APO Benchmark writes 16-bit PCM. The original isolated clean branch pe
 The measurement-only routes apply +24 dB to the convolved branch and +48 dB to the clean branch while using the −6 dBFS probe. They do not match normal playback devices. The analyzer automatically substitutes both precision captures when present and removes the recorded gains before de-embedding. Never use only one precision branch.
 
 For a ready-to-paste PC Codex prompt, use [`docs/windows-precision-branch-runbook.md`](../../docs/windows-precision-branch-runbook.md).
+
+## D200 Unified Prototype
+
+The first locked prototype replaces the parallel clean branch with two generated stereo IRs. It retains A100's smoothed deep-bass quantity, preserves the 15-sample cross-path bass offset, hands off at 80 Hz, and advances the BRIR portion another 100 samples. A100 remains the playback default; the selector activates D200 automatically only for its reserved Benchmark device.
+
+After pulling the prototype commit on Windows, run:
+
+```powershell
+.\tools\measurement\run_eapo_d200_prototype.ps1
+```
+
+The command captures the complete D200 output and a correlated full-scale headroom/CPU sweep under `measurements\minimum-latency\d200-prototype\raw`. Do not enable the prototype for listening until its captured response is compared with A100. See [`docs/windows-d200-prototype-runbook.md`](../../docs/windows-d200-prototype-runbook.md) for the PC handoff.

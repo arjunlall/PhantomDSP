@@ -1,0 +1,15 @@
+# Experimental candidate E; not the production default.
+# Candidate C plus a generated binaural diffuse tail after 25-30 ms.
+# No measured late-field waveform samples are copied into these IRs.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\synthetic-late\Synthetic Late Field Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\synthetic-late\Synthetic Late Field Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR
+Channel: all

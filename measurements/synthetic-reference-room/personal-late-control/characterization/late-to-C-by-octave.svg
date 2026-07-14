@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550.0" y="32" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="600">Late-Field Energy Relative to Candidate C</text>
+<line x1="88.00" y1="62" x2="88.00" y2="548" stroke="#e5e7eb"/>
+<text x="88.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">250</text>
+<line x1="251.33" y1="62" x2="251.33" y2="548" stroke="#e5e7eb"/>
+<text x="251.33" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">500</text>
+<line x1="414.67" y1="62" x2="414.67" y2="548" stroke="#e5e7eb"/>
+<text x="414.67" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">1k</text>
+<line x1="578.00" y1="62" x2="578.00" y2="548" stroke="#e5e7eb"/>
+<text x="578.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">2k</text>
+<line x1="741.33" y1="62" x2="741.33" y2="548" stroke="#e5e7eb"/>
+<text x="741.33" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">4k</text>
+<line x1="904.67" y1="62" x2="904.67" y2="548" stroke="#e5e7eb"/>
+<text x="904.67" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">8k</text>
+<line x1="1068.00" y1="62" x2="1068.00" y2="548" stroke="#e5e7eb"/>
+<text x="1068.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">16k</text>
+<line x1="88" y1="548.00" x2="1068" y2="548.00" stroke="#e5e7eb"/>
+<text x="78" y="552.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-16.0</text>
+<line x1="88" y1="467.00" x2="1068" y2="467.00" stroke="#e5e7eb"/>
+<text x="78" y="471.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-13.3</text>
+<line x1="88" y1="386.00" x2="1068" y2="386.00" stroke="#e5e7eb"/>
+<text x="78" y="390.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-10.7</text>
+<line x1="88" y1="305.00" x2="1068" y2="305.00" stroke="#e5e7eb"/>
+<text x="78" y="309.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-8.00</text>
+<line x1="88" y1="224.00" x2="1068" y2="224.00" stroke="#e5e7eb"/>
+<text x="78" y="228.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-5.33</text>
+<line x1="88" y1="143.00" x2="1068" y2="143.00" stroke="#e5e7eb"/>
+<text x="78" y="147.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-2.67</text>
+<line x1="88" y1="62.00" x2="1068" y2="62.00" stroke="#e5e7eb"/>
+<text x="78" y="66.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">0.00</text>
+<rect x="88" y="62" width="980" height="486" fill="none" stroke="#6b7280"/>
+<text x="578.0" y="602" text-anchor="middle" font-family="sans-serif" font-size="14">Octave-band center (Hz)</text>
+<text x="20" y="305.0" text-anchor="middle" transform="rotate(-90 20 305.0)" font-family="sans-serif" font-size="14">Late minus C energy (dB)</text>
+<polyline points="88.00,368.67 251.33,340.41 414.67,400.97 578.00,414.27 741.33,409.58 904.67,382.47 1068.00,428.36" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,357.74 251.33,213.08 414.67,163.30 578.00,148.31 741.33,138.04 904.67,129.67 1068.00,158.89" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,380.70 251.33,230.60 414.67,172.71 578.00,171.95 741.33,144.87 904.67,113.54 1068.00,104.28" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,399.96 251.33,333.96 414.67,381.28 578.00,419.31 741.33,438.16 904.67,420.54 1068.00,496.47" fill="none" stroke="#059669" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="100" y1="82" x2="124" y2="82" stroke="#2563eb" stroke-width="3"/>
+<text x="131" y="86" font-family="sans-serif" font-size="13">LL</text>
+<line x1="250" y1="82" x2="274" y2="82" stroke="#7c3aed" stroke-width="3"/>
+<text x="281" y="86" font-family="sans-serif" font-size="13">LR</text>
+<line x1="400" y1="82" x2="424" y2="82" stroke="#dc2626" stroke-width="3"/>
+<text x="431" y="86" font-family="sans-serif" font-size="13">RL</text>
+<line x1="550" y1="82" x2="574" y2="82" stroke="#059669" stroke-width="3"/>
+<text x="581" y="86" font-family="sans-serif" font-size="13">RR</text>
+</svg>

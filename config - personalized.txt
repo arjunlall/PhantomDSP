@@ -6,6 +6,8 @@ Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
 # Include: Synthetic Reference Room\Personal Early Room Renderer.txt
 # D — measured late-room control: disable A above before enabling.
 # Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
+# E — synthetic diffuse late field: disable A above before enabling.
+# Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
 # Known-good fallback; enable only after disabling Speaker Virtualization above.
 # Include: JBL M2 Binaural Convolution\Legacy Parallel Bass Reference.txt
 # Historical measurement routing; never enable alongside either playback renderer.

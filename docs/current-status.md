@@ -4,19 +4,21 @@ This file is the short resume point for active experiments. Detailed measurement
 
 ## Synthetic Reference Room Experiment
 
-Four mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production, B is synthetic direct-only, C adds personal early reflections, and D adds the complementary measured late field. Production remains enabled by default.
+Five mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production, B is synthetic direct-only, C adds personal early reflections, D adds the complementary measured late field, and E replaces D's late tail with a generated diffuse field. Production remains enabled by default.
 
 B was benchmarked cleanly on Windows and sounded like ordinary headphones despite its theoretical ITD and personal direct-HRTF magnitude. C restored four distinct +4 to +30 ms paths and A-like comb density, but sounded perceptually like B: frontal yet immediately in front of the listener. Switching either B or C to A moved the image back several feet. Offline analysis confirms C's early energy is already comparable to A; its decisive difference is the absence of energy after 30 ms.
 
 D preserves C bit-for-bit through 25 ms, adds a complementary 25–30 ms fade into the full measured decay, and keeps C's 250 Hz room high-pass, gain, direct timing, and bass. Its above-250 Hz decay closely follows A and its 20–80 Hz response changes by only 0.005 dB RMS.
 
-Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. This was not blinded or independently level matched. The result establishes sustained post-30 ms binaural decay—not early frequency-response combing alone—as necessary in this system, and makes D the frozen hybrid reference. B's synthetic direct stage is sufficient for the next experiment.
+Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. This was not blinded or independently level matched. The result establishes sustained post-30 ms binaural decay—not early frequency-response combing alone—as necessary in this system, and makes D the frozen hybrid reference. D subsequently passed Windows Benchmark with no clipping or configuration errors, 4.84 dB correlated-sweep headroom, and 0.60–0.66% single-core CPU.
 
-Resume by benchmarking D at low volume: renderer-only correlated gain is +3.93 dB, versus +1.28 dB for C and +4.21 dB for A. Then characterize D's broad frequency-dependent decay, direct-to-late ratio, and interaural coherence. Candidate E must retain D's direct sound, bass, and measured early field while replacing only its measured post-30 ms tail with a clean synthetic binaural late field.
+D's late field is now characterized as a broad target: 9.16 dB retained-C-to-late energy ratio, approximately 0.565 s decay, nearly equal late energy at both ears, low coherence above 500 Hz, and a smoothed at-ear spectral shape. Candidate E preserves C through the 25 ms boundary and generates a deterministic symmetric tail that matches those targets without copying D's late waveform. Its 20–80 Hz change from C is 0.00008 dB RMS and modeled correlated renderer gain is +3.42 dB.
+
+Resume by committing E, pulling it to the Windows checkout, selecting only `Synthetic Reference Room\Synthetic Late Field Renderer.txt`, and running the ordinary Benchmark probes before listening. If runtime validation passes, compare E directly with D; do not alter the early field, bass, or downstream filters during this test.
 
 ## Historical Bass Crossover Listening Decision
 
-These historical labels belong only to the completed bass experiment; they are unrelated to the synthetic-room A/B/C/D conditions above.
+These historical labels belong only to the completed bass experiment; they are unrelated to the synthetic-room A/B/C/D/E conditions above.
 
 - **Legacy topology (historical A):** preferred historical reference. It places bass with the phantom speakers and sounds less muddy or bloated; A100 retains this topology as the fallback.
 - **LR4 75 Hz (historical B):** sounded clearer, slightly louder, and wider, but moved bass toward the headphones and weakened the frontal phantom speakers. The runnable candidate was removed.

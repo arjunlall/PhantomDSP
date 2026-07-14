@@ -70,7 +70,18 @@ LISTENING_RESULT = {
     "method": "informal sighted A/C/D comparison with unchanged downstream filters",
     "result": "D restored apparent monitor distance and sounded more spacious and preferable to A",
     "interpretation": "Sustained post-30 ms binaural decay is necessary in this system; A-like early comb density alone was insufficient",
-    "limitations": "not blinded or independently level matched; Windows Benchmark remains pending",
+    "limitations": "not blinded or independently level matched",
+}
+WINDOWS_BENCHMARK_RESULT = {
+    "date": "2026-07-14",
+    "commit": "9e0818f04c5ba9db781ccf0cfc6dfbef84919393",
+    "device": "Output A1 Voicemeeter",
+    "result": "three probes passed with expected renderer, WAV, and 2x2 routing loads; no clipping or configuration-error markers",
+    "left_impulse_peak_dbfs": -25.065376,
+    "right_impulse_peak_dbfs": -25.842562,
+    "correlated_sweep_peak_dbfs": -4.844495,
+    "single_core_cpu_percent_range": [0.60, 0.66],
+    "capture_location": "temporary Windows evidence; not checked into the repository",
 }
 
 
@@ -430,6 +441,7 @@ def main():
         "schema_version": 1,
         "status": "opt-in measured late-field diagnostic",
         "listening_result": LISTENING_RESULT,
+        "windows_benchmark_result": WINDOWS_BENCHMARK_RESULT,
         "design": DESIGN,
         "candidate_C_files": early_metadata,
         "candidate_C_summary": str(EARLY_ANALYSIS.relative_to(REPOSITORY)),
@@ -476,7 +488,7 @@ def main():
         "",
         "## Interpretation",
         "",
-        "Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. The comparison was not blinded or independently level matched, and Windows Benchmark validation remains pending.",
+        "Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. The comparison was not blinded or independently level matched. Windows Benchmark subsequently passed all three probes with no clipping or configuration errors.",
         "",
         "This establishes sustained post-30 ms binaural decay as necessary in this system; A-like early comb density alone was insufficient. The next renderer should keep D's direct sound, bass, and measured early field while replacing only this measured tail with a clean synthetic binaural late field.",
     ]

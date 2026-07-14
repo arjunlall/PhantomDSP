@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "status": "offline characterization of the preferred D late field",
+  "analysis": {
+    "sample_rate_hz": 48000,
+    "late_analysis_start_ms": 30.0,
+    "late_analysis_end_ms": 500.0,
+    "octave_filter": {
+      "type": "causal RBJ second-order high-pass plus second-order low-pass",
+      "q": 0.7071067811865475,
+      "edge_ratio": 1.4142135623730951
+    },
+    "iacc_maximum_lag_ms": 1.0,
+    "decay_fits_db": {
+      "EDT": [
+        0.0,
+        -10.0
+      ],
+      "T20": [
+        -5.0,
+        -25.0
+      ],
+      "T30": [
+        -5.0,
+        -35.0
+      ]
+    }
+  },
+  "input_files": {
+    "candidate_d": {
+      "left": {
+        "path": "Synthetic Reference Room/IRs/personal-late-control/Personal Late Room Left Speaker.wav",
+        "sha256": "45784c6e93b0d1839ad1265cde80d69bc4c86535e1fb1f8382126d4f35e6a9c0",
+        "frames": 32768,
+        "sample_width_bits": 24
+      },
+      "right": {
+        "path": "Synthetic Reference Room/IRs/personal-late-control/Personal Late Room Right Speaker.wav",
+        "sha256": "4d533f4710675ae70f1dad47a742ab34eb25ec8732a4ec132a563bc2552cf839",
+        "frames": 32768,
+        "sample_width_bits": 24
+      }
+    },
+    "candidate_c": {
+      "left": {
+        "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Left Speaker.wav",
+        "sha256": "4b461d3571de03d95d6aee7c954ca2449bd20c777f18e1259f212eb4681af3a2",
+        "frames": 8192,
+        "sample_width_bits": 24
+      },
+      "right": {
+        "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Right Speaker.wav",
+        "sha256": "d108e03a66079b95f70da432c461def831d5a170acef10d29fb87739bfacb9e7",
+        "frames": 8192,
+        "sample_width_bits": 24
+      }
+    }
+  },
+  "broad_metrics": {
+    "path_late_to_c_energy_db": {
+      "LL": -11.341815,
+      "LR": -2.787018,
+      "RL": -3.054767,
+      "RR": -12.084112
+    },
+    "combined_retained_c_to_late_energy_ratio_db": {
+      "left_speaker": 8.74359,
+      "right_speaker": 9.64678,
+      "left_ear": 9.285081,
+      "right_ear": 9.0407
+    },
+    "late_ear_level_difference_db": {
+      "left_speaker_LL_minus_LR": -0.403555,
+      "right_speaker_RR_minus_RL": 0.1587
+    },
+    "late_source_total_balance_db": 1.121899
+  },
+  "octave_bands": {
+    "250": {
+      "center_hz": 250.0,
+      "decay_seconds": {
+        "LL": {
+          "EDT": 0.551055,
+          "T20": 0.44558,
+          "T30": 0.485895
+        },
+        "LR": {
+          "EDT": 0.527263,
+          "T20": 0.524902,
+          "T30": 0.52394
+        },
+        "RL": {
+          "EDT": 0.510686,
+          "T20": 0.480673,
+          "T30": 0.510587
+        },
+        "RR": {
+          "EDT": 0.572222,
+          "T20": 0.49325,
+          "T30": 0.507673
+        }
+      },
+      "aggregate": {
+        "median_T30_seconds": 0.50913
+      },
+      "late_energy_db": {
+        "LL": -53.511678,
+        "LR": -53.679008,
+        "RL": -54.708847,
+        "RR": -54.252709
+      },
+      "late_to_c_energy_db": {
+        "LL": -10.096257,
+        "LR": -9.73646,
+        "RL": -10.492079,
+        "RR": -11.126133
+      },
+      "iacc": {
+        "left_speaker": {
+          "signed": 0.323877,
+          "absolute": 0.323877,
+          "lag_samples": -5,
+          "lag_ms": -0.104167
+        },
+        "right_speaker": {
+          "signed": -0.246407,
+          "absolute": 0.246407,
+          "lag_samples": -48,
+          "lag_ms": -1.0
+        }
+      },
+      "cross_source": {
+        "left_ear": {
+          "signed": -0.32706,
+          "absolute": 0.32706,
+          "lag_samples": 48,
+          "lag_ms": 1.0
+        },
+        "right_ear": {
+          "signed": -0.142458,
+          "absolute": 0.142458,
+          "lag_samples": -33,
+          "lag_ms": -0.6875
+        }
+      }
+    },
+    "500": {
+      "center_hz": 500.0,
+      "decay_seconds": {
+        "LL": {
+          "EDT": 0.6158,
+          "T20": 0.541948,
+          "T30": 0.551429
+        },
+        "LR": {
+          "EDT": 0.617844,
+          "T20": 0.569089,
+          "T30": 0.574272
+        },
+        "RL": {
+          "EDT": 0.640441,
+          "T20": 0.543354,
+          "T30": 0.554157
+        },
+        "RR": {
+          "EDT": 0.628007,
+          "T20": 0.547815,
+          "T30": 0.547139
+        }
+      },
+      "aggregate": {
+        "median_T30_seconds": 0.552793
+      },
+      "late_energy_db": {
+        "LL": -47.930874,
+        "LR": -47.446895,
+        "RL": -48.793746,
+        "RR": -47.385129
+      },
+      "late_to_c_energy_db": {
+        "LL": -9.165817,
+        "LR": -4.973819,
+        "RL": -5.550668,
+        "RR": -8.953387
+      },
+      "iacc": {
+        "left_speaker": {
+          "signed": 0.121871,
+          "absolute": 0.121871,
+          "lag_samples": -33,
+          "lag_ms": -0.6875
+        },
+        "right_speaker": {
+          "signed": 0.134131,
+          "absolute": 0.134131,
+          "lag_samples": 45,
+          "lag_ms": 0.9375
+        }
+      },
+      "cross_source": {
+        "left_ear": {
+          "signed": -0.148083,
+          "absolute": 0.148083,
+          "lag_samples": 47,
+          "lag_ms": 0.979167
+        },
+        "right_ear": {
+          "signed": -0.136621,
+          "absolute": 0.136621,
+          "lag_samples": -48,
+          "lag_ms": -1.0
+        }
+      }
+    },
+    "1000": {
+      "center_hz": 1000.0,
+      "decay_seconds": {
+        "LL": {
+          "EDT": 0.67742,
+          "T20": 0.580164,
+          "T30": 0.574995
+        },
+        "LR": {
+          "EDT": 0.650921,
+          "T20": 0.579464,
+          "T30": 0.573754
+        },
+        "RL": {
+          "EDT": 0.70692,
+          "T20": 0.556896,
+          "T30": 0.557994
+        },
+        "RR": {
+          "EDT": 0.677691,
+          "T20": 0.575792,
+          "T30": 0.561196
+        }
+      },
+      "aggregate": {
+        "median_T30_seconds": 0.567475
+      },
+      "late_energy_db": {
+        "LL": -41.407089,
+        "LR": -40.267231,
+        "RL": -41.881758,
+        "RR": -40.746725
+      },
+      "late_to_c_energy_db": {
+        "LL": -11.15935,
+        "LR": -3.335066,
+        "RL": -3.644909,
+        "RR": -10.511423
+      },
+      "iacc": {
+        "left_speaker": {
+          "signed": 0.070356,
+          "absolute": 0.070356,
+          "lag_samples": -46,
+          "lag_ms": -0.958333
+        },
+        "right_speaker": {
+          "signed": 0.138307,
+          "absolute": 0.138307,
+          "lag_samples": 45,
+          "lag_ms": 0.9375
+        }
+      },
+      "cross_source": {
+        "left_ear": {
+          "signed": 0.145997,
+          "absolute": 0.145997,
+          "lag_samples": 24,
+          "lag_ms": 0.5
+        },
+        "right_ear": {
+          "signed": -0.08333,
+          "absolute": 0.08333,
+          "lag_samples": -47,
+          "lag_ms": -0.979167
+        }
+      }
+    },
+    "2000": {
+      "center_hz": 2000.0,
+      "decay_seconds": {
+        "LL": {
+          "EDT": 0.700182,
+          "T20": 0.583515,
+          "T30": 0.573509
+        },
+        "LR": {
+          "EDT": 0.661455,
+          "T20": 0.573662,
+          "T30": 0.563498
+        },
+        "RL": {
+          "EDT": 0.723296,
+          "T20": 0.5614,
+          "T30": 0.55839
+        },
+        "RR": {
+          "EDT": 0.70196,
+          "T20": 0.589101,
+          "T30": 0.562149
+        }
+      },
+      "aggregate": {
+        "median_T30_seconds": 0.562824
+      },
+      "late_energy_db": {
+        "LL": -33.21002,
+        "LR": -32.21413,
+        "RL": -34.046442,
+        "RR": -33.444777
+      },
+      "late_to_c_energy_db": {
+        "LL": -11.597391,
+        "LR": -2.841346,
+        "RL": -3.619712,
+        "RR": -11.763247
+      },
+      "iacc": {
+        "left_speaker": {
+          "signed": -0.052545,
+          "absolute": 0.052545,
+          "lag_samples": -22,
+          "lag_ms": -0.458333
+        },
+        "right_speaker": {
+          "signed": 0.134936,
+          "absolute": 0.134936,
+          "lag_samples": 14,
+          "lag_ms": 0.291667
+        }
+      },
+      "cross_source": {
+        "left_ear": {
+          "signed": 0.141688,
+          "absolute": 0.141688,
+          "lag_samples": 24,
+          "lag_ms": 0.5
+        },
+        "right_ear": {
+          "signed": -0.125172,
+          "absolute": 0.125172,
+          "lag_samples": -47,
+          "lag_ms": -0.979167
+        }
+      }
+    },
+    "4000": {
+      "center_hz": 4000.0,
+      "decay_seconds": {
+        "LL": {
+          "EDT": 0.699096,
+          "T20": 0.586701,
+          "T30": 0.576308
+        },
+        "LR": {
+          "EDT": 0.671533,
+          "T20": 0.57971,
+          "T30": 0.567934
+        },
+        "RL": {
+          "EDT": 0.734062,
+          "T20": 0.562927,
+          "T30": 0.55697
+        },
+        "RR": {
+          "EDT": 0.718902,
+          "T20": 0.590848,
+          "T30": 0.564437
+        }
+      },
+      "aggregate": {
+        "median_T30_seconds": 0.566186
+      },
+      "late_energy_db": {
+        "LL": -30.044753,
+        "LR": -29.725888,
+        "RL": -31.021951,
+        "RR": -31.090924
+      },
+      "late_to_c_energy_db": {
+        "LL": -11.443099,
+        "LR": -2.503484,
+        "RL": -2.728333,
+        "RR": -12.383751
+      },
+      "iacc": {
+        "left_speaker": {
+          "signed": -0.075846,
+          "absolute": 0.075846,
+          "lag_samples": 18,
+          "lag_ms": 0.375
+        },
+        "right_speaker": {
+          "signed": -0.146353,
+          "absolute": 0.146353,
+          "lag_samples": 7,
+          "lag_ms": 0.145833
+        }
+      },
+      "cross_source": {
+        "left_ear": {
+          "signed": 0.127803,
+          "absolute": 0.127803,
+          "lag_samples": 24,
+          "lag_ms": 0.5
+        },
+        "right_ear": {
+          "signed": -0.096721,
+          "absolute": 0.096721,
+          "lag_samples": -48,
+          "lag_ms": -1.0
+        }
+      }
+    },
+    "8000": {
+      "center_hz": 8000.0,
+      "decay_seconds": {
+        "LL": {
+          "EDT": 0.679306,
+          "T20": 0.571203,
+          "T30": 0.569048
+        },
+        "LR": {
+          "EDT": 0.669685,
+          "T20": 0.576282,
+          "T30": 0.57062
+        },
+        "RL": {
+          "EDT": 0.722974,
+          "T20": 0.559782,
+          "T30": 0.55378
+        },
+        "RR": {
+          "EDT": 0.711625,
+          "T20": 0.573438,
+          "T30": 0.55796
+        }
+      },
+      "aggregate": {
+        "median_T30_seconds": 0.563504
+      },
+      "late_energy_db": {
+        "LL": -34.590441,
+        "LR": -34.835922,
+        "RL": -35.853129,
+        "RR": -35.978566
+      },
+      "late_to_c_energy_db": {
+        "LL": -10.550525,
+        "LR": -2.22779,
+        "RL": -1.696829,
+        "RR": -11.803793
+      },
+      "iacc": {
+        "left_speaker": {
+          "signed": -0.07523,
+          "absolute": 0.07523,
+          "lag_samples": 18,
+          "lag_ms": 0.375
+        },
+        "right_speaker": {
+          "signed": -0.119969,
+          "absolute": 0.119969,
+          "lag_samples": -35,
+          "lag_ms": -0.729167
+        }
+      },
+      "cross_source": {
+        "left_ear": {
+          "signed": 0.091419,
+          "absolute": 0.091419,
+          "lag_samples": 25,
+          "lag_ms": 0.520833
+        },
+        "right_ear": {
+          "signed": 0.086265,
+          "absolute": 0.086265,
+          "lag_samples": -25,
+          "lag_ms": -0.520833
+        }
+      }
+    },
+    "16000": {
+      "center_hz": 16000.0,
+      "decay_seconds": {
+        "LL": {
+          "EDT": 0.574786,
+          "T20": 0.513903,
+          "T30": 0.584021
+        },
+        "LR": {
+          "EDT": 0.583625,
+          "T20": 0.543879,
+          "T30": 0.629407
+        },
+        "RL": {
+          "EDT": 0.616029,
+          "T20": 0.529714,
+          "T30": 0.608906
+        },
+        "RR": {
+          "EDT": 0.62069,
+          "T20": 0.564832,
+          "T30": 0.652111
+        }
+      },
+      "aggregate": {
+        "median_T30_seconds": 0.619156
+      },
+      "late_energy_db": {
+        "LL": -42.669981,
+        "LR": -43.467861,
+        "RL": -44.517204,
+        "RR": -45.064992
+      },
+      "late_to_c_energy_db": {
+        "LL": -12.061339,
+        "LR": -3.189867,
+        "RL": -1.392031,
+        "RR": -14.303631
+      },
+      "iacc": {
+        "left_speaker": {
+          "signed": -0.064088,
+          "absolute": 0.064088,
+          "lag_samples": 45,
+          "lag_ms": 0.9375
+        },
+        "right_speaker": {
+          "signed": -0.069562,
+          "absolute": 0.069562,
+          "lag_samples": -35,
+          "lag_ms": -0.729167
+        }
+      },
+      "cross_source": {
+        "left_ear": {
+          "signed": 0.057868,
+          "absolute": 0.057868,
+          "lag_samples": -42,
+          "lag_ms": -0.875
+        },
+        "right_ear": {
+          "signed": -0.054568,
+          "absolute": 0.054568,
+          "lag_samples": 6,
+          "lag_ms": 0.125
+        }
+      }
+    }
+  },
+  "candidate_e_target": {
+    "purpose": "broad statistical target for candidate E; do not copy D waveform or narrow resonances",
+    "transition_ms": [
+      25.0,
+      30.0
+    ],
+    "protective_highpass_hz": 250.0,
+    "combined_retained_c_to_late_energy_ratio_db": 9.163,
+    "late_energy_shape_db_relative_to_1khz": {
+      "250": -12.98,
+      "500": -6.822,
+      "1000": 0.0,
+      "2000": 7.854,
+      "4000": 10.602,
+      "8000": 5.76,
+      "16000": -2.799
+    },
+    "rt60_seconds_by_octave": {
+      "250": 0.50913,
+      "500": 0.552793,
+      "1000": 0.567475,
+      "2000": 0.562824,
+      "4000": 0.566186,
+      "8000": 0.563504,
+      "16000": 0.619156
+    },
+    "maximum_absolute_iacc_by_octave": {
+      "250": 0.285,
+      "500": 0.128,
+      "1000": 0.104,
+      "2000": 0.094,
+      "4000": 0.111,
+      "8000": 0.098,
+      "16000": 0.067
+    },
+    "late_ear_level_difference_db": 0.0,
+    "source_symmetry": "use averaged D statistics rather than measured left/right imbalance",
+    "late_source_injection": "separate decorrelated inputs into one shared binaural diffuse field"
+  },
+  "plots": [
+    "t30-by-octave.svg",
+    "late-to-C-by-octave.svg",
+    "late-field-coherence.svg"
+  ]
+}

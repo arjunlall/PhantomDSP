@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "status": "opt-in synthetic diffuse late-field candidate E",
+  "design": {
+    "sample_rate_hz": 48000,
+    "output_length_samples": 32768,
+    "late_transition_ms": [
+      25.0,
+      30.0
+    ],
+    "noise_preroll_ms": 100.0,
+    "final_fade_ms": 25.0,
+    "random_seed": 20260714,
+    "spectral_calibration_iterations": 8,
+    "spectral_correction_fir_samples": 2048,
+    "spectral_correction_limit_db": 6.0,
+    "coherence_mix_scale_above_250_hz": 0.6,
+    "late_highpass": {
+      "type": "cascaded RBJ Butterworth biquads (Linkwitz-Riley fourth order)",
+      "cutoff_hz": 250.0,
+      "q": 0.7071067811865475,
+      "sections": 2
+    },
+    "source_model": "independent deterministic Gaussian injections with a frequency-dependent shared ear component",
+    "normalization": "equal energy in all four late paths, then one global target-ratio scale"
+  },
+  "target_summary": {
+    "path": "measurements/synthetic-reference-room/personal-late-control/characterization/summary.json",
+    "sha256": "f056458072e1e5efbffe9314ae64fa5dc805a6722fd7277fd269fee5eac5e8b3",
+    "target": {
+      "purpose": "broad statistical target for candidate E; do not copy D waveform or narrow resonances",
+      "transition_ms": [
+        25.0,
+        30.0
+      ],
+      "protective_highpass_hz": 250.0,
+      "combined_retained_c_to_late_energy_ratio_db": 9.163,
+      "late_energy_shape_db_relative_to_1khz": {
+        "250": -12.98,
+        "500": -6.822,
+        "1000": 0.0,
+        "2000": 7.854,
+        "4000": 10.602,
+        "8000": 5.76,
+        "16000": -2.799
+      },
+      "rt60_seconds_by_octave": {
+        "250": 0.50913,
+        "500": 0.552793,
+        "1000": 0.567475,
+        "2000": 0.562824,
+        "4000": 0.566186,
+        "8000": 0.563504,
+        "16000": 0.619156
+      },
+      "maximum_absolute_iacc_by_octave": {
+        "250": 0.285,
+        "500": 0.128,
+        "1000": 0.104,
+        "2000": 0.094,
+        "4000": 0.111,
+        "8000": 0.098,
+        "16000": 0.067
+      },
+      "late_ear_level_difference_db": 0.0,
+      "source_symmetry": "use averaged D statistics rather than measured left/right imbalance",
+      "late_source_injection": "separate decorrelated inputs into one shared binaural diffuse field"
+    },
+    "measured_waveform_samples_copied": false
+  },
+  "candidate_c_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Left Speaker.wav",
+      "sha256": "4b461d3571de03d95d6aee7c954ca2449bd20c777f18e1259f212eb4681af3a2",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Right Speaker.wav",
+      "sha256": "d108e03a66079b95f70da432c461def831d5a170acef10d29fb87739bfacb9e7",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "direct_peak_samples": {
+    "LL": 9,
+    "LR": 15,
+    "RL": 15,
+    "RR": 9
+  },
+  "calibrated_band_gains": {
+    "250": 0.224388192,
+    "500": 0.455931922,
+    "1000": 1.0,
+    "2000": 2.470017328,
+    "4000": 3.389221869,
+    "8000": 1.940885878,
+    "16000": 0.724519369
+  },
+  "global_late_scale": 0.002399703,
+  "metrics": {
+    "combined_retained_c_to_late_energy_ratio_db": 9.163001,
+    "path_late_energy_db": {
+      "LL": -27.619245,
+      "LR": -27.619245,
+      "RL": -27.619259,
+      "RR": -27.619252
+    },
+    "first_difference_from_c_sample": {
+      "LL": 1212,
+      "LR": 1217,
+      "RL": 1218,
+      "RR": 1212
+    },
+    "bass_preservation_20_80_hz": {
+      "mean_delta_db": 2.4e-05,
+      "rms_delta_db": 0.000101,
+      "maximum_absolute_delta_db": 0.00026
+    },
+    "modeled_correlated_renderer_gain_db": 3.42572,
+    "bands": {
+      "250": {
+        "energy_shape_db_relative_to_1khz": -13.112144,
+        "median_t30_seconds": 0.56208,
+        "mean_maximum_absolute_iacc": 0.244607
+      },
+      "500": {
+        "energy_shape_db_relative_to_1khz": -7.818756,
+        "median_t30_seconds": 0.56359,
+        "mean_maximum_absolute_iacc": 0.137588
+      },
+      "1000": {
+        "energy_shape_db_relative_to_1khz": 0.0,
+        "median_t30_seconds": 0.55876,
+        "mean_maximum_absolute_iacc": 0.103982
+      },
+      "2000": {
+        "energy_shape_db_relative_to_1khz": 7.550896,
+        "median_t30_seconds": 0.561565,
+        "mean_maximum_absolute_iacc": 0.112945
+      },
+      "4000": {
+        "energy_shape_db_relative_to_1khz": 10.035044,
+        "median_t30_seconds": 0.570098,
+        "mean_maximum_absolute_iacc": 0.117871
+      },
+      "8000": {
+        "energy_shape_db_relative_to_1khz": 5.730908,
+        "median_t30_seconds": 0.570701,
+        "mean_maximum_absolute_iacc": 0.086724
+      },
+      "16000": {
+        "energy_shape_db_relative_to_1khz": -3.751525,
+        "median_t30_seconds": 0.574084,
+        "mean_maximum_absolute_iacc": 0.063661
+      }
+    }
+  },
+  "rendered_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/synthetic-late/Synthetic Late Field Left Speaker.wav",
+      "sha256": "bc0d754bcd8482dc11d209152bb9e991b53a82fbaa471a2d5dc54082c2c4aa8e",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080082
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/synthetic-late/Synthetic Late Field Right Speaker.wav",
+      "sha256": "5bde98d91f0b98210ca0a5534c3845abdb499b838d8118c0bffbf41723319a24",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080082
+    }
+  },
+  "plots": [
+    "late-spectrum-target.svg",
+    "late-decay-target.svg",
+    "late-coherence-target.svg"
+  ]
+}

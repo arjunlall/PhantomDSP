@@ -12,6 +12,6 @@ Candidate D changes one audible variable relative to C: it restores the measured
 
 ## Interpretation
 
-Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. The comparison was not blinded or independently level matched, and Windows Benchmark validation remains pending.
+Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. The comparison was not blinded or independently level matched. Windows Benchmark subsequently passed all three probes with no clipping or configuration errors.
 
 This establishes sustained post-30 ms binaural decay as necessary in this system; A-like early comb density alone was insufficient. The next renderer should keep D's direct sound, bass, and measured early field while replacing only this measured tail with a clean synthetic binaural late field.

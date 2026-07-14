@@ -75,6 +75,26 @@ DESIGN = {
     "source_model": "independent deterministic Gaussian injections with a frequency-dependent shared ear component",
     "normalization": "equal energy in all four late paths, then one global target-ratio scale",
 }
+LISTENING_RESULT = {
+    "date": "2026-07-14",
+    "method": "informal sighted A/D/E comparison with unchanged downstream filters",
+    "result": "no obvious difference between D and E; E sounded great and preserved the intended speaker placement",
+    "spatial_observation": "A sounded narrower, approximately 20-25 degrees per side, while D and E matched the intended plus/minus 30-degree geometry",
+    "interpretation": "the synthetic late field replaced D's measured late waveform without an obvious perceptual loss",
+    "limitations": "not blinded or independently level matched; apparent angles are subjective estimates",
+}
+WINDOWS_BENCHMARK_RESULT = {
+    "date": "2026-07-14",
+    "commit": "1fa8dc2e8e760e2daba8db02e023f446535d804f",
+    "device": "Output A1 Voicemeeter",
+    "renderer_sha256": "5222eef0050b8e6d254a71dc505f0c20d532bc4a5f5ff487745ec83114c49d74",
+    "result": "three probes passed with expected renderer, WAV, and 2x2 routing loads; no clipping or configuration-error markers",
+    "left_impulse_peak_dbfs": -25.065376,
+    "right_impulse_peak_dbfs": -25.842562,
+    "correlated_sweep_peak_dbfs": -4.606780,
+    "single_core_cpu_percent_range": [0.60, 0.67],
+    "capture_location": "temporary Windows evidence; not checked into the repository",
+}
 
 
 def rbj_lowpass_coefficients(sample_rate, cutoff, q):
@@ -485,7 +505,9 @@ def main():
     write_analysis_plots(args.analysis_output, target, metrics)
     summary = {
         "schema_version": 1,
-        "status": "opt-in synthetic diffuse late-field candidate E",
+        "status": "accepted opt-in synthetic diffuse late-field reference E",
+        "listening_result": LISTENING_RESULT,
+        "windows_benchmark_result": WINDOWS_BENCHMARK_RESULT,
         "design": DESIGN,
         "target_summary": {
             "path": str(TARGET_SUMMARY.relative_to(REPOSITORY)),
@@ -521,6 +543,10 @@ def main():
         f"- Maximum rendered IR peak: {maximum:.6f}.",
         "- All four synthetic late paths are normalized to equal total energy before one common level scale.",
         "- The 25-30 ms transition, frequency-dependent decay, spectrum, and binaural coherence are recorded in summary.json.",
+        "",
+        "## Listening and Runtime Result",
+        "",
+        "Informal sighted comparison found no obvious difference between D and E; E preserved the intended ±30° placement and sounded great. A sounded narrower, at an estimated ±20–25°. Windows Benchmark passed all three probes with no clipping or configuration errors, 4.61 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU.",
         "",
         "## Boundary",
         "",

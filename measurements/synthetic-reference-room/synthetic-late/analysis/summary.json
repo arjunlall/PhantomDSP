@@ -1,6 +1,29 @@
 {
   "schema_version": 1,
-  "status": "opt-in synthetic diffuse late-field candidate E",
+  "status": "accepted opt-in synthetic diffuse late-field reference E",
+  "listening_result": {
+    "date": "2026-07-14",
+    "method": "informal sighted A/D/E comparison with unchanged downstream filters",
+    "result": "no obvious difference between D and E; E sounded great and preserved the intended speaker placement",
+    "spatial_observation": "A sounded narrower, approximately 20-25 degrees per side, while D and E matched the intended plus/minus 30-degree geometry",
+    "interpretation": "the synthetic late field replaced D's measured late waveform without an obvious perceptual loss",
+    "limitations": "not blinded or independently level matched; apparent angles are subjective estimates"
+  },
+  "windows_benchmark_result": {
+    "date": "2026-07-14",
+    "commit": "1fa8dc2e8e760e2daba8db02e023f446535d804f",
+    "device": "Output A1 Voicemeeter",
+    "renderer_sha256": "5222eef0050b8e6d254a71dc505f0c20d532bc4a5f5ff487745ec83114c49d74",
+    "result": "three probes passed with expected renderer, WAV, and 2x2 routing loads; no clipping or configuration-error markers",
+    "left_impulse_peak_dbfs": -25.065376,
+    "right_impulse_peak_dbfs": -25.842562,
+    "correlated_sweep_peak_dbfs": -4.60678,
+    "single_core_cpu_percent_range": [
+      0.6,
+      0.67
+    ],
+    "capture_location": "temporary Windows evidence; not checked into the repository"
+  },
   "design": {
     "sample_rate_hz": 48000,
     "output_length_samples": 32768,

@@ -58,9 +58,11 @@ This result establishes that sustained post-30 ms binaural decay is necessary in
 - C remains unchanged until the 25 ms transition boundary; a raised-cosine synthetic tail reaches full level at 30 ms.
 - Separate deterministic left- and right-speaker noise injections feed statistically matched binaural pairs. Late energy is equalized across all four paths, while frequency-dependent shared components approximate D's low interaural coherence.
 - Broad octave targets come from the [D late-field characterization](../measurements/synthetic-reference-room/personal-late-control/characterization/report.md): 9.16 dB retained-C-to-late energy ratio, approximately 0.565 s decay, and D's smoothed at-ear spectral shape.
-- A causal fourth-order 250 Hz high-pass protects the existing bass. E changes 20–80 Hz by 0.00008 dB RMS relative to C.
+- A causal fourth-order 250 Hz high-pass protects the existing bass. E changes 20–80 Hz by 0.00010 dB RMS relative to C.
 
-The generated IRs are deterministic 48 kHz, 24-bit stereo files with 32,768 frames. Offline checks match the target spectral shape within 1.0 dB per octave, keep decay and coherence within their recorded tolerances, and model +3.42 dB maximum correlated renderer gain. E remains opt-in until Windows Benchmark and listening are complete; its [analysis summary](../measurements/synthetic-reference-room/synthetic-late/analysis/summary.json) records parameters, hashes, and achieved metrics.
+The generated IRs are deterministic 48 kHz, 24-bit stereo files with 32,768 frames. Offline checks match the target spectral shape within 1.0 dB per octave, keep decay and coherence within their recorded tolerances, and model +3.43 dB maximum correlated renderer gain. Windows Benchmark loaded only E and its intended downstream chain, reported no clipping or configuration errors, retained 4.61 dB correlated-sweep headroom, and used 0.60–0.67% single-core CPU.
+
+Informal sighted comparison found no obvious difference between D and E; E sounded great and preserved the intended ±30° speaker placement. A sounded narrower, subjectively closer to ±20–25°. This supports replacing D's measured late waveform with the synthetic statistical model, although the comparison was not blinded or independently level matched. E is now the accepted opt-in synthetic-late reference; its [analysis summary](../measurements/synthetic-reference-room/synthetic-late/analysis/summary.json) records parameters, hashes, achieved metrics, and validation results.
 
 ## A/B/C/D/E Listening
 
@@ -103,12 +105,12 @@ Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
 Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D has passed Windows Benchmark. E's modeled correlated gain is 0.51 dB below D, but E still requires the same runtime validation before listening.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D and E have both passed Windows Benchmark; E is the accepted synthetic-late reference while A remains the production default.
 
 ## Next Stages
 
-- Keep D frozen as the measured hybrid listening reference.
-- Benchmark and listen to E against D without changing any other stage.
+- Keep D frozen as the measured hybrid control and E frozen as the accepted synthetic-late reference.
 - Add a direct-only generic-HRTF control to reveal which benefits are actually personal.
-- Replace measured early energy with sparse image-source reflections using theoretical path lengths and directional filtering.
+- Build the next candidate by replacing C's measured early energy with sparse image-source reflections while preserving E's direct sound, bass, and late field.
+- Parameterize speaker azimuth only after the direct ILD/HRTF and reflection directions can change with the theoretical geometry; the shared late field should remain reusable.
 - Validate each stage through Equalizer APO Benchmark and controlled listening before promotion.

@@ -12,9 +12,11 @@ D preserves C bit-for-bit through 25 ms, adds a complementary 25–30 ms fade in
 
 Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. This was not blinded or independently level matched. The result establishes sustained post-30 ms binaural decay—not early frequency-response combing alone—as necessary in this system, and makes D the frozen hybrid reference. D subsequently passed Windows Benchmark with no clipping or configuration errors, 4.84 dB correlated-sweep headroom, and 0.60–0.66% single-core CPU.
 
-D's late field is now characterized as a broad target: 9.16 dB retained-C-to-late energy ratio, approximately 0.565 s decay, nearly equal late energy at both ears, low coherence above 500 Hz, and a smoothed at-ear spectral shape. Candidate E preserves C through the 25 ms boundary and generates a deterministic symmetric tail that matches those targets without copying D's late waveform. Its 20–80 Hz change from C is 0.00008 dB RMS and modeled correlated renderer gain is +3.42 dB.
+D's late field is now characterized as a broad target: 9.16 dB retained-C-to-late energy ratio, approximately 0.565 s decay, nearly equal late energy at both ears, low coherence above 500 Hz, and a smoothed at-ear spectral shape. Candidate E preserves C through the 25 ms boundary and generates a deterministic symmetric tail that matches those targets without copying D's late waveform. Its 20–80 Hz change from C is 0.00010 dB RMS and modeled correlated renderer gain is +3.43 dB.
 
-Resume by committing E, pulling it to the Windows checkout, selecting only `Synthetic Reference Room\Synthetic Late Field Renderer.txt`, and running the ordinary Benchmark probes before listening. If runtime validation passes, compare E directly with D; do not alter the early field, bass, or downstream filters during this test.
+E passed Windows Benchmark with no clipping or configuration errors, 4.61 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Informal sighted comparison found no obvious difference between D and E; E sounded great and preserved the intended ±30° placement, while A sounded narrower at an estimated ±20–25°. E is now the accepted opt-in synthetic-late reference; A remains the production default.
+
+Resume by replacing only C's measured +4 to +30 ms early field with theoretical image-source reflections. Keep E's direct sound, bass, and synthetic late field fixed so this remains a one-variable experiment. Future speaker-angle variants should recalculate theoretical ITD, direction-dependent ILD/HRTF, and early-reflection geometry while reusing the diffuse late field.
 
 ## Historical Bass Crossover Listening Decision
 

@@ -116,9 +116,10 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Benchmark the successful D hybrid reference on Windows and record its runtime result.
 - [x] Characterize D's broad frequency-dependent decay, retained-field-to-late ratio, spectrum, and interaural coherence without copying narrow room resonances.
 - [ ] Compare the personal direct control with production and a generic-HRTF direct control.
-- [ ] Add theoretical image-source early reflections without copying measured room arrival times.
+- [ ] Add theoretical image-source early reflections without copying measured room arrival times while keeping E's direct, bass, and late stages fixed.
 - [x] Build candidate E by replacing only D's measured post-30 ms decay with a shared synthetic binaural late field.
-- [ ] Benchmark and audition E against D with all downstream filters unchanged.
+- [x] Benchmark and audition E against D with all downstream filters unchanged; no obvious D/E difference was heard, while A sounded narrower than the intended ±30° placement.
+- [ ] Parameterize speaker azimuth after direct ILD/HRTF and early-reflection direction models can change together; reuse the shared synthetic late field.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
 - [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.
 - [ ] Compare minimum-phase and hybrid renderers with the measured BRIR baseline.

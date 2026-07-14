@@ -56,9 +56,11 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [x] Bound magnitude and inter-channel phase differences introduced by discarding the nonzero prefix.
 - [x] Confirm that direct/cross peak spacing and the approximately 13-sample cross-ear relationship remain intact.
 - [x] Model the maximum possible clean-path advance for A and C. The existing topology supports a coherent 100-sample A advance, but not the 160- or 200-sample targets.
-- [x] Add opt-in A0, A100, and diagnostic A200 playback configurations; keep A0 as the default.
-- [ ] Replace the clean branch with an equally advanced short 2×2 low-frequency renderer or complementary spectral replacement.
-- [ ] Compare active and advanced variants through Equalizer APO Benchmark before listening at low volume.
+- [x] Add A0, A100, and diagnostic A200 playback configurations for controlled comparison.
+- [x] Adopt A100 as the default after listening confirmed the original A bass placement and tonality were retained.
+- [x] Reject the current A200 topology after listening confirmed the predicted severe bass failure.
+- [ ] If pursuing more than 100 samples, replace the clean branch with an equally advanced short 2×2 low-frequency renderer or complementary spectral replacement.
+- [ ] Capture accepted A100 through Equalizer APO Benchmark; benchmark any redesigned 200-sample candidate before listening.
 
 Success means removing only common leading time: no transient truncation, no change to spatial relationships, and no new bass-transition error. This experiment does not address driver, application, or device-buffer latency.
 

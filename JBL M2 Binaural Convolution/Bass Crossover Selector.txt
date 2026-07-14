@@ -1,10 +1,10 @@
 # Select exactly one speaker-virtualization renderer.
 # Changes apply immediately; lower playback volume before switching.
-# A0 - original legacy renderer (default)
-Include: main.txt
-# A100 - original A sound, both branches advanced 100 samples (2.08 ms)
-# Include: main - A 100-sample advance.txt
-# A200 - EXPERIMENTAL: BRIR advanced 200 samples, clean bass only 100 samples
+# A0 - original legacy renderer
+# Include: main.txt
+# A100 - accepted default: original A sound, both branches advanced 100 samples (2.08 ms)
+Include: main - A 100-sample advance.txt
+# A200 - FAILED DIAGNOSTIC: BRIR advanced 200 samples, clean bass only 100 samples
 # Include: main - A 200-sample advance.txt
 # Historical B - 75 Hz LR4 bass crossover
 # Include: main - LR4 bass crossover.txt

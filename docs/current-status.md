@@ -1,10 +1,10 @@
 # Current DSP Work
 
-This file is the short resume point for active experiments. Detailed measurements remain in the linked reports; the active public configuration continues to select the legacy renderer by default.
+This file is the short resume point for active experiments. Detailed measurements remain in the linked reports; the active configuration selects the accepted A100 renderer by default.
 
 ## Bass Crossover Listening Decision
 
-- **A — legacy:** preferred reference and current default. It places bass with the phantom speakers and sounds less muddy or bloated.
+- **A — legacy topology:** preferred reference. It places bass with the phantom speakers and sounds less muddy or bloated; A100 retains this topology as the current default.
 - **B — LR4 75 Hz:** sounds clearer, slightly louder, and wider, but moves bass toward the headphones and weakens the frontal phantom speakers. Keep only as a diagnostic reference.
 - **C — LR4 65 Hz:** measures better through the transition, but also loses A's spatial bass placement and sounds muddier or more bloated. Keep only as a diagnostic reference.
 
@@ -20,22 +20,20 @@ Three exact asset sets now exist under `JBL M2 Binaural Convolution/IRs/advanced
 
 - **100 samples / 2.08 ms:** preferred transparency candidate; removing A's 100-sample clean-bass delay advances both branches equally.
 - **160 samples / 3.33 ms:** conservative control; preserves every channel's −60 dB onset.
-- **200 samples / 4.17 ms:** preferred latency target; removed content peaks at −55.65 dB or lower relative to its channel peak.
+- **200 samples / 4.17 ms:** research target; removed IR content is small, but the current clean-bass branch cannot share the full advance.
 
-`JBL M2 Binaural Convolution/Bass Crossover Selector.txt` now exposes three A-based listening versions while retaining original A as the default:
+`JBL M2 Binaural Convolution/Bass Crossover Selector.txt` exposes three A-based versions with A100 as the default:
 
-- **A0:** original renderer, unchanged.
-- **A100:** BRIR and clean bass both advanced 100 samples. This should preserve A apart from the very low-level discarded IR prefix.
-- **A200:** BRIR advanced 200 samples while clean bass advances only 100. This intentionally exposes the larger direct-sound latency reduction with a known bass phase mismatch.
+- **A0:** original reference, unchanged.
+- **A100:** accepted default. BRIR and clean bass both advance 100 samples, producing an easy 2.08 ms win without an audible bass or spatial regression.
+- **A200:** failed diagnostic. BRIR advances 200 samples while clean bass advances only 100; listening confirms that the resulting phase mismatch completely ruins the bass.
 
 Select exactly one uncommented `Include:` line and lower playback volume before switching. B and C remain available as historical diagnostics.
 
 Resume sequence:
 
-1. Confirm all three presets load without errors on Windows.
-2. Compare A0 with A100 for tonal, spatial, and bass transparency.
-3. Compare A100 with A200 using a real-time reference such as instrument monitoring, video, or game input; ordinary music playback alone does not reveal absolute latency reliably.
-4. Capture A100 and A200 through Equalizer APO Benchmark and re-run bass, timing, headroom, and channel-routing checks.
-5. If A200's additional latency improvement matters perceptually, design an equally advanced short 2×2 low-frequency renderer. Otherwise adopt A100 and keep A's bass implementation unchanged.
+1. Keep A100 as the daily renderer and A0 as the reference fallback.
+2. Capture A100 through Equalizer APO Benchmark when convenient to archive the realized timing, headroom, response, and routing. This is validation, not a blocker to the listening decision.
+3. Do not continue listening to the current A200 topology. Revisit 200 samples only by first designing an equally advanced 2×2 low-frequency renderer, then benchmark that complete candidate before playback.
 
-The saved 3.33 or 4.17 ms is only the BRIR direct-arrival contribution. It does not reduce application, driver, convolution-engine, or device-buffer latency.
+The accepted 2.08 ms saving is only the BRIR direct-arrival contribution. It does not reduce application, driver, convolution-engine, or device-buffer latency.

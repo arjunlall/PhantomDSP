@@ -30,6 +30,13 @@ The existing clean branch has a shared 100-sample explicit delay. Reducing it to
 
 Neither 160 nor 200 meets the planned −3 dB transition-interference limit with the existing clean-bass topology. A200 is available only as a listening diagnostic; adopting it would require a short BRIR-derived low-frequency renderer or spectral replacement that moves the bass path with the same common advance.
 
+## Listening Outcome
+
+- **A100 accepted:** sounds like the original A renderer while providing the coherent 100-sample advance. It is now the default.
+- **A200 rejected:** completely ruins the bass, consistent with the modeled 100-sample relative lag, up to 10.53 dB transition-magnitude error, and −12.66 dB worst branch interference.
+
+A Benchmark capture would quantify the exact Equalizer APO output but is not needed to explain the A200 failure. Any future 200-sample candidate must redesign the low-frequency path before further listening.
+
 ## Reproduction
 
 Run from the repository root:

@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "status": "accepted active renderer",
+  "reference": {
+    "path": "measurements/minimum-latency/legacy-reference/analysis/deembedded-reference.npz",
+    "sha256": "2b4bf21d35a27e6a837017ecabada11a4330efd5101e4b82b74397c5fb8a3616",
+    "precision_branches_used": true
+  },
+  "design": {
+    "lowpass_cutoff_hz": 90.0,
+    "lowpass_order": 1,
+    "low_gain_db": 0.75,
+    "highpass_cutoff_hz": 5.0,
+    "highpass_order": 2,
+    "cross_delay_samples": 15,
+    "common_output_eq": {
+      "type": "peaking",
+      "center_hz": 350.0,
+      "gain_db": -5.0,
+      "q": 2.0
+    },
+    "additional_high_advance_samples": 100,
+    "output_length_samples": 32768,
+    "nfft": 65536
+  },
+  "deep_target_level_db_before_calibration": {
+    "left": -15.922195,
+    "right": -15.873665
+  },
+  "low_tail_energy_beyond_output_db": {
+    "left": -140.037024,
+    "right": -140.037024
+  },
+  "candidate_tail_energy_beyond_output_db": {
+    "LL": -191.284464,
+    "LR": -182.609655,
+    "RL": -182.206691,
+    "RR": -192.438466
+  },
+  "paths": {
+    "LL": {
+      "onset_minus_60_db_sample": 0,
+      "onset_minus_40_db_sample": 0,
+      "peak_sample": 42,
+      "peak_time_ms": 0.875,
+      "low_model_peak_sample": 1,
+      "comparison": {
+        "bass_20_80_vs_legacy_reference": {
+          "mean_delta_db": -0.165996,
+          "rms_delta_db": 0.413637,
+          "maximum_absolute_delta_db": 0.729263
+        },
+        "midbass_80_160_vs_legacy_reference": {
+          "mean_delta_db": -0.438909,
+          "rms_delta_db": 0.841535,
+          "maximum_absolute_delta_db": 1.387853
+        },
+        "upper_bass_160_250_vs_legacy_reference": {
+          "mean_delta_db": -1.493196,
+          "rms_delta_db": 1.546138,
+          "maximum_absolute_delta_db": 2.464309
+        },
+        "return_250_500_vs_advanced_brir": {
+          "mean_delta_db": 0.213855,
+          "rms_delta_db": 0.881935,
+          "maximum_absolute_delta_db": 2.065948
+        }
+      }
+    },
+    "LR": {
+      "onset_minus_60_db_sample": 2,
+      "onset_minus_40_db_sample": 15,
+      "peak_sample": 54,
+      "peak_time_ms": 1.125,
+      "low_model_peak_sample": 16,
+      "comparison": {
+        "bass_20_80_vs_legacy_reference": {
+          "mean_delta_db": -0.060055,
+          "rms_delta_db": 0.320922,
+          "maximum_absolute_delta_db": 0.605547
+        },
+        "midbass_80_160_vs_legacy_reference": {
+          "mean_delta_db": -0.127798,
+          "rms_delta_db": 0.773248,
+          "maximum_absolute_delta_db": 1.56914
+        },
+        "upper_bass_160_250_vs_legacy_reference": {
+          "mean_delta_db": -0.311432,
+          "rms_delta_db": 0.919487,
+          "maximum_absolute_delta_db": 1.639639
+        },
+        "return_250_500_vs_advanced_brir": {
+          "mean_delta_db": 1.18695,
+          "rms_delta_db": 1.701024,
+          "maximum_absolute_delta_db": 4.116312
+        }
+      }
+    },
+    "RL": {
+      "onset_minus_60_db_sample": 5,
+      "onset_minus_40_db_sample": 15,
+      "peak_sample": 55,
+      "peak_time_ms": 1.145833,
+      "low_model_peak_sample": 16,
+      "comparison": {
+        "bass_20_80_vs_legacy_reference": {
+          "mean_delta_db": -0.126789,
+          "rms_delta_db": 0.358598,
+          "maximum_absolute_delta_db": 0.551215
+        },
+        "midbass_80_160_vs_legacy_reference": {
+          "mean_delta_db": 0.032841,
+          "rms_delta_db": 0.604189,
+          "maximum_absolute_delta_db": 1.391988
+        },
+        "upper_bass_160_250_vs_legacy_reference": {
+          "mean_delta_db": 0.297782,
+          "rms_delta_db": 1.197752,
+          "maximum_absolute_delta_db": 2.073565
+        },
+        "return_250_500_vs_advanced_brir": {
+          "mean_delta_db": 0.839844,
+          "rms_delta_db": 1.712313,
+          "maximum_absolute_delta_db": 7.653115
+        }
+      }
+    },
+    "RR": {
+      "onset_minus_60_db_sample": 0,
+      "onset_minus_40_db_sample": 0,
+      "peak_sample": 41,
+      "peak_time_ms": 0.854167,
+      "low_model_peak_sample": 1,
+      "comparison": {
+        "bass_20_80_vs_legacy_reference": {
+          "mean_delta_db": -0.053383,
+          "rms_delta_db": 0.32245,
+          "maximum_absolute_delta_db": 0.64229
+        },
+        "midbass_80_160_vs_legacy_reference": {
+          "mean_delta_db": -0.394064,
+          "rms_delta_db": 0.99111,
+          "maximum_absolute_delta_db": 1.784342
+        },
+        "upper_bass_160_250_vs_legacy_reference": {
+          "mean_delta_db": -1.080916,
+          "rms_delta_db": 1.260545,
+          "maximum_absolute_delta_db": 2.031974
+        },
+        "return_250_500_vs_advanced_brir": {
+          "mean_delta_db": -0.249812,
+          "rms_delta_db": 0.647462,
+          "maximum_absolute_delta_db": 1.207954
+        }
+      }
+    }
+  },
+  "spatial_error": {
+    "20_80_vs_legacy_reference": {
+      "left_speaker": {
+        "ild_rms_error_db": 0.19815,
+        "ipd_rms_error_degrees": 1.2189
+      },
+      "right_speaker": {
+        "ild_rms_error_db": 0.1594,
+        "ipd_rms_error_degrees": 0.94087
+      }
+    },
+    "80_160_vs_legacy_reference": {
+      "left_speaker": {
+        "ild_rms_error_db": 1.18694,
+        "ipd_rms_error_degrees": 7.81918
+      },
+      "right_speaker": {
+        "ild_rms_error_db": 1.12422,
+        "ipd_rms_error_degrees": 6.82423
+      }
+    },
+    "160_250_vs_legacy_reference": {
+      "left_speaker": {
+        "ild_rms_error_db": 2.33706,
+        "ipd_rms_error_degrees": 15.38109
+      },
+      "right_speaker": {
+        "ild_rms_error_db": 2.81373,
+        "ipd_rms_error_degrees": 17.39631
+      }
+    },
+    "250_500_vs_advanced_brir": {
+      "left_speaker": {
+        "ild_rms_error_db": 2.75207,
+        "ipd_rms_error_degrees": 29.10691
+      },
+      "right_speaker": {
+        "ild_rms_error_db": 3.3456,
+        "ipd_rms_error_degrees": 19.51896
+      }
+    }
+  },
+  "files": {
+    "left_speaker": {
+      "path": "JBL M2 Binaural Convolution/IRs/active/Left Speaker to Both Ears.wav",
+      "sha256": "a87f182328216360bf7f0455bd4948f1d0b104c39a49b1ad25e31b59acb7eef6",
+      "sample_rate_hz": 48000,
+      "sample_width_bits": 24,
+      "channels": 2,
+      "frames": 32768,
+      "peak_linear": 0.057789803,
+      "quantization_error_rms_db": -87.258992
+    },
+    "right_speaker": {
+      "path": "JBL M2 Binaural Convolution/IRs/active/Right Speaker to Both Ears.wav",
+      "sha256": "6d21739c7885588f0f9bd9b7f2e575cd550462e83417f68cda35f3f4c0e21da5",
+      "sample_rate_hz": 48000,
+      "sample_width_bits": 24,
+      "channels": 2,
+      "frames": 32768,
+      "peak_linear": 0.05859828,
+      "quantization_error_rms_db": -88.209375
+    }
+  }
+}

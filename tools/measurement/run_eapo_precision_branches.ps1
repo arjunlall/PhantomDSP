@@ -7,19 +7,28 @@ param(
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $CaptureScript = Join-Path $PSScriptRoot "run_eapo_baseline.ps1"
-$SelectorPath = Join-Path $RepoRoot "JBL M2 Binaural Convolution\Bass Crossover Selector.txt"
-$ExpectedSelection = "Include: main - A 100-sample advance.txt"
+$PersonalizedConfig = Join-Path $RepoRoot "config - personalized.txt"
+$SelectorPath = Join-Path $RepoRoot "tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt"
+$ExpectedRouter = "Include: tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt"
+$ExpectedReference = "Include: ..\..\..\JBL M2 Binaural Convolution\Legacy Parallel Bass Reference.txt"
 
 if ([string]::IsNullOrWhiteSpace($OutputRoot)) {
-    $OutputRoot = Join-Path $RepoRoot "measurements\minimum-latency\a100-reference\raw\precision-branches"
+    $OutputRoot = Join-Path $RepoRoot "measurements\minimum-latency\legacy-reference\raw\precision-branches"
 }
 
-$ActiveSelections = @(
+$RendererSelections = @(
+    Get-Content $PersonalizedConfig |
+        Where-Object { $_ -match "^\s*Include:\s+(JBL M2 Binaural Convolution|tools\\measurement\\equalizerapo)\\" }
+)
+$RouterSelections = @(
     Get-Content $SelectorPath |
         Where-Object { $_ -match "^\s*Include:" }
 )
-if (($ActiveSelections.Count -eq 0) -or ($ActiveSelections[-1].Trim() -ne $ExpectedSelection)) {
-    throw "A100 must be the normal playback renderer. Expected the last active include to be '$ExpectedSelection' in $SelectorPath."
+if (($RendererSelections.Count -ne 1) -or
+    ($RendererSelections[0].Trim() -ne $ExpectedRouter) -or
+    ($RouterSelections.Count -eq 0) -or
+    ($RouterSelections[-1].Trim() -ne $ExpectedReference)) {
+    throw "Temporarily select the historical benchmark router in $PersonalizedConfig; its default must remain the legacy parallel-bass reference."
 }
 
 $Captures = @(
@@ -46,7 +55,7 @@ foreach ($Capture in $Captures) {
         -DeviceName $DeviceName `
         -ProbeAmplitudeDbfs -6.0 `
         -OutputDirectory $OutputDirectory `
-        -CaptureLabel "minimum-latency reference: A100 precision $($Capture.Name)" `
+        -CaptureLabel "legacy renderer reference: precision $($Capture.Name)" `
         -RecordedOutputGainDb $Capture.OutputGainDb `
         -SkipHeadroomSweep
 

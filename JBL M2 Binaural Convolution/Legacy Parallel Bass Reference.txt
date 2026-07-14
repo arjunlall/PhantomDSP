@@ -1,0 +1,3 @@
+# A100: legacy A renderer advanced coherently by 100 samples (2.08 ms).
+# Retained as the known-good fallback and the frozen redesign reference.
+Include: Legacy Parallel Bass Reference - Signal Chain.txt

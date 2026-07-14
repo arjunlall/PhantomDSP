@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""De-embed downstream/headphone processing from an A100 reference capture."""
+"""De-embed downstream/headphone processing from the legacy renderer capture."""
 
 import argparse
 import json
@@ -171,7 +171,7 @@ def parse_args():
             REPOSITORY
             / "measurements"
             / "minimum-latency"
-            / "a100-reference"
+            / "legacy-reference"
             / "raw"
             / "precision-branches"
         ),
@@ -187,7 +187,7 @@ def parse_args():
             REPOSITORY
             / "measurements"
             / "minimum-latency"
-            / "a100-reference"
+            / "legacy-reference"
             / "raw"
             / "branches"
         ),
@@ -199,7 +199,7 @@ def parse_args():
             REPOSITORY
             / "measurements"
             / "minimum-latency"
-            / "a100-reference"
+            / "legacy-reference"
             / "analysis"
         ),
     )
@@ -334,9 +334,9 @@ def main():
     np.savez_compressed(args.output_dir / "deembedded-reference.npz", **archive)
 
     report = [
-        "# A100 Renderer Reference",
+        "# Legacy Renderer Reference",
         "",
-        "This analysis removes the measured downstream target, headphone, and personal EQ from the four Benchmark matrices. The resulting archive is the speaker-renderer-only A100 target used by the minimum-latency 2×2 redesign.",
+        "This analysis removes the measured downstream target, headphone, and personal EQ from the four Benchmark matrices. The resulting archive is the speaker-renderer-only legacy target used to derive the production 2×2 renderer.",
         "",
         "## Validation",
         "",

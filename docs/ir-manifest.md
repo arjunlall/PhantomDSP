@@ -1,6 +1,6 @@
 # Active IR Manifest
 
-This manifest records both the original BRIR parents and the generated files loaded by the accepted D200 A-matched renderer. It preserves asset lineage for bass experiments and sample-advance variants without publishing additional raw measurement material.
+This manifest records both the original BRIR parents and the generated files loaded by `Speaker Virtualization.txt`. It preserves asset lineage without using experimental names as production identifiers.
 
 ## Original BRIR Parents
 
@@ -53,24 +53,13 @@ The checked-in script `tools/measurement/render_ir_advances.py` verifies the par
 
 All six files are stereo 48 kHz, 24-bit PCM with 32,768 frames. They reside in `IRs/advanced/`. See the [BRIR advance analysis](../measurements/ir-advance/report.md) for prefix loss, transfer error, and the clean-bass integration constraint.
 
-## D200 Unified Prototype
+## Active Generated Renderer
 
-These generated files bake the precision de-embedded speaker renderer and the synthetic low-frequency model into one causal 2×2 matrix. They are derived from `measurements/minimum-latency/a100-reference/analysis/deembedded-reference.npz` with SHA-256 `2b4bf21d35a27e6a837017ecabada11a4330efd5101e4b82b74397c5fb8a3616`. They are not normalized and are not the active playback renderer.
-
-| File | Channel 1 | Channel 2 | SHA-256 |
-| --- | --- | --- | --- |
-| `D200 Unified LL_LR.wav` | `LL`: left speaker to left ear | `LR`: left speaker to right ear | `14a73ff1b418b0ca8e579e14677d9ff55a59e1a8fe51bb24e434bdc85485207c` |
-| `D200 Unified RL_RR.wav` | `RL`: right speaker to left ear | `RR`: right speaker to right ear | `ff187e32a75d4b60da9267429aa38b1ea25878fee29a9fa06924403691a013b7` |
-
-Both files are stereo 48 kHz, 24-bit PCM with 32,768 frames under `IRs/minimum-latency/`. The locked operation is documented in the [D200 offline report](../measurements/minimum-latency/d200-prototype/analysis/report.md) and reproduced by `tools/measurement/render_minimum_latency_renderer.py`. The [runtime comparison](../measurements/minimum-latency/d200-prototype/analysis/runtime-report.md) rejected this version for its 80–200 Hz mismatch.
-
-## D200 A-Matched Accepted Renderer
-
-This distinct revision keeps the same parent reference, 2×2 mapping, length, format, and common 200-sample BRIR advance. It replaces the v1 bass handoff with a first-order 90 Hz clean model, +0.75 dB calibration, the 15-sample cross offset, and one common −5 dB peaking correction at 350 Hz, Q 2. The common correction cannot change interaural ratios.
+The active renderer uses a first-order 90 Hz clean model, +0.75 dB calibration, a 15-sample cross offset, one common −5 dB peaking correction at 350 Hz, Q 2, and a common 200-sample BRIR advance. The common correction cannot change interaural ratios.
 
 | File | Channel 1 | Channel 2 | SHA-256 |
 | --- | --- | --- | --- |
-| `D200 A-Matched LL_LR.wav` | `LL`: left speaker to left ear | `LR`: left speaker to right ear | `a87f182328216360bf7f0455bd4948f1d0b104c39a49b1ad25e31b59acb7eef6` |
-| `D200 A-Matched RL_RR.wav` | `RL`: right speaker to left ear | `RR`: right speaker to right ear | `6d21739c7885588f0f9bd9b7f2e575cd550462e83417f68cda35f3f4c0e21da5` |
+| `IRs/active/Left Speaker to Both Ears.wav` | `LL`: left speaker to left ear | `LR`: left speaker to right ear | `a87f182328216360bf7f0455bd4948f1d0b104c39a49b1ad25e31b59acb7eef6` |
+| `IRs/active/Right Speaker to Both Ears.wav` | `RL`: right speaker to left ear | `RR`: right speaker to right ear | `6d21739c7885588f0f9bd9b7f2e575cd550462e83417f68cda35f3f4c0e21da5` |
 
-These files are the active playback renderer and are reproduced by `tools/measurement/render_minimum_latency_renderer_a_matched.py`. The [offline report](../measurements/minimum-latency/d200-a-matched/analysis/report.md) and [Windows runtime comparison](../measurements/minimum-latency/d200-a-matched/analysis/runtime-report.md) agree closely. The revision passes the digital gate, and controlled listening found no readily audible tonal or spatial regression from A100 while confirming the latency improvement. Filenames remain unchanged for reproducibility.
+These files are derived from `measurements/minimum-latency/legacy-reference/analysis/deembedded-reference.npz` with SHA-256 `2b4bf21d35a27e6a837017ecabada11a4330efd5101e4b82b74397c5fb8a3616`. They are stereo 48 kHz, 24-bit PCM with 32,768 frames, are not normalized, and are reproduced by `tools/measurement/render_active_renderer.py`. The [offline report](../measurements/minimum-latency/accepted-renderer/analysis/report.md) and [Windows runtime comparison](../measurements/minimum-latency/accepted-renderer/analysis/runtime-report.md) agree closely. Controlled listening found no readily audible tonal or spatial regression from the legacy reference while confirming the latency improvement.

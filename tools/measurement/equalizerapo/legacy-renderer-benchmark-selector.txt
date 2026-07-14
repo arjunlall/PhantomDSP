@@ -1,0 +1,9 @@
+# Historical measurement router; not part of normal playback.
+# Temporarily include this instead of Speaker Virtualization or its legacy fallback.
+# Its default branch is the frozen parallel-bass reference used to derive the active renderer.
+If: regexSearch("PhantomDSP Bass Downstream", deviceName)
+Channel: L R
+Copy: L=L R=R
+Else:
+Include: ..\..\..\JBL M2 Binaural Convolution\Legacy Parallel Bass Reference.txt
+EndIf:

@@ -1,0 +1,2 @@
+# Original unadvanced parallel-bass renderer; retained as a historical baseline.
+Include: Original Parallel Bass Renderer - Signal Chain.txt

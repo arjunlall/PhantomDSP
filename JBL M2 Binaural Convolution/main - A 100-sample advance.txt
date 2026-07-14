@@ -1,2 +1,0 @@
-# A100: legacy A renderer advanced coherently by 100 samples (2.08 ms).
-Include: Binaural Convolution - JBL LSR305 at DRP w Channel EQ - A 100-sample advance.txt

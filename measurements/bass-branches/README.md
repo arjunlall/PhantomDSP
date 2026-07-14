@@ -1,8 +1,8 @@
 # Bass Branch Measurement
 
-This workflow measures the current clean-bass handoff without reproducing Equalizer APO's filters in another DSP engine. It captures the complete output, the convolved branch alone, the clean-low branch alone, and a downstream-only identity reference. The bass-branch analyzer uses the first three; the downstream capture supports renderer de-embedding.
+This workflow measures the frozen legacy parallel-bass handoff without reproducing Equalizer APO's filters in another DSP engine. It captures the complete output, the convolved branch alone, the clean-low branch alone, and a downstream-only identity reference. The bass-branch analyzer uses the first three; the downstream capture supports renderer de-embedding. The accepted `Speaker Virtualization.txt` renderer has no separate clean-low branch.
 
-The measurement-only router sits immediately after the normal branch sum. It activates only when Benchmark uses the reserved names `PhantomDSP Bass Convolved` or `PhantomDSP Bass Clean`. The reserved `PhantomDSP Bass Downstream` device bypasses the complete renderer at its selector while retaining root-level target/headphone processing. Normal playback is unchanged.
+For this historical capture only, make `tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt` the sole renderer include in `config - personalized.txt`. The measurement router activates branch isolation only when Benchmark uses the reserved names `PhantomDSP Bass Convolved` or `PhantomDSP Bass Clean`. The reserved `PhantomDSP Bass Downstream` device bypasses the renderer while retaining root-level target/headphone processing.
 
 ## Capture on Windows
 
@@ -29,22 +29,7 @@ The base device name remains part of each reserved Benchmark name so the `Device
 
 The runner skips redundant stress sweeps and writes `measurements\bass-branches\raw\{combined,convolved,clean,downstream}`. It also requires the new combined outputs to match the checked-in digital baseline byte-for-byte. If an impulse capture clips, rerun all four with `-ProbeAmplitudeDbfs -6`.
 
-### Candidate Captures
-
-Capture a candidate's complete output first, then use that directory as the byte-for-byte reference for its isolated branch captures. This avoids overwriting or incorrectly comparing against the legacy baseline:
-
-```powershell
-.\tools\measurement\run_eapo_baseline.ps1 `
-  -OutputDirectory ".\measurements\candidates\lr4-75\digital\raw" `
-  -CaptureLabel "B: LR4 75 Hz"
-
-.\tools\measurement\run_eapo_bass_branches.ps1 `
-  -OutputRoot ".\measurements\candidates\lr4-75\bass-branches\raw" `
-  -CombinedReferenceDirectory ".\measurements\candidates\lr4-75\digital\raw" `
-  -CaptureLabel "B: LR4 75 Hz"
-```
-
-Select exactly one candidate before both commands and leave it selected until both complete. Each raw capture records a copy and hash of the active selector. Restore A before committing unless the listening session is intentionally continuing on another candidate.
+After capture, restore `JBL M2 Binaural Convolution\Speaker Virtualization.txt` as the sole renderer include. Do not leave the measurement router enabled for normal playback.
 
 ## Analyze on macOS
 
@@ -55,14 +40,6 @@ python3 tools/measurement/analyze_bass_branches.py
 ```
 
 The analyzer verifies that `combined ≈ convolved + clean`, then evaluates all four paths from 20–300 Hz. The report includes branch magnitude, relative phase, group delay, vector-sum interference, combined response relative to the convolved branch, and focused values around 118–135 Hz. Default plots and metrics use 1/24-octave smoothing; machine-readable samples remain in `analysis/summary.json`.
-
-For a candidate directory, pass explicit paths:
-
-```bash
-python3 tools/measurement/analyze_bass_branches.py \
-  --input-root measurements/candidates/lr4-75/bass-branches/raw \
-  --output-dir measurements/candidates/lr4-75/bass-branches/analysis
-```
 
 Closure error is a validity check. If the separately captured branches do not reconstruct the combined output well beyond the 16-bit quantization floor, fix the routing or capture before drawing conclusions about cancellation.
 

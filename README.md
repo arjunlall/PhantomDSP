@@ -20,7 +20,7 @@ See [Signal-Chain Architecture](docs/architecture.md) for the complete matrix an
 
 This repository reflects a personalized research system and includes historical experiments. The active configuration currently targets a 48 kHz stereo endpoint and a Focal Elex profile. Device names, headphone profiles, gain, and routing must be reviewed before use.
 
-The accepted D200 A-matched renderer advances the BRIR contribution by 200 samples while retaining the preferred A100 bass quantity and spatial presentation in controlled listening. A100 remains a known-good legacy fallback; several spatial-EQ decisions and closed-loop acoustic validation remain future work. Preserve a low listening level when enabling or editing the configuration: Equalizer APO applies saved changes immediately.
+Normal playback now loads the condition-free `Speaker Virtualization.txt` chain. Its two generated IRs minimize direct-arrival delay while retaining the bass quantity and spatial presentation of the legacy parallel-bass reference in controlled listening. That legacy renderer remains a known-good fallback; several spatial-EQ decisions and closed-loop acoustic validation remain future work. Preserve a low listening level when enabling or editing the configuration: Equalizer APO applies saved changes immediately.
 
 ## Requirements and Installation
 

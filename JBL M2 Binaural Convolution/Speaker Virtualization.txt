@@ -1,0 +1,16 @@
+# Active speaker virtualization renderer.
+# Each stereo IR stores one virtual speaker as heard at the left and right ears.
+# Speaker correction and the smooth extended-bass model are baked into these IRs.
+# Target, headphone, and personal-balance processing remain downstream.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\active\Left Speaker to Both Ears.wav
+
+Channel: RIL RIR
+Convolution: IRs\active\Right Speaker to Both Ears.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR
+Channel: all

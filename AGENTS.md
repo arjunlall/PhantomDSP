@@ -2,7 +2,7 @@
 
 ## Project Structure & Signal Chain
 
-PhantomDSP is an EqualizerAPO configuration repository, not a compiled application. Root files such as `config.txt` and `config - personalized.txt` are entry points. Headphone directories (`HD650/`, `Elex/`, `LCD-2.2F 2016/`) contain model-specific equalization and channel-balance presets. `JBL M2 Binaural Convolution/` contains the shared speaker virtualization chain and impulse responses.
+PhantomDSP is an EqualizerAPO configuration repository, not a compiled application. `config.txt` and `config - personalized.txt` are the entry points. Normal playback directly includes `JBL M2 Binaural Convolution/Speaker Virtualization.txt`; its generated assets live under `IRs/active/`. `Legacy Parallel Bass Reference.txt` is the known-good fallback. Measurement-only routing belongs under `tools/measurement/equalizerapo/` and must not be enabled during normal playback.
 
 `docs/architecture.md` defines the intended transfer-function model and measurement assumptions. `docs/ir-manifest.md` fingerprints the active BRIR assets. `docs/roadmap.md` tracks validation, bass, EQ, and latency work. Update these documents when a change alters the signal-chain meaning, IR lineage, or project priorities.
 
@@ -10,13 +10,14 @@ Treat `Include:` order as part of the DSP design: convolution, target-curve adju
 
 ## Build, Test, and Development Commands
 
-There is no package manager, build step, or automated test suite. Development consists of editing EqualizerAPO text filters and auditioning them on Windows.
+There is no build step. Development consists of editing EqualizerAPO filters, running the measurement-tool tests, and auditioning changes on Windows.
 
 - `rg '^Include:' --glob '*.txt'` lists active include relationships for review.
+- `PYTHONPATH=tools/measurement python3 -m unittest discover -s tools/measurement -p 'test_*.py'` runs measurement-tool unit tests.
 - `git diff -- '*.txt'` inspects numerical and routing changes before testing.
 - `git diff --check` catches whitespace errors before a commit.
 
-For runtime testing, place the contents in `C:\Program Files\EqualizerAPO\config`, select the intended includes in `config.txt`, and confirm an error-free load in EqualizerAPO's Configuration Editor. Changes apply immediately, so begin playback at low volume.
+For runtime testing, place the repository at `C:\Program Files\EqualizerAPO\config` and confirm an error-free load in EqualizerAPO's Configuration Editor. Changes apply immediately, so begin playback at low volume.
 
 ## Coding Style & Naming Conventions
 

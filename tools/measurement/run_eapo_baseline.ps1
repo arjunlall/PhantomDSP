@@ -81,11 +81,23 @@ $InstalledConfigHash = "missing"
 if (Test-Path $InstalledConfig -PathType Leaf) {
     $InstalledConfigHash = (Get-FileHash $InstalledConfig -Algorithm SHA256).Hash
 }
-$SelectorPath = Join-Path (Split-Path -Parent $InstalledConfig) "JBL M2 Binaural Convolution\Bass Crossover Selector.txt"
-$SelectorHash = "missing"
-if (Test-Path $SelectorPath -PathType Leaf) {
-    $SelectorHash = (Get-FileHash $SelectorPath -Algorithm SHA256).Hash
-    Copy-Item -Force $SelectorPath (Join-Path $OutputDirectory "active-bass-selector.txt")
+$InstalledRoot = Split-Path -Parent $InstalledConfig
+$PersonalizedConfig = Join-Path $InstalledRoot "config - personalized.txt"
+$RendererPath = "missing"
+$RendererHash = "missing"
+if (Test-Path $PersonalizedConfig -PathType Leaf) {
+    $RendererIncludes = @(
+        Get-Content $PersonalizedConfig |
+            Where-Object { $_ -match "^\s*Include:\s+(JBL M2 Binaural Convolution|tools\\measurement\\equalizerapo)\\" }
+    )
+    if ($RendererIncludes.Count -eq 1) {
+        $RendererRelativePath = ($RendererIncludes[0] -replace "^\s*Include:\s*", "").Trim()
+        $RendererPath = Join-Path $InstalledRoot $RendererRelativePath
+    }
+}
+if (Test-Path $RendererPath -PathType Leaf) {
+    $RendererHash = (Get-FileHash $RendererPath -Algorithm SHA256).Hash
+    Copy-Item -Force $RendererPath (Join-Path $OutputDirectory "captured-renderer-config.txt")
 }
 
 $LogPath = Join-Path $OutputDirectory "benchmark.log"
@@ -102,8 +114,8 @@ $RecordedOutputGain = $RecordedOutputGainDb.ToString(
     "Device name: $DeviceName"
     "Installed config: $InstalledConfig"
     "Installed config SHA256: $InstalledConfigHash"
-    "Bass selector: $SelectorPath"
-    "Bass selector SHA256: $SelectorHash"
+    "Renderer config: $RendererPath"
+    "Renderer config SHA256: $RendererHash"
     "Probe set: $ProbeSetName ($ProbeAmplitudeDbfs dBFS)"
     "Capture output gain: $RecordedOutputGain dB"
     ""

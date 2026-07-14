@@ -30,7 +30,7 @@ New in-ear measurements are not required for the first pass. The existing BRIR W
 ### Evaluate Candidate Designs
 
 - [x] Optimize clean-branch gain, polarity, and delay against all four BRIR paths. The [constrained search](../measurements/bass-branches/optimization/report.md) improves but cannot meet the cancellation criterion without materially changing deep-bass level.
-- [x] Model complementary low-pass/high-pass candidates. The selector now provides the legacy reference, a 75 Hz LR4 cancellation-focused candidate, and a 65 Hz LR4 candidate intended to retain more BRIR spatial information.
+- [x] Model complementary low-pass/high-pass candidates. The 75 Hz and 65 Hz LR4 variants were measured and auditioned, then their runnable configurations were removed after rejection; the conclusions remain in the candidate report and Git history.
 - [ ] Test spectral replacement: `new BRIR = high-frequency BRIR + low-frequency clean model` using complementary windows.
 - [ ] Compare minimum-phase, mixed-phase, and short-FIR crossover implementations.
 - [x] Use one shared bass handoff for the first listening candidate; modeled channel-specific refinements were too small to justify their complexity.
@@ -66,6 +66,7 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [x] Benchmark D200 A-matched; its measured response, timing, routing, headroom, and CPU pass the digital gate.
 - [x] Compare A100 and D200 A-matched in controlled listening; no tonal or spatial regression was readily audible, while the latency improvement was clear during finger drumming.
 - [x] Promote D200 A-matched to the daily default while retaining A100 as the known-good fallback and design reference.
+- [x] Replace development labels with functional production names and remove rejected runnable configurations after preserving their conclusions in documentation and Git history.
 
 ### Build the Minimum-Latency 2×2 Renderer
 
@@ -113,7 +114,7 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [ ] Compare minimum-phase and hybrid renderers with the measured BRIR baseline.
 - [ ] Explore a parametric/no-convolution model only after defining which BRIR cues it must reproduce.
 
-Any experiment based on the legacy A renderer must re-run the bass-alignment analysis because its clean branch depends on BRIR timing. The accepted D200 renderer has no parallel runtime bass branch, but generated-asset closure and all four path relationships must still be revalidated after an IR change.
+Any experiment based on the legacy A renderer must re-run the bass-alignment analysis because its clean branch depends on BRIR timing. The accepted Speaker Virtualization renderer has no parallel runtime bass branch, but generated-asset closure and all four path relationships must still be revalidated after an IR change.
 
 ## Priority 3: Public Project Clarity
 

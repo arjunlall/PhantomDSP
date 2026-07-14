@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "sample_rate_hz": 48000,
+  "response_length_samples": 94976,
+  "downstream_crosstalk_db": -180.0,
+  "capture_header": {
+    "commit": "e2c46ce66957eb3e286a37fc555fc40dc092725f",
+    "device_name": "Output A1 Voicemeeter PhantomDSP D200 A-Matched",
+    "installed_config": "C:\\Program Files\\EqualizerAPO\\config\\config.txt",
+    "probe_set": "0dbfs (0 dBFS)",
+    "capture_output_gain": "0 dB"
+  },
+  "runtime": {
+    "clipped_samples": 0,
+    "maximum_cpu_load_one_core_percent": 0.67
+  },
+  "correlated_sweep": {
+    "cpu_load_one_core_percent": 0.62,
+    "max_output_linear": 0.534528,
+    "max_output_dbfs": -5.440592,
+    "clipped_samples": 0
+  },
+  "measured_vs_generated_complex_error_db": {
+    "LL": {
+      "20_80_hz": -44.967329,
+      "20_300_hz": -36.902343,
+      "20_20000_hz": -41.441401
+    },
+    "LR": {
+      "20_80_hz": -42.243108,
+      "20_300_hz": -36.713377,
+      "20_20000_hz": -32.227791
+    },
+    "RL": {
+      "20_80_hz": -42.367668,
+      "20_300_hz": -37.015989,
+      "20_20000_hz": -32.808823
+    },
+    "RR": {
+      "20_80_hz": -41.387486,
+      "20_300_hz": -35.939835,
+      "20_20000_hz": -41.83368
+    }
+  },
+  "paths": {
+    "LL": {
+      "peak_sample": 42,
+      "peak_time_ms": 0.875,
+      "onset_minus_40_db_sample": 0,
+      "onset_minus_60_db_sample": 0,
+      "bass_20_80_mean_delta_db": -0.165789,
+      "bass_20_80_rms_delta_db": 0.407338,
+      "transition_80_200_rms_delta_db": 1.167596,
+      "transition_80_200_max_abs_delta_db": 2.465026
+    },
+    "LR": {
+      "peak_sample": 54,
+      "peak_time_ms": 1.125,
+      "onset_minus_40_db_sample": 15,
+      "onset_minus_60_db_sample": 2,
+      "bass_20_80_mean_delta_db": -0.064658,
+      "bass_20_80_rms_delta_db": 0.321588,
+      "transition_80_200_rms_delta_db": 0.832556,
+      "transition_80_200_max_abs_delta_db": 1.62416
+    },
+    "RL": {
+      "peak_sample": 55,
+      "peak_time_ms": 1.145833,
+      "onset_minus_40_db_sample": 15,
+      "onset_minus_60_db_sample": 11,
+      "bass_20_80_mean_delta_db": -0.128376,
+      "bass_20_80_rms_delta_db": 0.364073,
+      "transition_80_200_rms_delta_db": 0.866583,
+      "transition_80_200_max_abs_delta_db": 1.757957
+    },
+    "RR": {
+      "peak_sample": 41,
+      "peak_time_ms": 0.854167,
+      "onset_minus_40_db_sample": 0,
+      "onset_minus_60_db_sample": 0,
+      "bass_20_80_mean_delta_db": -0.048192,
+      "bass_20_80_rms_delta_db": 0.322581,
+      "transition_80_200_rms_delta_db": 1.173564,
+      "transition_80_200_max_abs_delta_db": 2.123433
+    }
+  },
+  "low_spatial_error_vs_legacy_reference": {
+    "left_speaker": {
+      "ild_rms_error_db": 0.19335,
+      "ipd_rms_error_degrees": 1.26361
+    },
+    "right_speaker": {
+      "ild_rms_error_db": 0.17288,
+      "ipd_rms_error_degrees": 1.01999
+    }
+  },
+  "digital_gate": "pass"
+}

@@ -23,7 +23,7 @@ REFERENCE = (
     REPOSITORY
     / "measurements"
     / "minimum-latency"
-    / "a100-reference"
+    / "legacy-reference"
     / "analysis"
     / "deembedded-reference.npz"
 )
@@ -433,7 +433,7 @@ def evaluate_candidate(
         },
         "aggregate": aggregate,
         "paths": path_metrics,
-        "low_spatial_error_vs_a100": low_spatial,
+        "low_spatial_error_vs_legacy_reference": low_spatial,
         "upper_spatial_error_vs_advanced_brir": upper_spatial,
     }
 
@@ -498,7 +498,7 @@ def main():
         "output_length_samples": args.output_length,
         "high_branch_additional_advance_samples": args.high_advance,
         "low_model": {
-            "source": "smoothed A100 20-45 Hz level averaged by output ear",
+            "source": "smoothed legacy-reference 20-45 Hz level averaged by output ear",
             "deep_extension": "constant per-ear target before causal crossover",
             "highpass_cutoff_hz": args.highpass_cutoff,
             "highpass_order": args.highpass_order,
@@ -506,7 +506,7 @@ def main():
             "phase": "minimum phase",
         },
         "magnitude_target": (
-            "smoothed A100 combined through 80 Hz, smooth transition, "
+            "smoothed legacy-reference response through 80 Hz, smooth transition, "
             "200-sample-advanced BRIR from 160 Hz upward"
         ),
         "candidate_count": len(candidates),

@@ -1,5 +1,9 @@
-# This config file includes personalized left/right ear balancing for the HD800s
-Include: JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+# Normal playback uses one condition-free production renderer.
+Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
+# Known-good fallback; enable only after disabling Speaker Virtualization above.
+# Include: JBL M2 Binaural Convolution\Legacy Parallel Bass Reference.txt
+# Historical measurement routing; never enable alongside either playback renderer.
+# Include: tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt
 Include: Target Curve Macro Adjustments.txt
 # Device: Speakers JDS Labs DAC {2b6e4e78-a1ba-483a-9c56-8db31029a000}
 # Include: HD800s EQ - Back\Flatten HD800s at DRP v2.txt

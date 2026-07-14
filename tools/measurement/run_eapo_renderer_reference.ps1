@@ -9,42 +9,51 @@ $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $BaselineScript = Join-Path $PSScriptRoot "run_eapo_baseline.ps1"
 $BranchScript = Join-Path $PSScriptRoot "run_eapo_bass_branches.ps1"
-$SelectorPath = Join-Path $RepoRoot "JBL M2 Binaural Convolution\Bass Crossover Selector.txt"
-$ExpectedSelection = "Include: main - A 100-sample advance.txt"
+$PersonalizedConfig = Join-Path $RepoRoot "config - personalized.txt"
+$SelectorPath = Join-Path $RepoRoot "tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt"
+$ExpectedRouter = "Include: tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt"
+$ExpectedReference = "Include: ..\..\..\JBL M2 Binaural Convolution\Legacy Parallel Bass Reference.txt"
 
 if ([string]::IsNullOrWhiteSpace($OutputRoot)) {
-    $OutputRoot = Join-Path $RepoRoot "measurements\minimum-latency\a100-reference\raw"
+    $OutputRoot = Join-Path $RepoRoot "measurements\minimum-latency\legacy-reference\raw"
 }
 
-$ActiveSelections = @(
+$RendererSelections = @(
+    Get-Content $PersonalizedConfig |
+        Where-Object { $_ -match "^\s*Include:\s+(JBL M2 Binaural Convolution|tools\\measurement\\equalizerapo)\\" }
+)
+$RouterSelections = @(
     Get-Content $SelectorPath |
         Where-Object { $_ -match "^\s*Include:" }
 )
-if (($ActiveSelections.Count -eq 0) -or ($ActiveSelections[-1].Trim() -ne $ExpectedSelection)) {
-    throw "A100 must be the normal playback renderer. Expected the last active include to be '$ExpectedSelection' in $SelectorPath."
+if (($RendererSelections.Count -ne 1) -or
+    ($RendererSelections[0].Trim() -ne $ExpectedRouter) -or
+    ($RouterSelections.Count -eq 0) -or
+    ($RouterSelections[-1].Trim() -ne $ExpectedReference)) {
+    throw "Temporarily select the historical benchmark router in $PersonalizedConfig; its default must remain the legacy parallel-bass reference."
 }
 
 $DigitalDirectory = Join-Path $OutputRoot "digital"
 $BranchDirectory = Join-Path $OutputRoot "branches"
 
-Write-Host "Capturing the frozen A100 reference response."
+Write-Host "Capturing the frozen legacy renderer reference response."
 & $BaselineScript `
     -BenchmarkPath $BenchmarkPath `
     -DeviceName $BaseDeviceName `
     -ProbeAmplitudeDbfs $ProbeAmplitudeDbfs `
     -OutputDirectory $DigitalDirectory `
-    -CaptureLabel "minimum-latency reference: A100 complete"
+    -CaptureLabel "legacy renderer reference: complete"
 
 Write-Host ""
-Write-Host "Capturing A100 combined, convolved, clean, and downstream matrices."
+Write-Host "Capturing legacy combined, convolved, clean, and downstream matrices."
 & $BranchScript `
     -BenchmarkPath $BenchmarkPath `
     -BaseDeviceName $BaseDeviceName `
     -ProbeAmplitudeDbfs $ProbeAmplitudeDbfs `
     -OutputRoot $BranchDirectory `
     -CombinedReferenceDirectory $DigitalDirectory `
-    -CaptureLabel "minimum-latency reference: A100"
+    -CaptureLabel "legacy renderer reference"
 
 Write-Host ""
-Write-Host "A100 renderer-reference capture complete: $OutputRoot"
+Write-Host "Legacy renderer-reference capture complete: $OutputRoot"
 Write-Host "Commit the raw directory and push it before running the macOS analysis."

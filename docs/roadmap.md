@@ -60,11 +60,12 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [x] Adopt A100 as the default after listening confirmed the original A bass placement and tonality were retained.
 - [x] Reject the current A200 topology after listening confirmed the predicted severe bass failure.
 - [x] Replace the clean branch offline with a unified causal 2×2 low-frequency renderer for the D200 prototype.
-- [x] Capture accepted A100 through Equalizer APO Benchmark.
+- [x] Capture A100 through Equalizer APO Benchmark as the frozen renderer reference.
 - [x] Benchmark D200 v1; retain its latency/CPU evidence but reject its 80–200 Hz response before listening.
 - [x] Render a distinct D200 A-matched revision that restores the preferred A100 upper-bass quantity without overwriting v1.
 - [x] Benchmark D200 A-matched; its measured response, timing, routing, headroom, and CPU pass the digital gate.
-- [ ] Compare A100 and D200 A-matched in controlled listening before changing the daily default.
+- [x] Compare A100 and D200 A-matched in controlled listening; no tonal or spatial regression was readily audible, while the latency improvement was clear during finger drumming.
+- [x] Promote D200 A-matched to the daily default while retaining A100 as the known-good fallback and design reference.
 
 ### Build the Minimum-Latency 2×2 Renderer
 
@@ -76,9 +77,9 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [x] Derive smooth low-frequency interaural level and timing targets without copying room resonances.
 - [x] Extend the base response flat through 20 Hz with a protective 5 Hz roll-off; keep overall bass quantity matched to A100.
 - [x] Merge synthesized bass into the original BRIR over a causal 80–200 Hz transition that preserves upper-bass harmonics and onset cues.
-- [x] Render causal 200-sample-advanced stereo IR pairs; remove the parallel clean branch in the opt-in candidate only.
+- [x] Render causal 200-sample-advanced stereo IR pairs and remove the parallel clean branch from the accepted renderer.
 - [x] Validate D200 v1 timing, decay, headroom, CPU, routing, and generated-asset closure; reject its response mismatch.
-- [x] Validate D200 A-matched response, timing, headroom, CPU, routing, and generated-asset closure before listening.
+- [x] Validate D200 A-matched response, timing, headroom, CPU, routing, generated-asset closure, and controlled listening.
 
 Success means removing only common leading time: no transient truncation, no change to spatial relationships, and no new bass-transition error. This experiment does not address driver, application, or device-buffer latency.
 
@@ -112,7 +113,7 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [ ] Compare minimum-phase and hybrid renderers with the measured BRIR baseline.
 - [ ] Explore a parametric/no-convolution model only after defining which BRIR cues it must reproduce.
 
-Every latency experiment must re-run the bass-alignment analysis because the clean branch currently depends on the BRIR timing.
+Any experiment based on the legacy A renderer must re-run the bass-alignment analysis because its clean branch depends on BRIR timing. The accepted D200 renderer has no parallel runtime bass branch, but generated-asset closure and all four path relationships must still be revalidated after an IR change.
 
 ## Priority 3: Public Project Clarity
 

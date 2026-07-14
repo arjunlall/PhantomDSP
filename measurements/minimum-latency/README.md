@@ -1,6 +1,6 @@
 # Minimum-Latency 2×2 Renderer
 
-This experiment replaces the room-limited JBL LSR305 bass and the parallel delayed clean-bass branch with one causal 2×2 renderer. A100 remains the accepted default and reference until a complete candidate passes digital and listening validation.
+This experiment replaces the room-limited JBL LSR305 bass and the parallel delayed clean-bass branch with one causal 2×2 renderer. D200 A-matched passed digital and controlled listening validation and is now the accepted default. A100 remains the frozen design reference and known-good fallback.
 
 ## Design Target
 
@@ -15,14 +15,14 @@ The first reference capture adds a downstream-only matrix to the existing combin
 
 ## Windows Reference Capture
 
-Pull the current `codex/dsp-improvements` branch and confirm A100 is the only active line in `JBL M2 Binaural Convolution\Bass Crossover Selector.txt`. From PowerShell at the repository root:
+This is a reproducibility procedure for the frozen A100 target, not the normal playback state. Temporarily comment the D200 A-matched normal-playback line and uncomment A100 in `JBL M2 Binaural Convolution\Bass Crossover Selector.txt`; leave reserved measurement routes intact. From PowerShell at the repository root:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
 .\tools\measurement\run_eapo_renderer_reference.ps1
 ```
 
-The command captures the complete renderer plus `combined`, `convolved`, `clean`, and `downstream` matrices under `measurements\minimum-latency\a100-reference\raw`. It does not require Python. Confirm every impulse capture reports zero clipped samples, then commit and push the raw directory.
+The command captures the complete renderer plus `combined`, `convolved`, `clean`, and `downstream` matrices under `measurements\minimum-latency\a100-reference\raw`. It does not require Python. Confirm every impulse capture reports zero clipped samples, then restore D200 A-matched as the only normal-playback renderer before committing.
 
 For a ready-to-paste PC Codex prompt, use [`docs/windows-minimum-latency-reference-runbook.md`](../../docs/windows-minimum-latency-reference-runbook.md).
 
@@ -39,13 +39,13 @@ The analyzer rejects unexpected downstream crosstalk, verifies de-embedded branc
 
 ## Precision Branch Recapture
 
-Equalizer APO Benchmark writes 16-bit PCM. The original isolated clean branch peaks near −65 dBFS, which is sufficient to identify the target but too quantized to use as the source for a production IR. Capture only the two source branches again at calibrated gains:
+Equalizer APO Benchmark writes 16-bit PCM. The original isolated clean branch peaks near −65 dBFS, which is sufficient to identify the target but too quantized to use as the source for a production IR. Temporarily select A100 as described above, then capture only the two source branches again at calibrated gains:
 
 ```powershell
 .\tools\measurement\run_eapo_precision_branches.ps1
 ```
 
-The measurement-only routes apply +24 dB to the convolved branch and +48 dB to the clean branch while using the −6 dBFS probe. They do not match normal playback devices. The analyzer automatically substitutes both precision captures when present and removes the recorded gains before de-embedding. Never use only one precision branch.
+The measurement-only routes apply +24 dB to the convolved branch and +48 dB to the clean branch while using the −6 dBFS probe. They do not match normal playback devices. The analyzer automatically substitutes both precision captures when present and removes the recorded gains before de-embedding. Never use only one precision branch, and restore D200 A-matched after capture.
 
 For a ready-to-paste PC Codex prompt, use [`docs/windows-precision-branch-runbook.md`](../../docs/windows-precision-branch-runbook.md).
 
@@ -61,7 +61,7 @@ After pulling the A-matched revision on Windows, run:
 .\tools\measurement\run_eapo_d200_a_matched.ps1
 ```
 
-The command captures the complete revised output and a correlated full-scale headroom/CPU sweep under `measurements\minimum-latency\d200-a-matched\raw`. A100 remains the playback default. See [`docs/windows-d200-a-matched-runbook.md`](../../docs/windows-d200-a-matched-runbook.md) for the reproducible PC handoff.
+The command captures the accepted output and a correlated full-scale headroom/CPU sweep under `measurements\minimum-latency\d200-a-matched\raw`. D200 A-matched must remain the normal playback default. See [`docs/windows-d200-a-matched-runbook.md`](../../docs/windows-d200-a-matched-runbook.md) for the reproducible PC handoff.
 
 After pulling the capture on macOS, run:
 

@@ -238,7 +238,7 @@ def main():
     report = [
         "# D200 Unified Renderer Prototype",
         "",
-        "This is an offline, opt-in prototype. A100 remains the active renderer.",
+        "This first offline revision is retained as a rejected diagnostic. D200 A-matched is the active renderer, and A100 remains its frozen reference.",
         "",
         "## Locked Design",
         "",
@@ -268,7 +268,7 @@ def main():
     report.extend(
         [
             "",
-            "Next gate: capture the complete prototype through Equalizer APO Benchmark, then compare it with A100 before listening.",
+            "The Windows runtime capture rejected this revision for its 80–200 Hz mismatch; retain it only as a reproducible diagnostic.",
         ]
     )
     (args.analysis_output / "report.md").write_text(

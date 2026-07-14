@@ -1,6 +1,6 @@
-# Select exactly one speaker-virtualization renderer.
+# Select one normal-playback speaker renderer. Reserved Benchmark routes are diagnostic only.
 # Changes apply immediately; lower playback volume before switching.
-# The reserved Benchmark device bypasses the renderer so downstream EQ can be measured.
+# Historical alternatives and their validation status are documented in docs/current-status.md.
 If: regexSearch("PhantomDSP Bass Downstream", deviceName)
 Channel: L R
 Copy: L=L R=R
@@ -8,23 +8,11 @@ Else:
 If: regexSearch("PhantomDSP D200 Prototype", deviceName)
 Include: main - D200 unified prototype.txt
 Else:
-If: regexSearch("PhantomDSP D200 A-Matched", deviceName)
+# D200 A-matched - accepted default: unified 2x2 bass, 200-sample BRIR advance
 Include: main - D200 A-matched prototype.txt
-Else:
-# A0 - original legacy renderer
+# A100 - known-good legacy reference and fallback
+# Include: main - A 100-sample advance.txt
+# A0 - original historical renderer
 # Include: main.txt
-# A100 - accepted default: original A sound, both branches advanced 100 samples (2.08 ms)
-Include: main - A 100-sample advance.txt
-# D200 v1 - digitally rejected: strong 80-200 Hz loss; diagnostic only
-# Include: main - D200 unified prototype.txt
-# D200 A-matched - digitally validated 200-sample candidate; controlled listening only
-# Include: main - D200 A-matched prototype.txt
-# A200 - FAILED DIAGNOSTIC: BRIR advanced 200 samples, clean bass only 100 samples
-# Include: main - A 200-sample advance.txt
-# Historical B - 75 Hz LR4 bass crossover
-# Include: main - LR4 bass crossover.txt
-# Historical C - 65 Hz LR4 bass crossover
-# Include: main - LR4 65 Hz bass crossover.txt
-EndIf:
 EndIf:
 EndIf:

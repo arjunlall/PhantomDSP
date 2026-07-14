@@ -18,8 +18,8 @@ $ActiveSelections = @(
     Get-Content $SelectorPath |
         Where-Object { $_ -match "^\s*Include:" }
 )
-if (($ActiveSelections.Count -ne 1) -or ($ActiveSelections[0].Trim() -ne $ExpectedSelection)) {
-    throw "A100 must be the only active renderer. Expected '$ExpectedSelection' in $SelectorPath."
+if (($ActiveSelections.Count -eq 0) -or ($ActiveSelections[-1].Trim() -ne $ExpectedSelection)) {
+    throw "A100 must be the normal playback renderer. Expected the last active include to be '$ExpectedSelection' in $SelectorPath."
 }
 
 $Captures = @(

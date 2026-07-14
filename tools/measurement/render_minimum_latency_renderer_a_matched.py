@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the causal D200 A-matched 2x2 prototype as 24-bit WAVs."""
+"""Render the accepted causal D200 A-matched 2x2 IRs as 24-bit WAVs."""
 
 import argparse
 import json
@@ -206,7 +206,7 @@ def main():
     }
     summary = {
         "schema_version": 1,
-        "status": "offline prototype; not the active renderer",
+        "status": "accepted active renderer",
         "reference": {
             "path": str(args.reference.relative_to(REPOSITORY)),
             "sha256": sha256(args.reference),
@@ -267,9 +267,9 @@ def main():
     )
 
     report = [
-        "# D200 A-Matched Renderer Prototype",
+        "# D200 A-Matched Accepted Renderer",
         "",
-        "This offline revision keeps A100 as the playback default. It responds to the measured D200 v1 loss in the 80–200 Hz handoff without reintroducing a runtime bass branch.",
+        "This accepted revision responds to the measured D200 v1 loss in the 80–200 Hz handoff without reintroducing a runtime bass branch. A100 remains the frozen design reference and fallback.",
         "",
         "## Locked Design",
         "",
@@ -300,7 +300,7 @@ def main():
     report.extend(
         [
             "",
-            "Windows runtime validation is recorded in `runtime-report.md`. The digital gate passes; A100 remains the default pending a controlled listening comparison with D200 A-Matched.",
+            "Windows runtime validation is recorded in `runtime-report.md`. The digital gate passes, and controlled listening found no readily audible tonal or spatial regression from A100 while confirming the latency improvement. D200 A-Matched is the accepted default.",
         ]
     )
     (args.analysis_output / "report.md").write_text(

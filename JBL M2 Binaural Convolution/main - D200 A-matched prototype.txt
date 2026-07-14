@@ -1,2 +1,3 @@
-# Opt-in D200 A-matched prototype: one causal 2x2 convolution, no parallel bass branch.
+# Accepted D200 A-matched renderer: one causal 2x2 convolution, no parallel bass branch.
+# Filename retained so measured captures and asset lineage remain reproducible.
 Include: Binaural Convolution - D200 A-Matched Prototype.txt

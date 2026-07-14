@@ -20,6 +20,6 @@ This report de-embeds the measured downstream target/headphone chain from the Wi
 
 ## Decision
 
-The runtime capture passes the digital gate: routing, timing, headroom, CPU load, generated-asset closure, and the A100 tonal match all validate. The 80–200 Hz RMS error is 0.83–1.17 dB and the worst smoothed point is 2.47 dB. Keep A100 as the default until a controlled listening comparison confirms bass placement, lower-mid tonality, phantom-speaker stability, and latency.
+The runtime capture passes the digital gate: routing, timing, headroom, CPU load, generated-asset closure, and the A100 tonal match all validate. The 80–200 Hz RMS error is 0.83–1.17 dB and the worst smoothed point is 2.47 dB. Controlled listening subsequently found no readily audible tonal or spatial regression from A100, while finger drumming confirmed the latency improvement. D200 A-matched is therefore the accepted default; A100 remains the fallback.
 
 See `a100-vs-d200-left-speaker.svg`, `a100-vs-d200-right-speaker.svg`, and `a100-vs-d200-magnitude-delta.svg` for the frequency-response comparison.

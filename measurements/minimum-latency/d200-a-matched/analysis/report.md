@@ -1,6 +1,6 @@
-# D200 A-Matched Renderer Prototype
+# D200 A-Matched Accepted Renderer
 
-This offline revision keeps A100 as the playback default. It responds to the measured D200 v1 loss in the 80–200 Hz handoff without reintroducing a runtime bass branch.
+This accepted revision responds to the measured D200 v1 loss in the 80–200 Hz handoff without reintroducing a runtime bass branch. A100 remains the frozen design reference and fallback.
 
 ## Locked Design
 
@@ -21,4 +21,4 @@ The first-order low model peaks at sample 1 on direct paths and sample 16 on cro
 | `RL` | -0.13 / 0.36 dB | +0.03 / 0.60 dB | +0.30 / 1.20 dB | 55 (1.146 ms) |
 | `RR` | -0.05 / 0.32 dB | -0.39 / 0.99 dB | -1.08 / 1.26 dB | 41 (0.854 ms) |
 
-Windows runtime validation is recorded in `runtime-report.md`. The digital gate passes; A100 remains the default pending a controlled listening comparison with D200 A-Matched.
+Windows runtime validation is recorded in `runtime-report.md`. The digital gate passes, and controlled listening found no readily audible tonal or spatial regression from A100 while confirming the latency improvement. D200 A-Matched is the accepted default.

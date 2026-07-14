@@ -1,6 +1,6 @@
 # PhantomDSP
 
-PhantomDSP is an experimental Equalizer APO configuration for reproducing a personalized, speaker-like binaural sound field over headphones. It uses a four-path binaural room impulse response (BRIR) matrix—each virtual speaker measured at both ears—plus headphone compensation, tonal shaping, and a hybrid low-frequency path.
+PhantomDSP is an experimental Equalizer APO configuration for reproducing a personalized, speaker-like binaural sound field over headphones. It uses a four-path binaural room impulse response (BRIR) matrix—each virtual speaker measured at both ears—plus headphone compensation and tonal shaping. The active renderer folds a smooth, extended low-frequency model into the same 2×2 convolution matrix instead of adding a delayed bass branch at runtime.
 
 The active BRIRs were measured from JBL LSR305 near-field monitors in a real room. Additional equalization is intended to move their tonal balance toward a JBL M2-inspired reference. This does not reproduce every physical characteristic of an M2, such as directivity, maximum output, or distortion.
 
@@ -20,7 +20,7 @@ See [Signal-Chain Architecture](docs/architecture.md) for the complete matrix an
 
 This repository reflects a personalized research system and includes historical experiments. The active configuration currently targets a 48 kHz stereo endpoint and a Focal Elex profile. Device names, headphone profiles, gain, and routing must be reviewed before use.
 
-The bass path and several spatial-EQ decisions are under active evaluation. Preserve a low listening level when enabling or editing the configuration: Equalizer APO applies saved changes immediately.
+The accepted D200 A-matched renderer advances the BRIR contribution by 200 samples while retaining the preferred A100 bass quantity and spatial presentation in controlled listening. A100 remains a known-good legacy fallback; several spatial-EQ decisions and closed-loop acoustic validation remain future work. Preserve a low listening level when enabling or editing the configuration: Equalizer APO applies saved changes immediately.
 
 ## Requirements and Installation
 
@@ -39,7 +39,7 @@ The repository contains profiles or experiments for several headphones, includin
 - Static BRIR playback does not respond to head movement.
 - The measured room is part of the rendered sound, including both useful spatial reflections and unwanted room coloration.
 - The current configuration has no automatic fallback for an incorrect sample rate or channel layout.
-- The approximately 5 ms figure refers to direct-sound arrival in the active IRs, not total application, driver, or device latency.
+- Direct-path peaks in the accepted generated IRs occur about 0.85–1.15 ms after input. Total interactive latency also includes application, Equalizer APO, driver, mixer, and device buffers and must be measured separately.
 
 ## Credits
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "offline prototype; not the active renderer",
+  "status": "accepted active renderer",
   "reference": {
     "path": "measurements/minimum-latency/a100-reference/analysis/deembedded-reference.npz",
     "sha256": "2b4bf21d35a27e6a837017ecabada11a4330efd5101e4b82b74397c5fb8a3616",

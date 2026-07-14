@@ -1,8 +1,8 @@
 # Active IR Manifest
 
-This manifest identifies the two BRIR files loaded by the active renderer. It provides a stable parent record for bass experiments and sample-advance variants without publishing additional raw measurement material.
+This manifest records both the original BRIR parents and the generated files loaded by the accepted D200 A-matched renderer. It preserves asset lineage for bass experiments and sample-advance variants without publishing additional raw measurement material.
 
-## Files and Channel Mapping
+## Original BRIR Parents
 
 Both files are stereo 48 kHz, 24-bit PCM WAVs containing 32,768 frames (0.682667 seconds) and occupying 196,652 bytes.
 
@@ -64,7 +64,7 @@ These generated files bake the precision de-embedded speaker renderer and the sy
 
 Both files are stereo 48 kHz, 24-bit PCM with 32,768 frames under `IRs/minimum-latency/`. The locked operation is documented in the [D200 offline report](../measurements/minimum-latency/d200-prototype/analysis/report.md) and reproduced by `tools/measurement/render_minimum_latency_renderer.py`. The [runtime comparison](../measurements/minimum-latency/d200-prototype/analysis/runtime-report.md) rejected this version for its 80–200 Hz mismatch.
 
-## D200 A-Matched Prototype
+## D200 A-Matched Accepted Renderer
 
 This distinct revision keeps the same parent reference, 2×2 mapping, length, format, and common 200-sample BRIR advance. It replaces the v1 bass handoff with a first-order 90 Hz clean model, +0.75 dB calibration, the 15-sample cross offset, and one common −5 dB peaking correction at 350 Hz, Q 2. The common correction cannot change interaural ratios.
 
@@ -73,4 +73,4 @@ This distinct revision keeps the same parent reference, 2×2 mapping, length, fo
 | `D200 A-Matched LL_LR.wav` | `LL`: left speaker to left ear | `LR`: left speaker to right ear | `a87f182328216360bf7f0455bd4948f1d0b104c39a49b1ad25e31b59acb7eef6` |
 | `D200 A-Matched RL_RR.wav` | `RL`: right speaker to left ear | `RR`: right speaker to right ear | `6d21739c7885588f0f9bd9b7f2e575cd550462e83417f68cda35f3f4c0e21da5` |
 
-These files are opt-in and are reproduced by `tools/measurement/render_minimum_latency_renderer_a_matched.py`. The [offline report](../measurements/minimum-latency/d200-a-matched/analysis/report.md) and [Windows runtime comparison](../measurements/minimum-latency/d200-a-matched/analysis/runtime-report.md) agree closely; the revision passes the digital gate and awaits controlled listening.
+These files are the active playback renderer and are reproduced by `tools/measurement/render_minimum_latency_renderer_a_matched.py`. The [offline report](../measurements/minimum-latency/d200-a-matched/analysis/report.md) and [Windows runtime comparison](../measurements/minimum-latency/d200-a-matched/analysis/runtime-report.md) agree closely. The revision passes the digital gate, and controlled listening found no readily audible tonal or spatial regression from A100 while confirming the latency improvement. Filenames remain unchanged for reproducibility.

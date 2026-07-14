@@ -1,4 +1,5 @@
-# D200 A-matched prototype: speaker EQ and the revised clean bass model are baked into the IRs.
+# Accepted D200 A-matched renderer: speaker EQ and the revised bass model are baked into the IRs.
+# Filename retained so measured captures and asset lineage remain reproducible.
 # Root target, headphone, and personal-balance processing remain downstream.
 Channel: all
 Copy: LL=L LR=L RIL=R RIR=R

@@ -416,9 +416,10 @@ def main():
             "headroom, CPU load, generated-asset closure, and the A100 tonal "
             f"match all validate. The 80–200 Hz RMS error is {min(transition_rms):.2f}–"
             f"{max(transition_rms):.2f} dB and the worst smoothed point is "
-            f"{max(transition_max):.2f} dB. Keep A100 as the default until a "
-            "controlled listening comparison confirms bass placement, lower-mid "
-            "tonality, phantom-speaker stability, and latency."
+            f"{max(transition_max):.2f} dB. Controlled listening subsequently "
+            "found no readily audible tonal or spatial regression from A100, "
+            "while finger drumming confirmed the latency improvement. D200 "
+            "A-matched is therefore the accepted default; A100 remains the fallback."
         )
     else:
         decision = (

@@ -1,6 +1,6 @@
 # D200 Unified Renderer Prototype
 
-This is an offline, opt-in prototype. A100 remains the active renderer.
+This first offline revision is retained as a rejected diagnostic. D200 A-matched is the active renderer, and A100 remains its frozen reference.
 
 ## Locked Design
 
@@ -24,4 +24,4 @@ This is an offline, opt-in prototype. A100 remains the active renderer.
 | `RL` | 5 | 42 | 55 | 1.146 ms |
 | `RR` | 9 | 28 | 41 | 0.854 ms |
 
-Next gate: capture the complete prototype through Equalizer APO Benchmark, then compare it with A100 before listening.
+The Windows runtime capture rejected this revision for its 80–200 Hz mismatch; retain it only as a reproducible diagnostic.

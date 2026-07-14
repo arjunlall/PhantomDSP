@@ -117,8 +117,12 @@ def load_stereo_paths(files):
             raise ValueError("Input sample rates do not match")
         for label, channel in PATH_CHANNELS[side]:
             paths[label] = loaded["samples"][:, channel]
+        try:
+            display_path = str(path.relative_to(REPOSITORY))
+        except ValueError:
+            display_path = str(path)
         metadata[side] = {
-            "path": str(path.relative_to(REPOSITORY)),
+            "path": display_path,
             "sha256": sha256(path),
             "frames": loaded["frame_count"],
             "sample_width_bits": loaded["sample_width_bits"],

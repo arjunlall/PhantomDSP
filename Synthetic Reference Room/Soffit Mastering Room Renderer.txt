@@ -1,0 +1,14 @@
+# Experimental candidate G; not the production default.
+# Personal direct sound, a synthetic soffit mastering-room early field, and E's synthetic late field.
+# No measured early- or late-room waveform samples are copied into these IRs.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\soffit-mastering\Soffit Mastering Room Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\soffit-mastering\Soffit Mastering Room Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR

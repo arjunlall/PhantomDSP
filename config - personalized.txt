@@ -10,6 +10,8 @@ Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
 # Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
 # F — theoretical early room: disable A above before enabling.
 # Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
+# G — soffit mastering room: disable A above before enabling.
+# Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
 # Known-good fallback; enable only after disabling Speaker Virtualization above.
 # Include: JBL M2 Binaural Convolution\Legacy Parallel Bass Reference.txt
 # Historical measurement routing; never enable alongside either playback renderer.

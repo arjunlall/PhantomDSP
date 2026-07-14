@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 
 import math
+import shutil
+import tempfile
 import unittest
+from pathlib import Path
 
 import numpy as np
 
 from render_synthetic_direct import (
     DESIGN,
+    OUTPUT_DIRECTORY,
+    OUTPUT_FILES,
     direct_window,
     lagrange_fractional_delay,
+    load_stereo_paths,
     theoretical_itd_samples,
 )
 
@@ -38,6 +44,23 @@ class SyntheticDirectRendererTests(unittest.TestCase):
         self.assertTrue(np.all(window[end + 1 :] == 0.0))
         self.assertLess(end, first_room_cluster)
         self.assertEqual(window[peak], 1.0)
+
+    def test_stereo_loader_accepts_files_outside_repository(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            files = {}
+            for side, filename in OUTPUT_FILES.items():
+                source = OUTPUT_DIRECTORY / filename
+                destination = root / source.name
+                shutil.copy2(source, destination)
+                files[side] = destination
+            paths, sample_rate, metadata = load_stereo_paths(files)
+
+        self.assertEqual(sample_rate, DESIGN["sample_rate_hz"])
+        self.assertEqual(set(paths), {"LL", "LR", "RL", "RR"})
+        self.assertTrue(
+            all(Path(values["path"]).is_absolute() for values in metadata.values())
+        )
 
 
 if __name__ == "__main__":

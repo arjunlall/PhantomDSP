@@ -1,0 +1,15 @@
+# Experimental candidate C; not the production default.
+# Synthetic personal direct sound plus four distinct personal early-reflection paths.
+# The 4-30 ms source window is high-passed at 250 Hz to preserve clean bass.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\personal-early\Personal Early Room Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\personal-early\Personal Early Room Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR
+Channel: all

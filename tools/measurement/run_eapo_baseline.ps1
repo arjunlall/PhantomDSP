@@ -88,7 +88,7 @@ $RendererHash = "missing"
 if (Test-Path $PersonalizedConfig -PathType Leaf) {
     $RendererIncludes = @(
         Get-Content $PersonalizedConfig |
-            Where-Object { $_ -match "^\s*Include:\s+(JBL M2 Binaural Convolution|tools\\measurement\\equalizerapo)\\" }
+            Where-Object { $_ -match "^\s*Include:\s+(JBL M2 Binaural Convolution|Synthetic Reference Room|tools\\measurement\\equalizerapo)\\" }
     )
     if ($RendererIncludes.Count -eq 1) {
         $RendererRelativePath = ($RendererIncludes[0] -replace "^\s*Include:\s*", "").Trim()

@@ -85,7 +85,7 @@ Filters applied only to direct or cross paths instead modify the synthesized bin
 
 The clean-bass branch was introduced to reduce undesirable low-frequency behavior in the measured speaker/room response while retaining the BRIR above the crossover region. The legacy implementation uses a 90 Hz low-pass, gain reduction, and explicit delay, but does not high-pass the convolved branch. It is therefore an overlapping parallel blend rather than a complementary crossover. Measured digital captures show destructive summation in its transition region; downstream headphone compensation cannot change that relative branch phase.
 
-The A100 fallback preserves the preferred legacy bass topology while advancing both the BRIR and clean branch by 100 samples. Candidate B uses a 75 Hz fourth-order Linkwitz-Riley handoff; candidate C lowers it to 65 Hz. Both measured more coherently than the legacy overlap, but listening found weaker frontal externalization and muddier or more bloated bass. They remain historical diagnostics. See the [candidate comparison](../measurements/candidates/bass-crossover-comparison.md).
+The A100 fallback preserves the preferred legacy bass topology while advancing both the BRIR and clean branch by 100 samples. Historical bass candidate B uses a 75 Hz fourth-order Linkwitz-Riley handoff; historical bass candidate C lowers it to 65 Hz. These labels predate and are unrelated to the synthetic-room listening conditions. Both measured more coherently than the legacy overlap, but listening found weaker frontal externalization and muddier or more bloated bass. They remain historical diagnostics. See the [candidate comparison](../measurements/candidates/bass-crossover-comparison.md).
 
 A diagnostic 200-sample BRIR advance failed because the clean branch could advance only 100 samples, producing the predicted severe bass phase error. A100 therefore remains the reference for the replacement below, not the active default.
 
@@ -110,9 +110,11 @@ The first version is digitally rejected and retained only as a historical diagno
 
 ## Synthetic Reference Room Experiment
 
-The opt-in [Synthetic Reference Room](synthetic-reference-room.md) is a parallel research renderer, not a revision of the production BRIR. Its direct-only first stage uses symmetrized personal magnitude cues from a 4 ms BRIR window, causal minimum-phase reconstruction, and a theoretical contralateral delay. It deliberately discards measured propagation time, measured left/right asymmetry, and all measured room decay.
+The opt-in [Synthetic Reference Room](synthetic-reference-room.md) is a parallel research renderer, not a revision of the production BRIR. Direct-only control B uses symmetrized personal magnitude cues from a 4 ms BRIR window, causal minimum-phase reconstruction, and a theoretical contralateral delay. It deliberately discards measured propagation time, measured left/right asymmetry, and all measured room decay.
 
-Below 300 Hz, it uses only the active renderer's broad magnitude as a bass-quantity calibration; the resulting bass phase and impulse are synthesized anew. Root target, headphone compensation, and personal balance remain downstream exactly as in production. Future stages will add theoretical early reflections and a shared synthetic late field without changing this separation of responsibilities.
+Candidate C keeps B's direct sound and adds four distinct personal early-reflection residuals from +4 to +30 ms. Each residual is aligned relative to B's theoretical direct peak, preserving measured reflection spacing without restoring old absolute latency. A reflection-only fourth-order high-pass at 250 Hz protects the synthetic low bass; measured late energy remains excluded. C is an empirical control for identifying the binaural room cues that B lacks, not the proposed final room.
+
+Below 300 Hz, B uses only the active renderer's broad magnitude as a bass-quantity calibration; the resulting bass phase and impulse are synthesized anew. Root target, headphone compensation, and personal balance remain downstream exactly as in production. If C externalizes successfully, future stages will replace its measured residual with theoretical early reflections and add a shared synthetic late field without changing this separation of responsibilities.
 
 ## Validation Boundary
 

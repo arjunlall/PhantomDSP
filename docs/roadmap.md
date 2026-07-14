@@ -110,6 +110,7 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Separate the personal direct window from the first repeatable room reflection cluster; +4 ms is the direct extraction boundary and the first room cluster begins around +5.1 ms.
 - [x] Quantify the direct-versus-later energy split. The direct window retains 83–91% of ipsilateral energy but only 44–49% of contralateral energy.
 - [x] Build an opt-in symmetric personal direct renderer with minimum-phase reconstruction, theory-derived ITD, and bass-quantity calibration.
+- [x] Build an opt-in personal early-reflection control using four distinct +4 to +30 ms residuals, theoretical direct alignment, and reflection-only bass protection.
 - [ ] Compare the personal direct control with production and a generic-HRTF direct control.
 - [ ] Add theoretical image-source early reflections without copying measured room arrival times.
 - [ ] Add a shared binaural late field with controlled decay and interaural coherence.

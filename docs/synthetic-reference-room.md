@@ -47,7 +47,9 @@ Listening found that C remained perceptually close to B: sources were frontal bu
 - The same four distinct paths, 250 Hz reflection high-pass, gain, and alignment are retained without normalization.
 - D's 20–80 Hz change from C is 0.005 dB RMS. Its above-250 Hz decay closely tracks A, while direct arrival remains unchanged.
 
-D is a mechanism test, not a proposed final room. If it restores A's apparent distance, replace the measured decay with a clean synthetic binaural late field. If it remains close, restore the complex personal direct response next. Exact closure, decay, response, headroom, and asset hashes are in the [candidate D analysis](../measurements/synthetic-reference-room/personal-late-control/analysis/summary.json).
+D began as a mechanism test and is now the successful hybrid reference, not the proposed final room. Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. The result was not blinded or independently level matched, and Windows Benchmark remains pending. Exact closure, decay, response, headroom, asset hashes, and the listening note are in the [candidate D analysis](../measurements/synthetic-reference-room/personal-late-control/analysis/summary.json).
+
+This result establishes that sustained post-30 ms binaural decay is necessary in this system. C already reproduced A-like early energy and comb density, so the visible frequency-response “hair” was a signature of delayed energy rather than the complete perceptual mechanism. B's synthetic direct stage is sufficient to continue; restoring the old complex direct response is no longer the next priority.
 
 ## A/B/C/D Listening
 
@@ -79,12 +81,13 @@ Include: Synthetic Reference Room\Personal Early Room Renderer.txt
 Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. Benchmark D before normal-volume listening because its modeled correlated gain is 2.65 dB higher than C, although it remains 0.28 dB below A. Compare C to D for distance, then D to A for room character. A D that moves the image backward but sounds too reverberant is a successful mechanism result.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. Benchmark D before treating it as validated: its modeled correlated gain is 2.65 dB higher than C, although it remains 0.28 dB below A.
 
 ## Next Stages
 
-- Benchmark and listen to D without changing its tail level or decay.
+- Freeze D's generated assets and complete its Windows Benchmark validation.
+- Measure D's frequency-dependent decay, direct-to-late ratio, and interaural coherence without copying narrow room resonances.
 - Add a direct-only generic-HRTF control to reveal which benefits are actually personal.
-- If D restores distance, replace its measured decay with a shared synthetic binaural late field.
+- Build candidate E by replacing only D's post-30 ms measured decay with a shared synthetic binaural late field.
 - Replace measured early energy with sparse image-source reflections using theoretical path lengths and directional filtering.
 - Validate each stage through Equalizer APO Benchmark and controlled listening before promotion.

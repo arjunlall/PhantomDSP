@@ -1,6 +1,13 @@
 {
   "schema_version": 1,
   "status": "opt-in measured late-field diagnostic",
+  "listening_result": {
+    "date": "2026-07-14",
+    "method": "informal sighted A/C/D comparison with unchanged downstream filters",
+    "result": "D restored apparent monitor distance and sounded more spacious and preferable to A",
+    "interpretation": "Sustained post-30 ms binaural decay is necessary in this system; A-like early comb density alone was insufficient",
+    "limitations": "not blinded or independently level matched; Windows Benchmark remains pending"
+  },
   "design": {
     "sample_rate_hz": 48000,
     "late_window": {

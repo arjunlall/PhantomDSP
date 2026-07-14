@@ -112,9 +112,12 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Build an opt-in symmetric personal direct renderer with minimum-phase reconstruction, theory-derived ITD, and bass-quantity calibration.
 - [x] Build an opt-in personal early-reflection control using four distinct +4 to +30 ms residuals, theoretical direct alignment, and reflection-only bass protection.
 - [x] Build a one-variable late-field diagnostic that preserves the early control through +25 ms and restores the complementary measured decay.
+- [x] Confirm in informal listening that the late-field control restores apparent monitor distance and sounds more spacious and preferable to production A.
+- [ ] Benchmark the successful D hybrid reference on Windows and freeze its runtime evidence.
+- [ ] Characterize D's broad frequency-dependent decay, direct-to-late ratio, and interaural coherence without copying narrow room resonances.
 - [ ] Compare the personal direct control with production and a generic-HRTF direct control.
 - [ ] Add theoretical image-source early reflections without copying measured room arrival times.
-- [ ] Add a shared binaural late field with controlled decay and interaural coherence.
+- [ ] Build candidate E by replacing only D's measured post-30 ms decay with a shared synthetic binaural late field.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
 - [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.
 - [ ] Compare minimum-phase and hybrid renderers with the measured BRIR baseline.

@@ -1,6 +1,6 @@
 # Synthetic Reference Room: Measured Late-Field Diagnostic
 
-Candidate D changes one audible variable relative to C: it restores the measured room field after the early-reflection window. It is an opt-in diagnostic, not a proposed final room.
+Candidate D changes one audible variable relative to C: it restores the measured room field after the early-reflection window. It is now the successful hybrid reference, not the proposed final synthetic room.
 
 ## Construction
 
@@ -12,4 +12,6 @@ Candidate D changes one audible variable relative to C: it restores the measured
 
 ## Interpretation
 
-If D restores A's apparent distance, the next renderer should replace this measured tail with a clean synthetic binaural late field. If D remains close, the complex personal direct path—not late reverberation—is the next variable to restore.
+Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. The comparison was not blinded or independently level matched, and Windows Benchmark validation remains pending.
+
+This establishes sustained post-30 ms binaural decay as necessary in this system; A-like early comb density alone was insufficient. The next renderer should keep D's direct sound, bass, and measured early field while replacing only this measured tail with a clean synthetic binaural late field.

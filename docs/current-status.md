@@ -8,7 +8,11 @@ Four mutually exclusive renderers are now documented in the [synthetic reference
 
 B was benchmarked cleanly on Windows and sounded like ordinary headphones despite its theoretical ITD and personal direct-HRTF magnitude. C restored four distinct +4 to +30 ms paths and A-like comb density, but sounded perceptually like B: frontal yet immediately in front of the listener. Switching either B or C to A moved the image back several feet. Offline analysis confirms C's early energy is already comparable to A; its decisive difference is the absence of energy after 30 ms.
 
-D preserves C bit-for-bit through 25 ms, adds a complementary 25–30 ms fade into the full measured decay, and keeps C's 250 Hz room high-pass, gain, direct timing, and bass. Its above-250 Hz decay closely follows A and its 20–80 Hz response changes by only 0.005 dB RMS. Resume by benchmarking D at low volume: renderer-only correlated gain is +3.93 dB, versus +1.28 dB for C and +4.21 dB for A. If D restores distance, replace its measured tail with a synthetic binaural late field; if not, restore the complex personal direct response.
+D preserves C bit-for-bit through 25 ms, adds a complementary 25–30 ms fade into the full measured decay, and keeps C's 250 Hz room high-pass, gain, direct timing, and bass. Its above-250 Hz decay closely follows A and its 20–80 Hz response changes by only 0.005 dB RMS.
+
+Informal sighted listening with unchanged downstream filters found that D restored apparent monitor distance and sounded more spacious and preferable to A. This was not blinded or independently level matched. The result establishes sustained post-30 ms binaural decay—not early frequency-response combing alone—as necessary in this system, and makes D the frozen hybrid reference. B's synthetic direct stage is sufficient for the next experiment.
+
+Resume by benchmarking D at low volume: renderer-only correlated gain is +3.93 dB, versus +1.28 dB for C and +4.21 dB for A. Then characterize D's broad frequency-dependent decay, direct-to-late ratio, and interaural coherence. Candidate E must retain D's direct sound, bass, and measured early field while replacing only its measured post-30 ms tail with a clean synthetic binaural late field.
 
 ## Historical Bass Crossover Listening Decision
 

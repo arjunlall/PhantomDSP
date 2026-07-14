@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "status": "opt-in direct-only prototype",
+  "design": {
+    "sample_rate_hz": 48000,
+    "direct_window": {
+      "pre_peak_start_ms": -3.0,
+      "pre_peak_full_level_ms": -1.75,
+      "post_peak_end_ms": 4.0,
+      "post_peak_taper_ms": 0.5
+    },
+    "magnitude_regularization": {
+      "personal_fractional_octave": 12,
+      "upper_treble_fractional_octave": 3,
+      "upper_treble_blend_hz": [
+        10000.0,
+        16000.0
+      ],
+      "synthetic_bass_end_hz": 300.0,
+      "personal_direct_start_hz": 700.0,
+      "gain_match_hz": [
+        500.0,
+        1000.0
+      ],
+      "nyquist_rolloff_start_hz": 18000.0,
+      "nyquist_rolloff_db": -24.0,
+      "protective_highpass_hz": 8.0,
+      "protective_highpass_order": 2
+    },
+    "timing_model": {
+      "speaker_azimuth_degrees": 30.0,
+      "head_radius_m": 0.0875,
+      "speed_of_sound_m_s": 343.0,
+      "fractional_delay_order": 7
+    },
+    "nfft": 65536,
+    "output_length_samples": 8192
+  },
+  "source_files": {
+    "left": {
+      "path": "JBL M2 Binaural Convolution/IRs/JBL LSR305 LL 4_LR 4 5-500.wav",
+      "sha256": "4f6aa5b21cd94a075904573f56d7b4ade24ebf6737405984a34d41a956aa386b",
+      "frames": 32768,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "JBL M2 Binaural Convolution/IRs/JBL LSR305 RL 4_RR 4 5-500.wav",
+      "sha256": "f733870e8ff87c578d57a30d5f898fea6f1d1cefe4aa15962fbe8912b1125efb",
+      "frames": 32768,
+      "sample_width_bits": 24
+    }
+  },
+  "bass_calibration_files": {
+    "left": {
+      "path": "JBL M2 Binaural Convolution/IRs/active/Left Speaker to Both Ears.wav",
+      "sha256": "a87f182328216360bf7f0455bd4948f1d0b104c39a49b1ad25e31b59acb7eef6",
+      "frames": 32768,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "JBL M2 Binaural Convolution/IRs/active/Right Speaker to Both Ears.wav",
+      "sha256": "6d21739c7885588f0f9bd9b7f2e575cd550462e83417f68cda35f3f4c0e21da5",
+      "frames": 32768,
+      "sample_width_bits": 24
+    }
+  },
+  "source_peak_samples_used_for_windowing_only": {
+    "LL": 242,
+    "LR": 231,
+    "RL": 245,
+    "RR": 240
+  },
+  "measured_timing_retained": false,
+  "left_right_asymmetry_retained": false,
+  "personal_gain_adjustment_db": 1.632428,
+  "bass_quantity_match_20_300_hz": {
+    "mean_delta_db": -0.006058,
+    "rms_delta_db": 0.151399,
+    "maximum_absolute_delta_db": 0.493471
+  },
+  "renderer_only_correlated_input_headroom": {
+    "maximum_gain_db": -1.425838,
+    "frequency_hz": 3317.871094,
+    "note": "Excludes downstream target, headphone, and balance filters."
+  },
+  "theoretical_itd": {
+    "samples": 12.533862558,
+    "milliseconds": 0.261122137,
+    "fractional_delay_fir": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.002405028111,
+      0.023479281212,
+      -0.11635971796,
+      0.557196516495,
+      0.638151607695,
+      -0.121734708908,
+      0.024124069711,
+      -0.002452020134
+    ],
+    "magnitude_error_db": {
+      "1000.0": -0.0,
+      "4000.0": -4.9e-05,
+      "8000.0": -0.010309,
+      "12000.0": -0.193754,
+      "16000.0": -1.311504
+    }
+  },
+  "paths": {
+    "LL": {
+      "peak_sample": 9,
+      "peak_time_ms": 0.1875,
+      "peak_linear": 0.053080031,
+      "tail_energy_beyond_output_db": -46.316712
+    },
+    "LR": {
+      "peak_sample": 15,
+      "peak_time_ms": 0.3125,
+      "peak_linear": 0.016650946,
+      "tail_energy_beyond_output_db": -36.457318
+    },
+    "RL": {
+      "peak_sample": 15,
+      "peak_time_ms": 0.3125,
+      "peak_linear": 0.016650946,
+      "tail_energy_beyond_output_db": -36.457318
+    },
+    "RR": {
+      "peak_sample": 9,
+      "peak_time_ms": 0.1875,
+      "peak_linear": 0.053080031,
+      "tail_energy_beyond_output_db": -46.316712
+    }
+  },
+  "symmetry": {
+    "LL_equals_RR": true,
+    "LR_equals_RL": true
+  },
+  "rendered_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Left Speaker.wav",
+      "sha256": "86b5e99be8717815de09fa2282c7c602e351cc4a0e7dc858b7fc231e7aec4d86",
+      "frames": 8192,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080031
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Right Speaker.wav",
+      "sha256": "e93255413410b195b9c0a80504ac4712bf58d3bb3fce6aa9dae0947344a4b912",
+      "frames": 8192,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080031
+    }
+  },
+  "plots": [
+    "magnitude-response.svg",
+    "ild-response.svg",
+    "impulse-response.svg",
+    "bass-calibration.svg"
+  ]
+}

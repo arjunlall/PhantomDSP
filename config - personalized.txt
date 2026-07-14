@@ -1,5 +1,7 @@
 # Normal playback uses one condition-free production renderer.
 Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
+# Synthetic direct-only A/B: disable the production include above before enabling.
+# Include: Synthetic Reference Room\Personal Direct Renderer.txt
 # Known-good fallback; enable only after disabling Speaker Virtualization above.
 # Include: JBL M2 Binaural Convolution\Legacy Parallel Bass Reference.txt
 # Historical measurement routing; never enable alongside either playback renderer.

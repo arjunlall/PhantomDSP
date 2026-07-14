@@ -108,6 +108,12 @@ The production revision—historically labeled D200 A-matched—keeps the common
 
 The first version is digitally rejected and retained only as a historical diagnostic. The production Speaker Virtualization renderer passes its Windows Benchmark capture, including a 0.83–1.17 dB RMS difference from the legacy reference at 80–200 Hz, a 2.47 dB worst smoothed point, zero clipping, and 0.67% maximum single-core CPU. Controlled listening found no readily audible tonal or spatial regression, while finger drumming revealed the latency improvement.
 
+## Synthetic Reference Room Experiment
+
+The opt-in [Synthetic Reference Room](synthetic-reference-room.md) is a parallel research renderer, not a revision of the production BRIR. Its direct-only first stage uses symmetrized personal magnitude cues from a 4 ms BRIR window, causal minimum-phase reconstruction, and a theoretical contralateral delay. It deliberately discards measured propagation time, measured left/right asymmetry, and all measured room decay.
+
+Below 300 Hz, it uses only the active renderer's broad magnitude as a bass-quantity calibration; the resulting bass phase and impulse are synthesized anew. Root target, headphone compensation, and personal balance remain downstream exactly as in production. Future stages will add theoretical early reflections and a shared synthetic late field without changing this separation of responsibilities.
+
 ## Validation Boundary
 
 The definitive validation is a closed-loop acoustic measurement:

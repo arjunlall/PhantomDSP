@@ -107,12 +107,16 @@ New measurements would strengthen validation but are not a blocker for the bass 
 
 ### Room and Renderer Experiments
 
-- [ ] Separate direct sound, early reflections, and late room decay in the active BRIRs.
-- [ ] Quantify which late energy supports externalization and which energy is room-specific coloration.
+- [x] Separate the personal direct window from the first repeatable room reflection cluster; +4 ms is the direct extraction boundary and the first room cluster begins around +5.1 ms.
+- [x] Quantify the direct-versus-later energy split. The direct window retains 83–91% of ipsilateral energy but only 44–49% of contralateral energy.
+- [x] Build an opt-in symmetric personal direct renderer with minimum-phase reconstruction, theory-derived ITD, and bass-quantity calibration.
+- [ ] Compare the personal direct control with production and a generic-HRTF direct control.
+- [ ] Add theoretical image-source early reflections without copying measured room arrival times.
+- [ ] Add a shared binaural late field with controlled decay and interaural coherence.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
 - [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.
 - [ ] Compare minimum-phase and hybrid renderers with the measured BRIR baseline.
-- [ ] Explore a parametric/no-convolution model only after defining which BRIR cues it must reproduce.
+- [ ] Explore a runtime parametric/no-convolution implementation after the synthetic IR establishes which cues it must reproduce.
 
 Any experiment based on the legacy A renderer must re-run the bass-alignment analysis because its clean branch depends on BRIR timing. The accepted Speaker Virtualization renderer has no parallel runtime bass branch, but generated-asset closure and all four path relationships must still be revalidated after an IR change.
 

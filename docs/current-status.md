@@ -2,6 +2,12 @@
 
 This file is the short resume point for active experiments. Detailed measurements remain in the linked reports; normal playback directly includes the accepted `Speaker Virtualization.txt` renderer with no conditional routing.
 
+## Synthetic Reference Room Experiment
+
+An opt-in [personal direct-only renderer](synthetic-reference-room.md) is now the first control for a fully synthetic reference room. It uses 4 ms windowed personal HRTF magnitudes, removes empirical arrival timing and left/right asymmetry, reconstructs minimum-phase filters, and applies a theoretical 12.534-sample cross-ear delay. Broad bass magnitude below 300 Hz is calibrated to the accepted renderer so listening is not confounded by a deliberate bass-quantity change.
+
+The production renderer remains enabled. To audition the control, comment its include in `config - personalized.txt` and uncomment `Synthetic Reference Room\Personal Direct Renderer.txt`; never enable both. Expect the control to sound dry and potentially less externalized because it contains no reflections or late field. Resume by recording whether its timbre and directional anchor are plausible, then add theoretical early reflections rather than tuning this control to imitate room spaciousness.
+
 ## Bass Crossover Listening Decision
 
 - **A — legacy topology:** preferred historical reference. It places bass with the phantom speakers and sounds less muddy or bloated; A100 retains this topology as the fallback.

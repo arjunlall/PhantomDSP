@@ -22,6 +22,8 @@ This repository reflects a personalized research system and includes historical 
 
 Normal playback now loads the condition-free `Speaker Virtualization.txt` chain. Its two generated IRs minimize direct-arrival delay while retaining the bass quantity and spatial presentation of the legacy parallel-bass reference in controlled listening. That legacy renderer remains a known-good fallback; several spatial-EQ decisions and closed-loop acoustic validation remain future work. Preserve a low listening level when enabling or editing the configuration: Equalizer APO applies saved changes immediately.
 
+An opt-in [Synthetic Reference Room](docs/synthetic-reference-room.md) experiment is being developed in parallel. Its first control keeps a regularized personal direct HRTF but replaces measured timing with a theoretical model and omits the measured room entirely. It is intentionally not enabled by default.
+
 ## Requirements and Installation
 
 1. Install [Equalizer APO](https://sourceforge.net/projects/equalizerapo/) on Windows and restart if prompted.

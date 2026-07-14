@@ -1,0 +1,15 @@
+# Experimental direct-only synthetic renderer; not the production default.
+# Personal magnitude cues come from symmetrized 4 ms BRIR windows.
+# Timing is theoretical and the measured room tail is intentionally absent.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\direct\Personal Direct Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\direct\Personal Direct Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR
+Channel: all

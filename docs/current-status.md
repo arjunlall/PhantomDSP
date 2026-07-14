@@ -4,7 +4,7 @@ This file is the short resume point for active experiments. Detailed measurement
 
 ## Synthetic Reference Room Experiment
 
-Five mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production, B is synthetic direct-only, C adds personal early reflections, D adds the complementary measured late field, and E replaces D's late tail with a generated diffuse field. Production remains enabled by default.
+Six mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production, B is synthetic direct-only, C adds personal early reflections, D adds the complementary measured late field, E replaces D's late tail with a generated diffuse field, and F replaces the remaining measured early-room waveform with image-source reflections. Production remains enabled by default.
 
 B was benchmarked cleanly on Windows and sounded like ordinary headphones despite its theoretical ITD and personal direct-HRTF magnitude. C restored four distinct +4 to +30 ms paths and A-like comb density, but sounded perceptually like B: frontal yet immediately in front of the listener. Switching either B or C to A moved the image back several feet. Offline analysis confirms C's early energy is already comparable to A; its decisive difference is the absence of energy after 30 ms.
 
@@ -16,7 +16,9 @@ D's late field is now characterized as a broad target: 9.16 dB retained-C-to-lat
 
 E passed Windows Benchmark with no clipping or configuration errors, 4.61 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Informal sighted comparison found no obvious difference between D and E; E sounded great and preserved the intended ±30° placement, while A sounded narrower at an estimated ±20–25°. E is now the accepted opt-in synthetic-late reference; A remains the production default.
 
-Resume by replacing only C's measured +4 to +30 ms early field with theoretical image-source reflections. Keep E's direct sound, bass, and synthetic late field fixed so this remains a one-variable experiment. Future speaker-angle variants should recalculate theoretical ITD, direction-dependent ILD/HRTF, and early-reflection geometry while reusing the diffuse late field.
+Candidate F now replaces C's measured +4 to +30 ms early field with six theoretical first-order image sources per speaker while keeping B's direct/bass stage and E's synthetic late branch fixed. It models a symmetric treated room, removes common propagation delay, matches C's combined early energy at −9.695 dB relative to direct, and copies no measured early- or late-room waveform. Relative to E, its change is 0.015 dB RMS at 20–80 Hz and 0.363 dB RMS at 80–200 Hz; modeled correlated renderer gain is +2.56 dB. A remains enabled.
+
+Resume by pushing F, switching exactly A to F on Windows, and running the standard three-probe Benchmark before listening. The first listening question is simply whether F preserves E's nearfield distance and spaciousness; do not tune room dimensions or absorption until that one-variable result is known. Future speaker-angle variants should recalculate theoretical ITD, direction-dependent ILD/HRTF, and early-reflection geometry while reusing the diffuse late field.
 
 ## Historical Bass Crossover Listening Decision
 

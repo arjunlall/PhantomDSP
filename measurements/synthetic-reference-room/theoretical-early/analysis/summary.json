@@ -1,0 +1,633 @@
+{
+  "schema_version": 1,
+  "status": "opt-in theoretical early-reflection candidate F",
+  "design": {
+    "sample_rate_hz": 48000,
+    "output_length_samples": 32768,
+    "nfft": 65536,
+    "speed_of_sound_m_s": 343.0,
+    "head_radius_m": 0.0875,
+    "speaker_distance_m": 1.0,
+    "speaker_azimuth_degrees": 30.0,
+    "ear_height_m": 1.2,
+    "room": {
+      "width_m": 4.8,
+      "length_m": 5.2,
+      "height_m": 2.7,
+      "listener_from_rear_wall_m": 2.0
+    },
+    "common_hrtf": {
+      "fractional_octave_smoothing": 6,
+      "impulse_samples": 1024,
+      "tail_fade_samples": 128
+    },
+    "directional_shadow": {
+      "maximum_high_frequency_attenuation_db": -12.0,
+      "fully_shadowed_cutoff_hz": 1500.0,
+      "unshadowed_cutoff_hz": 4000.0,
+      "filter_samples": 256
+    },
+    "fractional_delay_order": 7,
+    "target_combined_early_to_direct_energy_db": -9.694942,
+    "absolute_direct_propagation_delay_retained": false,
+    "reflection_orders": 1
+  },
+  "surfaces": {
+    "left_wall": {
+      "axis": 0,
+      "coordinate_m": -2.4,
+      "reflection_coefficient": 0.3,
+      "high_frequency_ratio": 0.45,
+      "absorption_cutoff_hz": 2500.0
+    },
+    "right_wall": {
+      "axis": 0,
+      "coordinate_m": 2.4,
+      "reflection_coefficient": 0.3,
+      "high_frequency_ratio": 0.45,
+      "absorption_cutoff_hz": 2500.0
+    },
+    "rear_wall": {
+      "axis": 1,
+      "coordinate_m": -2.0,
+      "reflection_coefficient": 0.45,
+      "high_frequency_ratio": 0.6,
+      "absorption_cutoff_hz": 3500.0
+    },
+    "front_wall": {
+      "axis": 1,
+      "coordinate_m": 3.2,
+      "reflection_coefficient": 0.35,
+      "high_frequency_ratio": 0.55,
+      "absorption_cutoff_hz": 3000.0
+    },
+    "floor": {
+      "axis": 2,
+      "coordinate_m": 0.0,
+      "reflection_coefficient": 0.55,
+      "high_frequency_ratio": 0.55,
+      "absorption_cutoff_hz": 3500.0
+    },
+    "ceiling": {
+      "axis": 2,
+      "coordinate_m": 2.7,
+      "reflection_coefficient": 0.32,
+      "high_frequency_ratio": 0.45,
+      "absorption_cutoff_hz": 2500.0
+    }
+  },
+  "source_positions_m": {
+    "left": [
+      -0.5,
+      0.866025,
+      1.2
+    ],
+    "right": [
+      0.5,
+      0.866025,
+      1.2
+    ]
+  },
+  "ear_positions_m": {
+    "left": [
+      -0.0875,
+      0.0,
+      1.2
+    ],
+    "right": [
+      0.0875,
+      0.0,
+      1.2
+    ]
+  },
+  "direct_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Left Speaker.wav",
+      "sha256": "86b5e99be8717815de09fa2282c7c602e351cc4a0e7dc858b7fc231e7aec4d86",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Right Speaker.wav",
+      "sha256": "e93255413410b195b9c0a80504ac4712bf58d3bb3fce6aa9dae0947344a4b912",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "candidate_c_files_used_only_to_isolate_E_late_and_verify_one_energy_scalar": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Left Speaker.wav",
+      "sha256": "4b461d3571de03d95d6aee7c954ca2449bd20c777f18e1259f212eb4681af3a2",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Right Speaker.wav",
+      "sha256": "d108e03a66079b95f70da432c461def831d5a170acef10d29fb87739bfacb9e7",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "accepted_e_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/synthetic-late/Synthetic Late Field Left Speaker.wav",
+      "sha256": "bc0d754bcd8482dc11d209152bb9e991b53a82fbaa471a2d5dc54082c2c4aa8e",
+      "frames": 32768,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/synthetic-late/Synthetic Late Field Right Speaker.wav",
+      "sha256": "5bde98d91f0b98210ca0a5534c3845abdb499b838d8118c0bffbf41723319a24",
+      "frames": 32768,
+      "sample_width_bits": 24
+    }
+  },
+  "measured_early_waveform_samples_copied": false,
+  "absolute_direct_propagation_delay_retained": false,
+  "direct_peak_samples": {
+    "LL": 9,
+    "LR": 15,
+    "RL": 15,
+    "RR": 9
+  },
+  "combined_measured_c_early_to_direct_energy_db": -9.694942,
+  "combined_theoretical_early_to_direct_energy_db": -9.694942,
+  "theoretical_early_global_scale": 2.379678023,
+  "branch_hashes": {
+    "accepted_E_minus_C_synthetic_late": {
+      "LL": "9cc4a5fca4150c9b69771c7b6295ad29617ade8f0994f845757419d8f94e803e",
+      "LR": "6052e4993fa1285afa8a8eeb75e7799b5bb70de89c9eb8d6bd41bb6351980d70",
+      "RL": "1d2005af70882c9c188780f06503a7e20413eaa19e9a68b71c58adc53cee974d",
+      "RR": "1d7c10bd63a86157e5ba11c712910e900296f880ee302d270f3ed5db2b53d207"
+    },
+    "theoretical_early": {
+      "LL": "5964b6084188c64a63ee7c5be0c554492d3660f3f1ecfe8bb0725e7a4ce3e50c",
+      "LR": "58452777f17a5abc8c2d969f7f09ac2148ee8562234d1f4ffecdaf0181eab3f9",
+      "RL": "58452777f17a5abc8c2d969f7f09ac2148ee8562234d1f4ffecdaf0181eab3f9",
+      "RR": "5964b6084188c64a63ee7c5be0c554492d3660f3f1ecfe8bb0725e7a4ce3e50c"
+    }
+  },
+  "reflections": {
+    "LL": [
+      {
+        "surface": "left_wall",
+        "image_source_m": [
+          -4.3,
+          0.866025,
+          1.2
+        ],
+        "reflected_distance_m": 4.3006,
+        "extra_delay_samples": 467.594417,
+        "extra_delay_ms": 9.74155,
+        "arrival_azimuth_degrees": -78.61289,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.066914932,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "right_wall",
+        "image_source_m": [
+          5.3,
+          0.866025,
+          1.2
+        ],
+        "reflected_distance_m": 5.456662,
+        "extra_delay_samples": 629.375704,
+        "extra_delay_ms": 13.111994,
+        "arrival_azimuth_degrees": 80.719824,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.052738166,
+        "head_shadow_fraction": 0.986912,
+        "head_shadow_cutoff_hz": 1532.721,
+        "head_shadow_high_frequency_gain": 0.260989
+      },
+      {
+        "surface": "rear_wall",
+        "image_source_m": [
+          -0.5,
+          -4.866025,
+          1.2
+        ],
+        "reflected_distance_m": 4.883478,
+        "extra_delay_samples": 549.163447,
+        "extra_delay_ms": 11.440905,
+        "arrival_azimuth_degrees": -174.133261,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.088392222,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "front_wall",
+        "image_source_m": [
+          -0.5,
+          5.533975,
+          1.2
+        ],
+        "reflected_distance_m": 5.549327,
+        "extra_delay_samples": 642.343463,
+        "extra_delay_ms": 13.382155,
+        "arrival_azimuth_degrees": -5.162712,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.060500437,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "floor",
+        "image_source_m": [
+          -0.5,
+          0.866025,
+          -1.2
+        ],
+        "reflected_distance_m": 2.5846,
+        "extra_delay_samples": 227.454517,
+        "extra_delay_ms": 4.738636,
+        "arrival_azimuth_degrees": -30.0,
+        "arrival_elevation_degrees": -67.380135,
+        "distance_and_surface_gain": 0.204126867,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "ceiling",
+        "image_source_m": [
+          -0.5,
+          0.866025,
+          4.2
+        ],
+        "reflected_distance_m": 3.149628,
+        "extra_delay_samples": 306.525509,
+        "extra_delay_ms": 6.385948,
+        "arrival_azimuth_degrees": -30.0,
+        "arrival_elevation_degrees": 71.565051,
+        "distance_and_surface_gain": 0.097458902,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      }
+    ],
+    "LR": [
+      {
+        "surface": "left_wall",
+        "image_source_m": [
+          -4.3,
+          0.866025,
+          1.2
+        ],
+        "reflected_distance_m": 4.472153,
+        "extra_delay_samples": 479.392134,
+        "extra_delay_ms": 9.987336,
+        "arrival_azimuth_degrees": -78.61289,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.070200888,
+        "head_shadow_fraction": 0.980316,
+        "head_shadow_cutoff_hz": 1549.211,
+        "head_shadow_high_frequency_gain": 0.265929
+      },
+      {
+        "surface": "right_wall",
+        "image_source_m": [
+          5.3,
+          0.866025,
+          1.2
+        ],
+        "reflected_distance_m": 5.283953,
+        "extra_delay_samples": 592.996699,
+        "extra_delay_ms": 12.354098,
+        "arrival_azimuth_degrees": 80.719824,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.059415585,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "rear_wall",
+        "image_source_m": [
+          -0.5,
+          -4.866025,
+          1.2
+        ],
+        "reflected_distance_m": 4.901363,
+        "extra_delay_samples": 539.456451,
+        "extra_delay_ms": 11.238676,
+        "arrival_azimuth_degrees": -174.133261,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.096080153,
+        "head_shadow_fraction": 0.102215,
+        "head_shadow_cutoff_hz": 3744.462,
+        "head_shadow_high_frequency_gain": 0.92346
+      },
+      {
+        "surface": "front_wall",
+        "image_source_m": [
+          -0.5,
+          5.533975,
+          1.2
+        ],
+        "reflected_distance_m": 5.565072,
+        "extra_delay_samples": 632.337067,
+        "extra_delay_ms": 13.173689,
+        "arrival_azimuth_degrees": -5.162712,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.065816573,
+        "head_shadow_fraction": 0.089984,
+        "head_shadow_cutoff_hz": 3775.039,
+        "head_shadow_high_frequency_gain": 0.932619
+      },
+      {
+        "surface": "floor",
+        "image_source_m": [
+          -0.5,
+          0.866025,
+          -1.2
+        ],
+        "reflected_distance_m": 2.618235,
+        "extra_delay_samples": 219.951701,
+        "extra_delay_ms": 4.582327,
+        "arrival_azimuth_degrees": -30.0,
+        "arrival_elevation_degrees": -67.380135,
+        "distance_and_surface_gain": 0.219832578,
+        "head_shadow_fraction": 0.5,
+        "head_shadow_cutoff_hz": 2750.0,
+        "head_shadow_high_frequency_gain": 0.625594
+      },
+      {
+        "surface": "ceiling",
+        "image_source_m": [
+          -0.5,
+          0.866025,
+          4.2
+        ],
+        "reflected_distance_m": 3.177288,
+        "extra_delay_samples": 298.186416,
+        "extra_delay_ms": 6.212217,
+        "arrival_azimuth_degrees": -30.0,
+        "arrival_elevation_degrees": 71.565051,
+        "distance_and_surface_gain": 0.105397789,
+        "head_shadow_fraction": 0.5,
+        "head_shadow_cutoff_hz": 2750.0,
+        "head_shadow_high_frequency_gain": 0.625594
+      }
+    ],
+    "RL": [
+      {
+        "surface": "left_wall",
+        "image_source_m": [
+          -5.3,
+          0.866025,
+          1.2
+        ],
+        "reflected_distance_m": 5.283953,
+        "extra_delay_samples": 592.996699,
+        "extra_delay_ms": 12.354098,
+        "arrival_azimuth_degrees": -80.719824,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.059415585,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "right_wall",
+        "image_source_m": [
+          4.3,
+          0.866025,
+          1.2
+        ],
+        "reflected_distance_m": 4.472153,
+        "extra_delay_samples": 479.392134,
+        "extra_delay_ms": 9.987336,
+        "arrival_azimuth_degrees": 78.61289,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.070200888,
+        "head_shadow_fraction": 0.980316,
+        "head_shadow_cutoff_hz": 1549.211,
+        "head_shadow_high_frequency_gain": 0.265929
+      },
+      {
+        "surface": "rear_wall",
+        "image_source_m": [
+          0.5,
+          -4.866025,
+          1.2
+        ],
+        "reflected_distance_m": 4.901363,
+        "extra_delay_samples": 539.456451,
+        "extra_delay_ms": 11.238676,
+        "arrival_azimuth_degrees": 174.133261,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.096080153,
+        "head_shadow_fraction": 0.102215,
+        "head_shadow_cutoff_hz": 3744.462,
+        "head_shadow_high_frequency_gain": 0.92346
+      },
+      {
+        "surface": "front_wall",
+        "image_source_m": [
+          0.5,
+          5.533975,
+          1.2
+        ],
+        "reflected_distance_m": 5.565072,
+        "extra_delay_samples": 632.337067,
+        "extra_delay_ms": 13.173689,
+        "arrival_azimuth_degrees": 5.162712,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.065816573,
+        "head_shadow_fraction": 0.089984,
+        "head_shadow_cutoff_hz": 3775.039,
+        "head_shadow_high_frequency_gain": 0.932619
+      },
+      {
+        "surface": "floor",
+        "image_source_m": [
+          0.5,
+          0.866025,
+          -1.2
+        ],
+        "reflected_distance_m": 2.618235,
+        "extra_delay_samples": 219.951701,
+        "extra_delay_ms": 4.582327,
+        "arrival_azimuth_degrees": 30.0,
+        "arrival_elevation_degrees": -67.380135,
+        "distance_and_surface_gain": 0.219832578,
+        "head_shadow_fraction": 0.5,
+        "head_shadow_cutoff_hz": 2750.0,
+        "head_shadow_high_frequency_gain": 0.625594
+      },
+      {
+        "surface": "ceiling",
+        "image_source_m": [
+          0.5,
+          0.866025,
+          4.2
+        ],
+        "reflected_distance_m": 3.177288,
+        "extra_delay_samples": 298.186416,
+        "extra_delay_ms": 6.212217,
+        "arrival_azimuth_degrees": 30.0,
+        "arrival_elevation_degrees": 71.565051,
+        "distance_and_surface_gain": 0.105397789,
+        "head_shadow_fraction": 0.5,
+        "head_shadow_cutoff_hz": 2750.0,
+        "head_shadow_high_frequency_gain": 0.625594
+      }
+    ],
+    "RR": [
+      {
+        "surface": "left_wall",
+        "image_source_m": [
+          -5.3,
+          0.866025,
+          1.2
+        ],
+        "reflected_distance_m": 5.456662,
+        "extra_delay_samples": 629.375704,
+        "extra_delay_ms": 13.111994,
+        "arrival_azimuth_degrees": -80.719824,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.052738166,
+        "head_shadow_fraction": 0.986912,
+        "head_shadow_cutoff_hz": 1532.721,
+        "head_shadow_high_frequency_gain": 0.260989
+      },
+      {
+        "surface": "right_wall",
+        "image_source_m": [
+          4.3,
+          0.866025,
+          1.2
+        ],
+        "reflected_distance_m": 4.3006,
+        "extra_delay_samples": 467.594417,
+        "extra_delay_ms": 9.74155,
+        "arrival_azimuth_degrees": 78.61289,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.066914932,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "rear_wall",
+        "image_source_m": [
+          0.5,
+          -4.866025,
+          1.2
+        ],
+        "reflected_distance_m": 4.883478,
+        "extra_delay_samples": 549.163447,
+        "extra_delay_ms": 11.440905,
+        "arrival_azimuth_degrees": 174.133261,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.088392222,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "front_wall",
+        "image_source_m": [
+          0.5,
+          5.533975,
+          1.2
+        ],
+        "reflected_distance_m": 5.549327,
+        "extra_delay_samples": 642.343463,
+        "extra_delay_ms": 13.382155,
+        "arrival_azimuth_degrees": 5.162712,
+        "arrival_elevation_degrees": 0.0,
+        "distance_and_surface_gain": 0.060500437,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "floor",
+        "image_source_m": [
+          0.5,
+          0.866025,
+          -1.2
+        ],
+        "reflected_distance_m": 2.5846,
+        "extra_delay_samples": 227.454517,
+        "extra_delay_ms": 4.738636,
+        "arrival_azimuth_degrees": 30.0,
+        "arrival_elevation_degrees": -67.380135,
+        "distance_and_surface_gain": 0.204126867,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "ceiling",
+        "image_source_m": [
+          0.5,
+          0.866025,
+          4.2
+        ],
+        "reflected_distance_m": 3.149628,
+        "extra_delay_samples": 306.525509,
+        "extra_delay_ms": 6.385948,
+        "arrival_azimuth_degrees": 30.0,
+        "arrival_elevation_degrees": 71.565051,
+        "distance_and_surface_gain": 0.097458902,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      }
+    ]
+  },
+  "response_delta_F_minus_E": {
+    "bass_20_80_hz": {
+      "mean_delta_db": -0.011011,
+      "rms_delta_db": 0.01456,
+      "maximum_absolute_delta_db": 0.023934
+    },
+    "handoff_80_200_hz": {
+      "mean_delta_db": 0.185732,
+      "rms_delta_db": 0.362772,
+      "maximum_absolute_delta_db": 0.757943
+    },
+    "upper_bass_200_300_hz": {
+      "mean_delta_db": -0.523123,
+      "rms_delta_db": 1.062255,
+      "maximum_absolute_delta_db": 2.870786
+    },
+    "room_band_300_10000_hz": {
+      "mean_delta_db": -0.50642,
+      "rms_delta_db": 1.044237,
+      "maximum_absolute_delta_db": 4.037181
+    }
+  },
+  "modeled_correlated_renderer_gain_db": 2.558108,
+  "rendered_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/theoretical-early/Theoretical Early Room Left Speaker.wav",
+      "sha256": "e7abcf1a29ac1b99f18408218392320d2ac3b7f7e1b8b14ed6227f94f9324a69",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080082
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/theoretical-early/Theoretical Early Room Right Speaker.wav",
+      "sha256": "9bbd7ffab481bde37212f9328122916b13cd980f995be4906236b8ad69a3fde4",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080082
+    }
+  },
+  "plots": [
+    "theoretical-early-impulse.svg",
+    "ll-e-f-magnitude.svg"
+  ]
+}

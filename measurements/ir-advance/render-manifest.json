@@ -1,0 +1,60 @@
+{
+  "parents": {
+    "JBL LSR305 LL 4_LR 4 5-500.wav": "4f6aa5b21cd94a075904573f56d7b4ade24ebf6737405984a34d41a956aa386b",
+    "JBL LSR305 RL 4_RR 4 5-500.wav": "f733870e8ff87c578d57a30d5f898fea6f1d1cefe4aa15962fbe8912b1125efb"
+  },
+  "outputs": [
+    {
+      "output": "JBL M2 Binaural Convolution/IRs/advanced/JBL LSR305 LL 4_LR 4 5-500 advance-160.wav",
+      "sha256": "7ecca2ebe74e9fc038216cceb36cd8f2d1f9abf3c6d9c910d358858f3500447f",
+      "operation": "non-circular advance: 160 samples",
+      "tail_zero_padded_samples": 160,
+      "normalization": "none",
+      "sample_rate": 48000,
+      "sample_width_bits": 24,
+      "channels": 2,
+      "frames": 32768,
+      "parent": "JBL LSR305 LL 4_LR 4 5-500.wav",
+      "parent_sha256": "4f6aa5b21cd94a075904573f56d7b4ade24ebf6737405984a34d41a956aa386b"
+    },
+    {
+      "output": "JBL M2 Binaural Convolution/IRs/advanced/JBL LSR305 LL 4_LR 4 5-500 advance-200.wav",
+      "sha256": "9a901597f5e704479899ca0903eeed2e4f3ca55476204e11164171e6159d2480",
+      "operation": "non-circular advance: 200 samples",
+      "tail_zero_padded_samples": 200,
+      "normalization": "none",
+      "sample_rate": 48000,
+      "sample_width_bits": 24,
+      "channels": 2,
+      "frames": 32768,
+      "parent": "JBL LSR305 LL 4_LR 4 5-500.wav",
+      "parent_sha256": "4f6aa5b21cd94a075904573f56d7b4ade24ebf6737405984a34d41a956aa386b"
+    },
+    {
+      "output": "JBL M2 Binaural Convolution/IRs/advanced/JBL LSR305 RL 4_RR 4 5-500 advance-160.wav",
+      "sha256": "db30a3c4b6e5f5ade18e4ce5f23684b0857f4b0eac797621943ebd55f61137f6",
+      "operation": "non-circular advance: 160 samples",
+      "tail_zero_padded_samples": 160,
+      "normalization": "none",
+      "sample_rate": 48000,
+      "sample_width_bits": 24,
+      "channels": 2,
+      "frames": 32768,
+      "parent": "JBL LSR305 RL 4_RR 4 5-500.wav",
+      "parent_sha256": "f733870e8ff87c578d57a30d5f898fea6f1d1cefe4aa15962fbe8912b1125efb"
+    },
+    {
+      "output": "JBL M2 Binaural Convolution/IRs/advanced/JBL LSR305 RL 4_RR 4 5-500 advance-200.wav",
+      "sha256": "9045fd83647956e76122967050860fedb190b90ce57462ed9d3147b9a0bf8dd9",
+      "operation": "non-circular advance: 200 samples",
+      "tail_zero_padded_samples": 200,
+      "normalization": "none",
+      "sample_rate": 48000,
+      "sample_width_bits": 24,
+      "channels": 2,
+      "frames": 32768,
+      "parent": "JBL LSR305 RL 4_RR 4 5-500.wav",
+      "parent_sha256": "f733870e8ff87c578d57a30d5f898fea6f1d1cefe4aa15962fbe8912b1125efb"
+    }
+  ]
+}

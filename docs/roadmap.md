@@ -2,6 +2,8 @@
 
 This roadmap prioritizes a reproducible digital baseline before changing the sound. The current renderer should remain available as a reference; experiments should use separate configuration files or generated assets until their behavior is understood.
 
+The active listening decision and exact continuation steps are summarized in [Current DSP Work](current-status.md).
+
 ## Priority 0: Baseline and Traceability
 
 - [ ] Add a simple 48 kHz stereo guard only if it does not complicate the active configuration.
@@ -45,15 +47,16 @@ All candidates should remain offline or opt-in until these criteria are met.
 
 ### Advance the BRIR Direct Arrival
 
-After the bass model is understood, test a common advance of approximately 192–200 samples across all four active BRIR channels. At 48 kHz, 200 samples represents about 4.17 ms. This should reduce the IR contribution to direct-sound latency while preserving the measured room response and every relative speaker-to-ear delay.
+The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests a common advance across all four active BRIR channels. At 48 kHz, 200 samples represents about 4.17 ms. This reduces the IR contribution to direct-sound latency while preserving the measured room response and every relative speaker-to-ear delay closely enough for a controlled candidate, but the low-frequency renderer must be redesigned before runtime use.
 
-- [ ] Measure the earliest meaningful onset—not only the largest peak—in each raw IR channel.
-- [ ] Render non-circular 192-, 196-, and 200-sample advances into new WAV files; never overwrite the baseline IRs.
-- [ ] Shift every channel by exactly the same amount. Do not independently align or normalize the four peaks.
-- [ ] Preserve sample rate, bit depth, channel order, polarity, amplitude, and trailing room decay.
-- [ ] Confirm that magnitude response and inter-channel phase differences remain unchanged within numerical tolerance.
-- [ ] Confirm that direct/cross peak spacing and the approximately 13-sample cross-ear relationship remain intact.
-- [ ] Recalculate the clean-bass delay and re-run the complete bass acceptance criteria for every candidate.
+- [x] Measure threshold onsets and discarded prefix energy—not only the largest peak—in each raw IR channel.
+- [x] Analyze non-circular 160-, 192-, 196-, and 200-sample advances; render the useful 160- and 200-sample endpoints without overwriting the parents.
+- [x] Shift every channel by exactly the same amount. Do not independently align or normalize the four peaks.
+- [x] Preserve sample rate, bit depth, channel order, polarity, amplitude, frame count, and trailing room decay; zero-pad the vacated tail.
+- [x] Bound magnitude and inter-channel phase differences introduced by discarding the nonzero prefix.
+- [x] Confirm that direct/cross peak spacing and the approximately 13-sample cross-ear relationship remain intact.
+- [x] Model the maximum possible clean-path advance for A and C. Neither current bass topology passes the transition criterion with an advanced BRIR.
+- [ ] Replace the clean branch with an equally advanced short 2×2 low-frequency renderer or complementary spectral replacement.
 - [ ] Compare active and advanced variants through Equalizer APO Benchmark before listening at low volume.
 
 Success means removing only common leading time: no transient truncation, no change to spatial relationships, and no new bass-transition error. This experiment does not address driver, application, or device-buffer latency.

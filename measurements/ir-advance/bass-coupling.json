@@ -1,0 +1,183 @@
+{
+  "assumptions": {
+    "clean_base_delay_before_samples": 100,
+    "clean_base_delay_after_samples": 0,
+    "clean_gain_change_db": 0,
+    "clean_cross_offset_change_samples": 0,
+    "comparison": "candidate versus an ideal common advance of the current renderer"
+  },
+  "renderers": {
+    "A_legacy": {
+      "160": {
+        "brir_advance_samples": 160,
+        "clean_advance_samples": 100,
+        "remaining_relative_lag_samples": 60,
+        "paths": {
+          "LL": {
+            "deep_bass_rms_magnitude_error_db": 0.12122,
+            "transition_rms_magnitude_error_db": 2.74599,
+            "transition_max_abs_magnitude_error_db": 7.55255,
+            "transition_rms_phase_error_degrees": 56.13386,
+            "worst_transition_interference_db": -12.47909
+          },
+          "LR": {
+            "deep_bass_rms_magnitude_error_db": 0.11117,
+            "transition_rms_magnitude_error_db": 2.0037,
+            "transition_max_abs_magnitude_error_db": 6.02789,
+            "transition_rms_phase_error_degrees": 55.58243,
+            "worst_transition_interference_db": -9.4692
+          },
+          "RL": {
+            "deep_bass_rms_magnitude_error_db": 0.09214,
+            "transition_rms_magnitude_error_db": 1.95737,
+            "transition_max_abs_magnitude_error_db": 6.15399,
+            "transition_rms_phase_error_degrees": 55.14629,
+            "worst_transition_interference_db": -10.27553
+          },
+          "RR": {
+            "deep_bass_rms_magnitude_error_db": 0.14398,
+            "transition_rms_magnitude_error_db": 2.64208,
+            "transition_max_abs_magnitude_error_db": 7.20679,
+            "transition_rms_phase_error_degrees": 55.22135,
+            "worst_transition_interference_db": -10.72689
+          }
+        },
+        "worst_path_metrics": {
+          "deep_bass_rms_magnitude_error_db": 0.14398,
+          "transition_rms_magnitude_error_db": 2.74599,
+          "transition_max_abs_magnitude_error_db": 7.55255,
+          "transition_rms_phase_error_degrees": 56.13386,
+          "worst_transition_interference_db": -12.47909
+        }
+      },
+      "200": {
+        "brir_advance_samples": 200,
+        "clean_advance_samples": 100,
+        "remaining_relative_lag_samples": 100,
+        "paths": {
+          "LL": {
+            "deep_bass_rms_magnitude_error_db": 0.21817,
+            "transition_rms_magnitude_error_db": 3.6709,
+            "transition_max_abs_magnitude_error_db": 10.29903,
+            "transition_rms_phase_error_degrees": 100.04904,
+            "worst_transition_interference_db": -12.49912
+          },
+          "LR": {
+            "deep_bass_rms_magnitude_error_db": 0.1877,
+            "transition_rms_magnitude_error_db": 2.54111,
+            "transition_max_abs_magnitude_error_db": 7.92294,
+            "transition_rms_phase_error_degrees": 97.54976,
+            "worst_transition_interference_db": -10.10269
+          },
+          "RL": {
+            "deep_bass_rms_magnitude_error_db": 0.16243,
+            "transition_rms_magnitude_error_db": 2.47816,
+            "transition_max_abs_magnitude_error_db": 6.43327,
+            "transition_rms_phase_error_degrees": 95.38219,
+            "worst_transition_interference_db": -8.94527
+          },
+          "RR": {
+            "deep_bass_rms_magnitude_error_db": 0.25197,
+            "transition_rms_magnitude_error_db": 3.78993,
+            "transition_max_abs_magnitude_error_db": 10.52542,
+            "transition_rms_phase_error_degrees": 100.26666,
+            "worst_transition_interference_db": -12.66142
+          }
+        },
+        "worst_path_metrics": {
+          "deep_bass_rms_magnitude_error_db": 0.25197,
+          "transition_rms_magnitude_error_db": 3.78993,
+          "transition_max_abs_magnitude_error_db": 10.52542,
+          "transition_rms_phase_error_degrees": 100.26666,
+          "worst_transition_interference_db": -12.66142
+        }
+      }
+    },
+    "C_lr4_65": {
+      "160": {
+        "brir_advance_samples": 160,
+        "clean_advance_samples": 100,
+        "remaining_relative_lag_samples": 60,
+        "paths": {
+          "LL": {
+            "deep_bass_rms_magnitude_error_db": 0.53093,
+            "transition_rms_magnitude_error_db": 1.32362,
+            "transition_max_abs_magnitude_error_db": 2.68081,
+            "transition_rms_phase_error_degrees": 14.73269,
+            "worst_transition_interference_db": -5.27273
+          },
+          "LR": {
+            "deep_bass_rms_magnitude_error_db": 0.27646,
+            "transition_rms_magnitude_error_db": 1.27426,
+            "transition_max_abs_magnitude_error_db": 2.52626,
+            "transition_rms_phase_error_degrees": 18.1718,
+            "worst_transition_interference_db": -5.68546
+          },
+          "RL": {
+            "deep_bass_rms_magnitude_error_db": 0.30794,
+            "transition_rms_magnitude_error_db": 1.22887,
+            "transition_max_abs_magnitude_error_db": 2.68481,
+            "transition_rms_phase_error_degrees": 18.66756,
+            "worst_transition_interference_db": -4.14377
+          },
+          "RR": {
+            "deep_bass_rms_magnitude_error_db": 0.52689,
+            "transition_rms_magnitude_error_db": 1.41264,
+            "transition_max_abs_magnitude_error_db": 3.74037,
+            "transition_rms_phase_error_degrees": 16.47838,
+            "worst_transition_interference_db": -5.53633
+          }
+        },
+        "worst_path_metrics": {
+          "deep_bass_rms_magnitude_error_db": 0.53093,
+          "transition_rms_magnitude_error_db": 1.41264,
+          "transition_max_abs_magnitude_error_db": 3.74037,
+          "transition_rms_phase_error_degrees": 18.66756,
+          "worst_transition_interference_db": -5.68546
+        }
+      },
+      "200": {
+        "brir_advance_samples": 200,
+        "clean_advance_samples": 100,
+        "remaining_relative_lag_samples": 100,
+        "paths": {
+          "LL": {
+            "deep_bass_rms_magnitude_error_db": 0.86053,
+            "transition_rms_magnitude_error_db": 2.03603,
+            "transition_max_abs_magnitude_error_db": 4.2379,
+            "transition_rms_phase_error_degrees": 25.24612,
+            "worst_transition_interference_db": -5.89801
+          },
+          "LR": {
+            "deep_bass_rms_magnitude_error_db": 0.38747,
+            "transition_rms_magnitude_error_db": 2.15558,
+            "transition_max_abs_magnitude_error_db": 5.19954,
+            "transition_rms_phase_error_degrees": 31.41457,
+            "worst_transition_interference_db": -6.937
+          },
+          "RL": {
+            "deep_bass_rms_magnitude_error_db": 0.46059,
+            "transition_rms_magnitude_error_db": 2.04231,
+            "transition_max_abs_magnitude_error_db": 5.80107,
+            "transition_rms_phase_error_degrees": 31.88557,
+            "worst_transition_interference_db": -7.21307
+          },
+          "RR": {
+            "deep_bass_rms_magnitude_error_db": 0.79639,
+            "transition_rms_magnitude_error_db": 2.39569,
+            "transition_max_abs_magnitude_error_db": 7.41251,
+            "transition_rms_phase_error_degrees": 28.46932,
+            "worst_transition_interference_db": -9.54005
+          }
+        },
+        "worst_path_metrics": {
+          "deep_bass_rms_magnitude_error_db": 0.86053,
+          "transition_rms_magnitude_error_db": 2.39569,
+          "transition_max_abs_magnitude_error_db": 7.41251,
+          "transition_rms_phase_error_degrees": 31.88557,
+          "worst_transition_interference_db": -9.54005
+        }
+      }
+    }
+  }
+}

@@ -17,7 +17,7 @@ Else:
 Include: main - A 100-sample advance.txt
 # D200 v1 - digitally rejected: strong 80-200 Hz loss; diagnostic only
 # Include: main - D200 unified prototype.txt
-# D200 A-matched - revised minimum-latency prototype; benchmark before playback
+# D200 A-matched - digitally validated 200-sample candidate; controlled listening only
 # Include: main - D200 A-matched prototype.txt
 # A200 - FAILED DIAGNOSTIC: BRIR advanced 200 samples, clean bass only 100 samples
 # Include: main - A 200-sample advance.txt

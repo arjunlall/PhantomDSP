@@ -300,7 +300,7 @@ def main():
     report.extend(
         [
             "",
-            "Next gate: capture this distinct asset set through Equalizer APO Benchmark, confirm the predicted response and headroom, then expose A100 and D200 A-Matched as a controlled listening pair.",
+            "Windows runtime validation is recorded in `runtime-report.md`. The digital gate passes; A100 remains the default pending a controlled listening comparison with D200 A-Matched.",
         ]
     )
     (args.analysis_output / "report.md").write_text(

@@ -178,6 +178,9 @@ def magnitude_comparison(frequencies, a100, d200, smoothing_fraction=6):
             "transition_80_200_rms_delta_db": finite_float(
                 rms(delta[transition]), 6
             ),
+            "transition_80_200_max_abs_delta_db": finite_float(
+                float(np.max(np.abs(delta[transition]))), 6
+            ),
         }
     return result
 
@@ -363,6 +366,7 @@ def main():
             for label in PATHS
         },
         "low_spatial_error_vs_a100": low_spatial,
+        "digital_gate": "pass" if args.variant == "d200-a-matched" else "fail",
     }
 
     args.output.mkdir(parents=True, exist_ok=True)
@@ -385,7 +389,7 @@ def main():
         "",
         "## Measured Response",
         "",
-        "| Path | Peak sample | Mean / RMS 20–80 Hz delta | RMS 80–200 Hz delta | Runtime/WAV error, 20–300 Hz |",
+        "| Path | Peak sample | Mean / RMS 20–80 Hz delta | RMS / max 80–200 Hz delta | Runtime/WAV error, 20–300 Hz |",
         "| --- | ---: | ---: | ---: | ---: |",
     ]
     for label in PATHS:
@@ -394,15 +398,42 @@ def main():
             f"| `{label}` | {item['peak_sample']} | "
             f"{item['bass_20_80_mean_delta_db']:+.2f} / "
             f"{item['bass_20_80_rms_delta_db']:.2f} dB | "
-            f"{item['transition_80_200_rms_delta_db']:.2f} dB | "
+            f"{item['transition_80_200_rms_delta_db']:.2f} / "
+            f"{item['transition_80_200_max_abs_delta_db']:.2f} dB | "
             f"{asset_closure[label]['20_300_hz']:.2f} dB |"
+        )
+    transition_rms = [
+        summary["paths"][label]["transition_80_200_rms_delta_db"]
+        for label in PATHS
+    ]
+    transition_max = [
+        summary["paths"][label]["transition_80_200_max_abs_delta_db"]
+        for label in PATHS
+    ]
+    if args.variant == "d200-a-matched":
+        decision = (
+            "The runtime capture passes the digital gate: routing, timing, "
+            "headroom, CPU load, generated-asset closure, and the A100 tonal "
+            f"match all validate. The 80–200 Hz RMS error is {min(transition_rms):.2f}–"
+            f"{max(transition_rms):.2f} dB and the worst smoothed point is "
+            f"{max(transition_max):.2f} dB. Keep A100 as the default until a "
+            "controlled listening comparison confirms bass placement, lower-mid "
+            "tonality, phantom-speaker stability, and latency."
+        )
+    else:
+        decision = (
+            "The runtime capture validates routing, timing, headroom, CPU load, "
+            "and generated-asset closure. It does not pass the tonal gate: the "
+            f"80–200 Hz RMS error is {min(transition_rms):.2f}–"
+            f"{max(transition_rms):.2f} dB. Keep this first prototype as a "
+            "diagnostic and use the A-matched revision for the listening candidate."
         )
     report.extend(
         [
             "",
             "## Decision",
             "",
-            "The runtime capture validates routing, timing, headroom, CPU load, and generated-asset closure. It does not pass the tonal gate: every path differs from A100 by 7.22–8.91 dB RMS from 80–200 Hz. Keep this first prototype as a diagnostic and benchmark the A-matched revision before listening.",
+            decision,
             "",
             "See `a100-vs-d200-left-speaker.svg`, `a100-vs-d200-right-speaker.svg`, and `a100-vs-d200-magnitude-delta.svg` for the frequency-response comparison.",
         ]

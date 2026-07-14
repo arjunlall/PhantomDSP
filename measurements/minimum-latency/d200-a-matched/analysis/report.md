@@ -21,4 +21,4 @@ The first-order low model peaks at sample 1 on direct paths and sample 16 on cro
 | `RL` | -0.13 / 0.36 dB | +0.03 / 0.60 dB | +0.30 / 1.20 dB | 55 (1.146 ms) |
 | `RR` | -0.05 / 0.32 dB | -0.39 / 0.99 dB | -1.08 / 1.26 dB | 41 (0.854 ms) |
 
-Next gate: capture this distinct asset set through Equalizer APO Benchmark, confirm the predicted response and headroom, then expose A100 and D200 A-Matched as a controlled listening pair.
+Windows runtime validation is recorded in `runtime-report.md`. The digital gate passes; A100 remains the default pending a controlled listening comparison with D200 A-Matched.

@@ -109,7 +109,7 @@ The first D200 prototype implements that structure as two generated 24-bit stere
 
 The A-matched revision keeps the common 200-sample BRIR advance but changes the synthetic branch to a first-order 90 Hz low-pass, +0.75 dB calibration, and the same 15-sample cross offset. Its direct low-model peak is sample 1, close to the clean-before-convolved timing of A100 after the additional advance. A common −5 dB correction at 350 Hz, Q 2 is applied to all four paths after summation; because it is identical on every path, it corrects shared magnitude without changing ILD or IPD. Speaker-renderer EQ remains baked into the generated IRs; root target, headphone, and personal-balance stages remain separate.
 
-Both versions remain opt-in. The first is digitally rejected; the A-matched revision must pass its reserved Windows Benchmark capture before a controlled A100 listening comparison.
+Both versions remain opt-in. The first is digitally rejected. The A-matched revision passes its reserved Windows Benchmark capture, including a 0.83–1.17 dB RMS difference from A100 at 80–200 Hz, a 2.47 dB worst smoothed point, zero clipping, and 0.67% maximum single-core CPU. It is ready for a controlled A100 listening comparison, but A100 remains the daily default.
 
 ## Validation Boundary
 

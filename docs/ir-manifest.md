@@ -73,4 +73,4 @@ This distinct revision keeps the same parent reference, 2×2 mapping, length, fo
 | `D200 A-Matched LL_LR.wav` | `LL`: left speaker to left ear | `LR`: left speaker to right ear | `a87f182328216360bf7f0455bd4948f1d0b104c39a49b1ad25e31b59acb7eef6` |
 | `D200 A-Matched RL_RR.wav` | `RL`: right speaker to left ear | `RR`: right speaker to right ear | `6d21739c7885588f0f9bd9b7f2e575cd550462e83417f68cda35f3f4c0e21da5` |
 
-These files are opt-in and are reproduced by `tools/measurement/render_minimum_latency_renderer_a_matched.py`. See the [offline report](../measurements/minimum-latency/d200-a-matched/analysis/report.md); Windows runtime validation remains pending.
+These files are opt-in and are reproduced by `tools/measurement/render_minimum_latency_renderer_a_matched.py`. The [offline report](../measurements/minimum-latency/d200-a-matched/analysis/report.md) and [Windows runtime comparison](../measurements/minimum-latency/d200-a-matched/analysis/runtime-report.md) agree closely; the revision passes the digital gate and awaits controlled listening.

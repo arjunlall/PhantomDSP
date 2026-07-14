@@ -35,7 +35,9 @@ Resume sequence:
 1. Keep A100 as the daily renderer and A0 as the reference fallback.
 2. Use the precision de-embedded A100 renderer reference under `measurements/minimum-latency/a100-reference/analysis`; do not infer the target from headphone-compensated output.
 3. Keep [D200 v1](../measurements/minimum-latency/d200-prototype/analysis/runtime-report.md) as a diagnostic. Its runtime routing, 41–55-sample peaks, −5.51 dBFS headroom, zero clipping, and 0.67% CPU pass, but its 7.22–8.91 dB RMS loss from 80–200 Hz fails the tonal gate.
-4. Benchmark the [D200 A-matched revision](../measurements/minimum-latency/d200-a-matched/analysis/report.md). Offline, it retains the same 0.85–1.15 ms path peaks while reducing RMS error to 0.30–0.41 dB at 20–80 Hz and 0.60–0.99 dB at 80–160 Hz.
-5. Only after the revised digital comparison passes, expose A100 and D200 A-matched as a controlled listening pair and compare bass placement, extension, resonance, phantom-speaker stability, lower-mid warmth, and finger-drumming latency.
+4. The [D200 A-matched runtime comparison](../measurements/minimum-latency/d200-a-matched/analysis/runtime-report.md) passes the digital gate: 0.85–1.15 ms path peaks, zero clipping, −5.44 dBFS correlated-sweep headroom, 0.67% maximum CPU, 0.32–0.41 dB RMS error at 20–80 Hz, and 0.83–1.17 dB at 80–200 Hz. The worst smoothed transition point is 2.47 dB.
+5. Keep A100 as the daily default, but expose A100 and D200 A-matched as a controlled listening pair. Compare bass placement, extension, resonance, phantom-speaker stability, lower-mid warmth, and finger-drumming latency before promotion.
+
+For listening, change only the two normal-playback lines in `JBL M2 Binaural Convolution/Bass Crossover Selector.txt`: keep exactly one of `main - A 100-sample advance.txt` or `main - D200 A-matched prototype.txt` uncommented. Do not alter either reserved Benchmark-device branch, and never enable both renderers together.
 
 The accepted 2.08 ms saving is only the BRIR direct-arrival contribution. It does not reduce application, driver, convolution-engine, or device-buffer latency.

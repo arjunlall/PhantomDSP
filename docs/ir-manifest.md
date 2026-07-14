@@ -44,9 +44,11 @@ The checked-in script `tools/measurement/render_ir_advances.py` verifies the par
 
 | Advance | Parent speaker file | Derived SHA-256 |
 | ---: | --- | --- |
+| 100 samples | `JBL LSR305 LL 4_LR 4 5-500.wav` | `30c2c9918bf3b870bae5c37521ebf4cb0ca98989a41630d4fb69743d1fcbbea3` |
+| 100 samples | `JBL LSR305 RL 4_RR 4 5-500.wav` | `7c339d76b3f03c540c8faf6f2766ba1ab8480f4cb3bbe55015569336d32d48f0` |
 | 160 samples | `JBL LSR305 LL 4_LR 4 5-500.wav` | `7ecca2ebe74e9fc038216cceb36cd8f2d1f9abf3c6d9c910d358858f3500447f` |
 | 160 samples | `JBL LSR305 RL 4_RR 4 5-500.wav` | `db30a3c4b6e5f5ade18e4ce5f23684b0857f4b0eac797621943ebd55f61137f6` |
 | 200 samples | `JBL LSR305 LL 4_LR 4 5-500.wav` | `9a901597f5e704479899ca0903eeed2e4f3ca55476204e11164171e6159d2480` |
 | 200 samples | `JBL LSR305 RL 4_RR 4 5-500.wav` | `9045fd83647956e76122967050860fedb190b90ce57462ed9d3147b9a0bf8dd9` |
 
-All four files are stereo 48 kHz, 24-bit PCM with 32,768 frames. They reside in `IRs/advanced/`. See the [BRIR advance analysis](../measurements/ir-advance/report.md) for prefix loss, transfer error, and the clean-bass integration blocker.
+All six files are stereo 48 kHz, 24-bit PCM with 32,768 frames. They reside in `IRs/advanced/`. See the [BRIR advance analysis](../measurements/ir-advance/report.md) for prefix loss, transfer error, and the clean-bass integration constraint.

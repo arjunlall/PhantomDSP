@@ -1,0 +1,2 @@
+# A200: experimental 200-sample BRIR advance with only 100 samples available from clean bass.
+Include: Binaural Convolution - JBL LSR305 at DRP w Channel EQ - A 200-sample advance.txt

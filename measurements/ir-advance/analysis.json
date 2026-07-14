@@ -1,5 +1,6 @@
 {
   "advances": [
+    100,
     160,
     192,
     196,
@@ -23,6 +24,31 @@
             "-40": 225
           },
           "advances": {
+            "100": {
+              "discarded_peak_relative_db": -75.322,
+              "discarded_energy_relative_db": -72.589,
+              "new_peak_sample": 142,
+              "transfer_error": {
+                "20-200_hz": {
+                  "magnitude_rms_db": 0.08465,
+                  "magnitude_p99_abs_db": 0.444887,
+                  "phase_rms_degrees": 0.563707,
+                  "phase_p99_abs_degrees": 3.218234
+                },
+                "200-2000_hz": {
+                  "magnitude_rms_db": 0.010871,
+                  "magnitude_p99_abs_db": 0.030544,
+                  "phase_rms_degrees": 0.104931,
+                  "phase_p99_abs_degrees": 0.198409
+                },
+                "2000-20000_hz": {
+                  "magnitude_rms_db": 0.006019,
+                  "magnitude_p99_abs_db": 0.021602,
+                  "phase_rms_degrees": 0.046098,
+                  "phase_p99_abs_degrees": 0.137403
+                }
+              }
+            },
             "160": {
               "discarded_peak_relative_db": -67.245,
               "discarded_energy_relative_db": -65.988,
@@ -136,6 +162,31 @@
             "-40": 215
           },
           "advances": {
+            "100": {
+              "discarded_peak_relative_db": -66.344,
+              "discarded_energy_relative_db": -66.801,
+              "new_peak_sample": 131,
+              "transfer_error": {
+                "20-200_hz": {
+                  "magnitude_rms_db": 0.002476,
+                  "magnitude_p99_abs_db": 0.009823,
+                  "phase_rms_degrees": 0.016824,
+                  "phase_p99_abs_degrees": 0.07736
+                },
+                "200-2000_hz": {
+                  "magnitude_rms_db": 0.019225,
+                  "magnitude_p99_abs_db": 0.050218,
+                  "phase_rms_degrees": 0.079637,
+                  "phase_p99_abs_degrees": 0.30828
+                },
+                "2000-20000_hz": {
+                  "magnitude_rms_db": 0.026448,
+                  "magnitude_p99_abs_db": 0.113142,
+                  "phase_rms_degrees": 0.181287,
+                  "phase_p99_abs_degrees": 0.794446
+                }
+              }
+            },
             "160": {
               "discarded_peak_relative_db": -61.174,
               "discarded_energy_relative_db": -60.113,
@@ -240,6 +291,20 @@
         }
       },
       "interchannel_phase_error": {
+        "100": {
+          "20-200_hz": {
+            "rms_degrees": 0.531675,
+            "p99_abs_degrees": 3.222692
+          },
+          "200-2000_hz": {
+            "rms_degrees": 0.128733,
+            "p99_abs_degrees": 0.362053
+          },
+          "2000-20000_hz": {
+            "rms_degrees": 0.186248,
+            "p99_abs_degrees": 0.801582
+          }
+        },
         "160": {
           "20-200_hz": {
             "rms_degrees": 0.85095,
@@ -315,6 +380,31 @@
             "-40": 232
           },
           "advances": {
+            "100": {
+              "discarded_peak_relative_db": -65.379,
+              "discarded_energy_relative_db": -68.981,
+              "new_peak_sample": 145,
+              "transfer_error": {
+                "20-200_hz": {
+                  "magnitude_rms_db": 0.071148,
+                  "magnitude_p99_abs_db": 0.365864,
+                  "phase_rms_degrees": 0.222908,
+                  "phase_p99_abs_degrees": 1.187884
+                },
+                "200-2000_hz": {
+                  "magnitude_rms_db": 0.008411,
+                  "magnitude_p99_abs_db": 0.029123,
+                  "phase_rms_degrees": 0.053074,
+                  "phase_p99_abs_degrees": 0.194593
+                },
+                "2000-20000_hz": {
+                  "magnitude_rms_db": 0.040406,
+                  "magnitude_p99_abs_db": 0.175999,
+                  "phase_rms_degrees": 0.266834,
+                  "phase_p99_abs_degrees": 1.183668
+                }
+              }
+            },
             "160": {
               "discarded_peak_relative_db": -63.839,
               "discarded_energy_relative_db": -62.723,
@@ -428,6 +518,31 @@
             "-40": 227
           },
           "advances": {
+            "100": {
+              "discarded_peak_relative_db": -73.589,
+              "discarded_energy_relative_db": -73.878,
+              "new_peak_sample": 140,
+              "transfer_error": {
+                "20-200_hz": {
+                  "magnitude_rms_db": 0.025882,
+                  "magnitude_p99_abs_db": 0.107404,
+                  "phase_rms_degrees": 0.200401,
+                  "phase_p99_abs_degrees": 0.935471
+                },
+                "200-2000_hz": {
+                  "magnitude_rms_db": 0.005116,
+                  "magnitude_p99_abs_db": 0.01887,
+                  "phase_rms_degrees": 0.045307,
+                  "phase_p99_abs_degrees": 0.151282
+                },
+                "2000-20000_hz": {
+                  "magnitude_rms_db": 0.005963,
+                  "magnitude_p99_abs_db": 0.021241,
+                  "phase_rms_degrees": 0.044619,
+                  "phase_p99_abs_degrees": 0.140274
+                }
+              }
+            },
             "160": {
               "discarded_peak_relative_db": -70.123,
               "discarded_energy_relative_db": -66.282,
@@ -532,6 +647,20 @@
         }
       },
       "interchannel_phase_error": {
+        "100": {
+          "20-200_hz": {
+            "rms_degrees": 0.37034,
+            "p99_abs_degrees": 1.83343
+          },
+          "200-2000_hz": {
+            "rms_degrees": 0.067345,
+            "p99_abs_degrees": 0.233522
+          },
+          "2000-20000_hz": {
+            "rms_degrees": 0.273344,
+            "p99_abs_degrees": 1.192447
+          }
+        },
         "160": {
           "20-200_hz": {
             "rms_degrees": 0.520983,

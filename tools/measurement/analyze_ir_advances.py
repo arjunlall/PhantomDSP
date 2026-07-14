@@ -141,7 +141,9 @@ def interchannel_phase_error(original, candidate, sample_rate):
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ir-directory", type=Path, default=DEFAULT_IR_DIRECTORY)
-    parser.add_argument("--shifts", type=int, nargs="+", default=(160, 192, 196, 200))
+    parser.add_argument(
+        "--shifts", type=int, nargs="+", default=(100, 160, 192, 196, 200)
+    )
     parser.add_argument("--output", type=Path, help="Optional JSON output path")
     return parser.parse_args()
 

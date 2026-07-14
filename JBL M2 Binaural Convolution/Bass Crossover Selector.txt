@@ -1,8 +1,12 @@
-# Select exactly one speaker-virtualization bass implementation.
+# Select exactly one speaker-virtualization renderer.
 # Changes apply immediately; lower playback volume before switching.
-# A - legacy baseline (default)
+# A0 - original legacy renderer (default)
 Include: main.txt
-# B - 75 Hz LR4: strongest cancellation cleanup
+# A100 - original A sound, both branches advanced 100 samples (2.08 ms)
+# Include: main - A 100-sample advance.txt
+# A200 - EXPERIMENTAL: BRIR advanced 200 samples, clean bass only 100 samples
+# Include: main - A 200-sample advance.txt
+# Historical B - 75 Hz LR4 bass crossover
 # Include: main - LR4 bass crossover.txt
-# C - 65 Hz LR4: retain more BRIR energy and phase through the punch region
+# Historical C - 65 Hz LR4 bass crossover
 # Include: main - LR4 65 Hz bass crossover.txt

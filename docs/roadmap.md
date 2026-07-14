@@ -50,12 +50,13 @@ All candidates should remain offline or opt-in until these criteria are met.
 The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests a common advance across all four active BRIR channels. At 48 kHz, 200 samples represents about 4.17 ms. This reduces the IR contribution to direct-sound latency while preserving the measured room response and every relative speaker-to-ear delay closely enough for a controlled candidate, but the low-frequency renderer must be redesigned before runtime use.
 
 - [x] Measure threshold onsets and discarded prefix energy—not only the largest peak—in each raw IR channel.
-- [x] Analyze non-circular 160-, 192-, 196-, and 200-sample advances; render the useful 160- and 200-sample endpoints without overwriting the parents.
+- [x] Analyze non-circular 100-, 160-, 192-, 196-, and 200-sample advances; render the useful 100-, 160-, and 200-sample endpoints without overwriting the parents.
 - [x] Shift every channel by exactly the same amount. Do not independently align or normalize the four peaks.
 - [x] Preserve sample rate, bit depth, channel order, polarity, amplitude, frame count, and trailing room decay; zero-pad the vacated tail.
 - [x] Bound magnitude and inter-channel phase differences introduced by discarding the nonzero prefix.
 - [x] Confirm that direct/cross peak spacing and the approximately 13-sample cross-ear relationship remain intact.
-- [x] Model the maximum possible clean-path advance for A and C. Neither current bass topology passes the transition criterion with an advanced BRIR.
+- [x] Model the maximum possible clean-path advance for A and C. The existing topology supports a coherent 100-sample A advance, but not the 160- or 200-sample targets.
+- [x] Add opt-in A0, A100, and diagnostic A200 playback configurations; keep A0 as the default.
 - [ ] Replace the clean branch with an equally advanced short 2×2 low-frequency renderer or complementary spectral replacement.
 - [ ] Compare active and advanced variants through Equalizer APO Benchmark before listening at low volume.
 

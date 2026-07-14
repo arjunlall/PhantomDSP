@@ -90,7 +90,7 @@ def parse_args():
         "--shifts",
         type=int,
         nargs="+",
-        default=(160, 200),
+        default=(100, 160, 200),
         help="Common advances to render, in samples",
     )
     parser.add_argument("--manifest", type=Path, help="Optional JSON manifest path")

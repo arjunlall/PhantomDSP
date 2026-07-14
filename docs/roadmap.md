@@ -61,7 +61,9 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [x] Reject the current A200 topology after listening confirmed the predicted severe bass failure.
 - [x] Replace the clean branch offline with a unified causal 2×2 low-frequency renderer for the D200 prototype.
 - [x] Capture accepted A100 through Equalizer APO Benchmark.
-- [ ] Benchmark the D200 prototype before listening.
+- [x] Benchmark D200 v1; retain its latency/CPU evidence but reject its 80–200 Hz response before listening.
+- [x] Render a distinct D200 A-matched revision that restores the preferred A100 upper-bass quantity without overwriting v1.
+- [ ] Benchmark D200 A-matched before listening.
 
 ### Build the Minimum-Latency 2×2 Renderer
 
@@ -74,7 +76,8 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [x] Extend the base response flat through 20 Hz with a protective 5 Hz roll-off; keep overall bass quantity matched to A100.
 - [x] Merge synthesized bass into the original BRIR over a causal 80–200 Hz transition that preserves upper-bass harmonics and onset cues.
 - [x] Render causal 200-sample-advanced stereo IR pairs; remove the parallel clean branch in the opt-in candidate only.
-- [ ] Validate response, interaural phase, timing, decay, peak headroom, and Equalizer APO CPU before listening.
+- [x] Validate D200 v1 timing, decay, headroom, CPU, routing, and generated-asset closure; reject its response mismatch.
+- [ ] Validate D200 A-matched response, timing, headroom, CPU, routing, and generated-asset closure before listening.
 
 Success means removing only common leading time: no transient truncation, no change to spatial relationships, and no new bass-transition error. This experiment does not address driver, application, or device-buffer latency.
 

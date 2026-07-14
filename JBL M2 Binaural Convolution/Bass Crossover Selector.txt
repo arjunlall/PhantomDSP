@@ -8,17 +8,23 @@ Else:
 If: regexSearch("PhantomDSP D200 Prototype", deviceName)
 Include: main - D200 unified prototype.txt
 Else:
+If: regexSearch("PhantomDSP D200 A-Matched", deviceName)
+Include: main - D200 A-matched prototype.txt
+Else:
 # A0 - original legacy renderer
 # Include: main.txt
 # A100 - accepted default: original A sound, both branches advanced 100 samples (2.08 ms)
 Include: main - A 100-sample advance.txt
-# D200 - unified minimum-latency prototype; benchmark before enabling for playback
+# D200 v1 - digitally rejected: strong 80-200 Hz loss; diagnostic only
 # Include: main - D200 unified prototype.txt
+# D200 A-matched - revised minimum-latency prototype; benchmark before playback
+# Include: main - D200 A-matched prototype.txt
 # A200 - FAILED DIAGNOSTIC: BRIR advanced 200 samples, clean bass only 100 samples
 # Include: main - A 200-sample advance.txt
 # Historical B - 75 Hz LR4 bass crossover
 # Include: main - LR4 bass crossover.txt
 # Historical C - 65 Hz LR4 bass crossover
 # Include: main - LR4 65 Hz bass crossover.txt
+EndIf:
 EndIf:
 EndIf:

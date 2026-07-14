@@ -76,6 +76,24 @@ def rbj_highpass_response(frequencies, sample_rate, cutoff, q):
     return numerator / denominator
 
 
+def rbj_peaking_response(frequencies, sample_rate, center, gain_db, q):
+    """Return the RBJ peaking-EQ response used for broad common correction."""
+    amplitude = 10.0 ** (gain_db / 40.0)
+    omega = 2.0 * np.pi * center / sample_rate
+    cosine = math.cos(omega)
+    alpha = math.sin(omega) / (2.0 * q)
+    b0 = 1.0 + alpha * amplitude
+    b1 = -2.0 * cosine
+    b2 = 1.0 - alpha * amplitude
+    a0 = 1.0 + alpha / amplitude
+    a1 = -2.0 * cosine
+    a2 = 1.0 - alpha / amplitude
+    z_inverse = np.exp(-2j * np.pi * frequencies / sample_rate)
+    numerator = b0 + b1 * z_inverse + b2 * np.square(z_inverse)
+    denominator = a0 + a1 * z_inverse + a2 * np.square(z_inverse)
+    return numerator / denominator
+
+
 def butterworth_lowpass_response(frequencies, sample_rate, cutoff, order):
     """Digital Butterworth response made causal with the bilinear transform."""
     if order < 1:

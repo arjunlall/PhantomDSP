@@ -105,9 +105,11 @@ Each new path will combine room-regularized, extended low bass with the original
 
 The target is a common 200-sample advance, minimum-phase or mixed-phase low-frequency synthesis, no explicit bass delay, and no runtime branch crossover. A causal renderer cannot have absolute zero latency; this design minimizes the IR direct-arrival contribution while retaining the measured direct/cross relationships. See [Minimum-Latency 2×2 Renderer](../measurements/minimum-latency/README.md).
 
-The first D200 prototype implements that structure as two generated 24-bit stereo IRs. Its deep-bass level is the smoothed A100 20–45 Hz level averaged by output ear, with a common −0.75 dB calibration, a second-order 5 Hz protective high-pass, and a sixth-order 80 Hz Butterworth low-pass. Direct and cross low-frequency paths share the same ear target while retaining A's 15-sample cross offset. The measured convolved paths are advanced another 100 samples and dominate through upper bass and above. Speaker-renderer EQ is baked into these IRs; root target, headphone, and personal-balance stages remain separate.
+The first D200 prototype implements that structure as two generated 24-bit stereo IRs. Its sixth-order 80 Hz synthetic low-pass retained deep-bass quantity, but the Windows capture found a 7.22–8.91 dB RMS loss from 80–200 Hz versus A100. The filter's low-model peak also arrived about 8.5 ms after sample zero, so this version is a diagnostic rather than a listening candidate.
 
-This is intentionally an opt-in prototype. Its smooth magnitude and interaural metrics are encouraging, but a Windows Benchmark capture must confirm runtime routing, headroom, and CPU before listening, and listening must still confirm phantom-speaker stability.
+The A-matched revision keeps the common 200-sample BRIR advance but changes the synthetic branch to a first-order 90 Hz low-pass, +0.75 dB calibration, and the same 15-sample cross offset. Its direct low-model peak is sample 1, close to the clean-before-convolved timing of A100 after the additional advance. A common −5 dB correction at 350 Hz, Q 2 is applied to all four paths after summation; because it is identical on every path, it corrects shared magnitude without changing ILD or IPD. Speaker-renderer EQ remains baked into the generated IRs; root target, headphone, and personal-balance stages remain separate.
+
+Both versions remain opt-in. The first is digitally rejected; the A-matched revision must pass its reserved Windows Benchmark capture before a controlled A100 listening comparison.
 
 ## Validation Boundary
 

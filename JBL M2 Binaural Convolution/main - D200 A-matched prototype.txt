@@ -1,0 +1,2 @@
+# Opt-in D200 A-matched prototype: one causal 2x2 convolution, no parallel bass branch.
+Include: Binaural Convolution - D200 A-Matched Prototype.txt

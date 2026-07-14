@@ -49,14 +49,22 @@ The measurement-only routes apply +24 dB to the convolved branch and +48 dB to t
 
 For a ready-to-paste PC Codex prompt, use [`docs/windows-precision-branch-runbook.md`](../../docs/windows-precision-branch-runbook.md).
 
-## D200 Unified Prototype
+## D200 Runtime Captures
 
-The first locked prototype replaces the parallel clean branch with two generated stereo IRs. It retains A100's smoothed deep-bass quantity, preserves the 15-sample cross-path bass offset, hands off at 80 Hz, and advances the BRIR portion another 100 samples. A100 remains the playback default; the selector activates D200 automatically only for its reserved Benchmark device.
+The first locked prototype replaces the parallel clean branch with two generated stereo IRs, preserves the 15-sample cross-path bass offset, and advances the BRIR portion another 100 samples. Its Windows capture validated exact routing, 41–55-sample peaks, −5.51 dBFS correlated-sweep headroom, zero clipping, and 0.67% maximum single-core CPU. It failed the tonal gate: the steep low-pass left a 7.22–8.91 dB RMS mismatch from 80–200 Hz versus A100. Keep it only as a reproducible diagnostic.
 
-After pulling the prototype commit on Windows, run:
+The A-matched revision preserves the one-convolution topology and exact 200-sample BRIR advance, but uses a first-order 90 Hz low-pass whose sample-1 direct peak recreates A100's clean-before-convolved timing. A common 350 Hz correction removes the resulting shared lower-mid excess without changing interaural ratios. Offline RMS error is 0.30–0.41 dB from 20–80 Hz and 0.60–0.99 dB from 80–160 Hz.
+
+After pulling the A-matched revision on Windows, run:
 
 ```powershell
-.\tools\measurement\run_eapo_d200_prototype.ps1
+.\tools\measurement\run_eapo_d200_a_matched.ps1
 ```
 
-The command captures the complete D200 output and a correlated full-scale headroom/CPU sweep under `measurements\minimum-latency\d200-prototype\raw`. Do not enable the prototype for listening until its captured response is compared with A100. See [`docs/windows-d200-prototype-runbook.md`](../../docs/windows-d200-prototype-runbook.md) for the PC handoff.
+The command captures the complete revised output and a correlated full-scale headroom/CPU sweep under `measurements\minimum-latency\d200-a-matched\raw`. A100 remains the playback default. Do not listen until the captured response is compared with A100. See [`docs/windows-d200-a-matched-runbook.md`](../../docs/windows-d200-a-matched-runbook.md) for the PC handoff.
+
+After pulling the capture on macOS, run:
+
+```bash
+python3 tools/measurement/analyze_d200_prototype.py --variant d200-a-matched
+```

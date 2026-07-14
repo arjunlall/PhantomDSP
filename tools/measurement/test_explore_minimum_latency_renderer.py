@@ -15,6 +15,7 @@ from explore_minimum_latency_renderer import (
     delay_non_circular,
     minimum_phase_spectrum,
     rbj_highpass_response,
+    rbj_peaking_response,
 )
 
 
@@ -56,6 +57,19 @@ class MinimumLatencyRendererTests(unittest.TestCase):
         self.assertLess(abs(response[0]), 1e-9)
         self.assertAlmostEqual(abs(response[1]), 1.0 / np.sqrt(2.0), places=6)
         self.assertGreater(abs(response[2]), 0.99)
+
+    def test_peaking_eq_reaches_requested_center_gain(self):
+        sample_rate = 48000
+        center = 350.0
+        frequencies = np.array([0.0, center, sample_rate / 2.0])
+        response = rbj_peaking_response(
+            frequencies, sample_rate, center, -5.0, 2.0
+        )
+        self.assertAlmostEqual(abs(response[0]), 1.0, places=12)
+        self.assertAlmostEqual(
+            20.0 * np.log10(abs(response[1])), -5.0, places=6
+        )
+        self.assertAlmostEqual(abs(response[2]), 1.0, places=12)
 
 
 if __name__ == "__main__":

@@ -62,4 +62,15 @@ These generated files bake the precision de-embedded speaker renderer and the sy
 | `D200 Unified LL_LR.wav` | `LL`: left speaker to left ear | `LR`: left speaker to right ear | `14a73ff1b418b0ca8e579e14677d9ff55a59e1a8fe51bb24e434bdc85485207c` |
 | `D200 Unified RL_RR.wav` | `RL`: right speaker to left ear | `RR`: right speaker to right ear | `ff187e32a75d4b60da9267429aa38b1ea25878fee29a9fa06924403691a013b7` |
 
-Both files are stereo 48 kHz, 24-bit PCM with 32,768 frames under `IRs/minimum-latency/`. The locked operation is documented in the [D200 offline report](../measurements/minimum-latency/d200-prototype/analysis/report.md) and reproduced by `tools/measurement/render_minimum_latency_renderer.py`.
+Both files are stereo 48 kHz, 24-bit PCM with 32,768 frames under `IRs/minimum-latency/`. The locked operation is documented in the [D200 offline report](../measurements/minimum-latency/d200-prototype/analysis/report.md) and reproduced by `tools/measurement/render_minimum_latency_renderer.py`. The [runtime comparison](../measurements/minimum-latency/d200-prototype/analysis/runtime-report.md) rejected this version for its 80–200 Hz mismatch.
+
+## D200 A-Matched Prototype
+
+This distinct revision keeps the same parent reference, 2×2 mapping, length, format, and common 200-sample BRIR advance. It replaces the v1 bass handoff with a first-order 90 Hz clean model, +0.75 dB calibration, the 15-sample cross offset, and one common −5 dB peaking correction at 350 Hz, Q 2. The common correction cannot change interaural ratios.
+
+| File | Channel 1 | Channel 2 | SHA-256 |
+| --- | --- | --- | --- |
+| `D200 A-Matched LL_LR.wav` | `LL`: left speaker to left ear | `LR`: left speaker to right ear | `a87f182328216360bf7f0455bd4948f1d0b104c39a49b1ad25e31b59acb7eef6` |
+| `D200 A-Matched RL_RR.wav` | `RL`: right speaker to left ear | `RR`: right speaker to right ear | `6d21739c7885588f0f9bd9b7f2e575cd550462e83417f68cda35f3f4c0e21da5` |
+
+These files are opt-in and are reproduced by `tools/measurement/render_minimum_latency_renderer_a_matched.py`. See the [offline report](../measurements/minimum-latency/d200-a-matched/analysis/report.md); Windows runtime validation remains pending.

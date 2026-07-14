@@ -34,8 +34,8 @@ Resume sequence:
 
 1. Keep A100 as the daily renderer and A0 as the reference fallback.
 2. Use the precision de-embedded A100 renderer reference under `measurements/minimum-latency/a100-reference/analysis`; do not infer the target from headphone-compensated output.
-3. Treat the generated [D200 unified renderer](../measurements/minimum-latency/d200-prototype/analysis/report.md) as an offline prototype. A100 remains the normal playback default.
-4. Capture D200 through the reserved Windows Benchmark route and compare the complete response, headroom, and CPU with A100.
-5. Only after the digital comparison passes, expose A100/D200 as a controlled listening pair and compare bass placement, extension, resonance, phantom-speaker stability, and finger-drumming latency.
+3. Keep [D200 v1](../measurements/minimum-latency/d200-prototype/analysis/runtime-report.md) as a diagnostic. Its runtime routing, 41–55-sample peaks, −5.51 dBFS headroom, zero clipping, and 0.67% CPU pass, but its 7.22–8.91 dB RMS loss from 80–200 Hz fails the tonal gate.
+4. Benchmark the [D200 A-matched revision](../measurements/minimum-latency/d200-a-matched/analysis/report.md). Offline, it retains the same 0.85–1.15 ms path peaks while reducing RMS error to 0.30–0.41 dB at 20–80 Hz and 0.60–0.99 dB at 80–160 Hz.
+5. Only after the revised digital comparison passes, expose A100 and D200 A-matched as a controlled listening pair and compare bass placement, extension, resonance, phantom-speaker stability, lower-mid warmth, and finger-drumming latency.
 
 The accepted 2.08 ms saving is only the BRIR direct-arrival contribution. It does not reduce application, driver, convolution-engine, or device-buffer latency.

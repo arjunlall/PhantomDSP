@@ -36,3 +36,15 @@ python3 tools/measurement/analyze_renderer_reference.py
 ```
 
 The analyzer rejects unexpected downstream crosstalk, verifies de-embedded branch closure, and writes the speaker-renderer target to `measurements/minimum-latency/a100-reference/analysis`.
+
+## Precision Branch Recapture
+
+Equalizer APO Benchmark writes 16-bit PCM. The original isolated clean branch peaks near −65 dBFS, which is sufficient to identify the target but too quantized to use as the source for a production IR. Capture only the two source branches again at calibrated gains:
+
+```powershell
+.\tools\measurement\run_eapo_precision_branches.ps1
+```
+
+The measurement-only routes apply +24 dB to the convolved branch and +48 dB to the clean branch while using the −6 dBFS probe. They do not match normal playback devices. The analyzer automatically substitutes both precision captures when present and removes the recorded gains before de-embedding. Never use only one precision branch.
+
+For a ready-to-paste PC Codex prompt, use [`docs/windows-precision-branch-runbook.md`](../../docs/windows-precision-branch-runbook.md).

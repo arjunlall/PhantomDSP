@@ -10,8 +10,10 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from analyze_renderer_reference import (
+    capture_output_gain_db,
     deembed_capture_matrices,
     matrix_to_paths,
+    remove_output_gain,
     spectra_to_matrix,
 )
 
@@ -29,6 +31,19 @@ class RendererReferenceTests(unittest.TestCase):
 
         for label, expected in spectra.items():
             np.testing.assert_array_equal(rebuilt[label], expected)
+
+    def test_recorded_output_gain_is_removed(self):
+        original = np.full((4, 2, 2), 0.25 + 0.5j)
+        gain_db = 48.0
+        captured = original * 10.0 ** (gain_db / 20.0)
+        capture = {"header": {"capture_output_gain": "48 dB"}}
+
+        self.assertEqual(capture_output_gain_db(capture), gain_db)
+        np.testing.assert_allclose(
+            remove_output_gain(captured, capture_output_gain_db(capture)),
+            original,
+            atol=1e-12,
+        )
 
     def test_deembedding_recovers_all_four_paths(self):
         bins = 32

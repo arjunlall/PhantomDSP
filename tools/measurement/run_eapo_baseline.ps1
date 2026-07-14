@@ -4,6 +4,8 @@ param(
     [double]$ProbeAmplitudeDbfs = 0.0,
     [string]$OutputDirectory = "",
     [string]$CaptureLabel = "",
+    # Metadata only; any measurement gain must be applied by the active config.
+    [double]$RecordedOutputGainDb = 0.0,
     [switch]$SkipHeadroomSweep
 )
 
@@ -88,6 +90,10 @@ if (Test-Path $SelectorPath -PathType Leaf) {
 
 $LogPath = Join-Path $OutputDirectory "benchmark.log"
 $Commit = Get-CheckoutCommit -RepositoryRoot $RepoRoot
+$RecordedOutputGain = $RecordedOutputGainDb.ToString(
+    "0.###",
+    [System.Globalization.CultureInfo]::InvariantCulture
+)
 
 @(
     "PhantomDSP commit: $Commit"
@@ -99,6 +105,7 @@ $Commit = Get-CheckoutCommit -RepositoryRoot $RepoRoot
     "Bass selector: $SelectorPath"
     "Bass selector SHA256: $SelectorHash"
     "Probe set: $ProbeSetName ($ProbeAmplitudeDbfs dBFS)"
+    "Capture output gain: $RecordedOutputGain dB"
     ""
 ) | Set-Content -Path $LogPath -Encoding UTF8
 

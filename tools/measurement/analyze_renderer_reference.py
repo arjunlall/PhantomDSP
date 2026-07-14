@@ -20,6 +20,7 @@ from analyze_bass_branches import load_capture
 
 REPOSITORY = Path(__file__).resolve().parents[2]
 CAPTURES = ("combined", "convolved", "clean", "downstream")
+PRECISION_CAPTURES = ("convolved", "clean")
 MATRIX_POSITIONS = {
     "LL": (0, 0),
     "LR": (1, 0),
@@ -46,6 +47,20 @@ def matrix_to_paths(matrix):
         label: matrix[:, position[0], position[1]]
         for label, position in MATRIX_POSITIONS.items()
     }
+
+
+def capture_output_gain_db(capture):
+    recorded = capture["header"].get("capture_output_gain", "0 dB")
+    try:
+        return float(recorded.split()[0])
+    except (TypeError, ValueError, IndexError) as error:
+        raise ValueError(
+            f"Invalid capture output gain in Benchmark log: {recorded!r}"
+        ) from error
+
+
+def remove_output_gain(matrix, gain_db):
+    return matrix / (10.0 ** (gain_db / 20.0))
 
 
 def first_threshold(values, relative_db):
@@ -150,6 +165,22 @@ def capture_runtime_metrics(capture):
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--precision-input-root",
+        type=Path,
+        default=(
+            REPOSITORY
+            / "measurements"
+            / "minimum-latency"
+            / "a100-reference"
+            / "raw"
+            / "precision-branches"
+        ),
+        help=(
+            "Use gain-calibrated convolved and clean captures from this directory "
+            "when both are present"
+        ),
+    )
+    parser.add_argument(
         "--input-root",
         type=Path,
         default=(
@@ -184,7 +215,30 @@ def parse_args():
 def main():
     args = parse_args()
     captures = {name: load_capture(args.input_root / name) for name in CAPTURES}
+    precision_paths = {
+        name: args.precision_input_root / name for name in PRECISION_CAPTURES
+    }
+    precision_presence = {
+        name: path.exists() for name, path in precision_paths.items()
+    }
+    if any(precision_presence.values()) and not all(precision_presence.values()):
+        missing = [name for name, present in precision_presence.items() if not present]
+        raise SystemExit(
+            "Precision branch capture is incomplete; missing: " + ", ".join(missing)
+        )
+    precision_used = all(precision_presence.values())
+    if precision_used:
+        for name, path in precision_paths.items():
+            captures[name] = load_capture(path)
+
     sample_rate = captures["combined"]["wave_info"]["sample_rate_hz"]
+    mismatched_rates = {
+        name: capture["wave_info"]["sample_rate_hz"]
+        for name, capture in captures.items()
+        if capture["wave_info"]["sample_rate_hz"] != sample_rate
+    }
+    if mismatched_rates:
+        raise SystemExit(f"Capture sample rates do not match: {mismatched_rates}")
     response_length = min(
         len(captures[name]["responses"][label])
         for name in CAPTURES
@@ -195,6 +249,7 @@ def main():
     audible = (frequencies >= 20.0) & (frequencies <= 20000.0)
 
     matrices = {}
+    capture_gains_db = {}
     for name in CAPTURES:
         spectra = {
             label: np.fft.rfft(
@@ -202,7 +257,10 @@ def main():
             )
             for label in PATHS
         }
-        matrices[name] = spectra_to_matrix(spectra)
+        capture_gains_db[name] = capture_output_gain_db(captures[name])
+        matrices[name] = remove_output_gain(
+            spectra_to_matrix(spectra), capture_gains_db[name]
+        )
 
     try:
         deembedded, downstream_crosstalk_db, closure_rms = (
@@ -224,7 +282,7 @@ def main():
         "20_20000_hz": audible,
     }
     summary = {
-        "schema_version": 1,
+        "schema_version": 2,
         "sample_rate_hz": sample_rate,
         "response_length_samples": response_length,
         "nfft": nfft,
@@ -233,6 +291,15 @@ def main():
         "deembedded_branch_closure_rms_db_by_band": {
             name: matrix_closure_rms_db(deembedded, mask)
             for name, mask in closure_bands.items()
+        },
+        "precision_branches_used": precision_used,
+        "capture_output_gain_db": capture_gains_db,
+        "capture_source": {
+            name: (
+                "precision" if precision_used and name in PRECISION_CAPTURES
+                else "reference"
+            )
+            for name in CAPTURES
         },
         "paths": {
             label: path_time_metrics(
@@ -273,10 +340,27 @@ def main():
         "",
         "## Validation",
         "",
+        (
+            "- Gain-calibrated precision captures were used for the convolved "
+            "and clean branches (+24 dB and +48 dB respectively); stored spectra "
+            "have those measurement gains removed."
+            if precision_used
+            else "- Precision branch captures are not present; convolved and clean "
+            "spectra still come from the original low-level 16-bit captures."
+        ),
         f"- Downstream off-diagonal leakage: {summary['downstream_crosstalk_db']:.2f} dB.",
         f"- De-embedded combined ≈ convolved + clean closure: {summary['deembedded_branch_closure_rms_db_by_band']['20_80_hz']:.2f} dB RMS at 20–80 Hz, {summary['deembedded_branch_closure_rms_db_by_band']['20_300_hz']:.2f} dB at 20–300 Hz, and {summary['deembedded_branch_closure_rms_db_by_band']['20_20000_hz']:.2f} dB at 20 Hz–20 kHz.",
         "- Every isolated impulse capture reports zero clipped samples.",
-        "- The independent 16-bit captures have the same approximate low-frequency closure floor as prior accepted branch measurements; use smoothed low-frequency targets rather than treating quantization ripple as acoustic detail.",
+        (
+            "- The combined reference remains a separate 16-bit capture, so use "
+            "smoothed low-frequency targets rather than treating residual closure "
+            "or quantization ripple as acoustic detail."
+            if precision_used
+            else "- The independent 16-bit captures have the same approximate "
+            "low-frequency closure floor as prior accepted branch measurements; "
+            "use smoothed low-frequency targets rather than treating quantization "
+            "ripple as acoustic detail."
+        ),
         "",
         "## Timing",
         "",

@@ -75,6 +75,7 @@ def parse_capture_header(log_path):
         "Device name: ": "device_name",
         "Installed config: ": "installed_config",
         "Probe set: ": "probe_set",
+        "Capture output gain: ": "capture_output_gain",
     }
     for line in log_path.read_text(encoding="utf-8-sig", errors="replace").splitlines():
         for prefix, key in prefixes.items():

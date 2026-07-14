@@ -8,6 +8,18 @@ Device: PhantomDSP Bass Clean
 Channel: L R
 Copy: L=LLLOW+RLLOW R=LRLOW+RRLOW
 
+# Precision captures raise isolated branches before Benchmark's 16-bit output.
+# These names intentionally do not contain the legacy reserved-device phrases.
+Device: PhantomDSP Precision Convolution
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR
+Preamp: 24 dB
+
+Device: PhantomDSP Precision CleanLow
+Channel: L R
+Copy: L=LLLOW+RLLOW R=LRLOW+RRLOW
+Preamp: 48 dB
+
 # Restore normal matching and channel state for every downstream include.
 Device: all
 Channel: all

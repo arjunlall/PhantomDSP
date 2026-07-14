@@ -76,6 +76,8 @@ The active sum includes `tools/measurement/equalizerapo/bass-branch-output.txt` 
 
 The reserved `PhantomDSP Bass Downstream` Benchmark device instead bypasses the whole speaker renderer in `Bass Crossover Selector.txt`. It still passes through root-level target, headphone, and personal EQ. Dividing the other captures by this diagonal response recovers the A100 speaker renderer, including its post-sum speaker correction, without reimplementing the Equalizer APO filters.
 
+Benchmark writes 16-bit PCM, so the very quiet isolated clean branch is too coarsely quantized to use directly when synthesizing new IR assets. Two additional reserved routes raise the convolved and clean branches by recorded calibration gains before capture. The analyzer removes those gains mathematically; these precision routes remain measurement-only and do not alter the active renderer.
+
 ## Physical Versus Synthetic Corrections
 
 A tonal correction representing a real loudspeaker prefilter should affect both ear paths from that speaker. An ear-side headphone correction should affect every virtual-speaker contribution sent to that ear.

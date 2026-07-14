@@ -68,6 +68,7 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [x] Add an A100 reference runner and de-embedding analyzer.
 - [x] Capture A100 `combined`, `convolved`, `clean`, and `downstream` matrices on Windows.
 - [x] Recover the speaker-renderer-only A100 matrix and verify branch closure after de-embedding.
+- [ ] Recapture the isolated convolved and clean branches at calibrated gains so 16-bit Benchmark quantization is not baked into generated IRs.
 - [ ] Derive smooth low-frequency interaural level and timing targets without copying room resonances.
 - [ ] Extend the base response flat to 20 Hz or lower, with a protective subsonic roll-off and a separate common preference shelf.
 - [ ] Merge synthesized bass into the original BRIR over a broad complex transition that preserves upper-bass harmonics and onset cues.

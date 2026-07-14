@@ -1,0 +1,1243 @@
+﻿PhantomDSP commit: dbdf5d17b125034c50d977935ca9854287f70f1f
+Capture label: minimum-latency reference: A100 / clean
+Benchmark: C:\Program Files\EqualizerAPO\Benchmark.exe
+Device name: Output A1 Voicemeeter PhantomDSP Bass Clean
+Installed config: C:\Program Files\EqualizerAPO\config\config.txt
+Installed config SHA256: 09C10E2759498834F84EC752DE261156B07AE430BC91D653C18E90E52833AD02
+Bass selector: C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+Bass selector SHA256: 499AE2891A80A486B19C40615CD1162906974CC89B71B312339E923BC8CBEB43
+Probe set: minus-6dbfs (-6 dBFS)
+
+=== left impulse ===
+(TRACE) 2 channels for this device: L R
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config.txt
+(TRACE) Matching pattern "Output A1 Voicemeeter" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config - personalized.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+(TRACE) If(regexSearch("PhantomDSP Bass Downstream", deviceName)) evaluated to  (false)
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\main - A 100-sample advance.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Binaural Convolution - JBL LSR305 at DRP w Channel EQ - A 100-sample advance.txt
+(TRACE) Selecting channel(s) number 1
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel LL from channel L with factor 1, to channel LR from channel L with factor 1, to channel RIL from channel R with factor 1, to channel RIR from channel R with factor 1, to channel LLLOW from channel L with factor 1, to channel LRLOW from channel L with factor 1, to channel RLLOW from channel R with factor 1, to channel RRLOW from channel R with factor 1
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\advanced\JBL LSR305 LL 4_LR 4 5-500 advance-100.wav
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\advanced\JBL LSR305 RL 4_RR 4 5-500 advance-100.wav
+(TRACE) Selecting channel(s) number 3
+(TRACE) Delaying by 0 samples
+(TRACE) Selecting channel(s) number 6
+(TRACE) Delaying by 1 samples
+(TRACE) Selecting channel(s) number 4
+(TRACE) Delaying by 23 samples
+(TRACE) Selecting channel(s) number 5
+(TRACE) Delaying by 10 samples
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Channel Balance EQ.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Adding peaking filter with frequency 63 Hz, gain -8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 100 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 112 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 312 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Adding peaking filter with frequency 50.8 Hz, gain -4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 109 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 116 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 306 Hz, gain -5 dB and Q 15
+(TRACE) Selecting channel(s) number 6
+(TRACE) Adding low-shelf filter with frequency 4000 Hz and gain -2 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 4 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 40 Hz and gain 7 dB
+(TRACE) Adding peaking filter with frequency 38 Hz, gain 10 dB and Q 10
+(TRACE) Adding peaking filter with frequency 95 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 168 Hz, gain -1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 344 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 366 Hz, gain -2 dB and Q 25
+(TRACE) Adding peaking filter with frequency 384 Hz, gain 4 dB and Q 20
+(TRACE) Adding peaking filter with frequency 420 Hz, gain 1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 450 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 571 Hz, gain 1 dB and Q 8
+(TRACE) Adding peaking filter with frequency 855 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 944 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 1449 Hz, gain -2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1497 Hz, gain -1 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 1700 Hz and gain -1.5 dB
+(TRACE) Adding peaking filter with frequency 2100 Hz, gain 1 dB and Q 12
+(TRACE) Adding peaking filter with frequency 2610 Hz, gain 3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2920 Hz, gain -1.5 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4050 Hz, gain -1 dB and Q 20
+(TRACE) Adding high-shelf filter with frequency 4000 Hz and gain 4 dB
+(TRACE) Adding peaking filter with frequency 12000 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 17360 Hz, gain -6 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 18000 Hz and gain -3 dB and slope 20 dB
+(TRACE) Selecting channel(s) number 3
+(TRACE) Adding low-shelf filter with frequency 15 Hz and gain 5 dB and slope 22 dB
+(TRACE) Adding low-shelf filter with frequency 20 Hz and gain 12 dB
+(TRACE) Adding peaking filter with frequency 28 Hz, gain 15 dB and Q 10
+(TRACE) Adding peaking filter with frequency 121.7 Hz, gain -5 dB and Q 12
+(TRACE) Adding peaking filter with frequency 307 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 380 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 637 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 720 Hz, gain -1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1089 Hz, gain -1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1195 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1421 Hz, gain -1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 1791 Hz, gain 1 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 5800 Hz and gain 5 dB and slope 25 dB
+(TRACE) Adding high-shelf filter with frequency 8000 Hz and gain -5 dB and slope 25 dB
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 3520 Hz, gain -3 dB and Q 15
+(TRACE) Adding peaking filter with frequency 4500 Hz, gain 4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 6420 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 7370 Hz, gain -3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 8060 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 8700 Hz, gain -8 dB and Q 6
+(TRACE) Selecting channel(s) number 5
+(TRACE) Adding low-shelf filter with frequency 40 Hz and gain 3 dB and slope 25 dB
+(TRACE) Adding peaking filter with frequency 38 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 49 Hz, gain -2 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 30 Hz and gain 3 dB and slope 20 dB
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 1 dB and slope 20 dB
+(TRACE) Adding peaking filter with frequency 100 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 395 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 428 Hz, gain 4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 611 Hz, gain 8 dB and Q 15
+(TRACE) Adding peaking filter with frequency 713 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 833 Hz, gain 1.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 946 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1046 Hz, gain 2 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 1200 Hz and gain 3.5 dB
+(TRACE) Adding peaking filter with frequency 1498 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 1714 Hz, gain -4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 1820 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -3.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -3 dB and Q 3
+(TRACE) Adding peaking filter with frequency 4100 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5341 Hz, gain 4 dB and Q 3
+(TRACE) Adding peaking filter with frequency 11559 Hz, gain -10 dB and Q 6
+(TRACE) Selecting channel(s) number 4
+(TRACE) Adding peaking filter with frequency 27 Hz, gain 15 dB and Q 10
+(TRACE) Adding peaking filter with frequency 66 Hz, gain -4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 117 Hz, gain 8 dB and Q 10
+(TRACE) Adding peaking filter with frequency 564 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 810 Hz, gain -5 dB and Q 16
+(TRACE) Adding peaking filter with frequency 862 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1428 Hz, gain -3 dB and Q 16
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\EQ to JBL M2.txt
+(TRACE) Selecting channel(s) number 3, 4, 5, 6
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Adding high-pass filter with frequency 15 Hz
+(TRACE) Adding peaking filter with frequency 50 Hz, gain -15 dB and Q 1
+(TRACE) Adding low-shelf filter with frequency 100 Hz and gain -5 dB
+(TRACE) Adding peaking filter with frequency 118 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 121 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 124 Hz, gain 4 dB and Q 12
+(TRACE) Adding peaking filter with frequency 135 Hz, gain -8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 150 Hz, gain -10 dB and Q 4
+(TRACE) Adding peaking filter with frequency 150 Hz, gain 1 dB and Q 2
+(TRACE) Adding peaking filter with frequency 186 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 224.4 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 528 Hz, gain -5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 826 Hz, gain 2 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 900 Hz and gain 3 dB
+(TRACE) Adding peaking filter with frequency 1050 Hz, gain 6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 1300 Hz, gain 4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1917 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2000 Hz, gain -7 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3780 Hz, gain 6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 2 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4800 Hz, gain 1 dB and Q 6
+(TRACE) Adding peaking filter with frequency 5300 Hz, gain -11 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6475 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 7790 Hz, gain -5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9359 Hz, gain -4 dB and Q 5
+(TRACE) Adding peaking filter with frequency 10876 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 12100 Hz, gain -6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 13200 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 14000 Hz, gain -2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 15000 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 18200 Hz, gain 6 dB and Q 5
+(TRACE) Adding high-shelf filter with frequency 12000 Hz and gain -8 dB
+(TRACE) Selecting channel(s) number 4, 5
+(TRACE) Adjusting preamp by -2 dB
+(TRACE) Adding peaking filter with frequency 1750 Hz, gain 8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain -12 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain 2 dB and Q 4
+(TRACE) Selecting channel(s) number 3, 6
+(TRACE) Adding peaking filter with frequency 2700 Hz, gain 8 dB and Q 5
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 3, 4, 5, 6
+(TRACE) Selecting channel(s) number 7, 8, 9, 10
+(TRACE) Adding low-pass filter with frequency 90 Hz
+(TRACE) Adding peaking filter with frequency 110 Hz, gain 2 dB and Q 1
+(TRACE) Adjusting preamp by -16 dB
+(TRACE) Delaying by 0 samples
+(TRACE) Selecting channel(s) number 8, 9
+(TRACE) Delaying by 15 samples
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LL with factor 1, from channel RIL with factor 1, from channel LLLOW with factor 1, from channel RLLOW with factor 1, to channel R from channel LR with factor 1, from channel RIR with factor 1, from channel LRLOW with factor 1, from channel RRLOW with factor 1
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\tools\measurement\equalizerapo\bass-branch-output.txt
+(TRACE) Not matching pattern "PhantomDSP Bass Convolved" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Matching pattern "PhantomDSP Bass Clean" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LLLOW with factor 1, from channel RLLOW with factor 1, to channel R from channel LRLOW with factor 1, from channel RRLOW with factor 1
+(TRACE) Matching pattern "all" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Post Channel Addition Channel Balance EQ.txt
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adding peaking filter with frequency 194 Hz, gain 0.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 215 Hz, gain -1.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 288 Hz, gain -1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 400 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 500 Hz, gain -0.5 dB and Q 5
+(TRACE) Adding peaking filter with frequency 540 Hz, gain -1.3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 577 Hz, gain 3.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 700 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 759 Hz, gain -1.8 dB and Q 20
+(TRACE) Adding peaking filter with frequency 810 Hz, gain 3 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1280 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1742 Hz, gain -1.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2105 Hz, gain -0.7 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2315 Hz, gain 3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2440 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2900 Hz, gain -1.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -0.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain 0.7 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain -0.6 dB and Q 5
+(TRACE) Adding peaking filter with frequency 8620 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 92.5 Hz, gain -0.7 dB and Q 20
+(TRACE) Adding peaking filter with frequency 246 Hz, gain 3.4 dB and Q 30
+(TRACE) Adding peaking filter with frequency 186 Hz, gain -2.4 dB and Q 30
+(TRACE) Adding peaking filter with frequency 185 Hz, gain 1.8 dB and Q 8
+(TRACE) Adding peaking filter with frequency 210 Hz, gain -1.2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 232 Hz, gain 0.4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 295 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 416 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 625 Hz, gain -1.3 dB and Q 30
+(TRACE) Adding peaking filter with frequency 927 Hz, gain -2.2 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1046 Hz, gain -4.8 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1019 Hz, gain 1.2 dB and Q 30
+(TRACE) Adding peaking filter with frequency 1109 Hz, gain 3 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1337 Hz, gain -1.8 dB and Q 50
+(TRACE) Adding peaking filter with frequency 1393 Hz, gain -1.2 dB and Q 30
+(TRACE) Adding peaking filter with frequency 13220 Hz, gain -2.5 dB and Q 4
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 289 Hz, gain 1.1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 330 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 331 Hz, gain 6.6 dB and Q 30
+(TRACE) Adding peaking filter with frequency 2303 Hz, gain -4 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2370 Hz, gain 4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -0.9 dB and Q 15
+(TRACE) Adding peaking filter with frequency 7000 Hz, gain 0.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 7360 Hz, gain -3.5 dB and Q 30
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Post Channel Addition EQ v3.txt
+(TRACE) Adding peaking filter with frequency 95 Hz, gain -2 dB and Q 2
+(TRACE) Adding peaking filter with frequency 200 Hz, gain 2 dB and Q 1.2
+(TRACE) Adding peaking filter with frequency 308 Hz, gain -2.5 dB and Q 20
+(TRACE) Adding peaking filter with frequency 330 Hz, gain -1.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 347 Hz, gain -1.1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 400 Hz, gain 1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 595 Hz, gain 1.5 dB and Q 20
+(TRACE) Adding peaking filter with frequency 727 Hz, gain -2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 950 Hz, gain -4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 1280 Hz, gain -3.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1300 Hz, gain 2 dB and Q 8
+(TRACE) Adding peaking filter with frequency 2680 Hz, gain 4 dB and Q 3
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -4 dB and Q 2
+(TRACE) Adding peaking filter with frequency 8000 Hz, gain 1 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8700 Hz, gain 6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 10500 Hz, gain -3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 12780 Hz, gain 5 dB and Q 1
+(TRACE) Adding high-shelf filter with frequency 10000 Hz and gain 5 dB and slope 30 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Target Curve Macro Adjustments.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 2 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Flatten EQ at DRP v3.txt
+(TRACE) Adjusting preamp by -3.5 dB
+(TRACE) Adding low-shelf filter with frequency 35 Hz and gain 5 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 650 Hz, gain 1.3 dB and Q 1
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -1.5 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3730 Hz, gain -8.8 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 14000 Hz and gain 12 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 2719 Hz, gain -1.4 dB and Q 2.5
+(TRACE) Adding peaking filter with frequency 5400 Hz, gain 3.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 7730 Hz, gain 5.2 dB and Q 5
+(TRACE) Adding peaking filter with frequency 11200 Hz, gain -6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 12950 Hz, gain -3.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 11100 Hz, gain -4.4 dB and Q 4
+(TRACE) Adding peaking filter with frequency 4450 Hz, gain -3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4792 Hz, gain 2.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 5690 Hz, gain 0.6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3628 Hz, gain 0.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 8770 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 9150 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9800 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -4 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 0.8 dB and Q 0.7
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -0.8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 8
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Personal Balance LR v3.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adjusting preamp by -0.5 dB
+(TRACE) Adding low-shelf filter with frequency 150 Hz and gain -0.3 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 2550 Hz, gain -1.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 3640 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4400 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6240 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 13000 Hz, gain 5 dB and Q 2
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -6 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 3900 Hz, gain 0.5 dB and Q 7
+(TRACE) Adding peaking filter with frequency 5100 Hz, gain 0.9 dB and Q 9
+(TRACE) Adding peaking filter with frequency 1754 Hz, gain -0.5 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8500 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 4060 Hz, gain 1.5 dB and Q 8
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain -3 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4410 Hz, gain -1 dB and Q 6
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adjusting preamp by 0 dB
+(TRACE) Finished loading configuration after 13.190400 milliseconds
+(TRACE) Successfully created directory change notification thread 13152 for C:\Program Files\EqualizerAPO\config and its subtree
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config.txt
+(TRACE) Matching pattern "Output A1 Voicemeeter" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config - personalized.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+(TRACE) If(regexSearch("PhantomDSP Bass Downstream", deviceName)) evaluated to  (false)
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\main - A 100-sample advance.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Binaural Convolution - JBL LSR305 at DRP w Channel EQ - A 100-sample advance.txt
+(TRACE) Selecting channel(s) number 1
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel LL from channel L with factor 1, to channel LR from channel L with factor 1, to channel RIL from channel R with factor 1, to channel RIR from channel R with factor 1, to channel LLLOW from channel L with factor 1, to channel LRLOW from channel L with factor 1, to channel RLLOW from channel R with factor 1, to channel RRLOW from channel R with factor 1
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\advanced\JBL LSR305 LL 4_LR 4 5-500 advance-100.wav
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\advanced\JBL LSR305 RL 4_RR 4 5-500 advance-100.wav
+(TRACE) Selecting channel(s) number 3
+(TRACE) Delaying by 0 samples
+(TRACE) Selecting channel(s) number 6
+(TRACE) Delaying by 1 samples
+(TRACE) Selecting channel(s) number 4
+(TRACE) Delaying by 23 samples
+(TRACE) Selecting channel(s) number 5
+(TRACE) Delaying by 10 samples
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Channel Balance EQ.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Adding peaking filter with frequency 63 Hz, gain -8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 100 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 112 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 312 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Adding peaking filter with frequency 50.8 Hz, gain -4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 109 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 116 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 306 Hz, gain -5 dB and Q 15
+(TRACE) Selecting channel(s) number 6
+(TRACE) Adding low-shelf filter with frequency 4000 Hz and gain -2 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 4 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 40 Hz and gain 7 dB
+(TRACE) Adding peaking filter with frequency 38 Hz, gain 10 dB and Q 10
+(TRACE) Adding peaking filter with frequency 95 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 168 Hz, gain -1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 344 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 366 Hz, gain -2 dB and Q 25
+(TRACE) Adding peaking filter with frequency 384 Hz, gain 4 dB and Q 20
+(TRACE) Adding peaking filter with frequency 420 Hz, gain 1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 450 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 571 Hz, gain 1 dB and Q 8
+(TRACE) Adding peaking filter with frequency 855 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 944 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 1449 Hz, gain -2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1497 Hz, gain -1 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 1700 Hz and gain -1.5 dB
+(TRACE) Adding peaking filter with frequency 2100 Hz, gain 1 dB and Q 12
+(TRACE) Adding peaking filter with frequency 2610 Hz, gain 3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2920 Hz, gain -1.5 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4050 Hz, gain -1 dB and Q 20
+(TRACE) Adding high-shelf filter with frequency 4000 Hz and gain 4 dB
+(TRACE) Adding peaking filter with frequency 12000 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 17360 Hz, gain -6 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 18000 Hz and gain -3 dB and slope 20 dB
+(TRACE) Selecting channel(s) number 3
+(TRACE) Adding low-shelf filter with frequency 15 Hz and gain 5 dB and slope 22 dB
+(TRACE) Adding low-shelf filter with frequency 20 Hz and gain 12 dB
+(TRACE) Adding peaking filter with frequency 28 Hz, gain 15 dB and Q 10
+(TRACE) Adding peaking filter with frequency 121.7 Hz, gain -5 dB and Q 12
+(TRACE) Adding peaking filter with frequency 307 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 380 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 637 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 720 Hz, gain -1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1089 Hz, gain -1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1195 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1421 Hz, gain -1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 1791 Hz, gain 1 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 5800 Hz and gain 5 dB and slope 25 dB
+(TRACE) Adding high-shelf filter with frequency 8000 Hz and gain -5 dB and slope 25 dB
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 3520 Hz, gain -3 dB and Q 15
+(TRACE) Adding peaking filter with frequency 4500 Hz, gain 4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 6420 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 7370 Hz, gain -3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 8060 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 8700 Hz, gain -8 dB and Q 6
+(TRACE) Selecting channel(s) number 5
+(TRACE) Adding low-shelf filter with frequency 40 Hz and gain 3 dB and slope 25 dB
+(TRACE) Adding peaking filter with frequency 38 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 49 Hz, gain -2 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 30 Hz and gain 3 dB and slope 20 dB
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 1 dB and slope 20 dB
+(TRACE) Adding peaking filter with frequency 100 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 395 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 428 Hz, gain 4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 611 Hz, gain 8 dB and Q 15
+(TRACE) Adding peaking filter with frequency 713 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 833 Hz, gain 1.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 946 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1046 Hz, gain 2 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 1200 Hz and gain 3.5 dB
+(TRACE) Adding peaking filter with frequency 1498 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 1714 Hz, gain -4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 1820 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -3.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -3 dB and Q 3
+(TRACE) Adding peaking filter with frequency 4100 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5341 Hz, gain 4 dB and Q 3
+(TRACE) Adding peaking filter with frequency 11559 Hz, gain -10 dB and Q 6
+(TRACE) Selecting channel(s) number 4
+(TRACE) Adding peaking filter with frequency 27 Hz, gain 15 dB and Q 10
+(TRACE) Adding peaking filter with frequency 66 Hz, gain -4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 117 Hz, gain 8 dB and Q 10
+(TRACE) Adding peaking filter with frequency 564 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 810 Hz, gain -5 dB and Q 16
+(TRACE) Adding peaking filter with frequency 862 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1428 Hz, gain -3 dB and Q 16
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\EQ to JBL M2.txt
+(TRACE) Selecting channel(s) number 3, 4, 5, 6
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Adding high-pass filter with frequency 15 Hz
+(TRACE) Adding peaking filter with frequency 50 Hz, gain -15 dB and Q 1
+(TRACE) Adding low-shelf filter with frequency 100 Hz and gain -5 dB
+(TRACE) Adding peaking filter with frequency 118 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 121 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 124 Hz, gain 4 dB and Q 12
+(TRACE) Adding peaking filter with frequency 135 Hz, gain -8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 150 Hz, gain -10 dB and Q 4
+(TRACE) Adding peaking filter with frequency 150 Hz, gain 1 dB and Q 2
+(TRACE) Adding peaking filter with frequency 186 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 224.4 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 528 Hz, gain -5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 826 Hz, gain 2 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 900 Hz and gain 3 dB
+(TRACE) Adding peaking filter with frequency 1050 Hz, gain 6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 1300 Hz, gain 4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1917 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2000 Hz, gain -7 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3780 Hz, gain 6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 2 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4800 Hz, gain 1 dB and Q 6
+(TRACE) Adding peaking filter with frequency 5300 Hz, gain -11 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6475 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 7790 Hz, gain -5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9359 Hz, gain -4 dB and Q 5
+(TRACE) Adding peaking filter with frequency 10876 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 12100 Hz, gain -6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 13200 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 14000 Hz, gain -2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 15000 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 18200 Hz, gain 6 dB and Q 5
+(TRACE) Adding high-shelf filter with frequency 12000 Hz and gain -8 dB
+(TRACE) Selecting channel(s) number 4, 5
+(TRACE) Adjusting preamp by -2 dB
+(TRACE) Adding peaking filter with frequency 1750 Hz, gain 8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain -12 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain 2 dB and Q 4
+(TRACE) Selecting channel(s) number 3, 6
+(TRACE) Adding peaking filter with frequency 2700 Hz, gain 8 dB and Q 5
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 3, 4, 5, 6
+(TRACE) Selecting channel(s) number 7, 8, 9, 10
+(TRACE) Adding low-pass filter with frequency 90 Hz
+(TRACE) Adding peaking filter with frequency 110 Hz, gain 2 dB and Q 1
+(TRACE) Adjusting preamp by -16 dB
+(TRACE) Delaying by 0 samples
+(TRACE) Selecting channel(s) number 8, 9
+(TRACE) Delaying by 15 samples
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LL with factor 1, from channel RIL with factor 1, from channel LLLOW with factor 1, from channel RLLOW with factor 1, to channel R from channel LR with factor 1, from channel RIR with factor 1, from channel LRLOW with factor 1, from channel RRLOW with factor 1
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\tools\measurement\equalizerapo\bass-branch-output.txt
+(TRACE) Not matching pattern "PhantomDSP Bass Convolved" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Matching pattern "PhantomDSP Bass Clean" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LLLOW with factor 1, from channel RLLOW with factor 1, to channel R from channel LRLOW with factor 1, from channel RRLOW with factor 1
+(TRACE) Matching pattern "all" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Post Channel Addition Channel Balance EQ.txt
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adding peaking filter with frequency 194 Hz, gain 0.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 215 Hz, gain -1.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 288 Hz, gain -1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 400 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 500 Hz, gain -0.5 dB and Q 5
+(TRACE) Adding peaking filter with frequency 540 Hz, gain -1.3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 577 Hz, gain 3.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 700 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 759 Hz, gain -1.8 dB and Q 20
+(TRACE) Adding peaking filter with frequency 810 Hz, gain 3 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1280 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1742 Hz, gain -1.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2105 Hz, gain -0.7 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2315 Hz, gain 3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2440 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2900 Hz, gain -1.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -0.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain 0.7 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain -0.6 dB and Q 5
+(TRACE) Adding peaking filter with frequency 8620 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 92.5 Hz, gain -0.7 dB and Q 20
+(TRACE) Adding peaking filter with frequency 246 Hz, gain 3.4 dB and Q 30
+(TRACE) Adding peaking filter with frequency 186 Hz, gain -2.4 dB and Q 30
+(TRACE) Adding peaking filter with frequency 185 Hz, gain 1.8 dB and Q 8
+(TRACE) Adding peaking filter with frequency 210 Hz, gain -1.2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 232 Hz, gain 0.4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 295 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 416 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 625 Hz, gain -1.3 dB and Q 30
+(TRACE) Adding peaking filter with frequency 927 Hz, gain -2.2 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1046 Hz, gain -4.8 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1019 Hz, gain 1.2 dB and Q 30
+(TRACE) Adding peaking filter with frequency 1109 Hz, gain 3 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1337 Hz, gain -1.8 dB and Q 50
+(TRACE) Adding peaking filter with frequency 1393 Hz, gain -1.2 dB and Q 30
+(TRACE) Adding peaking filter with frequency 13220 Hz, gain -2.5 dB and Q 4
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 289 Hz, gain 1.1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 330 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 331 Hz, gain 6.6 dB and Q 30
+(TRACE) Adding peaking filter with frequency 2303 Hz, gain -4 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2370 Hz, gain 4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -0.9 dB and Q 15
+(TRACE) Adding peaking filter with frequency 7000 Hz, gain 0.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 7360 Hz, gain -3.5 dB and Q 30
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Post Channel Addition EQ v3.txt
+(TRACE) Adding peaking filter with frequency 95 Hz, gain -2 dB and Q 2
+(TRACE) Adding peaking filter with frequency 200 Hz, gain 2 dB and Q 1.2
+(TRACE) Adding peaking filter with frequency 308 Hz, gain -2.5 dB and Q 20
+(TRACE) Adding peaking filter with frequency 330 Hz, gain -1.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 347 Hz, gain -1.1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 400 Hz, gain 1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 595 Hz, gain 1.5 dB and Q 20
+(TRACE) Adding peaking filter with frequency 727 Hz, gain -2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 950 Hz, gain -4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 1280 Hz, gain -3.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1300 Hz, gain 2 dB and Q 8
+(TRACE) Adding peaking filter with frequency 2680 Hz, gain 4 dB and Q 3
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -4 dB and Q 2
+(TRACE) Adding peaking filter with frequency 8000 Hz, gain 1 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8700 Hz, gain 6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 10500 Hz, gain -3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 12780 Hz, gain 5 dB and Q 1
+(TRACE) Adding high-shelf filter with frequency 10000 Hz and gain 5 dB and slope 30 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Target Curve Macro Adjustments.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 2 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Flatten EQ at DRP v3.txt
+(TRACE) Adjusting preamp by -3.5 dB
+(TRACE) Adding low-shelf filter with frequency 35 Hz and gain 5 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 650 Hz, gain 1.3 dB and Q 1
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -1.5 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3730 Hz, gain -8.8 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 14000 Hz and gain 12 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 2719 Hz, gain -1.4 dB and Q 2.5
+(TRACE) Adding peaking filter with frequency 5400 Hz, gain 3.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 7730 Hz, gain 5.2 dB and Q 5
+(TRACE) Adding peaking filter with frequency 11200 Hz, gain -6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 12950 Hz, gain -3.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 11100 Hz, gain -4.4 dB and Q 4
+(TRACE) Adding peaking filter with frequency 4450 Hz, gain -3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4792 Hz, gain 2.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 5690 Hz, gain 0.6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3628 Hz, gain 0.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 8770 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 9150 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9800 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -4 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 0.8 dB and Q 0.7
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -0.8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 8
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Personal Balance LR v3.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adjusting preamp by -0.5 dB
+(TRACE) Adding low-shelf filter with frequency 150 Hz and gain -0.3 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 2550 Hz, gain -1.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 3640 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4400 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6240 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 13000 Hz, gain 5 dB and Q 2
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -6 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 3900 Hz, gain 0.5 dB and Q 7
+(TRACE) Adding peaking filter with frequency 5100 Hz, gain 0.9 dB and Q 9
+(TRACE) Adding peaking filter with frequency 1754 Hz, gain -0.5 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8500 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 4060 Hz, gain 1.5 dB and Q 8
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain -3 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4410 Hz, gain -1 dB and Q 6
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adjusting preamp by 0 dB
+(TRACE) Finished loading configuration after 11.084300 milliseconds
+(TRACE) Successfully terminated directory change notification thread
+Benchmark 1.3
+Run "C:\Program Files\EqualizerAPO\Benchmark.exe -h" to show usage info
+
+Reading sound data from C:\Program Files\EqualizerAPO\config\measurements\minimum-latency\a100-reference\raw\branches\clean\left-input.wav
+Reading input file took 0.0047554 seconds
+
+Processing 96000 frames from 2 channel(s)
+192000 samples processed in 0.065564 seconds
+This is equivalent to 3.28% CPU load (one core) when processing in real time
+Max output level: 0.000536 (-65.416397 dB)
+
+Writing output to C:\Program Files\EqualizerAPO\config\measurements\minimum-latency\a100-reference\raw\branches\clean\left-output.wav
+
+=== right impulse ===
+(TRACE) 2 channels for this device: L R
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config.txt
+(TRACE) Matching pattern "Output A1 Voicemeeter" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config - personalized.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+(TRACE) If(regexSearch("PhantomDSP Bass Downstream", deviceName)) evaluated to  (false)
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\main - A 100-sample advance.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Binaural Convolution - JBL LSR305 at DRP w Channel EQ - A 100-sample advance.txt
+(TRACE) Selecting channel(s) number 1
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel LL from channel L with factor 1, to channel LR from channel L with factor 1, to channel RIL from channel R with factor 1, to channel RIR from channel R with factor 1, to channel LLLOW from channel L with factor 1, to channel LRLOW from channel L with factor 1, to channel RLLOW from channel R with factor 1, to channel RRLOW from channel R with factor 1
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\advanced\JBL LSR305 LL 4_LR 4 5-500 advance-100.wav
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\advanced\JBL LSR305 RL 4_RR 4 5-500 advance-100.wav
+(TRACE) Selecting channel(s) number 3
+(TRACE) Delaying by 0 samples
+(TRACE) Selecting channel(s) number 6
+(TRACE) Delaying by 1 samples
+(TRACE) Selecting channel(s) number 4
+(TRACE) Delaying by 23 samples
+(TRACE) Selecting channel(s) number 5
+(TRACE) Delaying by 10 samples
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Channel Balance EQ.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Adding peaking filter with frequency 63 Hz, gain -8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 100 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 112 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 312 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Adding peaking filter with frequency 50.8 Hz, gain -4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 109 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 116 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 306 Hz, gain -5 dB and Q 15
+(TRACE) Selecting channel(s) number 6
+(TRACE) Adding low-shelf filter with frequency 4000 Hz and gain -2 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 4 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 40 Hz and gain 7 dB
+(TRACE) Adding peaking filter with frequency 38 Hz, gain 10 dB and Q 10
+(TRACE) Adding peaking filter with frequency 95 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 168 Hz, gain -1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 344 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 366 Hz, gain -2 dB and Q 25
+(TRACE) Adding peaking filter with frequency 384 Hz, gain 4 dB and Q 20
+(TRACE) Adding peaking filter with frequency 420 Hz, gain 1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 450 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 571 Hz, gain 1 dB and Q 8
+(TRACE) Adding peaking filter with frequency 855 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 944 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 1449 Hz, gain -2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1497 Hz, gain -1 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 1700 Hz and gain -1.5 dB
+(TRACE) Adding peaking filter with frequency 2100 Hz, gain 1 dB and Q 12
+(TRACE) Adding peaking filter with frequency 2610 Hz, gain 3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2920 Hz, gain -1.5 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4050 Hz, gain -1 dB and Q 20
+(TRACE) Adding high-shelf filter with frequency 4000 Hz and gain 4 dB
+(TRACE) Adding peaking filter with frequency 12000 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 17360 Hz, gain -6 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 18000 Hz and gain -3 dB and slope 20 dB
+(TRACE) Selecting channel(s) number 3
+(TRACE) Adding low-shelf filter with frequency 15 Hz and gain 5 dB and slope 22 dB
+(TRACE) Adding low-shelf filter with frequency 20 Hz and gain 12 dB
+(TRACE) Adding peaking filter with frequency 28 Hz, gain 15 dB and Q 10
+(TRACE) Adding peaking filter with frequency 121.7 Hz, gain -5 dB and Q 12
+(TRACE) Adding peaking filter with frequency 307 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 380 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 637 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 720 Hz, gain -1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1089 Hz, gain -1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1195 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1421 Hz, gain -1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 1791 Hz, gain 1 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 5800 Hz and gain 5 dB and slope 25 dB
+(TRACE) Adding high-shelf filter with frequency 8000 Hz and gain -5 dB and slope 25 dB
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 3520 Hz, gain -3 dB and Q 15
+(TRACE) Adding peaking filter with frequency 4500 Hz, gain 4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 6420 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 7370 Hz, gain -3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 8060 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 8700 Hz, gain -8 dB and Q 6
+(TRACE) Selecting channel(s) number 5
+(TRACE) Adding low-shelf filter with frequency 40 Hz and gain 3 dB and slope 25 dB
+(TRACE) Adding peaking filter with frequency 38 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 49 Hz, gain -2 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 30 Hz and gain 3 dB and slope 20 dB
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 1 dB and slope 20 dB
+(TRACE) Adding peaking filter with frequency 100 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 395 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 428 Hz, gain 4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 611 Hz, gain 8 dB and Q 15
+(TRACE) Adding peaking filter with frequency 713 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 833 Hz, gain 1.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 946 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1046 Hz, gain 2 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 1200 Hz and gain 3.5 dB
+(TRACE) Adding peaking filter with frequency 1498 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 1714 Hz, gain -4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 1820 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -3.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -3 dB and Q 3
+(TRACE) Adding peaking filter with frequency 4100 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5341 Hz, gain 4 dB and Q 3
+(TRACE) Adding peaking filter with frequency 11559 Hz, gain -10 dB and Q 6
+(TRACE) Selecting channel(s) number 4
+(TRACE) Adding peaking filter with frequency 27 Hz, gain 15 dB and Q 10
+(TRACE) Adding peaking filter with frequency 66 Hz, gain -4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 117 Hz, gain 8 dB and Q 10
+(TRACE) Adding peaking filter with frequency 564 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 810 Hz, gain -5 dB and Q 16
+(TRACE) Adding peaking filter with frequency 862 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1428 Hz, gain -3 dB and Q 16
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\EQ to JBL M2.txt
+(TRACE) Selecting channel(s) number 3, 4, 5, 6
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Adding high-pass filter with frequency 15 Hz
+(TRACE) Adding peaking filter with frequency 50 Hz, gain -15 dB and Q 1
+(TRACE) Adding low-shelf filter with frequency 100 Hz and gain -5 dB
+(TRACE) Adding peaking filter with frequency 118 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 121 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 124 Hz, gain 4 dB and Q 12
+(TRACE) Adding peaking filter with frequency 135 Hz, gain -8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 150 Hz, gain -10 dB and Q 4
+(TRACE) Adding peaking filter with frequency 150 Hz, gain 1 dB and Q 2
+(TRACE) Adding peaking filter with frequency 186 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 224.4 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 528 Hz, gain -5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 826 Hz, gain 2 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 900 Hz and gain 3 dB
+(TRACE) Adding peaking filter with frequency 1050 Hz, gain 6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 1300 Hz, gain 4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1917 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2000 Hz, gain -7 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3780 Hz, gain 6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 2 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4800 Hz, gain 1 dB and Q 6
+(TRACE) Adding peaking filter with frequency 5300 Hz, gain -11 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6475 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 7790 Hz, gain -5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9359 Hz, gain -4 dB and Q 5
+(TRACE) Adding peaking filter with frequency 10876 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 12100 Hz, gain -6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 13200 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 14000 Hz, gain -2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 15000 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 18200 Hz, gain 6 dB and Q 5
+(TRACE) Adding high-shelf filter with frequency 12000 Hz and gain -8 dB
+(TRACE) Selecting channel(s) number 4, 5
+(TRACE) Adjusting preamp by -2 dB
+(TRACE) Adding peaking filter with frequency 1750 Hz, gain 8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain -12 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain 2 dB and Q 4
+(TRACE) Selecting channel(s) number 3, 6
+(TRACE) Adding peaking filter with frequency 2700 Hz, gain 8 dB and Q 5
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 3, 4, 5, 6
+(TRACE) Selecting channel(s) number 7, 8, 9, 10
+(TRACE) Adding low-pass filter with frequency 90 Hz
+(TRACE) Adding peaking filter with frequency 110 Hz, gain 2 dB and Q 1
+(TRACE) Adjusting preamp by -16 dB
+(TRACE) Delaying by 0 samples
+(TRACE) Selecting channel(s) number 8, 9
+(TRACE) Delaying by 15 samples
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LL with factor 1, from channel RIL with factor 1, from channel LLLOW with factor 1, from channel RLLOW with factor 1, to channel R from channel LR with factor 1, from channel RIR with factor 1, from channel LRLOW with factor 1, from channel RRLOW with factor 1
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\tools\measurement\equalizerapo\bass-branch-output.txt
+(TRACE) Not matching pattern "PhantomDSP Bass Convolved" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Matching pattern "PhantomDSP Bass Clean" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LLLOW with factor 1, from channel RLLOW with factor 1, to channel R from channel LRLOW with factor 1, from channel RRLOW with factor 1
+(TRACE) Matching pattern "all" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Post Channel Addition Channel Balance EQ.txt
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adding peaking filter with frequency 194 Hz, gain 0.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 215 Hz, gain -1.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 288 Hz, gain -1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 400 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 500 Hz, gain -0.5 dB and Q 5
+(TRACE) Adding peaking filter with frequency 540 Hz, gain -1.3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 577 Hz, gain 3.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 700 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 759 Hz, gain -1.8 dB and Q 20
+(TRACE) Adding peaking filter with frequency 810 Hz, gain 3 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1280 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1742 Hz, gain -1.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2105 Hz, gain -0.7 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2315 Hz, gain 3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2440 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2900 Hz, gain -1.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -0.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain 0.7 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain -0.6 dB and Q 5
+(TRACE) Adding peaking filter with frequency 8620 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 92.5 Hz, gain -0.7 dB and Q 20
+(TRACE) Adding peaking filter with frequency 246 Hz, gain 3.4 dB and Q 30
+(TRACE) Adding peaking filter with frequency 186 Hz, gain -2.4 dB and Q 30
+(TRACE) Adding peaking filter with frequency 185 Hz, gain 1.8 dB and Q 8
+(TRACE) Adding peaking filter with frequency 210 Hz, gain -1.2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 232 Hz, gain 0.4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 295 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 416 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 625 Hz, gain -1.3 dB and Q 30
+(TRACE) Adding peaking filter with frequency 927 Hz, gain -2.2 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1046 Hz, gain -4.8 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1019 Hz, gain 1.2 dB and Q 30
+(TRACE) Adding peaking filter with frequency 1109 Hz, gain 3 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1337 Hz, gain -1.8 dB and Q 50
+(TRACE) Adding peaking filter with frequency 1393 Hz, gain -1.2 dB and Q 30
+(TRACE) Adding peaking filter with frequency 13220 Hz, gain -2.5 dB and Q 4
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 289 Hz, gain 1.1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 330 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 331 Hz, gain 6.6 dB and Q 30
+(TRACE) Adding peaking filter with frequency 2303 Hz, gain -4 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2370 Hz, gain 4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -0.9 dB and Q 15
+(TRACE) Adding peaking filter with frequency 7000 Hz, gain 0.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 7360 Hz, gain -3.5 dB and Q 30
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Post Channel Addition EQ v3.txt
+(TRACE) Adding peaking filter with frequency 95 Hz, gain -2 dB and Q 2
+(TRACE) Adding peaking filter with frequency 200 Hz, gain 2 dB and Q 1.2
+(TRACE) Adding peaking filter with frequency 308 Hz, gain -2.5 dB and Q 20
+(TRACE) Adding peaking filter with frequency 330 Hz, gain -1.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 347 Hz, gain -1.1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 400 Hz, gain 1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 595 Hz, gain 1.5 dB and Q 20
+(TRACE) Adding peaking filter with frequency 727 Hz, gain -2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 950 Hz, gain -4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 1280 Hz, gain -3.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1300 Hz, gain 2 dB and Q 8
+(TRACE) Adding peaking filter with frequency 2680 Hz, gain 4 dB and Q 3
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -4 dB and Q 2
+(TRACE) Adding peaking filter with frequency 8000 Hz, gain 1 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8700 Hz, gain 6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 10500 Hz, gain -3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 12780 Hz, gain 5 dB and Q 1
+(TRACE) Adding high-shelf filter with frequency 10000 Hz and gain 5 dB and slope 30 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Target Curve Macro Adjustments.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 2 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Flatten EQ at DRP v3.txt
+(TRACE) Adjusting preamp by -3.5 dB
+(TRACE) Adding low-shelf filter with frequency 35 Hz and gain 5 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 650 Hz, gain 1.3 dB and Q 1
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -1.5 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3730 Hz, gain -8.8 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 14000 Hz and gain 12 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 2719 Hz, gain -1.4 dB and Q 2.5
+(TRACE) Adding peaking filter with frequency 5400 Hz, gain 3.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 7730 Hz, gain 5.2 dB and Q 5
+(TRACE) Adding peaking filter with frequency 11200 Hz, gain -6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 12950 Hz, gain -3.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 11100 Hz, gain -4.4 dB and Q 4
+(TRACE) Adding peaking filter with frequency 4450 Hz, gain -3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4792 Hz, gain 2.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 5690 Hz, gain 0.6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3628 Hz, gain 0.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 8770 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 9150 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9800 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -4 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 0.8 dB and Q 0.7
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -0.8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 8
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Personal Balance LR v3.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adjusting preamp by -0.5 dB
+(TRACE) Adding low-shelf filter with frequency 150 Hz and gain -0.3 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 2550 Hz, gain -1.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 3640 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4400 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6240 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 13000 Hz, gain 5 dB and Q 2
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -6 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 3900 Hz, gain 0.5 dB and Q 7
+(TRACE) Adding peaking filter with frequency 5100 Hz, gain 0.9 dB and Q 9
+(TRACE) Adding peaking filter with frequency 1754 Hz, gain -0.5 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8500 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 4060 Hz, gain 1.5 dB and Q 8
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain -3 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4410 Hz, gain -1 dB and Q 6
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adjusting preamp by 0 dB
+(TRACE) Finished loading configuration after 12.916500 milliseconds
+(TRACE) Successfully created directory change notification thread 14720 for C:\Program Files\EqualizerAPO\config and its subtree
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config.txt
+(TRACE) Matching pattern "Output A1 Voicemeeter" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\config - personalized.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Bass Crossover Selector.txt
+(TRACE) If(regexSearch("PhantomDSP Bass Downstream", deviceName)) evaluated to  (false)
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\main - A 100-sample advance.txt
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Binaural Convolution - JBL LSR305 at DRP w Channel EQ - A 100-sample advance.txt
+(TRACE) Selecting channel(s) number 1
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel LL from channel L with factor 1, to channel LR from channel L with factor 1, to channel RIL from channel R with factor 1, to channel RIR from channel R with factor 1, to channel LLLOW from channel L with factor 1, to channel LRLOW from channel L with factor 1, to channel RLLOW from channel R with factor 1, to channel RRLOW from channel R with factor 1
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\advanced\JBL LSR305 LL 4_LR 4 5-500 advance-100.wav
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Convolving using impulse response file C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\IRs\advanced\JBL LSR305 RL 4_RR 4 5-500 advance-100.wav
+(TRACE) Selecting channel(s) number 3
+(TRACE) Delaying by 0 samples
+(TRACE) Selecting channel(s) number 6
+(TRACE) Delaying by 1 samples
+(TRACE) Selecting channel(s) number 4
+(TRACE) Delaying by 23 samples
+(TRACE) Selecting channel(s) number 5
+(TRACE) Delaying by 10 samples
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Channel Balance EQ.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 5, 6
+(TRACE) Adding peaking filter with frequency 63 Hz, gain -8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 100 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 112 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 312 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 3, 4
+(TRACE) Adding peaking filter with frequency 50.8 Hz, gain -4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 109 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 116 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 306 Hz, gain -5 dB and Q 15
+(TRACE) Selecting channel(s) number 6
+(TRACE) Adding low-shelf filter with frequency 4000 Hz and gain -2 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 4 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 40 Hz and gain 7 dB
+(TRACE) Adding peaking filter with frequency 38 Hz, gain 10 dB and Q 10
+(TRACE) Adding peaking filter with frequency 95 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 168 Hz, gain -1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 344 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 366 Hz, gain -2 dB and Q 25
+(TRACE) Adding peaking filter with frequency 384 Hz, gain 4 dB and Q 20
+(TRACE) Adding peaking filter with frequency 420 Hz, gain 1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 450 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 571 Hz, gain 1 dB and Q 8
+(TRACE) Adding peaking filter with frequency 855 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 944 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 1449 Hz, gain -2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1497 Hz, gain -1 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 1700 Hz and gain -1.5 dB
+(TRACE) Adding peaking filter with frequency 2100 Hz, gain 1 dB and Q 12
+(TRACE) Adding peaking filter with frequency 2610 Hz, gain 3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2920 Hz, gain -1.5 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4050 Hz, gain -1 dB and Q 20
+(TRACE) Adding high-shelf filter with frequency 4000 Hz and gain 4 dB
+(TRACE) Adding peaking filter with frequency 12000 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 17360 Hz, gain -6 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 18000 Hz and gain -3 dB and slope 20 dB
+(TRACE) Selecting channel(s) number 3
+(TRACE) Adding low-shelf filter with frequency 15 Hz and gain 5 dB and slope 22 dB
+(TRACE) Adding low-shelf filter with frequency 20 Hz and gain 12 dB
+(TRACE) Adding peaking filter with frequency 28 Hz, gain 15 dB and Q 10
+(TRACE) Adding peaking filter with frequency 121.7 Hz, gain -5 dB and Q 12
+(TRACE) Adding peaking filter with frequency 307 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 380 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 637 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 720 Hz, gain -1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1089 Hz, gain -1 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1195 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1421 Hz, gain -1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 1791 Hz, gain 1 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 5800 Hz and gain 5 dB and slope 25 dB
+(TRACE) Adding high-shelf filter with frequency 8000 Hz and gain -5 dB and slope 25 dB
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 3520 Hz, gain -3 dB and Q 15
+(TRACE) Adding peaking filter with frequency 4500 Hz, gain 4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 6420 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 7370 Hz, gain -3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 8060 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 8700 Hz, gain -8 dB and Q 6
+(TRACE) Selecting channel(s) number 5
+(TRACE) Adding low-shelf filter with frequency 40 Hz and gain 3 dB and slope 25 dB
+(TRACE) Adding peaking filter with frequency 38 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 49 Hz, gain -2 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 30 Hz and gain 3 dB and slope 20 dB
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 1 dB and slope 20 dB
+(TRACE) Adding peaking filter with frequency 100 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 395 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 428 Hz, gain 4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 611 Hz, gain 8 dB and Q 15
+(TRACE) Adding peaking filter with frequency 713 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 833 Hz, gain 1.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 946 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1046 Hz, gain 2 dB and Q 10
+(TRACE) Adding high-shelf filter with frequency 1200 Hz and gain 3.5 dB
+(TRACE) Adding peaking filter with frequency 1498 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 1714 Hz, gain -4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 1820 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -4 dB and Q 6
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -3.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -3 dB and Q 3
+(TRACE) Adding peaking filter with frequency 4100 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5341 Hz, gain 4 dB and Q 3
+(TRACE) Adding peaking filter with frequency 11559 Hz, gain -10 dB and Q 6
+(TRACE) Selecting channel(s) number 4
+(TRACE) Adding peaking filter with frequency 27 Hz, gain 15 dB and Q 10
+(TRACE) Adding peaking filter with frequency 66 Hz, gain -4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 117 Hz, gain 8 dB and Q 10
+(TRACE) Adding peaking filter with frequency 564 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 810 Hz, gain -5 dB and Q 16
+(TRACE) Adding peaking filter with frequency 862 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1428 Hz, gain -3 dB and Q 16
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\EQ to JBL M2.txt
+(TRACE) Selecting channel(s) number 3, 4, 5, 6
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Adding high-pass filter with frequency 15 Hz
+(TRACE) Adding peaking filter with frequency 50 Hz, gain -15 dB and Q 1
+(TRACE) Adding low-shelf filter with frequency 100 Hz and gain -5 dB
+(TRACE) Adding peaking filter with frequency 118 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 121 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 124 Hz, gain 4 dB and Q 12
+(TRACE) Adding peaking filter with frequency 135 Hz, gain -8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 150 Hz, gain -10 dB and Q 4
+(TRACE) Adding peaking filter with frequency 150 Hz, gain 1 dB and Q 2
+(TRACE) Adding peaking filter with frequency 186 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 224.4 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 528 Hz, gain -5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 826 Hz, gain 2 dB and Q 10
+(TRACE) Adding low-shelf filter with frequency 900 Hz and gain 3 dB
+(TRACE) Adding peaking filter with frequency 1050 Hz, gain 6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 1300 Hz, gain 4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1917 Hz, gain 5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2000 Hz, gain -7 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3780 Hz, gain 6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 2 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4800 Hz, gain 1 dB and Q 6
+(TRACE) Adding peaking filter with frequency 5300 Hz, gain -11 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6475 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 7790 Hz, gain -5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9359 Hz, gain -4 dB and Q 5
+(TRACE) Adding peaking filter with frequency 10876 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 12100 Hz, gain -6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 13200 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 14000 Hz, gain -2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 15000 Hz, gain -3 dB and Q 2
+(TRACE) Adding peaking filter with frequency 18200 Hz, gain 6 dB and Q 5
+(TRACE) Adding high-shelf filter with frequency 12000 Hz and gain -8 dB
+(TRACE) Selecting channel(s) number 4, 5
+(TRACE) Adjusting preamp by -2 dB
+(TRACE) Adding peaking filter with frequency 1750 Hz, gain 8 dB and Q 6
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain -12 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain 2 dB and Q 4
+(TRACE) Selecting channel(s) number 3, 6
+(TRACE) Adding peaking filter with frequency 2700 Hz, gain 8 dB and Q 5
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 3, 4, 5, 6
+(TRACE) Selecting channel(s) number 7, 8, 9, 10
+(TRACE) Adding low-pass filter with frequency 90 Hz
+(TRACE) Adding peaking filter with frequency 110 Hz, gain 2 dB and Q 1
+(TRACE) Adjusting preamp by -16 dB
+(TRACE) Delaying by 0 samples
+(TRACE) Selecting channel(s) number 8, 9
+(TRACE) Delaying by 15 samples
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LL with factor 1, from channel RIL with factor 1, from channel LLLOW with factor 1, from channel RLLOW with factor 1, to channel R from channel LR with factor 1, from channel RIR with factor 1, from channel LRLOW with factor 1, from channel RRLOW with factor 1
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\tools\measurement\equalizerapo\bass-branch-output.txt
+(TRACE) Not matching pattern "PhantomDSP Bass Convolved" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Matching pattern "PhantomDSP Bass Clean" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Selecting channel(s) number 1, 2
+(TRACE) Copying to channel L from channel LLLOW with factor 1, from channel RLLOW with factor 1, to channel R from channel LRLOW with factor 1, from channel RRLOW with factor 1
+(TRACE) Matching pattern "all" with device "Output A1 Voicemeeter PhantomDSP Bass Clean File output "
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Post Channel Addition Channel Balance EQ.txt
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adding peaking filter with frequency 194 Hz, gain 0.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 215 Hz, gain -1.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 288 Hz, gain -1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 400 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 500 Hz, gain -0.5 dB and Q 5
+(TRACE) Adding peaking filter with frequency 540 Hz, gain -1.3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 577 Hz, gain 3.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 700 Hz, gain -1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 759 Hz, gain -1.8 dB and Q 20
+(TRACE) Adding peaking filter with frequency 810 Hz, gain 3 dB and Q 15
+(TRACE) Adding peaking filter with frequency 1280 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1742 Hz, gain -1.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2105 Hz, gain -0.7 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2315 Hz, gain 3 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2440 Hz, gain 3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 2900 Hz, gain -1.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -0.5 dB and Q 10
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain 0.7 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain -0.6 dB and Q 5
+(TRACE) Adding peaking filter with frequency 8620 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 92.5 Hz, gain -0.7 dB and Q 20
+(TRACE) Adding peaking filter with frequency 246 Hz, gain 3.4 dB and Q 30
+(TRACE) Adding peaking filter with frequency 186 Hz, gain -2.4 dB and Q 30
+(TRACE) Adding peaking filter with frequency 185 Hz, gain 1.8 dB and Q 8
+(TRACE) Adding peaking filter with frequency 210 Hz, gain -1.2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 232 Hz, gain 0.4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 295 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 416 Hz, gain 2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 625 Hz, gain -1.3 dB and Q 30
+(TRACE) Adding peaking filter with frequency 927 Hz, gain -2.2 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1046 Hz, gain -4.8 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1019 Hz, gain 1.2 dB and Q 30
+(TRACE) Adding peaking filter with frequency 1109 Hz, gain 3 dB and Q 40
+(TRACE) Adding peaking filter with frequency 1337 Hz, gain -1.8 dB and Q 50
+(TRACE) Adding peaking filter with frequency 1393 Hz, gain -1.2 dB and Q 30
+(TRACE) Adding peaking filter with frequency 13220 Hz, gain -2.5 dB and Q 4
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 289 Hz, gain 1.1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 330 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 331 Hz, gain 6.6 dB and Q 30
+(TRACE) Adding peaking filter with frequency 2303 Hz, gain -4 dB and Q 20
+(TRACE) Adding peaking filter with frequency 2370 Hz, gain 4 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -0.9 dB and Q 15
+(TRACE) Adding peaking filter with frequency 7000 Hz, gain 0.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 7360 Hz, gain -3.5 dB and Q 30
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\JBL M2 Binaural Convolution\Post Channel Addition EQ v3.txt
+(TRACE) Adding peaking filter with frequency 95 Hz, gain -2 dB and Q 2
+(TRACE) Adding peaking filter with frequency 200 Hz, gain 2 dB and Q 1.2
+(TRACE) Adding peaking filter with frequency 308 Hz, gain -2.5 dB and Q 20
+(TRACE) Adding peaking filter with frequency 330 Hz, gain -1.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 347 Hz, gain -1.1 dB and Q 20
+(TRACE) Adding peaking filter with frequency 400 Hz, gain 1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 595 Hz, gain 1.5 dB and Q 20
+(TRACE) Adding peaking filter with frequency 727 Hz, gain -2 dB and Q 20
+(TRACE) Adding peaking filter with frequency 950 Hz, gain -4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 1280 Hz, gain -3.6 dB and Q 10
+(TRACE) Adding peaking filter with frequency 1300 Hz, gain 2 dB and Q 8
+(TRACE) Adding peaking filter with frequency 2680 Hz, gain 4 dB and Q 3
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain 3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4000 Hz, gain -4 dB and Q 2
+(TRACE) Adding peaking filter with frequency 8000 Hz, gain 1 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8700 Hz, gain 6 dB and Q 6
+(TRACE) Adding peaking filter with frequency 10500 Hz, gain -3 dB and Q 10
+(TRACE) Adding peaking filter with frequency 12780 Hz, gain 5 dB and Q 1
+(TRACE) Adding high-shelf filter with frequency 10000 Hz and gain 5 dB and slope 30 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Target Curve Macro Adjustments.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adding low-shelf filter with frequency 80 Hz and gain 2 dB
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Flatten EQ at DRP v3.txt
+(TRACE) Adjusting preamp by -3.5 dB
+(TRACE) Adding low-shelf filter with frequency 35 Hz and gain 5 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 650 Hz, gain 1.3 dB and Q 1
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -1.5 dB and Q 2
+(TRACE) Adding peaking filter with frequency 3730 Hz, gain -8.8 dB and Q 3
+(TRACE) Adding high-shelf filter with frequency 14000 Hz and gain 12 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 2719 Hz, gain -1.4 dB and Q 2.5
+(TRACE) Adding peaking filter with frequency 5400 Hz, gain 3.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 7730 Hz, gain 5.2 dB and Q 5
+(TRACE) Adding peaking filter with frequency 11200 Hz, gain -6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 12950 Hz, gain -3.9 dB and Q 10
+(TRACE) Adding peaking filter with frequency 11100 Hz, gain -4.4 dB and Q 4
+(TRACE) Adding peaking filter with frequency 4450 Hz, gain -3 dB and Q 6
+(TRACE) Adding peaking filter with frequency 4792 Hz, gain 2.5 dB and Q 4
+(TRACE) Adding peaking filter with frequency 5690 Hz, gain 0.6 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3628 Hz, gain 0.9 dB and Q 8
+(TRACE) Adding peaking filter with frequency 8770 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding peaking filter with frequency 9150 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 9800 Hz, gain 1.5 dB and Q 15
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -4 dB
+(TRACE) Adding peaking filter with frequency 600 Hz, gain 0.8 dB and Q 0.7
+(TRACE) Adding peaking filter with frequency 2500 Hz, gain 1 dB and Q 5
+(TRACE) Adding peaking filter with frequency 6300 Hz, gain -3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 3000 Hz, gain -0.8 dB and Q 5
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 8
+(TRACE) Loading configuration from C:\Program Files\EqualizerAPO\config\Elex\Elex Personal Balance LR v3.txt
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adjusting preamp by 2 dB
+(TRACE) Selecting channel(s) number 2
+(TRACE) Adjusting preamp by -0.5 dB
+(TRACE) Adding low-shelf filter with frequency 150 Hz and gain -0.3 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 1400 Hz, gain -0.5 dB and Q 3
+(TRACE) Adding peaking filter with frequency 2550 Hz, gain -1.3 dB and Q 4
+(TRACE) Adding peaking filter with frequency 3300 Hz, gain -1 dB and Q 3
+(TRACE) Adding peaking filter with frequency 3640 Hz, gain -1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4200 Hz, gain 1 dB and Q 10
+(TRACE) Adding peaking filter with frequency 4400 Hz, gain 2 dB and Q 10
+(TRACE) Adding peaking filter with frequency 6240 Hz, gain -2.4 dB and Q 8
+(TRACE) Adding peaking filter with frequency 6600 Hz, gain 3 dB and Q 8
+(TRACE) Adding peaking filter with frequency 13000 Hz, gain 5 dB and Q 2
+(TRACE) Adding high-shelf filter with frequency 16000 Hz and gain -6 dB and slope 12 dB
+(TRACE) Adding peaking filter with frequency 3900 Hz, gain 0.5 dB and Q 7
+(TRACE) Adding peaking filter with frequency 5100 Hz, gain 0.9 dB and Q 9
+(TRACE) Adding peaking filter with frequency 1754 Hz, gain -0.5 dB and Q 6
+(TRACE) Adding peaking filter with frequency 8500 Hz, gain -3 dB and Q 10
+(TRACE) Selecting channel(s) number 1
+(TRACE) Adding peaking filter with frequency 4060 Hz, gain 1.5 dB and Q 8
+(TRACE) Adding peaking filter with frequency 5000 Hz, gain -3 dB and Q 5
+(TRACE) Adding peaking filter with frequency 4410 Hz, gain -1 dB and Q 6
+(TRACE) Selecting channel(s) number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+(TRACE) Adjusting preamp by 0 dB
+(TRACE) Finished loading configuration after 10.951200 milliseconds
+(TRACE) Successfully terminated directory change notification thread
+Benchmark 1.3
+Run "C:\Program Files\EqualizerAPO\Benchmark.exe -h" to show usage info
+
+Reading sound data from C:\Program Files\EqualizerAPO\config\measurements\minimum-latency\a100-reference\raw\branches\clean\right-input.wav
+Reading input file took 0.0044872 seconds
+
+Processing 96000 frames from 2 channel(s)
+192000 samples processed in 0.064430 seconds
+This is equivalent to 3.22% CPU load (one core) when processing in real time
+Max output level: 0.000536 (-65.416397 dB)
+
+Writing output to C:\Program Files\EqualizerAPO\config\measurements\minimum-latency\a100-reference\raw\branches\clean\right-output.wav

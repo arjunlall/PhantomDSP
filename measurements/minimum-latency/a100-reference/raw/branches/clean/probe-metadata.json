@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "generator_version": 1,
+  "sample_rate_hz": 48000,
+  "channel_order": [
+    "L",
+    "R"
+  ],
+  "sample_format": "signed 24-bit PCM little-endian",
+  "frame_count": 96000,
+  "duration_seconds": 2.0,
+  "impulse_sample": 1024,
+  "nominal_amplitude_dbfs": -6.0,
+  "actual_amplitude_dbfs": -6.0000004906757844,
+  "integer_sample_value": 4204263,
+  "normalized_sample_value": 0.5011872053146362,
+  "files": {
+    "left": {
+      "filename": "left-input.wav",
+      "sha256": "e778dbc0c827d45a0fc7d5c450adea75ca1f5ba9bbdb66c759922c75475554a9"
+    },
+    "right": {
+      "filename": "right-input.wav",
+      "sha256": "59ca2778c97102df0f572809a418ea26184c24d92f4f40097b192faa7b5d7518"
+    }
+  }
+}

@@ -50,3 +50,6 @@ README-WIP.md
 # Local Python tooling
 __pycache__/
 .venv/
+
+# Local raw room measurements
+measurements/room/*.mdat

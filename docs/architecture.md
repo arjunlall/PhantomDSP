@@ -72,7 +72,9 @@ Because all stages are linear and time invariant, common filters can commute mat
 
 ### Measurement-Only Branch Routing
 
-The active sum includes `tools/measurement/equalizerapo/bass-branch-output.txt` immediately before post-sum processing. Its `Device:` selectors match only reserved Benchmark names, so it is a no-op during normal playback. For measurement runs it can replace the normal L/R sum with either the convolved or clean-low branch; downstream target, headphone, and personal-balance filters then remain identical across isolated and combined captures. This makes `combined ≈ convolved + clean` a directly testable complex-response identity.
+The active sum includes `tools/measurement/equalizerapo/bass-branch-output.txt` immediately before post-sum processing. Its `Device:` selectors match only reserved Benchmark names, so it is a no-op during normal playback. For measurement runs it can replace the normal L/R sum with either the convolved or clean-low branch; post-sum, target, headphone, and personal-balance filters then remain identical across isolated and combined captures. This makes `combined ≈ convolved + clean` directly testable.
+
+The reserved `PhantomDSP Bass Downstream` Benchmark device instead bypasses the whole speaker renderer in `Bass Crossover Selector.txt`. It still passes through root-level target, headphone, and personal EQ. Dividing the other captures by this diagonal response recovers the A100 speaker renderer, including its post-sum speaker correction, without reimplementing the Equalizer APO filters.
 
 ## Physical Versus Synthetic Corrections
 
@@ -84,7 +86,22 @@ Filters applied only to direct or cross paths instead modify the synthesized bin
 
 The clean-bass branch was introduced to reduce undesirable low-frequency behavior in the measured speaker/room response while retaining the BRIR above the crossover region. The legacy implementation uses a 90 Hz low-pass, gain reduction, and explicit delay, but does not high-pass the convolved branch. It is therefore an overlapping parallel blend rather than a complementary crossover. Measured digital captures show destructive summation in its transition region; downstream headphone compensation cannot change that relative branch phase.
 
-`Bass Crossover Selector.txt` keeps the legacy renderer selected by default and exposes two opt-in candidates. Candidate B uses a 75 Hz fourth-order Linkwitz-Riley handoff and prioritizes cancellation reduction. Listening found clearer and wider bass, but weaker frontal externalization. Candidate C lowers the same topology to 65 Hz so more BRIR energy remains through the 60–150 Hz punch region. Both preserve the existing 100/115-sample clean-path delays and use one broad shared post-sum correction to approximate the legacy 25–250 Hz tonal balance. Benchmark measurements show that C has the best overall branch summation, while both candidates introduce frequency-dependent low-bass delay and interaural changes relative to the legacy chain. See the [candidate comparison](../measurements/candidates/bass-crossover-comparison.md).
+`Bass Crossover Selector.txt` selects A100 by default. It preserves the preferred legacy bass topology while advancing both the BRIR and clean branch by 100 samples. Candidate B uses a 75 Hz fourth-order Linkwitz-Riley handoff; candidate C lowers it to 65 Hz. Both measured more coherently than the legacy overlap, but listening found weaker frontal externalization and muddier or more bloated bass. They remain historical diagnostics. See the [candidate comparison](../measurements/candidates/bass-crossover-comparison.md).
+
+A diagnostic 200-sample BRIR advance failed because the clean branch could advance only 100 samples, producing the predicted severe bass phase error. The accepted A100 configuration is the reference while the replacement below is developed.
+
+## Minimum-Latency 2×2 Bass Redesign
+
+The new design removes the parallel clean-bass branch. It will render the full speaker-to-ear matrix in two stereo convolutions:
+
+```text
+left output  = H_LL × left input + H_RL × right input
+right output = H_LR × left input + H_RR × right input
+```
+
+Each new path will combine room-regularized, extended low bass with the original BRIR through upper bass and above. The low-frequency target must preserve smoothed interaural level and timing relationships while rejecting narrow room resonances. A broad complex transition should retain the spatial and transient information carried by approximately 80–200 Hz content. Preference bass level remains a separate common minimum-phase shelf so it can be adjusted without regenerating spatial IRs.
+
+The target is a common 200-sample advance, minimum-phase or mixed-phase low-frequency synthesis, no explicit bass delay, and no runtime branch crossover. A causal renderer cannot have absolute zero latency; this design minimizes the IR direct-arrival contribution while retaining the measured direct/cross relationships. See [Minimum-Latency 2×2 Renderer](../measurements/minimum-latency/README.md).
 
 ## Validation Boundary
 

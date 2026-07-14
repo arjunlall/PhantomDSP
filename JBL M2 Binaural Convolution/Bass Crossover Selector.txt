@@ -1,5 +1,10 @@
 # Select exactly one speaker-virtualization renderer.
 # Changes apply immediately; lower playback volume before switching.
+# The reserved Benchmark device bypasses the renderer so downstream EQ can be measured.
+If: regexSearch("PhantomDSP Bass Downstream", deviceName)
+Channel: L R
+Copy: L=L R=R
+Else:
 # A0 - original legacy renderer
 # Include: main.txt
 # A100 - accepted default: original A sound, both branches advanced 100 samples (2.08 ms)
@@ -10,3 +15,4 @@ Include: main - A 100-sample advance.txt
 # Include: main - LR4 bass crossover.txt
 # Historical C - 65 Hz LR4 bass crossover
 # Include: main - LR4 65 Hz bass crossover.txt
+EndIf:

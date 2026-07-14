@@ -22,7 +22,8 @@ if ([string]::IsNullOrWhiteSpace($CombinedReferenceDirectory)) {
 $Captures = @(
     @{ Name = "combined"; Suffix = "PhantomDSP Bass Combined" },
     @{ Name = "convolved"; Suffix = "PhantomDSP Bass Convolved" },
-    @{ Name = "clean"; Suffix = "PhantomDSP Bass Clean" }
+    @{ Name = "clean"; Suffix = "PhantomDSP Bass Clean" },
+    @{ Name = "downstream"; Suffix = "PhantomDSP Bass Downstream" }
 )
 
 foreach ($Capture in $Captures) {

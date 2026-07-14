@@ -15,7 +15,7 @@ Open Codex at the PhantomDSP repository on the Windows playback PC and give it t
 >
 > Diagnose any failure from its complete output and make only the smallest Windows measurement-tooling fix needed. Do not alter EQ, delays, convolution assets, normal routing, or Windows audio settings. Ask before changing anything outside the repository.
 >
-> Verify that all three capture directories—`combined`, `convolved`, and `clean`—contain both inputs, both outputs, probe metadata, and a Benchmark log. Each log must show the intended reserved device name and must load `tools\measurement\equalizerapo\bass-branch-output.txt`. The convolved log must show the `LL + RIL` / `LR + RIR` override; the clean log must show the `LLLOW + RLLOW` / `LRLOW + RRLOW` override. Neither impulse run may clip.
+> Verify that all four capture directories—`combined`, `convolved`, `clean`, and `downstream`—contain both inputs, both outputs, probe metadata, and a Benchmark log. Each log must show the intended reserved device name. The first three must load `tools\measurement\equalizerapo\bass-branch-output.txt`; the convolved log must show the `LL + RIL` / `LR + RIR` override and the clean log the `LLLOW + RLLOW` / `LRLOW + RRLOW` override. The downstream log must show that `Bass Crossover Selector.txt` bypassed the renderer. No impulse run may clip.
 >
 > The runner must report that the combined outputs match the checked-in digital baseline. If they do not, stop and identify the configuration difference instead of committing misleading measurements. Do not run the macOS analyzer.
 >

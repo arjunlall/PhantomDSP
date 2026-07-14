@@ -1,8 +1,8 @@
 # Bass Branch Measurement
 
-This workflow measures the current clean-bass handoff without reproducing Equalizer APO's filters in another DSP engine. It captures the complete output, the convolved branch alone, and the clean-low branch alone. All three pass through the same post-sum, target, headphone, and personal-balance filters.
+This workflow measures the current clean-bass handoff without reproducing Equalizer APO's filters in another DSP engine. It captures the complete output, the convolved branch alone, the clean-low branch alone, and a downstream-only identity reference. The bass-branch analyzer uses the first three; the downstream capture supports renderer de-embedding.
 
-The measurement-only router sits immediately after the normal branch sum. It activates only when Benchmark uses the reserved names `PhantomDSP Bass Convolved` or `PhantomDSP Bass Clean`; normal playback is unchanged.
+The measurement-only router sits immediately after the normal branch sum. It activates only when Benchmark uses the reserved names `PhantomDSP Bass Convolved` or `PhantomDSP Bass Clean`. The reserved `PhantomDSP Bass Downstream` device bypasses the complete renderer at its selector while retaining root-level target/headphone processing. Normal playback is unchanged.
 
 ## Capture on Windows
 
@@ -18,6 +18,7 @@ The runner makes left-only and right-only captures for:
 - `combined`: the existing convolved-plus-clean renderer.
 - `convolved`: `LL + RIL` and `LR + RIR` before downstream processing.
 - `clean`: `LLLOW + RLLOW` and `LRLOW + RRLOW` before downstream processing.
+- `downstream`: renderer bypass for measuring target, headphone, and personal EQ alone.
 
 The base device name remains part of each reserved Benchmark name so the `Device: Output A1 Voicemeeter` selector in `config.txt` still matches. Override it only if the active selector changes:
 
@@ -26,7 +27,7 @@ The base device name remains part of each reserved Benchmark name so the `Device
   -BaseDeviceName "Output A1 Voicemeeter"
 ```
 
-The runner skips redundant stress sweeps and writes `measurements\bass-branches\raw\{combined,convolved,clean}`. It also requires the new combined outputs to match the checked-in digital baseline byte-for-byte. If an impulse capture clips, rerun all three with `-ProbeAmplitudeDbfs -6`.
+The runner skips redundant stress sweeps and writes `measurements\bass-branches\raw\{combined,convolved,clean,downstream}`. It also requires the new combined outputs to match the checked-in digital baseline byte-for-byte. If an impulse capture clips, rerun all four with `-ProbeAmplitudeDbfs -6`.
 
 ### Candidate Captures
 

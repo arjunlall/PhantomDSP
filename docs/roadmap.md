@@ -62,6 +62,18 @@ The [offline BRIR advance analysis](../measurements/ir-advance/report.md) tests 
 - [ ] If pursuing more than 100 samples, replace the clean branch with an equally advanced short 2×2 low-frequency renderer or complementary spectral replacement.
 - [ ] Capture accepted A100 through Equalizer APO Benchmark; benchmark any redesigned 200-sample candidate before listening.
 
+### Build the Minimum-Latency 2×2 Renderer
+
+- [x] Add a downstream-only Benchmark bypass that is inert during normal playback.
+- [x] Add an A100 reference runner and de-embedding analyzer.
+- [ ] Capture A100 `combined`, `convolved`, `clean`, and `downstream` matrices on Windows.
+- [ ] Recover the speaker-renderer-only A100 matrix and verify branch closure after de-embedding.
+- [ ] Derive smooth low-frequency interaural level and timing targets without copying room resonances.
+- [ ] Extend the base response flat to 20 Hz or lower, with a protective subsonic roll-off and a separate common preference shelf.
+- [ ] Merge synthesized bass into the original BRIR over a broad complex transition that preserves upper-bass harmonics and onset cues.
+- [ ] Render causal 200-sample-advanced stereo IR pairs; remove the parallel clean branch in the opt-in candidate only.
+- [ ] Validate response, interaural phase, timing, decay, peak headroom, and Equalizer APO CPU before listening.
+
 Success means removing only common leading time: no transient truncation, no change to spatial relationships, and no new bass-transition error. This experiment does not address driver, application, or device-buffer latency.
 
 ### Close the Acoustic Loop When Practical

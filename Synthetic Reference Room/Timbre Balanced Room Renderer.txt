@@ -1,0 +1,14 @@
+# Experimental treatment-aware timbre candidate; not the production default.
+# Candidate K with only the deterministic microcluster spectrum aligned to the theoretical treated room.
+# Personal direct sound, bass, timing, specular and late fields, and directional ear ratios are unchanged.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\timbre-balanced\Timbre Balanced Room Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\timbre-balanced\Timbre Balanced Room Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR

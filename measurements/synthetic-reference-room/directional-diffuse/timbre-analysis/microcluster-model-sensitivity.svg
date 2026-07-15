@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550.0" y="32" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="600">Candidate K Microcluster Excess: Room-Model Sensitivity</text>
+<line x1="88.00" y1="62" x2="88.00" y2="548" stroke="#e5e7eb"/>
+<text x="88.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">1.5k</text>
+<line x1="223.58" y1="62" x2="223.58" y2="548" stroke="#e5e7eb"/>
+<text x="223.58" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">2k</text>
+<line x1="414.67" y1="62" x2="414.67" y2="548" stroke="#e5e7eb"/>
+<text x="414.67" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">3k</text>
+<line x1="655.41" y1="62" x2="655.41" y2="548" stroke="#e5e7eb"/>
+<text x="655.41" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">5k</text>
+<line x1="813.98" y1="62" x2="813.98" y2="548" stroke="#e5e7eb"/>
+<text x="813.98" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">7k</text>
+<line x1="982.08" y1="62" x2="982.08" y2="548" stroke="#e5e7eb"/>
+<text x="982.08" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">10k</text>
+<line x1="1068.00" y1="62" x2="1068.00" y2="548" stroke="#e5e7eb"/>
+<text x="1068.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">12k</text>
+<line x1="88" y1="548.00" x2="1068" y2="548.00" stroke="#e5e7eb"/>
+<text x="78" y="552.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-18.0</text>
+<line x1="88" y1="467.00" x2="1068" y2="467.00" stroke="#e5e7eb"/>
+<text x="78" y="471.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-12.0</text>
+<line x1="88" y1="386.00" x2="1068" y2="386.00" stroke="#e5e7eb"/>
+<text x="78" y="390.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-6.00</text>
+<line x1="88" y1="305.00" x2="1068" y2="305.00" stroke="#e5e7eb"/>
+<text x="78" y="309.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">0.00</text>
+<line x1="88" y1="224.00" x2="1068" y2="224.00" stroke="#e5e7eb"/>
+<text x="78" y="228.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">6.00</text>
+<line x1="88" y1="143.00" x2="1068" y2="143.00" stroke="#e5e7eb"/>
+<text x="78" y="147.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">12.0</text>
+<line x1="88" y1="62.00" x2="1068" y2="62.00" stroke="#e5e7eb"/>
+<text x="78" y="66.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">18.0</text>
+<rect x="88" y="62" width="980" height="486" fill="none" stroke="#6b7280"/>
+<text x="578.0" y="602" text-anchor="middle" font-family="sans-serif" font-size="14">Auditory-band center frequency (Hz)</text>
+<text x="20" y="305.0" text-anchor="middle" transform="rotate(-90 20 305.0)" font-family="sans-serif" font-size="14">Mean K minus theoretical microcluster energy (dB)</text>
+<polyline points="88.00,335.29 117.11,326.36 145.99,332.52 174.66,342.86 203.14,346.74 231.43,339.40 259.55,343.30 287.52,351.45 315.33,358.01 343.00,370.38 370.55,384.77 397.96,418.72 425.26,430.44 452.46,414.79 479.55,394.71 506.54,380.66 533.44,386.02 560.25,386.20 586.99,376.44 613.65,365.84 640.23,350.73 666.75,326.84 693.21,298.90 719.61,265.38 745.94,235.02 772.23,195.74 798.47,160.46 824.65,115.09 850.80,78.63 876.90,97.61 902.96,135.80 928.98,162.67 954.96,166.54 980.92,158.72 1006.84,138.68 1032.73,133.46 1058.59,160.76" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,345.39 117.11,338.07 145.99,345.99 174.66,358.42 203.14,364.65 231.43,359.72 259.55,365.95 287.52,376.54 315.33,385.81 343.00,401.17 370.55,418.60 397.96,455.37 425.26,469.82 452.46,456.92 479.55,439.71 506.54,428.51 533.44,436.53 560.25,439.00 586.99,431.53 613.65,422.86 640.23,410.19 666.75,388.97 693.21,363.57 719.61,332.22 745.94,303.65 772.23,265.85 798.47,231.69 824.65,188.36 850.80,153.39 876.90,173.71 902.96,213.77 928.98,241.60 954.96,246.18 980.92,239.55 1006.84,220.61 1032.73,216.89 1058.59,246.55" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,345.47 117.11,338.17 145.99,346.11 174.66,358.58 203.14,364.86 231.43,359.98 259.55,366.27 287.52,376.92 315.33,386.27 343.00,401.73 370.55,419.25 397.96,456.06 425.26,470.40 452.46,457.12 479.55,439.43 506.54,428.18 533.44,437.23 560.25,441.03 586.99,434.74 613.65,427.16 640.23,414.66 666.75,393.52 693.21,368.17 719.61,337.09 745.94,309.06 772.23,271.91 798.47,238.77 824.65,194.79 850.80,160.10 876.90,181.59 902.96,222.52 928.98,251.58 954.96,256.77 980.92,249.55 1006.84,229.81 1032.73,226.00 1058.59,254.06" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,345.32 117.11,337.99 145.99,345.88 174.66,358.29 203.14,364.49 231.43,359.52 259.55,365.72 287.52,376.26 315.33,385.48 343.00,400.78 370.55,418.15 397.96,454.92 425.26,469.53 452.46,457.03 479.55,440.33 506.54,429.25 533.44,436.37 560.25,437.61 586.99,429.05 613.65,419.35 640.23,406.64 666.75,385.49 693.21,360.18 719.61,328.68 745.94,299.69 772.23,261.34 798.47,226.18 824.65,183.74 850.80,148.65 876.90,167.90 902.96,207.24 928.98,233.80 954.96,237.77 980.92,231.96 1006.84,213.99 1032.73,210.37 1058.59,241.93" fill="none" stroke="#059669" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,355.49 117.11,349.80 145.99,359.49 174.66,374.05 203.14,382.67 231.43,380.17 259.55,388.78 287.52,401.84 315.33,413.88 343.00,432.32 370.55,452.83 397.96,492.48 425.26,509.74 452.46,499.68 479.55,485.42 506.54,477.15 533.44,487.85 560.25,492.63 586.99,487.49 613.65,480.79 640.23,470.74 666.75,452.37 693.21,429.64 719.61,400.56 745.94,373.85 772.23,337.61 798.47,304.58 824.65,263.74 850.80,230.56 876.90,252.38 902.96,294.29 928.98,322.91 954.96,328.21 980.92,323.17 1006.84,305.74 1032.73,303.77 1058.59,336.49" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="100" y1="82" x2="124" y2="82" stroke="#2563eb" stroke-width="3"/>
+<text x="131" y="86" font-family="sans-serif" font-size="13">full treated-room model</text>
+<line x1="250" y1="82" x2="274" y2="82" stroke="#7c3aed" stroke-width="3"/>
+<text x="281" y="86" font-family="sans-serif" font-size="13">half-strength losses</text>
+<line x1="400" y1="82" x2="424" y2="82" stroke="#d97706" stroke-width="3"/>
+<text x="431" y="86" font-family="sans-serif" font-size="13">speaker directivity only</text>
+<line x1="550" y1="82" x2="574" y2="82" stroke="#059669" stroke-width="3"/>
+<text x="581" y="86" font-family="sans-serif" font-size="13">surface absorption only</text>
+<line x1="700" y1="82" x2="724" y2="82" stroke="#6b7280" stroke-width="3"/>
+<text x="731" y="86" font-family="sans-serif" font-size="13">directional HRTF only</text>
+</svg>

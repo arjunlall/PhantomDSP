@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550.0" y="32" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="600">Candidate K Microcluster Envelope versus Theoretical Treated Room</text>
+<line x1="88.00" y1="62" x2="88.00" y2="548" stroke="#e5e7eb"/>
+<text x="88.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">1.5k</text>
+<line x1="223.58" y1="62" x2="223.58" y2="548" stroke="#e5e7eb"/>
+<text x="223.58" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">2k</text>
+<line x1="414.67" y1="62" x2="414.67" y2="548" stroke="#e5e7eb"/>
+<text x="414.67" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">3k</text>
+<line x1="655.41" y1="62" x2="655.41" y2="548" stroke="#e5e7eb"/>
+<text x="655.41" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">5k</text>
+<line x1="813.98" y1="62" x2="813.98" y2="548" stroke="#e5e7eb"/>
+<text x="813.98" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">7k</text>
+<line x1="982.08" y1="62" x2="982.08" y2="548" stroke="#e5e7eb"/>
+<text x="982.08" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">10k</text>
+<line x1="1068.00" y1="62" x2="1068.00" y2="548" stroke="#e5e7eb"/>
+<text x="1068.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">12k</text>
+<line x1="88" y1="548.00" x2="1068" y2="548.00" stroke="#e5e7eb"/>
+<text x="78" y="552.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-18.0</text>
+<line x1="88" y1="467.00" x2="1068" y2="467.00" stroke="#e5e7eb"/>
+<text x="78" y="471.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-13.3</text>
+<line x1="88" y1="386.00" x2="1068" y2="386.00" stroke="#e5e7eb"/>
+<text x="78" y="390.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-8.67</text>
+<line x1="88" y1="305.00" x2="1068" y2="305.00" stroke="#e5e7eb"/>
+<text x="78" y="309.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">-4.00</text>
+<line x1="88" y1="224.00" x2="1068" y2="224.00" stroke="#e5e7eb"/>
+<text x="78" y="228.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">0.67</text>
+<line x1="88" y1="143.00" x2="1068" y2="143.00" stroke="#e5e7eb"/>
+<text x="78" y="147.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">5.33</text>
+<line x1="88" y1="62.00" x2="1068" y2="62.00" stroke="#e5e7eb"/>
+<text x="78" y="66.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">10.0</text>
+<rect x="88" y="62" width="980" height="486" fill="none" stroke="#6b7280"/>
+<text x="578.0" y="602" text-anchor="middle" font-family="sans-serif" font-size="14">Auditory-band center frequency (Hz)</text>
+<text x="20" y="305.0" text-anchor="middle" transform="rotate(-90 20 305.0)" font-family="sans-serif" font-size="14">Microcluster energy relative to personal direct (dB)</text>
+<polyline points="88.00,337.70 117.11,316.51 145.99,317.25 174.66,320.15 203.14,322.14 231.43,318.80 259.55,337.81 287.52,350.62 315.33,361.65 343.00,393.46 370.55,430.49 397.96,481.25 425.26,490.82 452.46,489.52 479.55,489.32 506.54,483.37 533.44,493.39 560.25,490.71 586.99,480.66 613.65,472.38 640.23,450.07 666.75,419.54 693.21,379.88 719.61,340.16 745.94,295.62 772.23,249.83 798.47,194.56 824.65,138.16 850.80,103.05 876.90,117.54 902.96,159.52 928.98,197.98 954.96,208.46 980.92,213.15 1006.84,220.96 1032.73,244.06 1058.59,303.32" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,276.56 117.11,280.56 145.99,285.19 174.66,290.67 203.14,296.76 231.43,302.99 259.55,309.04 287.52,315.34 315.33,322.39 343.00,330.26 370.55,338.42 397.96,346.91 425.26,357.32 452.46,370.51 479.55,385.01 506.54,397.51 533.44,405.85 560.25,412.86 586.99,411.35 613.65,395.96 640.23,390.81 666.75,392.90 693.21,400.09 719.61,403.60 745.94,403.46 772.23,402.30 798.47,396.43 824.65,404.20 850.80,400.38 876.90,375.27 902.96,360.91 928.98,360.46 954.96,374.42 980.92,407.53 1006.84,444.85 1032.73,488.16 1058.59,523.69" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,269.80 117.11,276.35 145.99,300.54 174.66,335.07 203.14,355.25 231.43,352.17 259.55,355.29 287.52,376.07 315.33,396.02 343.00,411.75 370.55,428.08 397.96,481.62 425.26,523.30 452.46,512.42 479.55,494.10 506.54,490.63 533.44,501.86 560.25,501.47 586.99,478.67 613.65,445.93 640.23,432.43 666.75,402.59 693.21,371.01 719.61,322.37 745.94,285.37 772.23,226.51 798.47,176.24 824.65,130.43 850.80,78.95 876.90,104.79 902.96,156.53 928.98,182.33 954.96,191.96 980.92,211.48 1006.84,214.51 1032.73,242.60 1058.59,318.59" fill="none" stroke="#059669" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,253.04 117.11,257.38 145.99,261.83 174.66,267.21 203.14,273.30 231.43,279.53 259.55,285.59 287.52,291.90 315.33,298.96 343.00,306.84 370.55,315.02 397.96,323.54 425.26,334.23 452.46,349.10 479.55,367.71 506.54,381.93 533.44,381.05 560.25,370.50 586.99,364.29 613.65,365.90 640.23,374.11 666.75,373.07 693.21,366.49 719.61,360.81 745.94,357.47 772.23,354.99 798.47,346.05 824.65,352.74 850.80,363.71 876.90,380.36 902.96,390.21 928.98,385.85 954.96,382.05 980.92,393.25 1006.84,418.30 1032.73,439.60 1058.59,469.13" fill="none" stroke="#86efac" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="100" y1="82" x2="124" y2="82" stroke="#2563eb" stroke-width="3"/>
+<text x="131" y="86" font-family="sans-serif" font-size="13">K left microclusters</text>
+<line x1="250" y1="82" x2="274" y2="82" stroke="#93c5fd" stroke-width="3"/>
+<text x="281" y="86" font-family="sans-serif" font-size="13">theoretical left microclusters</text>
+<line x1="400" y1="82" x2="424" y2="82" stroke="#059669" stroke-width="3"/>
+<text x="431" y="86" font-family="sans-serif" font-size="13">K right microclusters</text>
+<line x1="550" y1="82" x2="574" y2="82" stroke="#86efac" stroke-width="3"/>
+<text x="581" y="86" font-family="sans-serif" font-size="13">theoretical right microclusters</text>
+</svg>

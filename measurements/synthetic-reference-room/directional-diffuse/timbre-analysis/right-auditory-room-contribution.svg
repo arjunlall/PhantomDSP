@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550.0" y="32" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="600">Candidate K Right Speaker Auditory-Band Room Contribution</text>
+<line x1="88.00" y1="62" x2="88.00" y2="548" stroke="#e5e7eb"/>
+<text x="88.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">1.5k</text>
+<line x1="223.58" y1="62" x2="223.58" y2="548" stroke="#e5e7eb"/>
+<text x="223.58" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">2k</text>
+<line x1="414.67" y1="62" x2="414.67" y2="548" stroke="#e5e7eb"/>
+<text x="414.67" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">3k</text>
+<line x1="655.41" y1="62" x2="655.41" y2="548" stroke="#e5e7eb"/>
+<text x="655.41" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">5k</text>
+<line x1="813.98" y1="62" x2="813.98" y2="548" stroke="#e5e7eb"/>
+<text x="813.98" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">7k</text>
+<line x1="982.08" y1="62" x2="982.08" y2="548" stroke="#e5e7eb"/>
+<text x="982.08" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">10k</text>
+<line x1="1068.00" y1="62" x2="1068.00" y2="548" stroke="#e5e7eb"/>
+<text x="1068.00" y="573" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#374151">12k</text>
+<line x1="88" y1="548.00" x2="1068" y2="548.00" stroke="#e5e7eb"/>
+<text x="78" y="552.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">0.00</text>
+<line x1="88" y1="467.00" x2="1068" y2="467.00" stroke="#e5e7eb"/>
+<text x="78" y="471.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">2.00</text>
+<line x1="88" y1="386.00" x2="1068" y2="386.00" stroke="#e5e7eb"/>
+<text x="78" y="390.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">4.00</text>
+<line x1="88" y1="305.00" x2="1068" y2="305.00" stroke="#e5e7eb"/>
+<text x="78" y="309.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">6.00</text>
+<line x1="88" y1="224.00" x2="1068" y2="224.00" stroke="#e5e7eb"/>
+<text x="78" y="228.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">8.00</text>
+<line x1="88" y1="143.00" x2="1068" y2="143.00" stroke="#e5e7eb"/>
+<text x="78" y="147.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">10.0</text>
+<line x1="88" y1="62.00" x2="1068" y2="62.00" stroke="#e5e7eb"/>
+<text x="78" y="66.00" text-anchor="end" font-family="sans-serif" font-size="12" fill="#374151">12.0</text>
+<rect x="88" y="62" width="980" height="486" fill="none" stroke="#6b7280"/>
+<text x="578.0" y="602" text-anchor="middle" font-family="sans-serif" font-size="14">Auditory-band center frequency (Hz)</text>
+<text x="20" y="305.0" text-anchor="middle" transform="rotate(-90 20 305.0)" font-family="sans-serif" font-size="14">Complete/direct room contribution (dB)</text>
+<polyline points="88.00,438.12 117.11,453.65 145.99,462.90 174.66,448.39 203.14,468.32 231.43,465.06 259.55,468.36 287.52,477.18 315.33,478.52 343.00,489.68 370.55,503.34 397.96,515.18 425.26,526.96 452.46,524.89 479.55,530.94 506.54,522.17 533.44,519.19 560.25,519.58 586.99,516.79 613.65,513.74 640.23,510.71 666.75,503.64 693.21,490.74 719.61,463.58 745.94,432.60 772.23,366.23 798.47,288.59 824.65,211.00 850.80,123.51 876.90,182.62 902.96,283.18 928.98,329.98 954.96,345.61 980.92,372.35 1006.84,376.34 1032.73,415.93 1058.59,486.76" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,429.31 117.11,449.19 145.99,460.24 174.66,450.56 203.14,468.13 231.43,466.91 259.55,468.82 287.52,477.14 315.33,479.27 343.00,489.05 370.55,503.10 397.96,515.20 425.26,527.60 452.46,525.75 479.55,530.72 506.54,521.80 533.44,519.19 560.25,519.19 586.99,516.41 613.65,512.98 640.23,509.93 666.75,503.28 693.21,491.05 719.61,464.77 745.94,432.92 772.23,365.83 798.47,288.30 824.65,210.93 850.80,123.36 876.90,182.44 902.96,283.33 928.98,329.99 954.96,345.19 980.92,372.26 1006.84,376.24 1032.73,415.72 1058.59,486.57" fill="none" stroke="#059669" stroke-width="1.5" stroke-linejoin="round"/>
+<polyline points="88.00,415.69 117.11,433.23 145.99,432.31 174.66,414.99 203.14,428.16 231.43,432.26 259.55,437.03 287.52,443.19 315.33,445.55 343.00,455.70 370.55,469.61 397.96,479.27 425.26,492.48 452.46,497.68 479.55,509.59 506.54,505.93 533.44,502.68 560.25,499.76 586.99,496.75 613.65,497.00 640.23,498.19 666.75,496.29 693.21,489.75 719.61,479.18 745.94,464.70 772.23,435.62 798.47,393.17 824.65,356.32 850.80,333.90 876.90,389.02 902.96,446.77 928.98,469.39 954.96,473.47 980.92,481.10 1006.84,486.16 1032.73,504.97 1058.59,526.40" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="100" y1="82" x2="124" y2="82" stroke="#6b7280" stroke-width="3"/>
+<text x="131" y="86" font-family="sans-serif" font-size="13">complete K, coherent</text>
+<line x1="250" y1="82" x2="274" y2="82" stroke="#059669" stroke-width="3"/>
+<text x="281" y="86" font-family="sans-serif" font-size="13">K diffuse-energy bound</text>
+<line x1="400" y1="82" x2="424" y2="82" stroke="#d97706" stroke-width="3"/>
+<text x="431" y="86" font-family="sans-serif" font-size="13">theoretical treated-room bound</text>
+</svg>

@@ -85,3 +85,25 @@ Both outputs are stereo 48 kHz, 24-bit PCM. Windows Benchmark verified the exact
 | `IRs/midrange-normalized/Midrange Normalized Room Right Speaker.wav` | `06faacc6675991279232a2a1ac8cf57376e0a02a0eb5fc13c1d770dd98bf42a1` | `ee42a346edee554f4de4388fdb4f25caec13b9d244a7b303098f5b6fa400f538` |
 
 Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames. The new filter starts at sample zero, adds no bulk delay, and leaves discarded convolution-tail energy below −113 dB. J has passed offline validation; Windows runtime validation remains pending. Exact filters, response deltas, and I/J plots are recorded in the [Candidate J analysis](../measurements/synthetic-reference-room/midrange-normalized/analysis/report.md).
+
+## Synthetic Candidate K
+
+`tools/measurement/render_directional_diffuse_room.py` verifies Candidate J and changes only the deterministic microcluster branch. It redistributes existing 4–12 kHz diffuse power between ears using the matched five-subject directional HRTF ensemble while preserving fused per-speaker power.
+
+| File | Parent J SHA-256 | Derived K SHA-256 |
+| --- | --- | --- |
+| `IRs/directional-diffuse/Directional Diffuse Room Left Speaker.wav` | `8b7e9015b2675a9e3b21b5f42c5a3eba56a3ceffb84d9f6cb8cc859eea3728d1` | `fb414138f79df16065f6b152f14bf046eaba7f2e785355c9628c6d38f38034ab` |
+| `IRs/directional-diffuse/Directional Diffuse Room Right Speaker.wav` | `ee42a346edee554f4de4388fdb4f25caec13b9d244a7b303098f5b6fa400f538` | `6bd9026e3f99f45caeb262818b6b2a7288975546c17471d7e9f96a27eefdc08a` |
+
+Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames. K has passed offline validation and informal listening; Windows runtime validation remains pending. Exact directional inputs, filters, and hashes are recorded in the [Candidate K analysis](../measurements/synthetic-reference-room/directional-diffuse/analysis/report.md).
+
+## Treatment-Aware Timbre Candidate
+
+`tools/measurement/render_timbre_balanced_room.py` verifies Candidate K and the independent auditory-band [timbre audit](../measurements/synthetic-reference-room/directional-diffuse/timbre-analysis/report.md). It applies one common attenuation-only microcluster filter per speaker, preserving both ear paths' directional ratio and all other branches.
+
+| File | Parent K SHA-256 | Derived SHA-256 |
+| --- | --- | --- |
+| `IRs/timbre-balanced/Timbre Balanced Room Left Speaker.wav` | `fb414138f79df16065f6b152f14bf046eaba7f2e785355c9628c6d38f38034ab` | `c6e58e93b8f4c72c18cb9e1eb57120d71c34f8fdfea79d7ad2043fc89eec9fa0` |
+| `IRs/timbre-balanced/Timbre Balanced Room Right Speaker.wav` | `6bd9026e3f99f45caeb262818b6b2a7288975546c17471d7e9f96a27eefdc08a` | `3b454023a56eb9d050a3a326cefbe40d6e2c4b1f8367bcb1c840d3a5c4074efd` |
+
+Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames. The minimum-phase filters begin at sample zero but add no bulk delay; direct sound and every non-microcluster branch remain inherited from K. Offline validation passes with +2.62 dB modeled maximum correlated gain. Windows runtime validation and K/L listening remain pending. Exact filters, response deltas, and plots are in the [timbre-balanced analysis](../measurements/synthetic-reference-room/timbre-balanced/analysis/report.md).

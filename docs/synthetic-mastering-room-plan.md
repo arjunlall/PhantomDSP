@@ -1,6 +1,6 @@
 # Synthetic Mastering Room Plan
 
-Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidates H and I passed offline and Windows validation, and listening found I successful. Candidate J is generated, offline-validated, and informally preferred tonally, but its apparent image may be too high. Candidate K is now offline-validated as a microcluster-only directional-HRTF experiment; Windows Benchmark and J/K listening are next.
+Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidates H and I passed offline and Windows validation, and listening found I successful. Candidate J was preferred tonally but placed the image too high. Candidate K's microcluster-only directional-HRTF change lowered the image and improved the stereo and phantom presentation in informal listening. A treatment-aware timbre audit now supports one final microcluster-envelope candidate; Windows Benchmark and K/L listening are next.
 
 ## Objective
 
@@ -89,5 +89,13 @@ The analysis covered G's actual geometry: direct sources at ±30°/0°, side-wal
 K treats its diffuse field as 80% horizontal side energy, 10% floor, and 10% ceiling. For each virtual speaker, the matched HRTF ensemble and personal direct paths define a desired two-ear power ratio. The existing smoothed microcluster power is redistributed to that ratio rather than multiplied by the raw dataset delta, which would double-count head shadow and alter tonality. The causal minimum-phase correction fades in from 3–4 kHz, is fully active from 4–12 kHz, and fades out by 14 kHz.
 
 Offline, K changes individual ear paths by up to roughly 3.3 dB in the localization band while retaining left/right fused microcluster power within 0.113/0.112 dB RMS. Bass changes by 0.00004 dB RMS, 200 Hz–1.8 kHz by 0.0074 dB RMS, and modeled correlated gain is +2.59 dB. J remains byte-identical. Acceptance now depends on Windows Benchmark and listening: K should lower the apparent image without pulling the center inward, narrowing the speakers, or weakening externalization.
+
+Informal listening found that K did lower the image slightly and made the stereo image, soundstage, and phantom center more convincing. Its absolute diffuse-field timbre remained the only open design question.
+
+## Candidate L Treatment-Aware Timbre Refinement
+
+The [auditory-band timbre audit](../measurements/synthetic-reference-room/directional-diffuse/timbre-analysis/report.md) identifies a specific modeling omission: K preserves the old broad microcluster spectrum while changing only its ear allocation, so it includes directional HRTF behavior but not G's monitor-directivity and treated-surface high-frequency losses. From 6–10 kHz, K's microcluster branch is 11.57/11.30 dB above the full left/right theoretical target and 5.98/5.76 dB above a half-strength sensitivity target. Its net complete-response effect remains roughly +3.78/+4.22 dB from 7–10 kHz.
+
+Candidate L, exposed as `Timbre Balanced Room Renderer.txt`, changes only that microcluster envelope. The correction is attenuation-only, causal minimum phase, and shared within each speaker's two ear paths. It leaves K's personal direct response, bass, timing, specular and late fields, and directional ratios unchanged. Offline, the modeled microcluster residual is below 0.01 dB from 6–10 kHz; the complete response falls 3.10/3.33 dB in that band, 3–5 kHz changes by only 0.03/0.02 dB RMS, and modeled correlated gain is +2.62 dB. The [Candidate L report](../measurements/synthetic-reference-room/timbre-balanced/analysis/report.md) records filters, hashes, response deltas, and plots.
 
 Research basis: the [CIPIC HRTF Database](https://escholarship.org/uc/item/3d10j9jw), the [ARI HRTF Database](https://www.oeaw.ac.at/en/ari/outreach/software/hrtf-database), and Langendijk and Bronkhorst's study of [spectral localization cues](https://doi.org/10.1121/1.424945).

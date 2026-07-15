@@ -1,0 +1,204 @@
+{
+  "candidate_k_files": {
+    "left": {
+      "frames": 32768,
+      "path": "Synthetic Reference Room/IRs/directional-diffuse/Directional Diffuse Room Left Speaker.wav",
+      "sample_width_bits": 24,
+      "sha256": "fb414138f79df16065f6b152f14bf046eaba7f2e785355c9628c6d38f38034ab"
+    },
+    "right": {
+      "frames": 32768,
+      "path": "Synthetic Reference Room/IRs/directional-diffuse/Directional Diffuse Room Right Speaker.wav",
+      "sample_width_bits": 24,
+      "sha256": "6bd9026e3f99f45caeb262818b6b2a7288975546c17471d7e9f96a27eefdc08a"
+    }
+  },
+  "candidate_k_rendered_hashes": {
+    "left": "fb414138f79df16065f6b152f14bf046eaba7f2e785355c9628c6d38f38034ab",
+    "right": "6bd9026e3f99f45caeb262818b6b2a7288975546c17471d7e9f96a27eefdc08a"
+  },
+  "design": {
+    "attenuation_only": true,
+    "base_candidate": "K directional diffuse mastering room",
+    "bulk_delay_samples": 0,
+    "changed_branch": "directional deterministic microclusters only",
+    "correction_full_strength_hz": [
+      6000.0,
+      12000.0
+    ],
+    "correction_source": "candidate K ERB timbre audit",
+    "correction_support_hz": [
+      4500.0,
+      14000.0
+    ],
+    "filter_calibration_iterations": 3,
+    "filter_fade_samples": 512,
+    "filter_samples": 4096,
+    "interaural_contract": "one identical microcluster filter per virtual speaker, shared by both ears",
+    "maximum_attenuation_db": -18.0,
+    "nfft": 65536,
+    "output_length_samples": 32768,
+    "sample_rate_hz": 48000,
+    "unchanged_branches": [
+      "personal direct and bass",
+      "treated specular reflections",
+      "synthetic late field",
+      "K interaural directional ratios",
+      "J 200 Hz-1.8 kHz tonal normalization"
+    ]
+  },
+  "direct_peak_samples": {
+    "LL": 9,
+    "LR": 15,
+    "RL": 15,
+    "RR": 9
+  },
+  "filter_impulse_first_nonzero_sample": {
+    "left": 0,
+    "right": 0
+  },
+  "filter_response_db": {
+    "left": {
+      "10000": -11.274673,
+      "12000": -12.695891,
+      "14000": -0.0,
+      "4000": -0.0,
+      "5000": 3e-06,
+      "6000": -5.765546,
+      "7000": -13.820747,
+      "8000": -14.845468
+    },
+    "right": {
+      "10000": -10.529408,
+      "12000": -8.673164,
+      "14000": -0.0,
+      "4000": -0.0,
+      "5000": 1e-06,
+      "6000": -3.814416,
+      "7000": -11.57516,
+      "8000": -15.872738
+    }
+  },
+  "microcluster_interaural_ratio_delta_6_10_khz": {
+    "left": {
+      "maximum_db": 0.0,
+      "mean_db": 0.0,
+      "minimum_db": -0.0,
+      "rms_db": 0.0
+    },
+    "right": {
+      "maximum_db": 0.0,
+      "mean_db": -0.0,
+      "minimum_db": -0.0,
+      "rms_db": 0.0
+    }
+  },
+  "microcluster_residual_vs_theory_6_10_khz": {
+    "left": {
+      "maximum_db": 0.005949,
+      "mean_db": 0.000214,
+      "minimum_db": -0.003098,
+      "rms_db": 0.002492
+    },
+    "right": {
+      "maximum_db": 0.006005,
+      "mean_db": 0.00013,
+      "minimum_db": -0.002428,
+      "rms_db": 0.002434
+    }
+  },
+  "modeled_correlated_renderer_gain_db": 2.620618,
+  "plots": [
+    "microcluster-timbre-filters.svg",
+    "microcluster-residual-vs-theory.svg",
+    "k-versus-timbre-balanced-full-spectrum.svg",
+    "timbre-balanced-minus-k.svg"
+  ],
+  "rendered_files": {
+    "left": {
+      "channels": 2,
+      "frames": 32768,
+      "path": "Synthetic Reference Room/IRs/timbre-balanced/Timbre Balanced Room Left Speaker.wav",
+      "peak_linear": 0.052122474,
+      "sample_width_bits": 24,
+      "sha256": "c6e58e93b8f4c72c18cb9e1eb57120d71c34f8fdfea79d7ad2043fc89eec9fa0"
+    },
+    "right": {
+      "channels": 2,
+      "frames": 32768,
+      "path": "Synthetic Reference Room/IRs/timbre-balanced/Timbre Balanced Room Right Speaker.wav",
+      "peak_linear": 0.0522331,
+      "sample_width_bits": 24,
+      "sha256": "3b454023a56eb9d050a3a326cefbe40d6e2c4b1f8367bcb1c840d3a5c4074efd"
+    }
+  },
+  "response_delta_balanced_minus_k": {
+    "left": {
+      "10-14 kHz": {
+        "maximum_db": 0.049261,
+        "mean_db": -1.171277,
+        "minimum_db": -2.938537,
+        "rms_db": 1.634224
+      },
+      "20-80 Hz": {
+        "maximum_db": 0.000156,
+        "mean_db": -2.3e-05,
+        "minimum_db": -0.000178,
+        "rms_db": 8.6e-05
+      },
+      "200 Hz-1.8 kHz": {
+        "maximum_db": 0.447114,
+        "mean_db": -0.007153,
+        "minimum_db": -0.29801,
+        "rms_db": 0.128884
+      },
+      "3-5 kHz": {
+        "maximum_db": 0.092653,
+        "mean_db": -0.000602,
+        "minimum_db": -0.090665,
+        "rms_db": 0.031672
+      },
+      "6-10 kHz": {
+        "maximum_db": -0.956904,
+        "mean_db": -3.102077,
+        "minimum_db": -5.166552,
+        "rms_db": 3.30647
+      }
+    },
+    "right": {
+      "10-14 kHz": {
+        "maximum_db": 0.02212,
+        "mean_db": -1.188449,
+        "minimum_db": -2.944113,
+        "rms_db": 1.636865
+      },
+      "20-80 Hz": {
+        "maximum_db": 0.000134,
+        "mean_db": 2.5e-05,
+        "minimum_db": -8.1e-05,
+        "rms_db": 6.2e-05
+      },
+      "200 Hz-1.8 kHz": {
+        "maximum_db": 0.246648,
+        "mean_db": -0.00298,
+        "minimum_db": -0.224537,
+        "rms_db": 0.076532
+      },
+      "3-5 kHz": {
+        "maximum_db": 0.061806,
+        "mean_db": -0.003457,
+        "minimum_db": -0.076217,
+        "rms_db": 0.020422
+      },
+      "6-10 kHz": {
+        "maximum_db": -0.554336,
+        "mean_db": -3.329025,
+        "minimum_db": -5.943047,
+        "rms_db": 3.5832
+      }
+    }
+  },
+  "schema_version": 1,
+  "status": "opt-in treatment-aware timbre candidate",
+  "timbre_audit": "measurements/synthetic-reference-room/directional-diffuse/timbre-analysis/summary.json"
+}

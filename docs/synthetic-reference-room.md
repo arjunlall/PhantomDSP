@@ -98,7 +98,7 @@ Offline validation finds 0.168 maximum broadband center correlation, under 0.001
 - Both side walls and the ceiling receive 9 dB low-frequency attenuation; the floor receives 12 dB. The shelves transition broadly around 1 kHz and are effectively unity by the upper spatial band.
 - Only coherent specular paths change. The diffuse field continues to provide lower-midrange and binaural room energy.
 
-H reduces G's worst smoothed 200–350 Hz direct-path null from −5.70 to −3.44 dB for LL and from −4.17 to −2.02 dB for RR. H changes G by 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz; maximum center IACC remains 0.168 and modeled correlated gain is +2.61 dB. Exact filter responses, hashes, plots, and response metrics are in the [Candidate H report](../measurements/synthetic-reference-room/idealized-treated/analysis/report.md).
+H reduces G's worst smoothed 200–350 Hz direct-path null from −5.70 to −3.44 dB for LL and from −4.17 to −2.02 dB for RR. H changes G by 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz; maximum center IACC remains 0.168 and modeled correlated gain is +2.61 dB. Windows Benchmark passed with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.62–0.70% single-core CPU. Exact filter responses, hashes, plots, and response metrics are in the [Candidate H report](../measurements/synthetic-reference-room/idealized-treated/analysis/report.md).
 
 ## A/B/C/D/E/F/G/H Listening
 
@@ -186,7 +186,7 @@ Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
 Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, and G have passed Windows Benchmark; G is the listening reference for H, H is offline-validated, and A remains the production default.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, and H have passed Windows Benchmark; G is the listening reference for H, H is active for listening, and A remains the production default.
 
 ## Next Stages
 

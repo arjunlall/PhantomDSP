@@ -124,7 +124,8 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Build and offline-validate one complete candidate G with soffit geometry, controlled directivity, a 3 cm rigid lateral offset, attenuated specular paths, and deterministic binaural diffusion.
 - [x] Benchmark and audition G against E with all downstream filters unchanged; G passed runtime validation and sounded much better than F and competitive with E, but exposed a broad 200–300 Hz specular cancellation.
 - [x] Build candidate H with post-calibration idealized lower-midrange treatment on G's coherent floor, ceiling, and side-wall reflections while preserving its diffuse and late fields.
-- [ ] Benchmark and audition H against G for a smoother lower midrange without weakening externalization or room naturalness.
+- [x] Benchmark H on Windows; all three probes loaded only the intended 2×2 chain, with no clipping or configuration errors and 5.54 dB correlated-sweep headroom.
+- [ ] Audition H against G for a smoother lower midrange without weakening externalization or room naturalness.
 - [ ] Parameterize speaker azimuth after direct ILD/HRTF and early-reflection direction models can change together; reuse the shared synthetic late field.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
 - [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.

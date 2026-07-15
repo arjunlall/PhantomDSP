@@ -1,6 +1,6 @@
 # Synthetic Mastering Room Plan
 
-Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidate H is generated and offline-validated as the next opt-in treatment experiment.
+Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidate H passed offline and Windows validation and is active for the next listening comparison.
 
 ## Objective
 
@@ -51,4 +51,4 @@ G's remaining 200–300 Hz dip is not a room mode. Its coherent floor and near-s
 
 H keeps G's complete geometry and every non-specular branch fixed. After G's specular-energy calibration, causal low-frequency shelves attenuate both side walls and the ceiling by 9 dB and the floor by 12 dB, with a broad transition centered at 1 kHz. This represents idealized lower-midrange treatment that is difficult to realize physically; no final renormalization restores the removed energy.
 
-Offline, H improves the worst smoothed 200–350 Hz direct-path null by 2.26 dB for LL and 2.15 dB for RR. It changes G by only 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz, retains 0.168 maximum center IACC, and models +2.61 dB maximum correlated gain. Exact treatment response, hashes, plots, and response deltas are in the [Candidate H analysis](../measurements/synthetic-reference-room/idealized-treated/analysis/report.md).
+Offline, H improves the worst smoothed 200–350 Hz direct-path null by 2.26 dB for LL and 2.15 dB for RR. It changes G by only 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz, retains 0.168 maximum center IACC, and models +2.61 dB maximum correlated gain. Windows Benchmark passed with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.62–0.70% single-core CPU. Exact treatment response, hashes, plots, and response deltas are in the [Candidate H analysis](../measurements/synthetic-reference-room/idealized-treated/analysis/report.md).

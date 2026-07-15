@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "status": "opt-in candidate J midrange normalized mastering room",
+  "design": {
+    "sample_rate_hz": 48000,
+    "output_length_samples": 32768,
+    "nfft": 65536,
+    "base_candidate": "I tonally normalized room",
+    "correction": {
+      "reference": "complete-to-direct binaural energy ratio per virtual speaker",
+      "smoothing_fractional_octave": 6,
+      "flat_band_hz": [
+        1000.0,
+        1500.0
+      ],
+      "target_band_hz": [
+        200.0,
+        1000.0
+      ],
+      "transition_band_hz": [
+        900.0,
+        1800.0
+      ],
+      "target": "candidate I 200 Hz-1 kHz log-frequency mean",
+      "phase": "minimum phase",
+      "fir_samples": 4096,
+      "fir_fade_samples": 512,
+      "calibration_iterations": 0,
+      "maximum_absolute_gain_db": 6.0,
+      "bulk_delay_samples": 0,
+      "applied_identically_within_speaker_pairs": {
+        "left": [
+          "LL",
+          "LR"
+        ],
+        "right": [
+          "RL",
+          "RR"
+        ]
+      },
+      "evaluation_band_hz": [
+        200.0,
+        1500.0
+      ],
+      "transition_mode": "frequency-shaped raised cosine"
+    }
+  },
+  "direct_peak_samples": {
+    "LL": 9,
+    "LR": 15,
+    "RL": 15,
+    "RR": 9
+  },
+  "direct_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Left Speaker.wav",
+      "sha256": "86b5e99be8717815de09fa2282c7c602e351cc4a0e7dc858b7fc231e7aec4d86",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Right Speaker.wav",
+      "sha256": "e93255413410b195b9c0a80504ac4712bf58d3bb3fce6aa9dae0947344a4b912",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "candidate_h_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/idealized-treated/Idealized Treated Room Left Speaker.wav",
+      "sha256": "1b6c8b00b2eed642265114caf26e85f57decb26f54e1a530f4ff1fb63987a58d",
+      "frames": 32768,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/idealized-treated/Idealized Treated Room Right Speaker.wav",
+      "sha256": "f00cc29c8767513f636089cd45f59e7997214e558d44e002ed64f4b5d9cad854",
+      "frames": 32768,
+      "sample_width_bits": 24
+    }
+  },
+  "candidate_h_rendered_hashes": {
+    "left": "1b6c8b00b2eed642265114caf26e85f57decb26f54e1a530f4ff1fb63987a58d",
+    "right": "f00cc29c8767513f636089cd45f59e7997214e558d44e002ed64f4b5d9cad854"
+  },
+  "binaural_response_200_1500_hz": {
+    "left": {
+      "H": {
+        "mean_db": 1.300587,
+        "rms_deviation_from_mean_db": 1.847818,
+        "peak_to_peak_db": 8.872364,
+        "minimum_db": -2.312144,
+        "maximum_db": 6.560219
+      },
+      "J": {
+        "mean_db": 0.764691,
+        "rms_deviation_from_mean_db": 0.436507,
+        "peak_to_peak_db": 2.294091,
+        "minimum_db": -0.400464,
+        "maximum_db": 1.893627
+      },
+      "target_db": 0.768037,
+      "I": {
+        "mean_db": 1.339037,
+        "rms_deviation_from_mean_db": 1.535933,
+        "peak_to_peak_db": 7.034905,
+        "minimum_db": -0.353223,
+        "maximum_db": 6.681681
+      }
+    },
+    "right": {
+      "H": {
+        "mean_db": 1.360498,
+        "rms_deviation_from_mean_db": 1.544616,
+        "peak_to_peak_db": 6.937378,
+        "minimum_db": -1.546437,
+        "maximum_db": 5.39094
+      },
+      "J": {
+        "mean_db": 0.963923,
+        "rms_deviation_from_mean_db": 0.368061,
+        "peak_to_peak_db": 1.824027,
+        "minimum_db": -0.047682,
+        "maximum_db": 1.776345
+      },
+      "target_db": 0.962793,
+      "I": {
+        "mean_db": 1.248129,
+        "rms_deviation_from_mean_db": 0.899891,
+        "peak_to_peak_db": 4.839593,
+        "minimum_db": 0.067021,
+        "maximum_db": 4.906615
+      }
+    }
+  },
+  "interaural_preservation_200_1500_hz": {
+    "left": {
+      "maximum_absolute_ild_delta_db": 0.051664,
+      "rms_ild_delta_db": 0.002602,
+      "maximum_absolute_phase_delta_degrees": 0.402961
+    },
+    "right": {
+      "maximum_absolute_ild_delta_db": 0.044079,
+      "rms_ild_delta_db": 0.002949,
+      "maximum_absolute_phase_delta_degrees": 0.14272
+    }
+  },
+  "filter_response_db": {
+    "left": {
+      "20": 0.0,
+      "100": 1e-06,
+      "200": -0.0,
+      "270": 0.0,
+      "500": 1e-06,
+      "900": 0.000202,
+      "1000": 0.02081,
+      "1250": -3.797707,
+      "1500": -0.25299,
+      "1800": -1.4e-05,
+      "8000": 1e-06
+    },
+    "right": {
+      "20": 0.0,
+      "100": 0.0,
+      "200": 0.0,
+      "270": 0.0,
+      "500": 1e-06,
+      "900": 0.000987,
+      "1000": -0.148836,
+      "1250": -1.391788,
+      "1500": -1.801707,
+      "1800": 1.4e-05,
+      "8000": 0.0
+    }
+  },
+  "filter_gain_1000_1500_hz": {
+    "left": {
+      "mean_db": -2.836249,
+      "rms_deviation_from_mean_db": 2.149411,
+      "peak_to_peak_db": 6.50551,
+      "minimum_db": -5.910955,
+      "maximum_db": 0.594555
+    },
+    "right": {
+      "mean_db": -1.41118,
+      "rms_deviation_from_mean_db": 1.400022,
+      "peak_to_peak_db": 4.629635,
+      "minimum_db": -3.958709,
+      "maximum_db": 0.670926
+    }
+  },
+  "filter_impulse_first_nonzero_sample": {
+    "left": 0,
+    "right": 0
+  },
+  "truncated_filter_tail_energy_db_relative_to_complete_convolution": {
+    "LL": -129.450267,
+    "LR": -118.520367,
+    "RL": -115.035583,
+    "RR": -124.959652
+  },
+  "response_delta_J_minus_H": {
+    "bass_20_80_hz": {
+      "mean_delta_db": 0.000246,
+      "rms_delta_db": 0.000463,
+      "maximum_absolute_delta_db": 0.000862
+    },
+    "protected_80_900_hz": {
+      "mean_delta_db": -0.099413,
+      "rms_delta_db": 0.992271,
+      "maximum_absolute_delta_db": 2.55086
+    },
+    "corrected_200_1500_hz": {
+      "mean_delta_db": -1.04331,
+      "rms_delta_db": 1.854034,
+      "maximum_absolute_delta_db": 4.569442
+    },
+    "protected_1800_8000_hz": {
+      "mean_delta_db": 0.000117,
+      "rms_delta_db": 0.001268,
+      "maximum_absolute_delta_db": 0.019642
+    }
+  },
+  "modeled_correlated_renderer_gain_db": 2.607259,
+  "rendered_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/midrange-normalized/Midrange Normalized Room Left Speaker.wav",
+      "sha256": "8b7e9015b2675a9e3b21b5f42c5a3eba56a3ceffb84d9f6cb8cc859eea3728d1",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.052122509
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/midrange-normalized/Midrange Normalized Room Right Speaker.wav",
+      "sha256": "ee42a346edee554f4de4388fdb4f25caec13b9d244a7b303098f5b6fa400f538",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.052233116
+    }
+  },
+  "plots": [
+    "binaural-tonal-normalization.svg",
+    "i-j-room-coloration.svg",
+    "ipsilateral-h-j-direct-relative.svg",
+    "tonal-correction-response.svg"
+  ],
+  "candidate_i_rendered_hashes": {
+    "left": "3c7694241bf69a5d57759d3c3896d40533bb2b9f04ba6be7150f8f7b02fae882",
+    "right": "06faacc6675991279232a2a1ac8cf57376e0a02a0eb5fc13c1d770dd98bf42a1"
+  },
+  "response_delta_J_minus_I": {
+    "established_200_1000_hz": {
+      "mean_delta_db": 0.004289,
+      "rms_delta_db": 0.016385,
+      "maximum_absolute_delta_db": 0.089744
+    },
+    "correction_extension_1000_1500_hz": {
+      "mean_delta_db": -2.099674,
+      "rms_delta_db": 2.49734,
+      "maximum_absolute_delta_db": 4.399934
+    },
+    "release_1500_1800_hz": {
+      "mean_delta_db": -0.386347,
+      "rms_delta_db": 0.484359,
+      "maximum_absolute_delta_db": 0.832202
+    },
+    "protected_1800_8000_hz": {
+      "mean_delta_db": -0.000118,
+      "rms_delta_db": 0.001269,
+      "maximum_absolute_delta_db": 0.019884
+    }
+  }
+}

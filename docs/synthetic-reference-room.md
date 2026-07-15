@@ -1,6 +1,6 @@
 # Synthetic Reference Room
 
-This experiment works toward a speaker renderer that does not depend on the original JBL room response. The production `Speaker Virtualization.txt` remains the default; candidates C and D reuse measured room segments as diagnostic controls, E replaces D's measured late decay, F replaces the remaining measured early waveform, G redesigns the theoretical room around soffit mains and binaural diffusion, H adds idealized lower-midrange reflection treatment, and I normalizes H's broad 200 Hz–1 kHz room coloration.
+This experiment works toward a speaker renderer that does not depend on the original JBL room response. The production `Speaker Virtualization.txt` remains the default; candidates C and D reuse measured room segments as diagnostic controls, E replaces D's measured late decay, F replaces the remaining measured early waveform, G redesigns the theoretical room around soffit mains and binaural diffusion, H adds idealized lower-midrange reflection treatment, I normalizes H through 1 kHz, and J extends that normalization through the remaining 1–1.5 kHz jump before releasing it smoothly.
 
 ## Design Boundary
 
@@ -10,7 +10,7 @@ The renderer is divided into three independently testable stages:
 2. **Synthetic early reflections:** geometrically generated arrivals filtered for their incident directions.
 3. **Shared late field:** diffuse binaural decay with controlled interaural coherence and no copied room modes.
 
-Prototype B implements only stage 1. Candidate C adds a deliberately limited personal early-room control. Candidate D adds the complementary measured late field to determine whether sustained binaural decay supplies the missing apparent distance. Candidate E keeps C but synthesizes stage 3 from statistical targets. Candidate F keeps B and E's accepted late branch while synthesizing stage 2. Candidate G keeps those accepted endpoints but replaces F's symmetric free-standing room with a complete synthetic mastering-room model. Candidate H keeps G fixed except for frequency-dependent attenuation of coherent specular reflections. Candidate I keeps H's time-domain renderer fixed while correcting broad fused-response tonality.
+Prototype B implements only stage 1. Candidate C adds a deliberately limited personal early-room control. Candidate D adds the complementary measured late field to determine whether sustained binaural decay supplies the missing apparent distance. Candidate E keeps C but synthesizes stage 3 from statistical targets. Candidate F keeps B and E's accepted late branch while synthesizing stage 2. Candidate G keeps those accepted endpoints but replaces F's symmetric free-standing room with a complete synthetic mastering-room model. Candidate H keeps G fixed except for frequency-dependent attenuation of coherent specular reflections. Candidate I keeps H's time-domain renderer fixed while correcting broad fused-response tonality through 1 kHz. Candidate J keeps I fixed below that region and corrects the remaining broad 1–1.5 kHz coloration.
 
 ## Personal Direct Prototype
 
@@ -111,7 +111,18 @@ H reduces G's worst smoothed 200–350 Hz direct-path null from −5.70 to −3.
 
 Offline, left-speaker coloration falls from 1.294 to 0.414 dB RMS and right-speaker coloration falls from 1.282 to 0.341 dB RMS. Average 200 Hz–1 kHz level changes by at most 0.003 dB per speaker. The 20–80 Hz change is 0.0005 dB RMS, the 1.25–8 kHz change is 0.0007 dB RMS, and modeled correlated gain remains +2.62 dB. Windows Benchmark passed with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Exact filters, hashes, before/after plots, and spatial-preservation metrics are in the [Candidate I report](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).
 
-## A/B/C/D/E/F/G/H/I Listening
+## Midrange-Normalized Candidate
+
+`tools/measurement/render_tonally_normalized_room.py --candidate J` constructs candidate J directly from I:
+
+- I's established 200 Hz–1 kHz balance is retained; J changes it by only 0.0164 dB RMS.
+- Separate broad filters normalize each speaker's remaining 1–1.5 kHz complete-to-direct coloration to I's established level.
+- The new correction fades in from 900 Hz–1 kHz, begins a frequency-shaped release at 1.5 kHz, and reaches unity by 1.8 kHz. The already-smooth upper response and absolute personal-HRTF rise are therefore not treated as coloration that must be flattened.
+- The filters are causal minimum phase, shared within speaker pairs, and generated without iterative narrow-band overfitting.
+
+Across 200 Hz–1.5 kHz, J reduces left/right room-coloration RMS to 0.437/0.368 dB and peak-to-peak range to 2.294/1.824 dB. It changes I by 0.0013 dB RMS from 1.8–8 kHz, preserves bass, and models +2.61 dB maximum correlated gain. J is offline-validated but still needs Windows Benchmark and listening. Exact hashes and plots are in the [Candidate J report](../measurements/synthetic-reference-room/midrange-normalized/analysis/report.md).
+
+## A/B/C/D/E/F/G/H/I/J Listening
 
 In `config - personalized.txt`, select exactly one renderer:
 
@@ -125,18 +136,19 @@ In `config - personalized.txt`, select exactly one renderer:
 # G: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
 # H: Synthetic Reference Room\Idealized Treated Room Renderer.txt
 # I: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
+# J: Synthetic Reference Room\Midrange Normalized Room Renderer.txt
 
 # Example: Candidate I active; every other renderer must be commented.
 # Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
 Include: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, H, and I have passed Windows Benchmark; I is active on the Windows system for H/I listening. A remains the production default.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, H, and I have passed Windows Benchmark; J has passed offline validation only. A remains the production default.
 
 ## Next Stages
 
 - Keep D frozen as the measured hybrid control and E frozen as the accepted synthetic-late reference.
-- Benchmark and audition I against H with every downstream stage unchanged.
+- Benchmark and audition J against I with every downstream stage unchanged.
 - Add a direct-only generic-HRTF control only if the remaining personal contribution needs to be isolated.
 - Parameterize speaker azimuth only after the direct ILD/HRTF and reflection directions can change with the theoretical geometry; the shared late field should remain reusable.
 - Validate each stage through Equalizer APO Benchmark and controlled listening before promotion.

@@ -74,3 +74,14 @@ These files are derived from `measurements/minimum-latency/legacy-reference/anal
 | `IRs/tonally-normalized/Tonally Normalized Room Right Speaker.wav` | `f00cc29c8767513f636089cd45f59e7997214e558d44e002ed64f4b5d9cad854` | `06faacc6675991279232a2a1ac8cf57376e0a02a0eb5fc13c1d770dd98bf42a1` |
 
 Both outputs are stereo 48 kHz, 24-bit PCM. Windows Benchmark verified the exact assets and routing with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Exact response targets, filter behavior, spatial-preservation metrics, and plots are recorded in the [Candidate I analysis](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).
+
+## Synthetic Candidate J
+
+`tools/measurement/render_tonally_normalized_room.py --candidate J` verifies Candidate I as its direct parent and adds separate broad 1–1.5 kHz complete-to-direct corrections for the left and right speakers. Each filter is shared by both ear paths, fades in from 900 Hz, uses a frequency-shaped release to unity by 1.8 kHz, and is generated without iterative narrow-band calibration.
+
+| File | Parent I SHA-256 | Derived J SHA-256 |
+| --- | --- | --- |
+| `IRs/midrange-normalized/Midrange Normalized Room Left Speaker.wav` | `3c7694241bf69a5d57759d3c3896d40533bb2b9f04ba6be7150f8f7b02fae882` | `8b7e9015b2675a9e3b21b5f42c5a3eba56a3ceffb84d9f6cb8cc859eea3728d1` |
+| `IRs/midrange-normalized/Midrange Normalized Room Right Speaker.wav` | `06faacc6675991279232a2a1ac8cf57376e0a02a0eb5fc13c1d770dd98bf42a1` | `ee42a346edee554f4de4388fdb4f25caec13b9d244a7b303098f5b6fa400f538` |
+
+Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames. The new filter starts at sample zero, adds no bulk delay, and leaves discarded convolution-tail energy below −113 dB. J has passed offline validation; Windows runtime validation remains pending. Exact filters, response deltas, and I/J plots are recorded in the [Candidate J analysis](../measurements/synthetic-reference-room/midrange-normalized/analysis/report.md).

@@ -40,6 +40,7 @@ class TonallyNormalizedRoomTests(unittest.TestCase):
         )
         self.assertEqual(correction["smoothing_fractional_octave"], 6)
         self.assertEqual(correction["flat_band_hz"], [200.0, 1000.0])
+        self.assertEqual(correction["target_band_hz"], [200.0, 1000.0])
         self.assertEqual(correction["transition_band_hz"], [160.0, 1250.0])
         self.assertEqual(correction["phase"], "minimum phase")
         self.assertEqual(correction["bulk_delay_samples"], 0)

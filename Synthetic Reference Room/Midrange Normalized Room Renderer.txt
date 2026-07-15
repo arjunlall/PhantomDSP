@@ -1,0 +1,14 @@
+# Experimental candidate J; not the production default.
+# Candidate I's accepted balance extended through 1.5 kHz, then released by 1.8 kHz.
+# Both ear paths from each speaker share one correction, preserving spatial ratios.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\midrange-normalized\Midrange Normalized Room Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\midrange-normalized\Midrange Normalized Room Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR

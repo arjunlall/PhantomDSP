@@ -126,6 +126,8 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Build candidate H with post-calibration idealized lower-midrange treatment on G's coherent floor, ceiling, and side-wall reflections while preserving its diffuse and late fields.
 - [x] Benchmark H on Windows; all three probes loaded only the intended 2×2 chain, with no clipping or configuration errors and 5.54 dB correlated-sweep headroom.
 - [ ] Audition H against G for a smoother lower midrange without weakening externalization or room naturalness.
+- [x] Build candidate I from H by normalizing each virtual speaker's 1/6-octave-smoothed complete-to-direct binaural energy response from 200 Hz to 1 kHz; preserve both-ear spatial ratios and leave raw comb teeth unchanged.
+- [ ] Benchmark and audition I against H for more neutral lower-midrange timbre with unchanged placement, distance, spaciousness, and overall band energy.
 - [ ] Parameterize speaker azimuth after direct ILD/HRTF and early-reflection direction models can change together; reuse the shared synthetic late field.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
 - [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.

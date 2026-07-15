@@ -1,0 +1,14 @@
+# Experimental candidate I; not the production default.
+# Candidate H with per-speaker 200 Hz-1 kHz binaural tonal normalization.
+# Each correction is shared by both ears, preserving the speaker's spatial ratios.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\tonally-normalized\Tonally Normalized Room Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\tonally-normalized\Tonally Normalized Room Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR

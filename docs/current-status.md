@@ -4,7 +4,7 @@ This file is the short resume point for active experiments. Detailed measurement
 
 ## Synthetic Reference Room Experiment
 
-Eight mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production; B through F isolate direct, early, and late mechanisms; G is the complete synthetic soffit-mastering-room candidate; and H tests idealized lower-midrange reflection treatment. Production remains enabled by default.
+Nine mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production; B through F isolate direct, early, and late mechanisms; G is the complete synthetic soffit-mastering-room candidate; H tests idealized lower-midrange reflection treatment; and I normalizes H's broad 200 Hz–1 kHz coloration. Production remains enabled by default.
 
 B was benchmarked cleanly on Windows and sounded like ordinary headphones despite its theoretical ITD and personal direct-HRTF magnitude. C restored four distinct +4 to +30 ms paths and A-like comb density, but sounded perceptually like B: frontal yet immediately in front of the listener. Switching either B or C to A moved the image back several feet. Offline analysis confirms C's early energy is already comparable to A; its decisive difference is the absence of energy after 30 ms.
 
@@ -25,6 +25,8 @@ Candidate G now combines mastering-room-inspired proportions, soffit-mounted ±3
 G passed the Windows three-probe Benchmark with no clipping or configuration errors, 5.55 dB correlated-sweep headroom, and 0.60–0.69% single-core CPU. Early sighted listening found G much better than F and competitive with E, with a potentially preferable timbre. Response inspection then identified a broad 200–300 Hz cancellation caused by coherent floor and side-wall reflections around the 250 Hz room-branch transition.
 
 Candidate H preserves G's geometry, direct/bass, diffuse microclusters, and late field while applying causal idealized treatment only to the already-calibrated specular branch. Offline, H reduces the worst smoothed 200–350 Hz direct-path null from −5.70 to −3.44 dB for LL and from −4.17 to −2.02 dB for RR. Its H-minus-G change is 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz; center IACC remains 0.168 and modeled correlated gain is +2.61 dB. H passed Windows Benchmark with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.62–0.70% single-core CPU. H is left active for comparison with G; listen for lower-midrange cleanliness without loss of apparent distance or spaciousness.
+
+Candidate I keeps H's complete temporal and spatial renderer, uses the direct-only paths as the unchanged tonal reference, and removes only the 1/6-octave-smoothed complete-to-direct coloration from 200 Hz to 1 kHz. Corrections are paired by virtual speaker—LL with LR and RL with RR—so neither speaker's interaural transfer ratio is independently changed. Raw comb-filter teeth remain untouched. Offline, left/right coloration falls from 1.294/1.282 to 0.414/0.341 dB RMS while average band level, bass, and the response above 1.25 kHz remain effectively unchanged. I is ready for Windows Benchmark and H/I listening.
 
 ## Historical Bass Crossover Listening Decision
 

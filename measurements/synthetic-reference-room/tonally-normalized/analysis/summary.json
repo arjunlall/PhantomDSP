@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "status": "opt-in candidate I tonally normalized mastering room",
+  "design": {
+    "sample_rate_hz": 48000,
+    "output_length_samples": 32768,
+    "nfft": 65536,
+    "base_candidate": "H idealized treated room",
+    "correction": {
+      "reference": "complete-to-direct binaural energy ratio per virtual speaker",
+      "smoothing_fractional_octave": 6,
+      "flat_band_hz": [
+        200.0,
+        1000.0
+      ],
+      "transition_band_hz": [
+        160.0,
+        1250.0
+      ],
+      "target": "log-frequency mean of the uncorrected smoothed ratio",
+      "phase": "minimum phase",
+      "fir_samples": 4096,
+      "fir_fade_samples": 512,
+      "calibration_iterations": 4,
+      "maximum_absolute_gain_db": 6.0,
+      "bulk_delay_samples": 0,
+      "applied_identically_within_speaker_pairs": {
+        "left": [
+          "LL",
+          "LR"
+        ],
+        "right": [
+          "RL",
+          "RR"
+        ]
+      }
+    }
+  },
+  "direct_peak_samples": {
+    "LL": 9,
+    "LR": 15,
+    "RL": 15,
+    "RR": 9
+  },
+  "direct_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Left Speaker.wav",
+      "sha256": "86b5e99be8717815de09fa2282c7c602e351cc4a0e7dc858b7fc231e7aec4d86",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Right Speaker.wav",
+      "sha256": "e93255413410b195b9c0a80504ac4712bf58d3bb3fce6aa9dae0947344a4b912",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "candidate_h_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/idealized-treated/Idealized Treated Room Left Speaker.wav",
+      "sha256": "1b6c8b00b2eed642265114caf26e85f57decb26f54e1a530f4ff1fb63987a58d",
+      "frames": 32768,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/idealized-treated/Idealized Treated Room Right Speaker.wav",
+      "sha256": "f00cc29c8767513f636089cd45f59e7997214e558d44e002ed64f4b5d9cad854",
+      "frames": 32768,
+      "sample_width_bits": 24
+    }
+  },
+  "candidate_h_rendered_hashes": {
+    "left": "1b6c8b00b2eed642265114caf26e85f57decb26f54e1a530f4ff1fb63987a58d",
+    "right": "f00cc29c8767513f636089cd45f59e7997214e558d44e002ed64f4b5d9cad854"
+  },
+  "binaural_response_200_1000_hz": {
+    "left": {
+      "H": {
+        "mean_db": 0.767507,
+        "rms_deviation_from_mean_db": 1.294021,
+        "peak_to_peak_db": 5.849933,
+        "minimum_db": -2.322375,
+        "maximum_db": 3.527558
+      },
+      "I": {
+        "mean_db": 0.768037,
+        "rms_deviation_from_mean_db": 0.41407,
+        "peak_to_peak_db": 2.24774,
+        "minimum_db": -0.354092,
+        "maximum_db": 1.893648
+      },
+      "target_db": 0.767507
+    },
+    "right": {
+      "H": {
+        "mean_db": 0.965863,
+        "rms_deviation_from_mean_db": 1.282061,
+        "peak_to_peak_db": 6.035295,
+        "minimum_db": -1.544656,
+        "maximum_db": 4.490639
+      },
+      "I": {
+        "mean_db": 0.962793,
+        "rms_deviation_from_mean_db": 0.341431,
+        "peak_to_peak_db": 1.7025,
+        "minimum_db": 0.073013,
+        "maximum_db": 1.775512
+      },
+      "target_db": 0.965863
+    }
+  },
+  "interaural_preservation_200_1000_hz": {
+    "left": {
+      "maximum_absolute_ild_delta_db": 0.027266,
+      "rms_ild_delta_db": 0.002817,
+      "maximum_absolute_phase_delta_degrees": 0.638839
+    },
+    "right": {
+      "maximum_absolute_ild_delta_db": 0.053225,
+      "rms_ild_delta_db": 0.003266,
+      "maximum_absolute_phase_delta_degrees": 0.565752
+    }
+  },
+  "filter_response_db": {
+    "left": {
+      "20": 0.001704,
+      "100": 0.003954,
+      "160": -0.01495,
+      "200": 0.632644,
+      "270": 2.708423,
+      "500": 1.729366,
+      "1000": 0.920232,
+      "1250": 0.000679,
+      "2000": 0.000679,
+      "8000": 0.00068
+    },
+    "right": {
+      "20": -0.000313,
+      "100": 0.000379,
+      "160": -0.001017,
+      "200": 0.399689,
+      "270": 1.502257,
+      "500": -0.764045,
+      "1000": -2.382973,
+      "1250": -0.000218,
+      "2000": -0.000206,
+      "8000": -0.000206
+    }
+  },
+  "filter_gain_200_1000_hz": {
+    "left": {
+      "mean_db": 0.00112,
+      "rms_deviation_from_mean_db": 2.271325,
+      "peak_to_peak_db": 9.987085,
+      "minimum_db": -5.191636,
+      "maximum_db": 4.795449
+    },
+    "right": {
+      "mean_db": -0.002818,
+      "rms_deviation_from_mean_db": 1.876048,
+      "peak_to_peak_db": 10.16956,
+      "minimum_db": -5.46386,
+      "maximum_db": 4.7057
+    }
+  },
+  "filter_impulse_first_nonzero_sample": {
+    "left": 0,
+    "right": 0
+  },
+  "truncated_filter_tail_energy_db_relative_to_complete_convolution": {
+    "LL": -113.825254,
+    "LR": -104.970398,
+    "RL": -110.78653,
+    "RR": -116.818975
+  },
+  "response_delta_I_minus_H": {
+    "bass_20_80_hz": {
+      "mean_delta_db": 0.000228,
+      "rms_delta_db": 0.000456,
+      "maximum_absolute_delta_db": 0.000874
+    },
+    "protected_80_160_hz": {
+      "mean_delta_db": 0.000451,
+      "rms_delta_db": 0.002079,
+      "maximum_absolute_delta_db": 0.00689
+    },
+    "corrected_200_1000_hz": {
+      "mean_delta_db": -0.288132,
+      "rms_delta_db": 1.13306,
+      "maximum_absolute_delta_db": 2.550896
+    },
+    "protected_1250_8000_hz": {
+      "mean_delta_db": 0.000186,
+      "rms_delta_db": 0.000709,
+      "maximum_absolute_delta_db": 0.016699
+    }
+  },
+  "modeled_correlated_renderer_gain_db": 2.618375,
+  "rendered_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/tonally-normalized/Tonally Normalized Room Left Speaker.wav",
+      "sha256": "3c7694241bf69a5d57759d3c3896d40533bb2b9f04ba6be7150f8f7b02fae882",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.05308513
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/tonally-normalized/Tonally Normalized Room Right Speaker.wav",
+      "sha256": "06faacc6675991279232a2a1ac8cf57376e0a02a0eb5fc13c1d770dd98bf42a1",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.052840724
+    }
+  },
+  "plots": [
+    "binaural-tonal-normalization.svg",
+    "ipsilateral-h-i-direct-relative.svg",
+    "tonal-correction-response.svg"
+  ]
+}

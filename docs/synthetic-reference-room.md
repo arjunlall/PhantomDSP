@@ -1,6 +1,6 @@
 # Synthetic Reference Room
 
-This experiment works toward a speaker renderer that does not depend on the original JBL room response. The production `Speaker Virtualization.txt` remains the default; candidates C and D reuse measured room segments as diagnostic controls, E replaces D's measured late decay, F replaces the remaining measured early waveform, G redesigns the theoretical room around soffit mains and binaural diffusion, and H adds idealized lower-midrange reflection treatment.
+This experiment works toward a speaker renderer that does not depend on the original JBL room response. The production `Speaker Virtualization.txt` remains the default; candidates C and D reuse measured room segments as diagnostic controls, E replaces D's measured late decay, F replaces the remaining measured early waveform, G redesigns the theoretical room around soffit mains and binaural diffusion, H adds idealized lower-midrange reflection treatment, and I normalizes H's broad 200 Hz–1 kHz room coloration.
 
 ## Design Boundary
 
@@ -10,7 +10,7 @@ The renderer is divided into three independently testable stages:
 2. **Synthetic early reflections:** geometrically generated arrivals filtered for their incident directions.
 3. **Shared late field:** diffuse binaural decay with controlled interaural coherence and no copied room modes.
 
-Prototype B implements only stage 1. Candidate C adds a deliberately limited personal early-room control. Candidate D adds the complementary measured late field to determine whether sustained binaural decay supplies the missing apparent distance. Candidate E keeps C but synthesizes stage 3 from statistical targets. Candidate F keeps B and E's accepted late branch while synthesizing stage 2. Candidate G keeps those accepted endpoints but replaces F's symmetric free-standing room with a complete synthetic mastering-room model. Candidate H keeps G fixed except for frequency-dependent attenuation of coherent specular reflections.
+Prototype B implements only stage 1. Candidate C adds a deliberately limited personal early-room control. Candidate D adds the complementary measured late field to determine whether sustained binaural decay supplies the missing apparent distance. Candidate E keeps C but synthesizes stage 3 from statistical targets. Candidate F keeps B and E's accepted late branch while synthesizing stage 2. Candidate G keeps those accepted endpoints but replaces F's symmetric free-standing room with a complete synthetic mastering-room model. Candidate H keeps G fixed except for frequency-dependent attenuation of coherent specular reflections. Candidate I keeps H's time-domain renderer fixed while correcting broad fused-response tonality.
 
 ## Personal Direct Prototype
 
@@ -100,98 +100,43 @@ Offline validation finds 0.168 maximum broadband center correlation, under 0.001
 
 H reduces G's worst smoothed 200–350 Hz direct-path null from −5.70 to −3.44 dB for LL and from −4.17 to −2.02 dB for RR. H changes G by 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz; maximum center IACC remains 0.168 and modeled correlated gain is +2.61 dB. Windows Benchmark passed with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.62–0.70% single-core CPU. Exact filter responses, hashes, plots, and response metrics are in the [Candidate H report](../measurements/synthetic-reference-room/idealized-treated/analysis/report.md).
 
-## A/B/C/D/E/F/G/H Listening
+## Tonally Normalized Candidate
+
+`tools/measurement/render_tonally_normalized_room.py` constructs candidate I from H without changing its room geometry or independently manipulating any ear path:
+
+- The direct-only renderer is the unchanged tonal reference; its personal HRTF is not flattened.
+- Each virtual speaker's complete-to-direct binaural energy ratio is 1/6-octave smoothed from 200 Hz to 1 kHz and normalized to its original log-frequency mean.
+- One causal minimum-phase correction is shared by LL and LR; another is shared by RL and RR. This preserves each speaker's interaural ratio while correcting its broad fused-response coloration.
+- Correction tapers to unity by 160 Hz and 1.25 kHz. Raw comb teeth are not inverted, bulk delay remains zero, and the discarded convolution tail is below −104 dB relative to the complete output.
+
+Offline, left-speaker coloration falls from 1.294 to 0.414 dB RMS and right-speaker coloration falls from 1.282 to 0.341 dB RMS. Average 200 Hz–1 kHz level changes by at most 0.003 dB per speaker. The 20–80 Hz change is 0.0005 dB RMS, the 1.25–8 kHz change is 0.0007 dB RMS, and modeled correlated gain remains +2.62 dB. Exact filters, hashes, before/after plots, and spatial-preservation metrics are in the [Candidate I report](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).
+
+## A/B/C/D/E/F/G/H/I Listening
 
 In `config - personalized.txt`, select exactly one renderer:
 
 ```text
-# A — production
-Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
-# Include: Synthetic Reference Room\Personal Direct Renderer.txt
-# Include: Synthetic Reference Room\Personal Early Room Renderer.txt
-# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
-# Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
-# Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
-# Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
-# Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
+# A: JBL M2 Binaural Convolution\Speaker Virtualization.txt
+# B: Synthetic Reference Room\Personal Direct Renderer.txt
+# C: Synthetic Reference Room\Personal Early Room Renderer.txt
+# D: Synthetic Reference Room\Personal Late Room Control Renderer.txt
+# E: Synthetic Reference Room\Synthetic Late Field Renderer.txt
+# F: Synthetic Reference Room\Theoretical Early Room Renderer.txt
+# G: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
+# H: Synthetic Reference Room\Idealized Treated Room Renderer.txt
+# I: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
 
-# B — direct-only control
+# Example: Candidate I active; every other renderer must be commented.
 # Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
-Include: Synthetic Reference Room\Personal Direct Renderer.txt
-# Include: Synthetic Reference Room\Personal Early Room Renderer.txt
-# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
-# Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
-# Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
-# Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
-# Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
-
-# C — personal early-room candidate
-# Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
-# Include: Synthetic Reference Room\Personal Direct Renderer.txt
-Include: Synthetic Reference Room\Personal Early Room Renderer.txt
-# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
-# Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
-# Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
-# Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
-# Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
-
-# D — measured late-field diagnostic
-# Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
-# Include: Synthetic Reference Room\Personal Direct Renderer.txt
-# Include: Synthetic Reference Room\Personal Early Room Renderer.txt
-Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
-# Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
-# Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
-# Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
-# Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
-
-# E — synthetic diffuse late-field candidate
-# Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
-# Include: Synthetic Reference Room\Personal Direct Renderer.txt
-# Include: Synthetic Reference Room\Personal Early Room Renderer.txt
-# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
-Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
-# Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
-# Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
-# Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
-
-# F — theoretical early-reflection candidate
-# Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
-# Include: Synthetic Reference Room\Personal Direct Renderer.txt
-# Include: Synthetic Reference Room\Personal Early Room Renderer.txt
-# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
-# Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
-Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
-# Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
-# Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
-
-# G — synthetic soffit mastering-room candidate
-# Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
-# Include: Synthetic Reference Room\Personal Direct Renderer.txt
-# Include: Synthetic Reference Room\Personal Early Room Renderer.txt
-# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
-# Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
-# Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
-Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
-# Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
-
-# H — idealized treated-room candidate
-# Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
-# Include: Synthetic Reference Room\Personal Direct Renderer.txt
-# Include: Synthetic Reference Room\Personal Early Room Renderer.txt
-# Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
-# Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
-# Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
-# Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
-Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
+Include: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, and H have passed Windows Benchmark; G is the listening reference for H, H is active for listening, and A remains the production default.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, and H have passed Windows Benchmark; I is offline-validated pending its Windows Benchmark and H/I listening comparison. A remains the production default.
 
 ## Next Stages
 
 - Keep D frozen as the measured hybrid control and E frozen as the accepted synthetic-late reference.
-- Benchmark and audition H against G with every downstream stage unchanged.
+- Benchmark and audition I against H with every downstream stage unchanged.
 - Add a direct-only generic-HRTF control only if the remaining personal contribution needs to be isolated.
 - Parameterize speaker azimuth only after the direct ILD/HRTF and reflection directions can change with the theoretical geometry; the shared late field should remain reusable.
 - Validate each stage through Equalizer APO Benchmark and controlled listening before promotion.

@@ -1,6 +1,6 @@
 # Synthetic Mastering Room Plan
 
-Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidate H passed offline and Windows validation and is active for the next listening comparison.
+Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidate H passed offline and Windows validation. Candidate I is generated and offline-validated as the 200 Hz–1 kHz tonal-normalization experiment built from H.
 
 ## Objective
 
@@ -52,3 +52,16 @@ G's remaining 200–300 Hz dip is not a room mode. Its coherent floor and near-s
 H keeps G's complete geometry and every non-specular branch fixed. After G's specular-energy calibration, causal low-frequency shelves attenuate both side walls and the ceiling by 9 dB and the floor by 12 dB, with a broad transition centered at 1 kHz. This represents idealized lower-midrange treatment that is difficult to realize physically; no final renormalization restores the removed energy.
 
 Offline, H improves the worst smoothed 200–350 Hz direct-path null by 2.26 dB for LL and 2.15 dB for RR. It changes G by only 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz, retains 0.168 maximum center IACC, and models +2.61 dB maximum correlated gain. Windows Benchmark passed with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.62–0.70% single-core CPU. Exact treatment response, hashes, plots, and response deltas are in the [Candidate H analysis](../measurements/synthetic-reference-room/idealized-treated/analysis/report.md).
+
+## Candidate I Tonal Normalization
+
+I keeps H's complete 2×2 time-domain renderer and treats its direct-only transfer as the tonal reference. It does not flatten the personal direct HRTF. Instead, for each virtual speaker it measures the complete-to-direct binaural energy ratio:
+
+```text
+R_L(f) = 10 log10[(|H_LL|² + |H_LR|²) / (|D_LL|² + |D_LR|²)]
+R_R(f) = 10 log10[(|H_RL|² + |H_RR|²) / (|D_RL|² + |D_RR|²)]
+```
+
+Each ratio is 1/6-octave smoothed and normalized toward its mean from 200 Hz to 1 kHz, with tapered boundaries and unity response outside the correction region. The left correction is applied identically to LL and LR; the right correction is applied identically to RL and RR. This preserves each virtual speaker's interaural transfer ratio, direct-to-room relationship, timing, and spatial placement while removing only broad fused-response coloration. Raw comb-filter teeth are not inverted. The correction is causal minimum phase, so it adds no bulk delay or pre-ringing.
+
+Offline, left-speaker RMS coloration falls from 1.294 to 0.414 dB and right-speaker coloration falls from 1.282 to 0.341 dB. The corresponding peak-to-peak ranges fall from 5.850 to 2.248 dB and from 6.035 to 1.703 dB. Average band levels remain within 0.003 dB of H; the 20–80 Hz and 1.25–8 kHz changes are 0.0005 and 0.0007 dB RMS. Modeled maximum correlated gain is +2.62 dB. Exact filters and response plots are in the [Candidate I analysis](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).

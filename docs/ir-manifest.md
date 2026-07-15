@@ -63,3 +63,14 @@ The active renderer uses a first-order 90 Hz clean model, +0.75 dB calibration, 
 | `IRs/active/Right Speaker to Both Ears.wav` | `RL`: right speaker to left ear | `RR`: right speaker to right ear | `6d21739c7885588f0f9bd9b7f2e575cd550462e83417f68cda35f3f4c0e21da5` |
 
 These files are derived from `measurements/minimum-latency/legacy-reference/analysis/deembedded-reference.npz` with SHA-256 `2b4bf21d35a27e6a837017ecabada11a4330efd5101e4b82b74397c5fb8a3616`. They are stereo 48 kHz, 24-bit PCM with 32,768 frames, are not normalized, and are reproduced by `tools/measurement/render_active_renderer.py`. The [offline report](../measurements/minimum-latency/accepted-renderer/analysis/report.md) and [Windows runtime comparison](../measurements/minimum-latency/accepted-renderer/analysis/runtime-report.md) agree closely. Controlled listening found no readily audible tonal or spatial regression from the legacy reference while confirming the latency improvement.
+
+## Synthetic Candidate I
+
+`tools/measurement/render_tonally_normalized_room.py` verifies Candidate H as its parent, derives separate 1/6-octave-smoothed 200 Hz–1 kHz binaural tonal corrections for the left and right virtual speakers, and applies each correction identically to both ear paths from that speaker. The corrections are causal minimum phase, unity outside tapered 160 Hz–1.25 kHz boundaries, and preserve the 32,768-frame length without normalization.
+
+| File | Parent SHA-256 | Derived SHA-256 |
+| --- | --- | --- |
+| `IRs/tonally-normalized/Tonally Normalized Room Left Speaker.wav` | `1b6c8b00b2eed642265114caf26e85f57decb26f54e1a530f4ff1fb63987a58d` | `3c7694241bf69a5d57759d3c3896d40533bb2b9f04ba6be7150f8f7b02fae882` |
+| `IRs/tonally-normalized/Tonally Normalized Room Right Speaker.wav` | `f00cc29c8767513f636089cd45f59e7997214e558d44e002ed64f4b5d9cad854` | `06faacc6675991279232a2a1ac8cf57376e0a02a0eb5fc13c1d770dd98bf42a1` |
+
+Both outputs are stereo 48 kHz, 24-bit PCM. Exact response targets, filter behavior, spatial-preservation metrics, and plots are recorded in the [Candidate I analysis](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).

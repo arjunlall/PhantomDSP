@@ -4,7 +4,7 @@ This file is the short resume point for active experiments. Detailed measurement
 
 ## Synthetic Reference Room Experiment
 
-Seven mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production; B through F isolate direct, early, and late mechanisms; G is the complete synthetic soffit-mastering-room candidate. Production remains enabled by default.
+Eight mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production; B through F isolate direct, early, and late mechanisms; G is the complete synthetic soffit-mastering-room candidate; and H tests idealized lower-midrange reflection treatment. Production remains enabled by default.
 
 B was benchmarked cleanly on Windows and sounded like ordinary headphones despite its theoretical ITD and personal direct-HRTF magnitude. C restored four distinct +4 to +30 ms paths and A-like comb density, but sounded perceptually like B: frontal yet immediately in front of the listener. Switching either B or C to A moved the image back several feet. Offline analysis confirms C's early energy is already comparable to A; its decisive difference is the absence of energy after 30 ms.
 
@@ -22,7 +22,9 @@ Extended listening found F good but less convincing than E: centered material mo
 
 Candidate G now combines mastering-room-inspired proportions, soffit-mounted ±30° mains, a 3 cm rigid lateral offset, controlled source directivity, attenuated specular paths, and equal-energy binaural diffusion. It keeps B's direct/bass stage and E's synthetic late branch fixed and copies no measured room waveform. Offline validation finds 0.168 maximum broadband center correlation, less than 0.001 dB left/right center-energy mismatch, 0.0248 dB RMS bass change from E, and +2.64 dB modeled maximum correlated gain. Every discrete 1–8 kHz reflection is at least 13.36 dB below direct sound.
 
-Resume by committing and pushing G, switching exactly A to G on Windows, and running the standard three-probe Benchmark. If runtime validation passes, compare only E and G for center distance and stability, focused left/right placement, tonal continuity, audible echoes, and natural room spaciousness. The complete design and acceptance boundary are in the [synthetic mastering-room plan](synthetic-mastering-room-plan.md).
+G passed the Windows three-probe Benchmark with no clipping or configuration errors, 5.55 dB correlated-sweep headroom, and 0.60–0.69% single-core CPU. Early sighted listening found G much better than F and competitive with E, with a potentially preferable timbre. Response inspection then identified a broad 200–300 Hz cancellation caused by coherent floor and side-wall reflections around the 250 Hz room-branch transition.
+
+Candidate H preserves G's geometry, direct/bass, diffuse microclusters, and late field while applying causal idealized treatment only to the already-calibrated specular branch. Offline, H reduces the worst smoothed 200–350 Hz direct-path null from −5.70 to −3.44 dB for LL and from −4.17 to −2.02 dB for RR. Its H-minus-G change is 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz; center IACC remains 0.168 and modeled correlated gain is +2.61 dB. Resume by committing and pushing H, selecting exactly H on Windows, running the standard Benchmark, and comparing G against H for lower-midrange cleanliness without loss of apparent distance or spaciousness.
 
 ## Historical Bass Crossover Listening Decision
 

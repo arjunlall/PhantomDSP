@@ -1,6 +1,6 @@
 # Synthetic Mastering Room Plan
 
-Status: Candidate G is generated and offline-validated; Windows Benchmark and listening remain pending.
+Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidate H is generated and offline-validated as the next opt-in treatment experiment.
 
 ## Objective
 
@@ -39,8 +39,16 @@ The complete early field targets E's broad energy and frequency-dependent center
 - Prove the accepted E-minus-C late branch is unchanged.
 - Verify deterministic 48 kHz, 24-bit, four-path output; safe correlated headroom; correct Equalizer APO routing; and an error-free Windows Benchmark.
 
-Listening will compare only E and G for center distance, center stability, focused left/right placement, tonal and bass consistency, audible echoes, and perceived room naturalness.
+G listening compared E and G for center distance, stability, focused placement, timbre, and room naturalness. H listening will compare only G and H for lower-midrange cleanliness, bass continuity, apparent distance, and spaciousness.
 
 ## Offline Result
 
 The deterministic render passes the offline contract. Its four early paths are distinct; center-ear energy differs by less than 0.001 dB, center early energy is within 0.43 dB of E, and maximum broadband early correlation is 0.168 rather than F's 1.000. Every discrete 1–8 kHz specular path is at least 13.36 dB below direct sound. The 20–80 Hz difference from E is 0.0248 dB RMS, modeled maximum correlated gain is +2.64 dB, and the accepted E-minus-C late-field hashes are unchanged. Exact geometry, path timing, response deltas, hashes, and plots are in the [Candidate G analysis](../measurements/synthetic-reference-room/soffit-mastering/analysis/report.md).
+
+## Candidate H Treatment Refinement
+
+G's remaining 200–300 Hz dip is not a room mode. Its coherent floor and near-side-wall arrivals combine out of phase with the direct path near the steep 250 Hz room-branch transition. Room-width and crossover sweeps moved the cancellation but did not remove it consistently.
+
+H keeps G's complete geometry and every non-specular branch fixed. After G's specular-energy calibration, causal low-frequency shelves attenuate both side walls and the ceiling by 9 dB and the floor by 12 dB, with a broad transition centered at 1 kHz. This represents idealized lower-midrange treatment that is difficult to realize physically; no final renormalization restores the removed energy.
+
+Offline, H improves the worst smoothed 200–350 Hz direct-path null by 2.26 dB for LL and 2.15 dB for RR. It changes G by only 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz, retains 0.168 maximum center IACC, and models +2.61 dB maximum correlated gain. Exact treatment response, hashes, plots, and response deltas are in the [Candidate H analysis](../measurements/synthetic-reference-room/idealized-treated/analysis/report.md).

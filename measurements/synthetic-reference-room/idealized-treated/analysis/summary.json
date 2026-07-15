@@ -1,0 +1,622 @@
+{
+  "schema_version": 1,
+  "status": "opt-in candidate H idealized treated mastering room",
+  "design": {
+    "sample_rate_hz": 48000,
+    "output_length_samples": 32768,
+    "nfft": 65536,
+    "base_candidate": "G synthetic soffit mastering room",
+    "geometry_changed": false,
+    "personal_direct_changed": false,
+    "microclusters_changed": false,
+    "synthetic_late_field_changed": false,
+    "surface_treatment": {
+      "type": "causal one-pole low-frequency attenuation shelf",
+      "transition_hz": 1000.0,
+      "filter_samples": 1024,
+      "applied_after_G_specular_energy_calibration": true,
+      "low_frequency_attenuation_db": {
+        "left_wall": -9.0,
+        "right_wall": -9.0,
+        "floor": -12.0,
+        "ceiling": -9.0
+      }
+    }
+  },
+  "inherited_G_geometry": {
+    "length_m": 6.6,
+    "width_m": 4.6,
+    "height_m": 2.8,
+    "listener_from_front_wall_m": 2.5,
+    "listener_lateral_offset_m": 0.03
+  },
+  "direct_peak_samples": {
+    "LL": 9,
+    "LR": 15,
+    "RL": 15,
+    "RR": 9
+  },
+  "direct_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Left Speaker.wav",
+      "sha256": "86b5e99be8717815de09fa2282c7c602e351cc4a0e7dc858b7fc231e7aec4d86",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Right Speaker.wav",
+      "sha256": "e93255413410b195b9c0a80504ac4712bf58d3bb3fce6aa9dae0947344a4b912",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "candidate_c_files_used_only_to_reconstruct_E_late_and_G_targets": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Left Speaker.wav",
+      "sha256": "4b461d3571de03d95d6aee7c954ca2449bd20c777f18e1259f212eb4681af3a2",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/personal-early/Personal Early Room Right Speaker.wav",
+      "sha256": "d108e03a66079b95f70da432c461def831d5a170acef10d29fb87739bfacb9e7",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "accepted_e_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/synthetic-late/Synthetic Late Field Left Speaker.wav",
+      "sha256": "bc0d754bcd8482dc11d209152bb9e991b53a82fbaa471a2d5dc54082c2c4aa8e",
+      "frames": 32768,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/synthetic-late/Synthetic Late Field Right Speaker.wav",
+      "sha256": "5bde98d91f0b98210ca0a5534c3845abdb499b838d8118c0bffbf41723319a24",
+      "frames": 32768,
+      "sample_width_bits": 24
+    }
+  },
+  "candidate_g_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/soffit-mastering/Soffit Mastering Room Left Speaker.wav",
+      "sha256": "a9b004fb68119710f49392379aaa0a10652f37b07296e67243b63a77a3de718b",
+      "frames": 32768,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/soffit-mastering/Soffit Mastering Room Right Speaker.wav",
+      "sha256": "b36734e0ad95981477ce1fe936be0379b4606ab6d8883b3d21da720b49424a50",
+      "frames": 32768,
+      "sample_width_bits": 24
+    }
+  },
+  "measured_early_or_late_waveform_samples_copied": false,
+  "branch_scales_inherited_from_G": {
+    "specular": 2.347946872,
+    "microclusters": 0.007388655,
+    "right_microcluster_energy_balance": 0.995916199,
+    "final_early": 1.016147185
+  },
+  "surface_filter_response_db": {
+    "left_wall": {
+      "20": -8.988195,
+      "250": -7.511375,
+      "500": -5.209282,
+      "1000": -2.486536,
+      "2000": -0.823857,
+      "8000": -0.048295
+    },
+    "right_wall": {
+      "20": -8.988195,
+      "250": -7.511375,
+      "500": -5.209282,
+      "1000": -2.486536,
+      "2000": -0.823857,
+      "8000": -0.048295
+    },
+    "floor": {
+      "20": -11.974792,
+      "250": -9.271488,
+      "500": -6.000518,
+      "1000": -2.734595,
+      "2000": -0.889524,
+      "8000": -0.051785
+    },
+    "ceiling": {
+      "20": -8.988195,
+      "250": -7.511375,
+      "500": -5.209282,
+      "1000": -2.486536,
+      "2000": -0.823857,
+      "8000": -0.048295
+    }
+  },
+  "combined_early_to_direct_energy_db": -9.796708,
+  "early_energy_delta_H_minus_G_db": -0.101771,
+  "achieved_center_metrics": {
+    "zero_lag_correlation": 0.096995,
+    "maximum_absolute_iacc": 0.168375,
+    "maximum_iacc_lag_samples": -15,
+    "left_to_right_energy_db": -0.094773,
+    "bands": {
+      "250": {
+        "maximum_absolute_iacc": 0.696613,
+        "lag_samples": 1
+      },
+      "500": {
+        "maximum_absolute_iacc": 0.546086,
+        "lag_samples": 2
+      },
+      "1000": {
+        "maximum_absolute_iacc": 0.477373,
+        "lag_samples": 0
+      },
+      "2000": {
+        "maximum_absolute_iacc": 0.261348,
+        "lag_samples": -1
+      },
+      "4000": {
+        "maximum_absolute_iacc": 0.218037,
+        "lag_samples": 35
+      },
+      "8000": {
+        "maximum_absolute_iacc": 0.178692,
+        "lag_samples": -8
+      }
+    }
+  },
+  "center_early_energy_delta_H_minus_G_db": {
+    "left": -0.083546,
+    "right": 0.011229
+  },
+  "first_full_center_ear_difference_sample_above_1e_6": 156,
+  "first_full_center_ear_difference_ms": 3.25,
+  "direct_relative_response": {
+    "LL": {
+      "worst_200_350_hz_delta_db": -3.43834,
+      "worst_delta_frequency_hz": 270.996,
+      "peak_to_peak_200_1000_hz_db": 6.853769
+    },
+    "RR": {
+      "worst_200_350_hz_delta_db": -2.022129,
+      "worst_delta_frequency_hz": 265.137,
+      "peak_to_peak_200_1000_hz_db": 7.353268
+    }
+  },
+  "direct_relative_response_G_reference": {
+    "LL": {
+      "worst_200_350_hz_delta_db": -5.69956,
+      "worst_delta_frequency_hz": 270.264,
+      "peak_to_peak_200_1000_hz_db": 9.304441
+    },
+    "RR": {
+      "worst_200_350_hz_delta_db": -4.172211,
+      "worst_delta_frequency_hz": 265.137,
+      "peak_to_peak_200_1000_hz_db": 8.405591
+    }
+  },
+  "response_delta_H_minus_G": {
+    "bass_20_80_hz": {
+      "mean_delta_db": 0.007334,
+      "rms_delta_db": 0.011754,
+      "maximum_absolute_delta_db": 0.035318
+    },
+    "handoff_80_200_hz": {
+      "mean_delta_db": -0.213395,
+      "rms_delta_db": 0.379032,
+      "maximum_absolute_delta_db": 0.615761
+    },
+    "upper_bass_200_300_hz": {
+      "mean_delta_db": 0.665851,
+      "rms_delta_db": 1.084912,
+      "maximum_absolute_delta_db": 1.969411
+    },
+    "lower_mid_300_1000_hz": {
+      "mean_delta_db": -0.122061,
+      "rms_delta_db": 0.391534,
+      "maximum_absolute_delta_db": 0.821168
+    },
+    "spatial_1000_8000_hz": {
+      "mean_delta_db": -0.01135,
+      "rms_delta_db": 0.06934,
+      "maximum_absolute_delta_db": 0.420242
+    }
+  },
+  "response_delta_H_minus_E": {
+    "bass_20_80_hz": {
+      "mean_delta_db": -0.003398,
+      "rms_delta_db": 0.015624,
+      "maximum_absolute_delta_db": 0.039631
+    },
+    "upper_bass_200_300_hz": {
+      "mean_delta_db": -0.949353,
+      "rms_delta_db": 1.683537,
+      "maximum_absolute_delta_db": 2.820515
+    },
+    "room_band_300_10000_hz": {
+      "mean_delta_db": 1.24916,
+      "rms_delta_db": 1.824053,
+      "maximum_absolute_delta_db": 4.518142
+    }
+  },
+  "shared_branch_hashes": {
+    "accepted_E_minus_C_synthetic_late": {
+      "LL": "9cc4a5fca4150c9b69771c7b6295ad29617ade8f0994f845757419d8f94e803e",
+      "LR": "6052e4993fa1285afa8a8eeb75e7799b5bb70de89c9eb8d6bd41bb6351980d70",
+      "RL": "1d2005af70882c9c188780f06503a7e20413eaa19e9a68b71c58adc53cee974d",
+      "RR": "1d7c10bd63a86157e5ba11c712910e900296f880ee302d270f3ed5db2b53d207"
+    },
+    "G_specular_before_H_treatment": {
+      "LL": "febe27a09aec89cfce457395fc65e4d1d3ac669cbb41decdd54ef465d0ac5249",
+      "LR": "94985dd2a88fe3495e08cba81113f0201d2227142446effa885735561f7adffc",
+      "RL": "548d02f6ad56e3aa858538ca6353e42702e1e9bd76f3c1472d5ed2a943213441",
+      "RR": "e1b25dfdfa19f39782ecc6ed1fb104810e783527689ed28da260ef9294a7f792"
+    },
+    "G_microclusters": {
+      "LL": "c2be7b226924f82f536d4d8971234f71390bf88aed4ef44f2fe4f90e8bdce043",
+      "LR": "d0630d0c86b712de90e34b42926b5540d795013dbc08de3184880550c4203dff",
+      "RL": "2c395cee296b7d5ba35a90f3ad637d65b86257f7e8256eba37b39fe12cf6591d",
+      "RR": "342b7b12851ed1badb2bc6135b17823a9ac1f0361edc235a0cf07b8d86c4a2c5"
+    }
+  },
+  "treated_branch_hashes": {
+    "surface_filters": {
+      "left_wall": "db69d3cfab58e8cf49e2b0f127f6a2a99abaa77838bc576eb82ac727a31fde37",
+      "right_wall": "db69d3cfab58e8cf49e2b0f127f6a2a99abaa77838bc576eb82ac727a31fde37",
+      "floor": "8d917aa49127910b8934365174188561a8d40531f8edfed06cb44cdcac82e056",
+      "ceiling": "db69d3cfab58e8cf49e2b0f127f6a2a99abaa77838bc576eb82ac727a31fde37"
+    },
+    "treated_specular": {
+      "LL": "ead4a1665fc4e7b5af4330ebc0c3b4196f2e893ed3575c8ea440f2743eac0f60",
+      "LR": "ae60ef270c0df6549666609f5b6d15ce57f0ce2df8770cd0d1f9c170f8c78166",
+      "RL": "e440172386ce8bbf2ce5708c414d82d1fe8c66311af43f8190925df5339f1010",
+      "RR": "b554de11d47edea156594b5e602342b9ed3fcb05ddc06e8ff818baee4a48c9bf"
+    },
+    "complete_early": {
+      "LL": "03e669aadd23455331154d8852b2db5aaed0bdb59d7ab8bcefba59fcf2b3f934",
+      "LR": "01836fb9e763ac15bf38e6029e8cc39fbf149a8b0ea22008c850f23fee31a952",
+      "RL": "0d444d7e9e780641b2d28e40123d209680e28aa9036c3887550694c626af2a31",
+      "RR": "e224d68e9e18da84390d6e74d3e75d8bc030b9ad06a32e355212e1d52aea9b44"
+    }
+  },
+  "modeled_correlated_renderer_gain_db": 2.609926,
+  "rendered_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/idealized-treated/Idealized Treated Room Left Speaker.wav",
+      "sha256": "1b6c8b00b2eed642265114caf26e85f57decb26f54e1a530f4ff1fb63987a58d",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080082
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/idealized-treated/Idealized Treated Room Right Speaker.wav",
+      "sha256": "f00cc29c8767513f636089cd45f59e7997214e558d44e002ed64f4b5d9cad854",
+      "frames": 32768,
+      "channels": 2,
+      "sample_width_bits": 24,
+      "peak_linear": 0.053080082
+    }
+  },
+  "plots": [
+    "idealized-treated-early-impulse.svg",
+    "ll-g-h-magnitude.svg",
+    "upper-bass-direct-delta.svg"
+  ],
+  "reflections": {
+    "LL": [
+      {
+        "surface": "left_wall",
+        "reflection_point_m": [
+          -2.3,
+          1.791635,
+          1.2
+        ],
+        "extra_delay_ms": 3.385315,
+        "extra_delay_samples": 162.495112,
+        "arrival_azimuth_degrees": -52.145209,
+        "arrival_elevation_degrees": 0.0,
+        "speaker_off_axis_degrees": 81.377049,
+        "source_directivity_high_frequency_attenuation_db": -11.783708,
+        "source_directivity_high_frequency_gain": 0.257522,
+        "distance_and_surface_gain": 0.142016852,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "right_wall",
+        "reflection_point_m": [
+          2.3,
+          0.970824,
+          1.2
+        ],
+        "extra_delay_ms": 10.849765,
+        "extra_delay_samples": 520.788699,
+        "arrival_azimuth_degrees": 67.323641,
+        "arrival_elevation_degrees": 0.0,
+        "speaker_off_axis_degrees": 37.618028,
+        "source_directivity_high_frequency_attenuation_db": -5.44701,
+        "source_directivity_high_frequency_gain": 0.534133,
+        "distance_and_surface_gain": 0.086635278,
+        "head_shadow_fraction": 0.922697,
+        "head_shadow_cutoff_hz": 1693.257,
+        "head_shadow_high_frequency_gain": 0.309074
+      },
+      {
+        "surface": "floor",
+        "reflection_point_m": [
+          -0.735438,
+          1.25,
+          0.0
+        ],
+        "extra_delay_ms": 2.557821,
+        "extra_delay_samples": 122.775413,
+        "arrival_azimuth_degrees": -30.0,
+        "arrival_elevation_degrees": -39.739606,
+        "speaker_off_axis_degrees": 40.184402,
+        "source_directivity_high_frequency_attenuation_db": -5.953136,
+        "source_directivity_high_frequency_gain": 0.503899,
+        "distance_and_surface_gain": 0.122278888,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "ceiling",
+        "reflection_point_m": [
+          -0.735438,
+          1.25,
+          2.8
+        ],
+        "extra_delay_ms": 4.189962,
+        "extra_delay_samples": 201.118164,
+        "arrival_azimuth_degrees": -30.0,
+        "arrival_elevation_degrees": 47.946072,
+        "speaker_off_axis_degrees": 48.388872,
+        "source_directivity_high_frequency_attenuation_db": -7.535574,
+        "source_directivity_high_frequency_gain": 0.419973,
+        "distance_and_surface_gain": 0.09300302,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      }
+    ],
+    "LR": [
+      {
+        "surface": "left_wall",
+        "reflection_point_m": [
+          -2.3,
+          1.829153,
+          1.2
+        ],
+        "extra_delay_ms": 3.533107,
+        "extra_delay_samples": 169.589124,
+        "arrival_azimuth_degrees": -52.145209,
+        "arrival_elevation_degrees": 0.0,
+        "speaker_off_axis_degrees": 82.887753,
+        "source_directivity_high_frequency_attenuation_db": -11.852607,
+        "source_directivity_high_frequency_gain": 0.255487,
+        "distance_and_surface_gain": 0.141503394,
+        "head_shadow_fraction": 0.789569,
+        "head_shadow_cutoff_hz": 2026.079,
+        "head_shadow_high_frequency_gain": 0.408762
+      },
+      {
+        "surface": "right_wall",
+        "reflection_point_m": [
+          2.3,
+          0.925435,
+          1.2
+        ],
+        "extra_delay_ms": 10.123993,
+        "extra_delay_samples": 485.951657,
+        "arrival_azimuth_degrees": 67.323641,
+        "arrival_elevation_degrees": 0.0,
+        "speaker_off_axis_degrees": 37.021831,
+        "source_directivity_high_frequency_attenuation_db": -5.329338,
+        "source_directivity_high_frequency_gain": 0.541418,
+        "distance_and_surface_gain": 0.091551409,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "floor",
+        "reflection_point_m": [
+          -0.647938,
+          1.25,
+          0.0
+        ],
+        "extra_delay_ms": 2.498924,
+        "extra_delay_samples": 119.948364,
+        "arrival_azimuth_degrees": -30.0,
+        "arrival_elevation_degrees": -39.739606,
+        "speaker_off_axis_degrees": 39.330526,
+        "source_directivity_high_frequency_attenuation_db": -5.784918,
+        "source_directivity_high_frequency_gain": 0.513753,
+        "distance_and_surface_gain": 0.123801792,
+        "head_shadow_fraction": 0.5,
+        "head_shadow_cutoff_hz": 2750.0,
+        "head_shadow_high_frequency_gain": 0.625594
+      },
+      {
+        "surface": "ceiling",
+        "reflection_point_m": [
+          -0.647938,
+          1.25,
+          2.8
+        ],
+        "extra_delay_ms": 4.105791,
+        "extra_delay_samples": 197.077981,
+        "arrival_azimuth_degrees": -30.0,
+        "arrival_elevation_degrees": 47.946072,
+        "speaker_off_axis_degrees": 47.525118,
+        "source_directivity_high_frequency_attenuation_db": -7.373432,
+        "source_directivity_high_frequency_gain": 0.427886,
+        "distance_and_surface_gain": 0.094568971,
+        "head_shadow_fraction": 0.5,
+        "head_shadow_cutoff_hz": 2750.0,
+        "head_shadow_high_frequency_gain": 0.625594
+      }
+    ],
+    "RL": [
+      {
+        "surface": "left_wall",
+        "reflection_point_m": [
+          -2.3,
+          0.931909,
+          1.2
+        ],
+        "extra_delay_ms": 10.446578,
+        "extra_delay_samples": 501.435767,
+        "arrival_azimuth_degrees": -67.725533,
+        "arrival_elevation_degrees": 0.0,
+        "speaker_off_axis_degrees": 37.433837,
+        "source_directivity_high_frequency_attenuation_db": -5.410653,
+        "source_directivity_high_frequency_gain": 0.536374,
+        "distance_and_surface_gain": 0.089996473,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "right_wall",
+        "reflection_point_m": [
+          2.3,
+          1.85098,
+          1.2
+        ],
+        "extra_delay_ms": 3.256002,
+        "extra_delay_samples": 156.28808,
+        "arrival_azimuth_degrees": 51.084996,
+        "arrival_elevation_degrees": 0.0,
+        "speaker_off_axis_degrees": 81.862939,
+        "source_directivity_high_frequency_attenuation_db": -11.807285,
+        "source_directivity_high_frequency_gain": 0.256824,
+        "distance_and_surface_gain": 0.144825657,
+        "head_shadow_fraction": 0.778079,
+        "head_shadow_cutoff_hz": 2054.803,
+        "head_shadow_high_frequency_gain": 0.417366
+      },
+      {
+        "surface": "floor",
+        "reflection_point_m": [
+          0.707938,
+          1.25,
+          0.0
+        ],
+        "extra_delay_ms": 2.498924,
+        "extra_delay_samples": 119.948364,
+        "arrival_azimuth_degrees": 30.0,
+        "arrival_elevation_degrees": -39.739606,
+        "speaker_off_axis_degrees": 39.330526,
+        "source_directivity_high_frequency_attenuation_db": -5.784918,
+        "source_directivity_high_frequency_gain": 0.513753,
+        "distance_and_surface_gain": 0.123801792,
+        "head_shadow_fraction": 0.5,
+        "head_shadow_cutoff_hz": 2750.0,
+        "head_shadow_high_frequency_gain": 0.625594
+      },
+      {
+        "surface": "ceiling",
+        "reflection_point_m": [
+          0.707938,
+          1.25,
+          2.8
+        ],
+        "extra_delay_ms": 4.105791,
+        "extra_delay_samples": 197.077981,
+        "arrival_azimuth_degrees": 30.0,
+        "arrival_elevation_degrees": 47.946072,
+        "speaker_off_axis_degrees": 47.525118,
+        "source_directivity_high_frequency_attenuation_db": -7.373432,
+        "source_directivity_high_frequency_gain": 0.427886,
+        "distance_and_surface_gain": 0.094568971,
+        "head_shadow_fraction": 0.5,
+        "head_shadow_cutoff_hz": 2750.0,
+        "head_shadow_high_frequency_gain": 0.625594
+      }
+    ],
+    "RR": [
+      {
+        "surface": "left_wall",
+        "reflection_point_m": [
+          -2.3,
+          0.976235,
+          1.2
+        ],
+        "extra_delay_ms": 11.173719,
+        "extra_delay_samples": 536.338497,
+        "arrival_azimuth_degrees": -67.725533,
+        "arrival_elevation_degrees": 0.0,
+        "speaker_off_axis_degrees": 38.010154,
+        "source_directivity_high_frequency_attenuation_db": -5.524411,
+        "source_directivity_high_frequency_gain": 0.529395,
+        "distance_and_surface_gain": 0.085193437,
+        "head_shadow_fraction": 0.925379,
+        "head_shadow_cutoff_hz": 1686.553,
+        "head_shadow_high_frequency_gain": 0.307066
+      },
+      {
+        "surface": "right_wall",
+        "reflection_point_m": [
+          2.3,
+          1.813235,
+          1.2
+        ],
+        "extra_delay_ms": 3.114075,
+        "extra_delay_samples": 149.47559,
+        "arrival_azimuth_degrees": 51.084996,
+        "arrival_elevation_degrees": 0.0,
+        "speaker_off_axis_degrees": 80.279978,
+        "source_directivity_high_frequency_attenuation_db": -11.725564,
+        "source_directivity_high_frequency_gain": 0.259252,
+        "distance_and_surface_gain": 0.145394183,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "floor",
+        "reflection_point_m": [
+          0.795438,
+          1.25,
+          0.0
+        ],
+        "extra_delay_ms": 2.557821,
+        "extra_delay_samples": 122.775413,
+        "arrival_azimuth_degrees": 30.0,
+        "arrival_elevation_degrees": -39.739606,
+        "speaker_off_axis_degrees": 40.184402,
+        "source_directivity_high_frequency_attenuation_db": -5.953136,
+        "source_directivity_high_frequency_gain": 0.503899,
+        "distance_and_surface_gain": 0.122278888,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      },
+      {
+        "surface": "ceiling",
+        "reflection_point_m": [
+          0.795438,
+          1.25,
+          2.8
+        ],
+        "extra_delay_ms": 4.189962,
+        "extra_delay_samples": 201.118164,
+        "arrival_azimuth_degrees": 30.0,
+        "arrival_elevation_degrees": 47.946072,
+        "speaker_off_axis_degrees": 48.388872,
+        "source_directivity_high_frequency_attenuation_db": -7.535574,
+        "source_directivity_high_frequency_gain": 0.419973,
+        "distance_and_surface_gain": 0.09300302,
+        "head_shadow_fraction": 0.0,
+        "head_shadow_cutoff_hz": 4000.0,
+        "head_shadow_high_frequency_gain": 1.0
+      }
+    ]
+  }
+}

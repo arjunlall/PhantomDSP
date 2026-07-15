@@ -1,0 +1,14 @@
+# Experimental candidate H; not the production default.
+# G's geometry and diffuse field with idealized lower-midrange specular treatment.
+# Personal direct sound, synthetic room branches, and clean bass remain convolution-integrated.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\idealized-treated\Idealized Treated Room Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\idealized-treated\Idealized Treated Room Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR

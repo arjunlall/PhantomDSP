@@ -122,7 +122,9 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Audition F against E; F retained focused left/right placement but moved the mono center close to the forehead, while E remained more convincing.
 - [x] Trace F's center failure to sample-identical ear responses through 25.25 ms and 1.000 early-field correlation versus E's 4.21 ms divergence and 0.280 maximum correlation.
 - [x] Build and offline-validate one complete candidate G with soffit geometry, controlled directivity, a 3 cm rigid lateral offset, attenuated specular paths, and deterministic binaural diffusion.
-- [ ] Benchmark and audition G against E with all downstream filters unchanged.
+- [x] Benchmark and audition G against E with all downstream filters unchanged; G passed runtime validation and sounded much better than F and competitive with E, but exposed a broad 200–300 Hz specular cancellation.
+- [x] Build candidate H with post-calibration idealized lower-midrange treatment on G's coherent floor, ceiling, and side-wall reflections while preserving its diffuse and late fields.
+- [ ] Benchmark and audition H against G for a smoother lower midrange without weakening externalization or room naturalness.
 - [ ] Parameterize speaker azimuth after direct ILD/HRTF and early-reflection direction models can change together; reuse the shared synthetic late field.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
 - [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.

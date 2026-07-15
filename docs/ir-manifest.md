@@ -73,4 +73,4 @@ These files are derived from `measurements/minimum-latency/legacy-reference/anal
 | `IRs/tonally-normalized/Tonally Normalized Room Left Speaker.wav` | `1b6c8b00b2eed642265114caf26e85f57decb26f54e1a530f4ff1fb63987a58d` | `3c7694241bf69a5d57759d3c3896d40533bb2b9f04ba6be7150f8f7b02fae882` |
 | `IRs/tonally-normalized/Tonally Normalized Room Right Speaker.wav` | `f00cc29c8767513f636089cd45f59e7997214e558d44e002ed64f4b5d9cad854` | `06faacc6675991279232a2a1ac8cf57376e0a02a0eb5fc13c1d770dd98bf42a1` |
 
-Both outputs are stereo 48 kHz, 24-bit PCM. Exact response targets, filter behavior, spatial-preservation metrics, and plots are recorded in the [Candidate I analysis](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).
+Both outputs are stereo 48 kHz, 24-bit PCM. Windows Benchmark verified the exact assets and routing with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Exact response targets, filter behavior, spatial-preservation metrics, and plots are recorded in the [Candidate I analysis](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).

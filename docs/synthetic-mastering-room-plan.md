@@ -1,6 +1,6 @@
 # Synthetic Mastering Room Plan
 
-Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidate H passed offline and Windows validation. Candidate I is generated and offline-validated as the 200 Hz–1 kHz tonal-normalization experiment built from H.
+Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidate H passed offline and Windows validation. Candidate I passed offline and Windows validation and is active for H/I listening.
 
 ## Objective
 
@@ -64,4 +64,4 @@ R_R(f) = 10 log10[(|H_RL|² + |H_RR|²) / (|D_RL|² + |D_RR|²)]
 
 Each ratio is 1/6-octave smoothed and normalized toward its mean from 200 Hz to 1 kHz, with tapered boundaries and unity response outside the correction region. The left correction is applied identically to LL and LR; the right correction is applied identically to RL and RR. This preserves each virtual speaker's interaural transfer ratio, direct-to-room relationship, timing, and spatial placement while removing only broad fused-response coloration. Raw comb-filter teeth are not inverted. The correction is causal minimum phase, so it adds no bulk delay or pre-ringing.
 
-Offline, left-speaker RMS coloration falls from 1.294 to 0.414 dB and right-speaker coloration falls from 1.282 to 0.341 dB. The corresponding peak-to-peak ranges fall from 5.850 to 2.248 dB and from 6.035 to 1.703 dB. Average band levels remain within 0.003 dB of H; the 20–80 Hz and 1.25–8 kHz changes are 0.0005 and 0.0007 dB RMS. Modeled maximum correlated gain is +2.62 dB. Exact filters and response plots are in the [Candidate I analysis](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).
+Offline, left-speaker RMS coloration falls from 1.294 to 0.414 dB and right-speaker coloration falls from 1.282 to 0.341 dB. The corresponding peak-to-peak ranges fall from 5.850 to 2.248 dB and from 6.035 to 1.703 dB. Average band levels remain within 0.003 dB of H; the 20–80 Hz and 1.25–8 kHz changes are 0.0005 and 0.0007 dB RMS. Modeled maximum correlated gain is +2.62 dB. Windows Benchmark passed with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Exact filters and response plots are in the [Candidate I analysis](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).

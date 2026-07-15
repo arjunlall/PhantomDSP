@@ -109,7 +109,7 @@ H reduces G's worst smoothed 200–350 Hz direct-path null from −5.70 to −3.
 - One causal minimum-phase correction is shared by LL and LR; another is shared by RL and RR. This preserves each speaker's interaural ratio while correcting its broad fused-response coloration.
 - Correction tapers to unity by 160 Hz and 1.25 kHz. Raw comb teeth are not inverted, bulk delay remains zero, and the discarded convolution tail is below −104 dB relative to the complete output.
 
-Offline, left-speaker coloration falls from 1.294 to 0.414 dB RMS and right-speaker coloration falls from 1.282 to 0.341 dB RMS. Average 200 Hz–1 kHz level changes by at most 0.003 dB per speaker. The 20–80 Hz change is 0.0005 dB RMS, the 1.25–8 kHz change is 0.0007 dB RMS, and modeled correlated gain remains +2.62 dB. Exact filters, hashes, before/after plots, and spatial-preservation metrics are in the [Candidate I report](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).
+Offline, left-speaker coloration falls from 1.294 to 0.414 dB RMS and right-speaker coloration falls from 1.282 to 0.341 dB RMS. Average 200 Hz–1 kHz level changes by at most 0.003 dB per speaker. The 20–80 Hz change is 0.0005 dB RMS, the 1.25–8 kHz change is 0.0007 dB RMS, and modeled correlated gain remains +2.62 dB. Windows Benchmark passed with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Exact filters, hashes, before/after plots, and spatial-preservation metrics are in the [Candidate I report](../measurements/synthetic-reference-room/tonally-normalized/analysis/report.md).
 
 ## A/B/C/D/E/F/G/H/I Listening
 
@@ -131,7 +131,7 @@ In `config - personalized.txt`, select exactly one renderer:
 Include: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, and H have passed Windows Benchmark; I is offline-validated pending its Windows Benchmark and H/I listening comparison. A remains the production default.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, H, and I have passed Windows Benchmark; I is active on the Windows system for H/I listening. A remains the production default.
 
 ## Next Stages
 

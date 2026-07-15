@@ -1,6 +1,6 @@
 # Synthetic Mastering Room Plan
 
-Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidates H and I passed offline and Windows validation, and listening found I successful. Candidate J is generated and offline-validated for comparison with I.
+Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidates H and I passed offline and Windows validation, and listening found I successful. Candidate J is generated, offline-validated, and informally preferred tonally, but its apparent image may be too high. Candidate K is now offline-validated as a microcluster-only directional-HRTF experiment; Windows Benchmark and J/K listening are next.
 
 ## Objective
 
@@ -71,3 +71,23 @@ Offline, left-speaker RMS coloration falls from 1.294 to 0.414 dB and right-spea
 J preserves I exactly as its parent and corrects only the remaining broad 1–1.5 kHz complete-to-direct coloration. Its new filters begin a raised-cosine transition at 900 Hz, reach full effect from 1–1.5 kHz, and use a short frequency-shaped release to unity by 1.8 kHz. This removes the inherited 1.1–1.4 kHz jump while allowing the absolute at-ear response to retain the natural personal-HRTF rise above roughly 1.5 kHz. The correction is shared within LL/LR and RL/RR, so it cannot independently alter a speaker's interaural cues.
 
 Unlike I's historical iterative calibration, J does not fit the smoothed target with narrow alternating correction teeth. It applies one broad minimum-phase pass to I. J changes I by only 0.0164 dB RMS from 200 Hz–1 kHz and 0.0013 dB RMS from 1.8–8 kHz. Across the combined 200 Hz–1.5 kHz evaluation band, coloration is 0.437/0.368 dB RMS and 2.294/1.824 dB peak-to-peak for the left/right speakers. Modeled maximum correlated gain is +2.61 dB. Exact filters, hashes, and I/J plots are in the [Candidate J analysis](../measurements/synthetic-reference-room/midrange-normalized/analysis/report.md).
+
+## Candidate K Directional-HRTF Refinement
+
+J's absolute response does not contain a 9 dB upper-treble boost. Its rising complete-to-direct ratio above 5 kHz is caused mainly by synthetic early energy filling the personal direct-path notch near 7–8 kHz. Some filling is physically expected because reflections arrive from different directions, but G's directional model is incomplete: it calculates reflection elevation for metadata while filtering only for azimuthal head shadow. Its floor paths arrive near −40° and ceiling paths near +48°, yet neither receives an elevation-dependent pinna response. The stochastic microclusters likewise have timing and binaural-coherence structure but no explicit arrival-direction HRTF.
+
+The screening analysis estimated personal directional responses from public measured HRTFs without replacing the personal direct path. For ear `e`, measured direct direction `Ω0`, and reflection direction `Ω`, the starting model was:
+
+```text
+H_est(e, Ω) = H_personal(e, Ω0) × H_dataset(e, Ω) / H_dataset(e, Ω0)
+```
+
+The dataset ratio contributes only the directional change. The personal LL/LR/RL/RR measurements remain the magnitude, asymmetry, and ear-canal anchor at the ±30° direct-speaker positions. A screen of 150 full-resolution ARI laboratory HRTFs compared all four direction-centered personal paths from 4–12 kHz. The five selected subjects match them within 0.88–1.12 dB RMS after frequency scaling.
+
+The analysis covered G's actual geometry: direct sources at ±30°/0°, side-wall arrivals around ±51–68°/0°, floor arrivals at ±30°/−40°, and ceiling arrivals at ±30°/+48°. A branch-energy audit then changed the implementation scope: explicit specular paths are roughly 24–31 dB below direct at 7–8 kHz, while the directionless microclusters are 6–8 dB above it. E's accepted late field is also unchanged between the successful and suspect candidates. K therefore modifies only the controlling microcluster branch.
+
+K treats its diffuse field as 80% horizontal side energy, 10% floor, and 10% ceiling. For each virtual speaker, the matched HRTF ensemble and personal direct paths define a desired two-ear power ratio. The existing smoothed microcluster power is redistributed to that ratio rather than multiplied by the raw dataset delta, which would double-count head shadow and alter tonality. The causal minimum-phase correction fades in from 3–4 kHz, is fully active from 4–12 kHz, and fades out by 14 kHz.
+
+Offline, K changes individual ear paths by up to roughly 3.3 dB in the localization band while retaining left/right fused microcluster power within 0.113/0.112 dB RMS. Bass changes by 0.00004 dB RMS, 200 Hz–1.8 kHz by 0.0074 dB RMS, and modeled correlated gain is +2.59 dB. J remains byte-identical. Acceptance now depends on Windows Benchmark and listening: K should lower the apparent image without pulling the center inward, narrowing the speakers, or weakening externalization.
+
+Research basis: the [CIPIC HRTF Database](https://escholarship.org/uc/item/3d10j9jw), the [ARI HRTF Database](https://www.oeaw.ac.at/en/ari/outreach/software/hrtf-database), and Langendijk and Bronkhorst's study of [spectral localization cues](https://doi.org/10.1121/1.424945).

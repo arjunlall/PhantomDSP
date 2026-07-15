@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact public HRTF inputs selected for candidate K's compact directional model",
+  "retrieved_date": "2026-07-15",
+  "dataset": "ARI Loudspeaker Array Studio in-the-ear directional transfer functions",
+  "source_pages": {
+    "ari_database": "https://www.oeaw.ac.at/en/ari/outreach/software/hrtf-database",
+    "sofa_catalog": "https://www.sofaconventions.org/mediawiki/index.php/Files",
+    "ari_las_directory": "https://sofacoustics.org/data/database/ari%20%28las%29/",
+    "license": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "license_name": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+  "selection": {
+    "screened_full_resolution_subjects": 150,
+    "excluded_reduced_direction_files": 10,
+    "personal_anchor": "direction-centered LL/LR/RL/RR responses at room azimuth ±30 degrees",
+    "match_band_hz": [4000.0, 12000.0],
+    "smoothing_fractional_octave": 6,
+    "frequency_scale_grid": [0.85, 1.15, 0.005],
+    "final_model": "median of the five lowest-RMS matches after frequency scaling"
+  },
+  "selected_subjects": [
+    {
+      "rank": 1,
+      "subject": "nh965",
+      "filename": "dtf las_nh965.sofa",
+      "url": "https://sofacoustics.org/data/database/ari%20%28las%29/dtf%20las_nh965.sofa",
+      "bytes": 884279,
+      "sha256": "9532e6a7e08fd4ac77335fd6c7feaadd32d61fecb97d49c7f69de81706a59309",
+      "frequency_scale": 0.95,
+      "match_rms_db": 0.879611
+    },
+    {
+      "rank": 2,
+      "subject": "nh1124",
+      "filename": "dtf las_nh1124.sofa",
+      "url": "https://sofacoustics.org/data/database/ari%20%28las%29/dtf%20las_nh1124.sofa",
+      "bytes": 883162,
+      "sha256": "0d1893150a94989a3a5a887656ee90319116b302d48c858599e495aeadead526",
+      "frequency_scale": 1.0,
+      "match_rms_db": 0.947456
+    },
+    {
+      "rank": 3,
+      "subject": "nh948",
+      "filename": "dtf las_nh948.sofa",
+      "url": "https://sofacoustics.org/data/database/ari%20%28las%29/dtf%20las_nh948.sofa",
+      "bytes": 882931,
+      "sha256": "adb267ddf0d975400c4b82fc6166b96ce93b5c66427150cce66f7ceb9b49f6e2",
+      "frequency_scale": 1.0,
+      "match_rms_db": 1.06892
+    },
+    {
+      "rank": 4,
+      "subject": "nh1145",
+      "filename": "dtf las_nh1145.sofa",
+      "url": "https://sofacoustics.org/data/database/ari%20%28las%29/dtf%20las_nh1145.sofa",
+      "bytes": 882986,
+      "sha256": "aa73026b84be16da6c7472695b67d5eea9e54e2bac28ce7dff7ad93f9cd57b8d",
+      "frequency_scale": 1.045,
+      "match_rms_db": 1.098222
+    },
+    {
+      "rank": 5,
+      "subject": "nh1123",
+      "filename": "dtf las_nh1123.sofa",
+      "url": "https://sofacoustics.org/data/database/ari%20%28las%29/dtf%20las_nh1123.sofa",
+      "bytes": 883904,
+      "sha256": "40b854149e9affada30006559127c4801180f0e42fb98c449c1a9bef53b65c95",
+      "frequency_scale": 1.15,
+      "match_rms_db": 1.124198
+    }
+  ],
+  "derived_model": {
+    "path": "analysis/ari-las/directional-model.json",
+    "sha256": "6675b7cb0b9f06b9661e0e6ad53f91860ba2415af81bd38f5c53bf578f4091c9",
+    "bytes": 69631
+  }
+}

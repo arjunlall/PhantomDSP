@@ -243,6 +243,9 @@
   "plots": [
     "binaural-tonal-normalization.svg",
     "i-j-room-coloration.svg",
+    "j-left-right-full-spectrum.svg",
+    "j-left-components-full-spectrum.svg",
+    "j-right-components-full-spectrum.svg",
     "ipsilateral-h-j-direct-relative.svg",
     "tonal-correction-response.svg"
   ],

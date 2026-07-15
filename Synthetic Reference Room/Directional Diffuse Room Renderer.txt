@@ -1,0 +1,14 @@
+# Experimental candidate K; not the production default.
+# J with only the dominant microcluster branch redistributed using directional HRTF cues.
+# Fused per-speaker power is preserved; direct, bass, specular, and late branches are unchanged.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\directional-diffuse\Directional Diffuse Room Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\directional-diffuse\Directional Diffuse Room Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR

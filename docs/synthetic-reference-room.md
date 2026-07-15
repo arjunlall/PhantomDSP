@@ -1,6 +1,6 @@
 # Synthetic Reference Room
 
-This experiment works toward a speaker renderer that does not depend on the original JBL room response. The production `Speaker Virtualization.txt` remains the default; candidates C and D reuse measured room segments as diagnostic controls, E replaces D's measured late decay, F replaces the remaining measured early waveform, G redesigns the theoretical room around soffit mains and binaural diffusion, H adds idealized lower-midrange reflection treatment, I normalizes H through 1 kHz, and J extends that normalization through the remaining 1–1.5 kHz jump before releasing it smoothly.
+This experiment works toward a speaker renderer that does not depend on the original JBL room response. The production `Speaker Virtualization.txt` remains the default; candidates C and D reuse measured room segments as diagnostic controls, E replaces D's measured late decay, F replaces the remaining measured early waveform, G redesigns the theoretical room around soffit mains and binaural diffusion, H adds idealized lower-midrange reflection treatment, I and J normalize broad coloration through 1.5 kHz, and K gives J's diffuse early field a directional HRTF model.
 
 ## Design Boundary
 
@@ -10,7 +10,7 @@ The renderer is divided into three independently testable stages:
 2. **Synthetic early reflections:** geometrically generated arrivals filtered for their incident directions.
 3. **Shared late field:** diffuse binaural decay with controlled interaural coherence and no copied room modes.
 
-Prototype B implements only stage 1. Candidate C adds a deliberately limited personal early-room control. Candidate D adds the complementary measured late field to determine whether sustained binaural decay supplies the missing apparent distance. Candidate E keeps C but synthesizes stage 3 from statistical targets. Candidate F keeps B and E's accepted late branch while synthesizing stage 2. Candidate G keeps those accepted endpoints but replaces F's symmetric free-standing room with a complete synthetic mastering-room model. Candidate H keeps G fixed except for frequency-dependent attenuation of coherent specular reflections. Candidate I keeps H's time-domain renderer fixed while correcting broad fused-response tonality through 1 kHz. Candidate J keeps I fixed below that region and corrects the remaining broad 1–1.5 kHz coloration.
+Prototype B implements only stage 1. Candidate C adds a deliberately limited personal early-room control. Candidate D adds the complementary measured late field to determine whether sustained binaural decay supplies the missing apparent distance. Candidate E keeps C but synthesizes stage 3 from statistical targets. Candidate F keeps B and E's accepted late branch while synthesizing stage 2. Candidate G keeps those accepted endpoints but replaces F's symmetric free-standing room with a complete synthetic mastering-room model. Candidate H keeps G fixed except for frequency-dependent attenuation of coherent specular reflections. Candidate I keeps H's time-domain renderer fixed while correcting broad fused-response tonality through 1 kHz. Candidate J extends that correction through 1.5 kHz. Candidate K keeps J's fused response fixed while redistributing its diffuse early energy between ears using measured directional HRTF ratios.
 
 ## Personal Direct Prototype
 
@@ -122,7 +122,18 @@ Offline, left-speaker coloration falls from 1.294 to 0.414 dB RMS and right-spea
 
 Across 200 Hz–1.5 kHz, J reduces left/right room-coloration RMS to 0.437/0.368 dB and peak-to-peak range to 2.294/1.824 dB. It changes I by 0.0013 dB RMS from 1.8–8 kHz, preserves bass, and models +2.61 dB maximum correlated gain. J is offline-validated but still needs Windows Benchmark and listening. Exact hashes and plots are in the [Candidate J report](../measurements/synthetic-reference-room/midrange-normalized/analysis/report.md).
 
-## A/B/C/D/E/F/G/H/I/J Listening
+## Directional Diffuse-Field Candidate
+
+`tools/measurement/render_directional_diffuse_room.py` constructs candidate K directly from J:
+
+- A 150-subject ARI laboratory-HRTF screen selects the five best matches to the personal ±30° LL/LR/RL/RR directional contrast.
+- The microcluster direction model is 80% horizontal side energy, 10% floor, and 10% ceiling. It is active from 3–14 kHz and full strength from 4–12 kHz.
+- Each speaker's existing smoothed microcluster power is redistributed between its two ear paths; it is not boosted or cut as a fused source.
+- J's direct, bass, treated specular, accepted late field, and midrange normalization remain unchanged. The filters are causal minimum phase with no bulk delay.
+
+Individual ear paths change by up to roughly 3.3 dB in the localization band, while the left/right fused microcluster responses change by only 0.113/0.112 dB RMS. K changes J by 0.00004 dB RMS at 20–80 Hz and 0.0074 dB RMS at 200 Hz–1.8 kHz; modeled correlated gain is +2.59 dB. Exact source hashes, filters, and plots are in the [Candidate K report](../measurements/synthetic-reference-room/directional-diffuse/analysis/report.md); the [HRTF reproduction guide](hrtf-reproduction.md) pins the public sources and both fast and full rebuild procedures.
+
+## A/B/C/D/E/F/G/H/I/J/K Listening
 
 In `config - personalized.txt`, select exactly one renderer:
 
@@ -137,18 +148,19 @@ In `config - personalized.txt`, select exactly one renderer:
 # H: Synthetic Reference Room\Idealized Treated Room Renderer.txt
 # I: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
 # J: Synthetic Reference Room\Midrange Normalized Room Renderer.txt
+# K: Synthetic Reference Room\Directional Diffuse Room Renderer.txt
 
 # Example: Candidate I active; every other renderer must be commented.
 # Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
 Include: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, H, and I have passed Windows Benchmark; J has passed offline validation only. A remains the production default.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, H, and I have passed Windows Benchmark; J and K have passed offline validation only. A remains the production default.
 
 ## Next Stages
 
 - Keep D frozen as the measured hybrid control and E frozen as the accepted synthetic-late reference.
-- Benchmark and audition J against I with every downstream stage unchanged.
+- Benchmark K, then audition it directly against J for image height, center distance, and externalization with every downstream stage unchanged.
 - Add a direct-only generic-HRTF control only if the remaining personal contribution needs to be isolated.
 - Parameterize speaker azimuth only after the direct ILD/HRTF and reflection directions can change with the theoretical geometry; the shared late field should remain reusable.
 - Validate each stage through Equalizer APO Benchmark and controlled listening before promotion.

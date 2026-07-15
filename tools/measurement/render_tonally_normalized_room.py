@@ -14,7 +14,9 @@ from explore_minimum_latency_renderer import minimum_phase_spectrum
 from render_active_renderer import write_pcm24
 from render_idealized_treated_room import (
     ANALYSIS_DIRECTORY as H_ANALYSIS_DIRECTORY,
+    C_FILES,
     DESIGN as H_DESIGN,
+    E_FILES,
     OUTPUT_DIRECTORY as H_OUTPUT_DIRECTORY,
     OUTPUT_FILES as H_OUTPUT_FILES,
 )
@@ -160,6 +162,11 @@ def speaker_ratio_db(spectra, direct_spectra, paths):
     return 10.0 * np.log10(
         np.maximum(complete_power, 1e-30) / np.maximum(direct_power, 1e-30)
     )
+
+
+def speaker_energy_db(spectra, paths):
+    power = sum(np.square(np.abs(spectra[path])) for path in paths)
+    return 10.0 * np.log10(np.maximum(power, 1e-30))
 
 
 def log_frequency_samples(frequencies, values, low, high, count=512):
@@ -332,6 +339,7 @@ def write_plots(
     filters,
     profile,
     i_spectra=None,
+    component_spectra=None,
 ):
     label = profile["label"]
     design = profile["design"]
@@ -436,6 +444,128 @@ def write_plots(
             x_scale="log",
         )
         plots.append("i-j-room-coloration.svg")
+
+    if label == "J":
+        full_band = (frequencies >= 20.0) & (frequencies <= 20000.0)
+        # The responses are already 1/6-octave smoothed. A log-spaced display
+        # grid preserves their visible shape without emitting tens of
+        # thousands of redundant SVG points.
+        full_plot_frequencies = np.geomspace(20.0, 20000.0, 1200)
+        write_svg_plot(
+            output / "j-left-right-full-spectrum.svg",
+            "Candidate J Full-Spectrum Per-Speaker Room Coloration",
+            [
+                (
+                    "J left speaker",
+                    full_plot_frequencies,
+                    np.interp(
+                        full_plot_frequencies,
+                        frequencies[full_band],
+                        ratios[(label, "left")][full_band],
+                    ),
+                    "#2563eb",
+                ),
+                (
+                    "J right speaker",
+                    full_plot_frequencies,
+                    np.interp(
+                        full_plot_frequencies,
+                        frequencies[full_band],
+                        ratios[(label, "right")][full_band],
+                    ),
+                    "#059669",
+                ),
+            ],
+            "Frequency (Hz)",
+            "1/6-octave complete-to-direct ratio (dB)",
+            20.0,
+            20000.0,
+            -2.0,
+            12.0,
+            [20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000],
+            x_scale="log",
+        )
+        plots.append("j-left-right-full-spectrum.svg")
+
+        if component_spectra is not None:
+            component_colors = {
+                "direct": "#6b7280",
+                "early": "#2563eb",
+                "late": "#d97706",
+                "complete": "#059669",
+            }
+            for speaker, paths in SPEAKER_PATHS.items():
+                combined_filter_db = speaker_ratio_db(
+                    candidate_spectra, h_spectra, paths
+                )
+                component_curves = {
+                    name: smooth_db_values(
+                        frequencies,
+                        speaker_energy_db(spectra, paths) + combined_filter_db,
+                        design,
+                    )
+                    for name, spectra in component_spectra.items()
+                }
+                component_curves["complete"] = smooth_db_values(
+                    frequencies,
+                    speaker_energy_db(candidate_spectra, paths),
+                    design,
+                )
+                reference = float(
+                    np.interp(
+                        1000.0,
+                        frequencies,
+                        component_curves["direct"],
+                    )
+                )
+                for name in component_curves:
+                    component_curves[name] -= reference
+                filename = f"j-{speaker}-components-full-spectrum.svg"
+                write_svg_plot(
+                    output / filename,
+                    f"Candidate J {speaker.title()} Speaker Components",
+                    [
+                        (
+                            label_text,
+                            full_plot_frequencies,
+                            np.maximum(
+                                np.interp(
+                                    full_plot_frequencies,
+                                    frequencies[full_band],
+                                    component_curves[name][full_band],
+                                ),
+                                -40.0,
+                            ),
+                            component_colors[name],
+                        )
+                        for name, label_text in (
+                            ("direct", "personal direct"),
+                            ("early", "synthetic early"),
+                            ("late", "synthetic late"),
+                            ("complete", "complete J"),
+                        )
+                    ],
+                    "Frequency (Hz)",
+                    "Energy relative to J-filtered direct at 1 kHz (dB)",
+                    20.0,
+                    20000.0,
+                    -40.0,
+                    25.0,
+                    [
+                        20,
+                        50,
+                        100,
+                        200,
+                        500,
+                        1000,
+                        2000,
+                        5000,
+                        10000,
+                        20000,
+                    ],
+                    x_scale="log",
+                )
+                plots.append(filename)
 
     path_series = []
     for path, h_color, candidate_color in (
@@ -622,6 +752,38 @@ def main():
     candidate_spectra = {
         path: np.fft.rfft(values, nfft) for path, values in rendered.items()
     }
+    component_spectra = None
+    if label == "J":
+        candidate_c, c_rate, _ = load_stereo_paths(C_FILES)
+        candidate_e, e_rate, _ = load_stereo_paths(E_FILES)
+        if c_rate != sample_rate or e_rate != sample_rate:
+            raise ValueError("Expected J component inputs at the design sample rate")
+        candidate_c = {
+            path: pad_to(values, output_length)
+            for path, values in candidate_c.items()
+        }
+        candidate_e = {
+            path: pad_to(values, output_length)
+            for path, values in candidate_e.items()
+        }
+        late = {
+            path: candidate_e[path] - candidate_c[path] for path in PATH_ORDER
+        }
+        early = {
+            path: candidate_h[path] - direct_padded[path] - late[path]
+            for path in PATH_ORDER
+        }
+        component_spectra = {
+            "direct": direct_spectra,
+            "early": {
+                path: np.fft.rfft(values, nfft)
+                for path, values in early.items()
+            },
+            "late": {
+                path: np.fft.rfft(values, nfft)
+                for path, values in late.items()
+            },
+        }
     ratios = {}
     response_stats = {}
     interaural = {}
@@ -705,6 +867,7 @@ def main():
         filters,
         profile,
         i_spectra,
+        component_spectra,
     )
     correction_low, correction_high = design["correction"]["flat_band_hz"]
     low, high = evaluation_band

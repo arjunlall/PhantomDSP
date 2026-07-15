@@ -1,0 +1,1949 @@
+{
+  "schema_version": 1,
+  "status": "directional-HRTF screening analysis; no candidate K rendered",
+  "dataset": {
+    "name": "ARI Loudspeaker Array Studio in-the-ear directional transfer functions",
+    "source": "https://sofacoustics.org/data/database/ari%20%28las%29/",
+    "subjects_analyzed": 150,
+    "selection_boundary": "all matching files discovered in the official directory",
+    "files": [
+      {
+        "listener": "nh965",
+        "filename": "dtf las_nh965.sofa",
+        "sha256": "9532e6a7e08fd4ac77335fd6c7feaadd32d61fecb97d49c7f69de81706a59309",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.95,
+        "match_rms_db": 0.879611
+      },
+      {
+        "listener": "nh1124",
+        "filename": "dtf las_nh1124.sofa",
+        "sha256": "0d1893150a94989a3a5a887656ee90319116b302d48c858599e495aeadead526",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.0,
+        "match_rms_db": 0.947456
+      },
+      {
+        "listener": "nh948",
+        "filename": "dtf las_nh948.sofa",
+        "sha256": "adb267ddf0d975400c4b82fc6166b96ce93b5c66427150cce66f7ceb9b49f6e2",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.0,
+        "match_rms_db": 1.06892
+      },
+      {
+        "listener": "nh1145",
+        "filename": "dtf las_nh1145.sofa",
+        "sha256": "aa73026b84be16da6c7472695b67d5eea9e54e2bac28ce7dff7ad93f9cd57b8d",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.045,
+        "match_rms_db": 1.098222
+      },
+      {
+        "listener": "nh1123",
+        "filename": "dtf las_nh1123.sofa",
+        "sha256": "40b854149e9affada30006559127c4801180f0e42fb98c449c1a9bef53b65c95",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.124198
+      },
+      {
+        "listener": "nh1087",
+        "filename": "dtf las_nh1087.sofa",
+        "sha256": "bfccfc2f071f0e7bbf22203578771d11244a9f16ca667188208fcddebb4ea34b",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.895,
+        "match_rms_db": 1.144936
+      },
+      {
+        "listener": "nh995",
+        "filename": "dtf las_nh995.sofa",
+        "sha256": "b02c752856775e80b63c706fa661b8b4824f43f926f9d483562fe07540d73f35",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.945,
+        "match_rms_db": 1.16402
+      },
+      {
+        "listener": "nh1016",
+        "filename": "dtf las_nh1016.sofa",
+        "sha256": "3068d470342b0710048bd28d293f5d751bc26f0ac191fd1621b8c1ec7e94db87",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.97,
+        "match_rms_db": 1.182609
+      },
+      {
+        "listener": "nh1137",
+        "filename": "dtf las_nh1137.sofa",
+        "sha256": "7af7b9b79899f7ad03171de005174336709a10018ef8a291115809966a571014",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.895,
+        "match_rms_db": 1.201685
+      },
+      {
+        "listener": "nh1051",
+        "filename": "dtf las_nh1051.sofa",
+        "sha256": "bd4ba9463d6521bb52908d525a01eac26bc6bc9d2b62400b14d128989f6cbfcf",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.06,
+        "match_rms_db": 1.210545
+      },
+      {
+        "listener": "nh956",
+        "filename": "dtf las_nh956.sofa",
+        "sha256": "432c40ed8d652c4337e628f134c3b47447aadf7b9e68d4e0cee0153d26852ab9",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.235478
+      },
+      {
+        "listener": "nh1133",
+        "filename": "dtf las_nh1133.sofa",
+        "sha256": "287010462eaa472d1e6d0509d56963ff8c714f569dd3026928a00bbf941c2ff2",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.249519
+      },
+      {
+        "listener": "nh1071",
+        "filename": "dtf las_nh1071.sofa",
+        "sha256": "bad62d1c50bccc353ed49da8fe243e8c184ca228cc54f05b104e59d84183aa86",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.905,
+        "match_rms_db": 1.301102
+      },
+      {
+        "listener": "nh1102",
+        "filename": "dtf las_nh1102.sofa",
+        "sha256": "7bb1c9b388d847fa31b143149aca71905977f61d71c4e864a58b33e2bc914be7",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.07,
+        "match_rms_db": 1.328837
+      },
+      {
+        "listener": "nh1088",
+        "filename": "dtf las_nh1088.sofa",
+        "sha256": "3949751dee052e699e1cc3ebe0b9379e94124395640b27407812d8f06a80fae1",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.05,
+        "match_rms_db": 1.341136
+      },
+      {
+        "listener": "nh957",
+        "filename": "dtf las_nh957.sofa",
+        "sha256": "288de180f77d142a02ce1e43da6b930ab82993fe3f39c293706808fb02470318",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.96,
+        "match_rms_db": 1.355197
+      },
+      {
+        "listener": "nh943",
+        "filename": "dtf las_nh943.sofa",
+        "sha256": "75dcef2e08245eeb3d94d0089c84ee8ba1cceddfa75e228521cef36f5bf6f7a7",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.97,
+        "match_rms_db": 1.377787
+      },
+      {
+        "listener": "nh958",
+        "filename": "dtf las_nh958.sofa",
+        "sha256": "49e1d7d75ab964d97f4d8b40e8eceb2074a64889f3ec0f2494ab533626a5db5a",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.055,
+        "match_rms_db": 1.379689
+      },
+      {
+        "listener": "nh1063",
+        "filename": "dtf las_nh1063.sofa",
+        "sha256": "029a1b0829546f8932266c916f28b0ce27f6c2595450326013a593ab7465749d",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.390621
+      },
+      {
+        "listener": "nh742",
+        "filename": "dtf las_nh742.sofa",
+        "sha256": "76565f842d455507e8c1d0966561d7ec99b743fe8d53a74a9fedb35c6cca2931",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.095,
+        "match_rms_db": 1.400463
+      },
+      {
+        "listener": "nh1065",
+        "filename": "dtf las_nh1065.sofa",
+        "sha256": "9878f74134566e72c0039d1493050f51a05cae8c8430c0649d41a64e0db6f78a",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.965,
+        "match_rms_db": 1.401819
+      },
+      {
+        "listener": "nh1161",
+        "filename": "dtf las_nh1161.sofa",
+        "sha256": "13d13ce0ba72411ae11d39084c2d484c0004bf9eb21987c207fa93865b5c173f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.065,
+        "match_rms_db": 1.408491
+      },
+      {
+        "listener": "nh999",
+        "filename": "dtf las_nh999.sofa",
+        "sha256": "6e3f32724f887ece1157cd3adccee96e1ebcd88b5784a2f29f05d01a043888da",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.0,
+        "match_rms_db": 1.409456
+      },
+      {
+        "listener": "nh1017",
+        "filename": "dtf las_nh1017.sofa",
+        "sha256": "f5fff918f2801c88435926be08d2c9f0cb8b9d459c58e0db84866a4978a5af3e",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.875,
+        "match_rms_db": 1.414844
+      },
+      {
+        "listener": "nh1023",
+        "filename": "dtf las_nh1023.sofa",
+        "sha256": "b065ce177999986f6a38bcf7caf519416b895606e33dcc54791604a814e99ffb",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.97,
+        "match_rms_db": 1.425678
+      },
+      {
+        "listener": "nh971",
+        "filename": "dtf las_nh971.sofa",
+        "sha256": "c6d2872a45e10ec23e30cf5c8ba9b36f5ea64004741d4c91a67a61c0fc8ce7de",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.105,
+        "match_rms_db": 1.434087
+      },
+      {
+        "listener": "nh1068",
+        "filename": "dtf las_nh1068.sofa",
+        "sha256": "09d7d9aaf2fb669ba2c889a6e3c8d657c1aee6b351af81b95acc9ecc7fbd05da",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.14,
+        "match_rms_db": 1.435822
+      },
+      {
+        "listener": "nh946",
+        "filename": "dtf las_nh946.sofa",
+        "sha256": "f9138fc4b302dd674335bf1eeb0ca7416e560b81884f1d0411117128ae08a172",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.446148
+      },
+      {
+        "listener": "nh1053",
+        "filename": "dtf las_nh1053.sofa",
+        "sha256": "267c5623191ec5b7cca8159588662dd32d5c93edbb7beb9019941ec5a157c274",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.12,
+        "match_rms_db": 1.449284
+      },
+      {
+        "listener": "nh1136",
+        "filename": "dtf las_nh1136.sofa",
+        "sha256": "af74b9dfa527b39b5f0f1062001fb97929e804f9151ff773b02010be36db634f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.456385
+      },
+      {
+        "listener": "nh1131",
+        "filename": "dtf las_nh1131.sofa",
+        "sha256": "b7560c75d31017bdd2526d87bc61e53966e145adc20b2fc40380212ea8e1f753",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.45748
+      },
+      {
+        "listener": "nh1150",
+        "filename": "dtf las_nh1150.sofa",
+        "sha256": "50260a68b6b48a42a69d11aea7aa21575fb0922c1509192cd73da8b82c36573e",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.469143
+      },
+      {
+        "listener": "nh1175",
+        "filename": "dtf las_nh1175.sofa",
+        "sha256": "6b39d463a830f3f114136595c99895f94dbb542141ad9a2a5b0c4ffba2e3c79d",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.495036
+      },
+      {
+        "listener": "nh1082",
+        "filename": "dtf las_nh1082.sofa",
+        "sha256": "3299440c2c44dfa8a9efb6f1d1441d6d6e184b14f824446c77c707f5a991e354",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.025,
+        "match_rms_db": 1.529025
+      },
+      {
+        "listener": "nh1143",
+        "filename": "dtf las_nh1143.sofa",
+        "sha256": "089dcea0d083658c0c4e909b90944111c68ecb60bc922369669170a0d18cda11",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.535217
+      },
+      {
+        "listener": "nh1050",
+        "filename": "dtf las_nh1050.sofa",
+        "sha256": "e6b4411566efd0517383c7fed03bfe7a81fea4d8685927fb4e70c1a650dbbe7e",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.13,
+        "match_rms_db": 1.540437
+      },
+      {
+        "listener": "nh949",
+        "filename": "dtf las_nh949.sofa",
+        "sha256": "7439826a53a257f1a1ec1bf32c4763db574ad4e03585f7032423caa89d6ffe9e",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.87,
+        "match_rms_db": 1.542684
+      },
+      {
+        "listener": "nh1076",
+        "filename": "dtf las_nh1076.sofa",
+        "sha256": "c86199fb80dcfe3203e4bb87c5c3ab034952bab0ea80286790e61641fe216f06",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.54463
+      },
+      {
+        "listener": "nh942",
+        "filename": "dtf las_nh942.sofa",
+        "sha256": "49f46a0d1d9fab0109a45f3d409753379dc2dc946cd33f521b2ec552a227766b",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.550952
+      },
+      {
+        "listener": "nh1144",
+        "filename": "dtf las_nh1144.sofa",
+        "sha256": "b3e77f49302d269522bf6a5cbf722de9ac44298b290fa4aa8bbb30e7cf2b78f8",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.085,
+        "match_rms_db": 1.554297
+      },
+      {
+        "listener": "nh981",
+        "filename": "dtf las_nh981.sofa",
+        "sha256": "39da2da93b232b471f4e09651b35c0a99887b0a0ff8f6814d30ea6a0428261ca",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.145,
+        "match_rms_db": 1.57049
+      },
+      {
+        "listener": "nh1048",
+        "filename": "dtf las_nh1048.sofa",
+        "sha256": "c9caf150a90c976d03dad9bde28b9af4b31f15f9adf5e0f352b8f5f6bd1b92cc",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.04,
+        "match_rms_db": 1.572577
+      },
+      {
+        "listener": "nh1054",
+        "filename": "dtf las_nh1054.sofa",
+        "sha256": "05ac40a1566253aec125a8e988140bac853811b43834cd9c31c36e5622e38124",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.915,
+        "match_rms_db": 1.577145
+      },
+      {
+        "listener": "nh1125",
+        "filename": "dtf las_nh1125.sofa",
+        "sha256": "8f0ca39a182eeb511b6c9568fcefdb94e3b81d625fd050531a8d54b90042e141",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.586826
+      },
+      {
+        "listener": "nh1058",
+        "filename": "dtf las_nh1058.sofa",
+        "sha256": "ddfbf6dd33c11fe7be24f9647440cb4e27eda1c3dc80afbcd7fc50aececf4d7f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.08,
+        "match_rms_db": 1.598512
+      },
+      {
+        "listener": "nh1127",
+        "filename": "dtf las_nh1127.sofa",
+        "sha256": "81dc6bf6784477081ad55ce46cea7ee8f0ec4874de55667f9e9c40dcf27dea65",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.60083
+      },
+      {
+        "listener": "nh1095",
+        "filename": "dtf las_nh1095.sofa",
+        "sha256": "55572e8703871bcfb578df562d0679451595d72ecd8f06d99cf557bfd70b9c3e",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.60752
+      },
+      {
+        "listener": "nh1056",
+        "filename": "dtf las_nh1056.sofa",
+        "sha256": "bed01065cbb0d16e244ae6dc889f5f69999d48a11b887023214d44f2711ac5cc",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.865,
+        "match_rms_db": 1.609392
+      },
+      {
+        "listener": "nh984",
+        "filename": "dtf las_nh984.sofa",
+        "sha256": "524f4586430e2f4baeafbdbed6bc2ebb30b28f26924df72ef4f93e96be26b0a6",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.025,
+        "match_rms_db": 1.624482
+      },
+      {
+        "listener": "nh990",
+        "filename": "dtf las_nh990.sofa",
+        "sha256": "ae8c6ec2147aa4592a640595ac67ae8e0ffafd89a4e328ec6e7141ae22abd1f3",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.125,
+        "match_rms_db": 1.625015
+      },
+      {
+        "listener": "nh963",
+        "filename": "dtf las_nh963.sofa",
+        "sha256": "2a1be88c7fa883644b4d5a15c1b21f374446d1be8bc30125f89eb8ee618a2769",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.025,
+        "match_rms_db": 1.636867
+      },
+      {
+        "listener": "nh1091",
+        "filename": "dtf las_nh1091.sofa",
+        "sha256": "6dd192be52c6f3514abdcc59beec962f9b8daa0266869fd718c6deede395e86e",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.672763
+      },
+      {
+        "listener": "nh919",
+        "filename": "dtf las_nh919.sofa",
+        "sha256": "9bcfc417741ee1dda5ff2babc3788137b90db5c675873f78019d0e8e80602035",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.93,
+        "match_rms_db": 1.677418
+      },
+      {
+        "listener": "nh994",
+        "filename": "dtf las_nh994.sofa",
+        "sha256": "73221a2fa022440c55d7a8d070f2ce82367132d7b2bfdfcb497a1822c184d02f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.945,
+        "match_rms_db": 1.693033
+      },
+      {
+        "listener": "nh1159",
+        "filename": "dtf las_nh1159.sofa",
+        "sha256": "b8f875bbcbe93eb362347eea5d39b905c7da9bce322f38bc753c0824d279a7aa",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.693887
+      },
+      {
+        "listener": "nh1011",
+        "filename": "dtf las_nh1011.sofa",
+        "sha256": "bd8720c97aced7732116a0dada110012024d9916ca1b3f1ee46dbc6660878b77",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.719677
+      },
+      {
+        "listener": "nh997",
+        "filename": "dtf las_nh997.sofa",
+        "sha256": "94476bcdb05be71be2fe9549119f384a95a2dd34713956cac42e2e8bbae2b6a4",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.721439
+      },
+      {
+        "listener": "nh938",
+        "filename": "dtf las_nh938.sofa",
+        "sha256": "85ce2ca9d28a3142da29514448a5095a1d71f34675a609bb8dde1fb4b39beee7",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.99,
+        "match_rms_db": 1.725834
+      },
+      {
+        "listener": "nh4",
+        "filename": "dtf las_nh4.sofa",
+        "sha256": "47ed663840a0b8d9100ced0e36e24accba9965fab39e89e519298044612172fe",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.726298
+      },
+      {
+        "listener": "nh5",
+        "filename": "dtf las_nh5.sofa",
+        "sha256": "08d777e4c5ba5c2009015ccc1c4ae5b600d2bf210e63a359c0112878a2b4a004",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.726298
+      },
+      {
+        "listener": "nh1157",
+        "filename": "dtf las_nh1157.sofa",
+        "sha256": "6cbe9d6f582fb1962660c3476234f626d9306cec4afdf7e0888922ea1819583a",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.740828
+      },
+      {
+        "listener": "nh1062",
+        "filename": "dtf las_nh1062.sofa",
+        "sha256": "e54c8657141008ab340e6599ac6de18a494d55c587b55fd630c9929fdc529fd2",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.085,
+        "match_rms_db": 1.756033
+      },
+      {
+        "listener": "nh993",
+        "filename": "dtf las_nh993.sofa",
+        "sha256": "ce9c5886cc9feca4f906d561f725bdbd8f72b11380fdb55dc893eb19e4700c69",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.965,
+        "match_rms_db": 1.764109
+      },
+      {
+        "listener": "nh92",
+        "filename": "dtf las_nh92.sofa",
+        "sha256": "614c0fa491cce066bac022916f269b82ef27ddc1e8f4cd4099f43b948eb77f24",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.12,
+        "match_rms_db": 1.768375
+      },
+      {
+        "listener": "nh911",
+        "filename": "dtf las_nh911.sofa",
+        "sha256": "2f7e0b6f5b5bdcd435613acb2b91511db22614ed54cf36897b2229e86203bbe1",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.02,
+        "match_rms_db": 1.771653
+      },
+      {
+        "listener": "nh972",
+        "filename": "dtf las_nh972.sofa",
+        "sha256": "a7c5d056f072954f3eb8761e83b53f4bdf6b7330edb4959566c29e448156886a",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.985,
+        "match_rms_db": 1.781685
+      },
+      {
+        "listener": "nh1099",
+        "filename": "dtf las_nh1099.sofa",
+        "sha256": "f0148dd42dfb270a2bc080b2696f58b9d9b730fac1a325edb261cd775629cad2",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.9,
+        "match_rms_db": 1.783491
+      },
+      {
+        "listener": "nh986",
+        "filename": "dtf las_nh986.sofa",
+        "sha256": "7c61aea90035f81d341a9981b96d9d8f77fbd500cddf0c880fafdda1a872182f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.885,
+        "match_rms_db": 1.792042
+      },
+      {
+        "listener": "nh983",
+        "filename": "dtf las_nh983.sofa",
+        "sha256": "fae0271cc86cc2ce37e6003c8e967cc009edf223d365c41bf9fb3954cbee2e6a",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.885,
+        "match_rms_db": 1.793974
+      },
+      {
+        "listener": "nh1078",
+        "filename": "dtf las_nh1078.sofa",
+        "sha256": "626817908edb5f9c11ba68d1454af79ba325ad93099a68df29a8667d4ed5970c",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.105,
+        "match_rms_db": 1.794431
+      },
+      {
+        "listener": "nh970",
+        "filename": "dtf las_nh970.sofa",
+        "sha256": "d18993ef3730b59c81f0a17846a34d152956edccc80c548fd417cbef9e640d44",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.115,
+        "match_rms_db": 1.822915
+      },
+      {
+        "listener": "nh966",
+        "filename": "dtf las_nh966.sofa",
+        "sha256": "6b5e66dcd766e233334b7a3a5a125c38ae74e1ef55696005f58e3ade475b550b",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.145,
+        "match_rms_db": 1.823822
+      },
+      {
+        "listener": "nh1083",
+        "filename": "dtf las_nh1083.sofa",
+        "sha256": "1bf39cbefcf11a93332c5a2d52bd62b1d207e8d21935a31922759e195b52a116",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.885,
+        "match_rms_db": 1.843139
+      },
+      {
+        "listener": "nh1135",
+        "filename": "dtf las_nh1135.sofa",
+        "sha256": "a9ff822a916bf31372df12226dcd9d61ab3967923805f0461a3fe04a9fdddf72",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.844809
+      },
+      {
+        "listener": "nh214",
+        "filename": "dtf las_nh214.sofa",
+        "sha256": "2188a3fd14fe91ab28a8b354c94b34bad810adada939f57b8a5e6ffe446b273f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.065,
+        "match_rms_db": 1.858605
+      },
+      {
+        "listener": "nh1079",
+        "filename": "dtf las_nh1079.sofa",
+        "sha256": "a51c1487618925d873666c5c936c0123923bbaffc1b7cdfb89c330e1caf3aba2",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.035,
+        "match_rms_db": 1.867336
+      },
+      {
+        "listener": "nh1140",
+        "filename": "dtf las_nh1140.sofa",
+        "sha256": "9812c1b1aa84c574a4b3f5e6591fd5b8a46afccd2af337d7afa3abcc97e19152",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.07,
+        "match_rms_db": 1.868813
+      },
+      {
+        "listener": "nh1057",
+        "filename": "dtf las_nh1057.sofa",
+        "sha256": "3f69d62fbf0f1efddfee63f8621412544665fff9a42d1baa09a851fb0ae5911a",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.89,
+        "match_rms_db": 1.872192
+      },
+      {
+        "listener": "nh1012",
+        "filename": "dtf las_nh1012.sofa",
+        "sha256": "80b37eae564a7d2b0d9fc0c2f684d43162a474b633d8bed5ee24127f5d85b107",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.89,
+        "match_rms_db": 1.879788
+      },
+      {
+        "listener": "nh1069",
+        "filename": "dtf las_nh1069.sofa",
+        "sha256": "607d0e92e43adffca36aa8d54e7125f54924914162df0e17f3bcb6543afa83bc",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.955,
+        "match_rms_db": 1.890511
+      },
+      {
+        "listener": "nh1067",
+        "filename": "dtf las_nh1067.sofa",
+        "sha256": "9ec737d1195550a560002b014e68c89644983690eed7529175dd81fbc14758c5",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.995,
+        "match_rms_db": 1.926644
+      },
+      {
+        "listener": "nh1096",
+        "filename": "dtf las_nh1096.sofa",
+        "sha256": "cfa41146140fb5fda66cf82bf922a34770d3f9e4f130f60848a8062372a8e3b2",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.1,
+        "match_rms_db": 1.933193
+      },
+      {
+        "listener": "nh961",
+        "filename": "dtf las_nh961.sofa",
+        "sha256": "65ef4c4fe1ca8299a49893a9affea412164328c40230fbccf64cd830d2b1fc3f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.952823
+      },
+      {
+        "listener": "nh1100",
+        "filename": "dtf las_nh1100.sofa",
+        "sha256": "a5ecf34b8ab99e78005ef2514f09cb1313e7684aca64c25d09186f6c2d55736c",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.94,
+        "match_rms_db": 1.955526
+      },
+      {
+        "listener": "nh1052",
+        "filename": "dtf las_nh1052.sofa",
+        "sha256": "9d709f22d334f79a493f1e5bcad30233048699c4cb4cd8e3cd571d7a54a10de2",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.960077
+      },
+      {
+        "listener": "nh1167",
+        "filename": "dtf las_nh1167.sofa",
+        "sha256": "3232a1e7da6d2aadff6a4752441aae2af7a4413e5c30ed1acaeefa8186468d4a",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.095,
+        "match_rms_db": 2.009281
+      },
+      {
+        "listener": "nh1147",
+        "filename": "dtf las_nh1147.sofa",
+        "sha256": "f3c11750a03743a554297f8be621c9f279611f20e34e966b5fac8569d9cf358c",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.01,
+        "match_rms_db": 2.024211
+      },
+      {
+        "listener": "nh1080",
+        "filename": "dtf las_nh1080.sofa",
+        "sha256": "a68fa9a965921f4c5984e15063c73863dca700829c447248ef96a99e761fb35b",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.86,
+        "match_rms_db": 2.027856
+      },
+      {
+        "listener": "nh940",
+        "filename": "dtf las_nh940.sofa",
+        "sha256": "83c39f10d428af2ab476057c3923d2771e1157086cb7093a6354411426532731",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.045,
+        "match_rms_db": 2.028148
+      },
+      {
+        "listener": "nh1092",
+        "filename": "dtf las_nh1092.sofa",
+        "sha256": "b4937622ed8a3e208e452f3c82853949868e570a2ea59599ab0ca5bda571d5d4",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.04,
+        "match_rms_db": 2.031048
+      },
+      {
+        "listener": "nh890",
+        "filename": "dtf las_nh890.sofa",
+        "sha256": "fcfb0c83bbd08a7d455d978221d3464afd58b35f0cad9eb7465fa378c95764df",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.135,
+        "match_rms_db": 2.037822
+      },
+      {
+        "listener": "nh1074",
+        "filename": "dtf las_nh1074.sofa",
+        "sha256": "c97aa84f06125ca574a7e2e3a7ee82ccc4a29693f45fecd4d2211ed78e2db648",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.91,
+        "match_rms_db": 2.055058
+      },
+      {
+        "listener": "nh1090",
+        "filename": "dtf las_nh1090.sofa",
+        "sha256": "85d9c811ff4e32d231bc0f5ca58d6f3c353694f334a9021c12d59cb8e78d7af8",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.88,
+        "match_rms_db": 2.064551
+      },
+      {
+        "listener": "nh1084",
+        "filename": "dtf las_nh1084.sofa",
+        "sha256": "abc960bef1a8a9cfe5b23fa15f923a8baaabd263a95037221b0bb2aa59ca49fb",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 2.066895
+      },
+      {
+        "listener": "nh1122",
+        "filename": "dtf las_nh1122.sofa",
+        "sha256": "dd9a501853b470027e6b8dbac99f6f5a24cfac6ca6c8cdca1b6138382a1d78e6",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.06,
+        "match_rms_db": 2.072987
+      },
+      {
+        "listener": "nh1075",
+        "filename": "dtf las_nh1075.sofa",
+        "sha256": "7510230b87600995f2de5141677c0a301f5ad86eaa48595a3138021c90a29989",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.935,
+        "match_rms_db": 2.073915
+      },
+      {
+        "listener": "nh992",
+        "filename": "dtf las_nh992.sofa",
+        "sha256": "5ef309f0d4cd9755e65098554e062f8e27c99a5408d9f63faf984b216c9c9a5a",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.01,
+        "match_rms_db": 2.088055
+      },
+      {
+        "listener": "nh1077",
+        "filename": "dtf las_nh1077.sofa",
+        "sha256": "81ecb96686b4452e98b91d4b23c1025c4443286f4df5568765e91bc6f062b900",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 2.090176
+      },
+      {
+        "listener": "nh1130",
+        "filename": "dtf las_nh1130.sofa",
+        "sha256": "7d19d467c516420361ddd40cd6c1a598a943337af67ce4e25116e1700f13a41b",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.14,
+        "match_rms_db": 2.091298
+      },
+      {
+        "listener": "nh967",
+        "filename": "dtf las_nh967.sofa",
+        "sha256": "ddebbc1f2f24f88d8b07334753331bb56c57bb681f45c912ee5445b6d0fb6896",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.13,
+        "match_rms_db": 2.098143
+      },
+      {
+        "listener": "nh1089",
+        "filename": "dtf las_nh1089.sofa",
+        "sha256": "25ab6e54aaf604401d0087b98397e4f986309c4e111add806ee464cd58850022",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 2.117435
+      },
+      {
+        "listener": "nh1070",
+        "filename": "dtf las_nh1070.sofa",
+        "sha256": "e801babd571b23fb0abef8ce9f7dcf5a5aeff6cfdbd6893922876f8e94b1c4c4",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.92,
+        "match_rms_db": 2.144724
+      },
+      {
+        "listener": "nh1148",
+        "filename": "dtf las_nh1148.sofa",
+        "sha256": "daa52b8dfed9ed052842cc3c19239be7feb92ccaf54405e9b261270c107e0283",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.05,
+        "match_rms_db": 2.153779
+      },
+      {
+        "listener": "nh968",
+        "filename": "dtf las_nh968.sofa",
+        "sha256": "35d45821ad1a373971b37a31ccd138aadcb76aaea6e2450e2c27860550825103",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.03,
+        "match_rms_db": 2.155954
+      },
+      {
+        "listener": "nh1072",
+        "filename": "dtf las_nh1072.sofa",
+        "sha256": "6f321af2bd40ecb90cd03e2b13c04359a54608e28c0f06428d803b7034a8ef80",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.045,
+        "match_rms_db": 2.168172
+      },
+      {
+        "listener": "nh714",
+        "filename": "dtf las_nh714.sofa",
+        "sha256": "4fabef22e4438ae32bd8782bc626d36f2c5acb4be18aa6524e5d3fd8d27950b7",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.065,
+        "match_rms_db": 2.170151
+      },
+      {
+        "listener": "nh1129",
+        "filename": "dtf las_nh1129.sofa",
+        "sha256": "2dbeccda4fa331a54abf30f1dc0c8bb311fe4bc0066b184668c7dfcabaf6f1f9",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.0,
+        "match_rms_db": 2.182072
+      },
+      {
+        "listener": "nh916",
+        "filename": "dtf las_nh916.sofa",
+        "sha256": "f82e159aa61eb9f1f2e013177d7f098dd9525adc73b96199ab6d07a4d2c6d448",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 2.208647
+      },
+      {
+        "listener": "nh1045",
+        "filename": "dtf las_nh1045.sofa",
+        "sha256": "551e8416be10b68ee6af023ac19a391d8c77bb3ea813246ac514303099ce0348",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.105,
+        "match_rms_db": 2.218197
+      },
+      {
+        "listener": "nh979",
+        "filename": "dtf las_nh979.sofa",
+        "sha256": "8651c2660a97c4ff4decf39fbabeae0f86c16a79acffb9551710203dd0328936",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.145,
+        "match_rms_db": 2.222289
+      },
+      {
+        "listener": "nh1073",
+        "filename": "dtf las_nh1073.sofa",
+        "sha256": "017d1b18c2fc8e1e3202125148249dc9ee4c64024a742f9def92764f8da818bc",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 2.261609
+      },
+      {
+        "listener": "nh1115",
+        "filename": "dtf las_nh1115.sofa",
+        "sha256": "61c7d129d840f5c85a1ce50eda275e2f3fa9ee9d948c4334735ad833a9e9523d",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 2.261609
+      },
+      {
+        "listener": "nh1018",
+        "filename": "dtf las_nh1018.sofa",
+        "sha256": "51bb3ce685f93884222b74679e8417f114ec13c96ac3855a9019e229b2cc2294",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.95,
+        "match_rms_db": 2.262997
+      },
+      {
+        "listener": "nh257",
+        "filename": "dtf las_nh257.sofa",
+        "sha256": "33910b83177510cc60daf295d541db14718c66fb45be1106ab2a9712ebb3646b",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.045,
+        "match_rms_db": 2.27309
+      },
+      {
+        "listener": "nh953",
+        "filename": "dtf las_nh953.sofa",
+        "sha256": "9e32067100cf639b6a05d8732a54f72dc47f7fb1293ab05d71ee47d1e1432bc5",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.04,
+        "match_rms_db": 2.284255
+      },
+      {
+        "listener": "nh964",
+        "filename": "dtf las_nh964.sofa",
+        "sha256": "2d01df3a1ea19e3d3df1b52f5df46cf312441c256a237d44a6d3e243e8f5b447",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.015,
+        "match_rms_db": 2.299825
+      },
+      {
+        "listener": "nh1128",
+        "filename": "dtf las_nh1128.sofa",
+        "sha256": "9c1fe7f40130675e8631d8e58a425222f117782a6bd79f9e3612a8e9bc3a732d",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.045,
+        "match_rms_db": 2.301795
+      },
+      {
+        "listener": "nh1081",
+        "filename": "dtf las_nh1081.sofa",
+        "sha256": "387a0422faee4987f104419ce6575f165fc3f9035a19980bf4325524c4bf5d6c",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.9,
+        "match_rms_db": 2.305649
+      },
+      {
+        "listener": "nh1107",
+        "filename": "dtf las_nh1107.sofa",
+        "sha256": "e5cc061599e31277255bda8a88e50d76cba21ed4f9ce9b8cf7a12f1ab594e65e",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.13,
+        "match_rms_db": 2.305685
+      },
+      {
+        "listener": "nh1064",
+        "filename": "dtf las_nh1064.sofa",
+        "sha256": "c69c3e826a403d7cdb576ce2584346da59186b43c6aa1b8d448f2311f7e48694",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.985,
+        "match_rms_db": 2.316713
+      },
+      {
+        "listener": "nh998",
+        "filename": "dtf las_nh998.sofa",
+        "sha256": "46cebfc25bc698ec2a5f8979abaf07609ecae22d5ffae70bad3f6a588cbb85b8",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.95,
+        "match_rms_db": 2.323023
+      },
+      {
+        "listener": "nh1085",
+        "filename": "dtf las_nh1085.sofa",
+        "sha256": "edfde4feddd3437d40b4e7878d2c82cf7d69e12c25011f093fbd4a671716dffd",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.985,
+        "match_rms_db": 2.332755
+      },
+      {
+        "listener": "nh950",
+        "filename": "dtf las_nh950.sofa",
+        "sha256": "d45bbfcc8a6640848bd4dcd2fd88d210d8212272f44c3da04122a20e66fffed1",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 2.333357
+      },
+      {
+        "listener": "nh1158",
+        "filename": "dtf las_nh1158.sofa",
+        "sha256": "842bdc61da2be999d2e4a11603ff05d1982c87e08a8ec8582d12fb2202fa311d",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.03,
+        "match_rms_db": 2.345899
+      },
+      {
+        "listener": "nh945",
+        "filename": "dtf las_nh945.sofa",
+        "sha256": "fe08ddd1adb95a4fc1f37edf2ecf879251705ac20aa9b54f509746a853b1a570",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 2.364071
+      },
+      {
+        "listener": "nh1066",
+        "filename": "dtf las_nh1066.sofa",
+        "sha256": "b67bb0fee60b66fa43811f403feabd42089fccb91a393e33c22ae6ea7962d625",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.945,
+        "match_rms_db": 2.395225
+      },
+      {
+        "listener": "nh1093",
+        "filename": "dtf las_nh1093.sofa",
+        "sha256": "d3a111387aa4472a8e9c86f69ee2b7a1cdbe3d47f187dc98b13201ae545057d0",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.925,
+        "match_rms_db": 2.410004
+      },
+      {
+        "listener": "nh929",
+        "filename": "dtf las_nh929.sofa",
+        "sha256": "0944143f394c7bd26eaa287e8c78e6c4118ee3013f22efbb60fe2ce345305ada",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.035,
+        "match_rms_db": 2.417907
+      },
+      {
+        "listener": "nh960",
+        "filename": "dtf las_nh960.sofa",
+        "sha256": "7db85f11670d48cbb18aa031527056bf97684f5e5aa0592c1471b6251284d8ea",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 2.426706
+      },
+      {
+        "listener": "nh988",
+        "filename": "dtf las_nh988.sofa",
+        "sha256": "99c5a12d42beaa15e08575d1c6eb10dadb57616c0035a9e59af3cc9013b08ea0",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 2.439899
+      },
+      {
+        "listener": "nh991",
+        "filename": "dtf las_nh991.sofa",
+        "sha256": "b2532c2d50b57e62015a9121f2b07e3486e8ac6c5c7cdaea4015f9adb00fc87e",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.02,
+        "match_rms_db": 2.455787
+      },
+      {
+        "listener": "nh939",
+        "filename": "dtf las_nh939.sofa",
+        "sha256": "de42136ef8ecb3d2c529ab4e9be1943ee159c68c9a1d4d6c64be6c6199e18765",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.96,
+        "match_rms_db": 2.465536
+      },
+      {
+        "listener": "nh1139",
+        "filename": "dtf las_nh1139.sofa",
+        "sha256": "ba2ab07edef77056df3f6f658e754cfec8449d03cef62f7d2a92247d87919940",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 2.47371
+      },
+      {
+        "listener": "nh969",
+        "filename": "dtf las_nh969.sofa",
+        "sha256": "f520518044daa371d30c7607d7b600a1df770c04368970e1a3810f11c54ba1b2",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.07,
+        "match_rms_db": 2.560952
+      },
+      {
+        "listener": "nh1094",
+        "filename": "dtf las_nh1094.sofa",
+        "sha256": "b1d51692b274af2184e07cceba04d5af3b09102dd88592c23c9a8ecc700f8c63",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.095,
+        "match_rms_db": 2.575533
+      },
+      {
+        "listener": "nh962",
+        "filename": "dtf las_nh962.sofa",
+        "sha256": "d611875cf4b38998281e574505d1c335d5fb8d9fd56d9b1236c881ccfde3103b",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.99,
+        "match_rms_db": 2.577913
+      },
+      {
+        "listener": "nh1146",
+        "filename": "dtf las_nh1146.sofa",
+        "sha256": "4e2bb6f271745a47e6a0e687f3926cb0ce533b94b1a3ef17af207c827d246914",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 2.58038
+      },
+      {
+        "listener": "nh1151",
+        "filename": "dtf las_nh1151.sofa",
+        "sha256": "d4c19d767461c737ddd97ad2ce2ba122428f54d61958a80bb0b4fb567731af62",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.915,
+        "match_rms_db": 2.596595
+      },
+      {
+        "listener": "nh1149",
+        "filename": "dtf las_nh1149.sofa",
+        "sha256": "e00d7ef9dfc0ac446a7e10e7c86586adeaea7a7ed8b9982a5b7dfdc1e8ea0520",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.045,
+        "match_rms_db": 2.610173
+      },
+      {
+        "listener": "nh1141",
+        "filename": "dtf las_nh1141.sofa",
+        "sha256": "183c7653394160a42ccc00b20ea8c219fd5f24c92744980e70a12a7798d740a6",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.075,
+        "match_rms_db": 2.619895
+      },
+      {
+        "listener": "nh1132",
+        "filename": "dtf las_nh1132.sofa",
+        "sha256": "1ff966bbdfdd9efa98957ec6104fb8fa6b7022444377ddbc3e494f1ecf16cee7",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.92,
+        "match_rms_db": 2.662676
+      },
+      {
+        "listener": "nh985",
+        "filename": "dtf las_nh985.sofa",
+        "sha256": "ef18a140ba3af5a2933d21e616128e13afcf8d401a7554fee1f71cf362a881ba",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 2.730425
+      },
+      {
+        "listener": "nh1126",
+        "filename": "dtf las_nh1126.sofa",
+        "sha256": "51d4bf0aa4f184999dd075d08ba5415480721c3f65e8897677c1ff771b10a32f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.91,
+        "match_rms_db": 2.734217
+      },
+      {
+        "listener": "nh987",
+        "filename": "dtf las_nh987.sofa",
+        "sha256": "2aaf248b29fb00ed638d064117b238cd78e333e411ac9efecb8f310fc465f3a5",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.06,
+        "match_rms_db": 2.834008
+      },
+      {
+        "listener": "nh975",
+        "filename": "dtf las_nh975.sofa",
+        "sha256": "f8ab27d49aa4ad1a0105611f8202df5ce89c421b74da3070b1595381af7c9b71",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.915,
+        "match_rms_db": 2.847887
+      },
+      {
+        "listener": "nh1121",
+        "filename": "dtf las_nh1121.sofa",
+        "sha256": "4537cabf19150e052438faec56e8476adda0b9a8b4c2071b302d81694a428211",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.88,
+        "match_rms_db": 2.942704
+      },
+      {
+        "listener": "nh912",
+        "filename": "dtf las_nh912.sofa",
+        "sha256": "f6b75692bc052bdf421d00481880931b9adfe0fa0e2395b2243cbccd7518e34b",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.925,
+        "match_rms_db": 2.971859
+      },
+      {
+        "listener": "nh1049",
+        "filename": "dtf las_nh1049.sofa",
+        "sha256": "9d5ca242ab96ce7fe400012fa97ba6bd0a2d5041d2d20be24b0d525f8cede988",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 3.000347
+      },
+      {
+        "listener": "nh1101",
+        "filename": "dtf las_nh1101.sofa",
+        "sha256": "f54cc41ca59f1bcccc16375497f516ff870ffd617030b553283be6a9cf362403",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.02,
+        "match_rms_db": 3.055233
+      },
+      {
+        "listener": "nh1086",
+        "filename": "dtf las_nh1086.sofa",
+        "sha256": "1ef14e77cc107d3575a73692a5ceb322d78d44004d412e2c72ffcc4ab817d2e4",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.935,
+        "match_rms_db": 3.071825
+      }
+    ]
+  },
+  "method": {
+    "personal_anchor": "four personal \u00b130\u00b0 direct paths, direction-centered per ear",
+    "match_band_hz": [
+      4000.0,
+      12000.0
+    ],
+    "smoothing_fractional_octave": 6,
+    "frequency_scale_range": [
+      0.85,
+      1.15
+    ],
+    "directional_model": "H_personal(\u03a90) \u00d7 H_ARI(\u03a9) / H_ARI(\u03a90)",
+    "phase_or_hrir_rendering_performed": false
+  },
+  "best_match": {
+    "listener": "nh965",
+    "frequency_scale": 0.95,
+    "match_rms_db": 0.879611
+  },
+  "personal_direct_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Left Speaker.wav",
+      "sha256": "86b5e99be8717815de09fa2282c7c602e351cc4a0e7dc858b7fc231e7aec4d86",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Right Speaker.wav",
+      "sha256": "e93255413410b195b9c0a80504ac4712bf58d3bb3fce6aa9dae0947344a4b912",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "selected_directions": {
+    "left": {
+      "direct": {
+        "requested_room_degrees": [
+          -30.0,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          30.0,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          31.7,
+          0.0
+        ],
+        "angular_error_degrees": 1.7
+      },
+      "left_wall": {
+        "requested_room_degrees": [
+          -52.145209,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          52.145209,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          54.1,
+          0.0
+        ],
+        "angular_error_degrees": 1.954791
+      },
+      "right_wall": {
+        "requested_room_degrees": [
+          67.323641,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          292.676359,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          290.9,
+          0.0
+        ],
+        "angular_error_degrees": 1.776359
+      },
+      "floor": {
+        "requested_room_degrees": [
+          -30.0,
+          -39.739606
+        ],
+        "requested_sofa_degrees": [
+          30.0,
+          -39.739606
+        ],
+        "selected_sofa_degrees": [
+          30.4,
+          -40.8
+        ],
+        "angular_error_degrees": 1.103438
+      },
+      "ceiling": {
+        "requested_room_degrees": [
+          -30.0,
+          47.946072
+        ],
+        "requested_sofa_degrees": [
+          30.0,
+          47.946072
+        ],
+        "selected_sofa_degrees": [
+          30.4,
+          40.8
+        ],
+        "angular_error_degrees": 7.151761
+      }
+    },
+    "right": {
+      "direct": {
+        "requested_room_degrees": [
+          30.0,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          330.0,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          328.3,
+          0.0
+        ],
+        "angular_error_degrees": 1.7
+      },
+      "left_wall": {
+        "requested_room_degrees": [
+          -67.725533,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          67.725533,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          69.1,
+          0.0
+        ],
+        "angular_error_degrees": 1.374467
+      },
+      "right_wall": {
+        "requested_room_degrees": [
+          51.084996,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          308.915004,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          305.9,
+          0.0
+        ],
+        "angular_error_degrees": 3.015004
+      },
+      "floor": {
+        "requested_room_degrees": [
+          30.0,
+          -39.739606
+        ],
+        "requested_sofa_degrees": [
+          330.0,
+          -39.739606
+        ],
+        "selected_sofa_degrees": [
+          329.6,
+          -40.8
+        ],
+        "angular_error_degrees": 1.103438
+      },
+      "ceiling": {
+        "requested_room_degrees": [
+          30.0,
+          47.946072
+        ],
+        "requested_sofa_degrees": [
+          330.0,
+          47.946072
+        ],
+        "selected_sofa_degrees": [
+          329.6,
+          40.8
+        ],
+        "angular_error_degrees": 7.151761
+      }
+    }
+  },
+  "directional_delta_db": {
+    "population_median_unscaled": {
+      "left": {
+        "left_wall": {
+          "left": {
+            "5000": 0.851194,
+            "7000": 3.900891,
+            "8000": 2.513784,
+            "10000": 1.525287,
+            "12000": -2.066689
+          },
+          "right": {
+            "5000": -5.506833,
+            "7000": -6.454446,
+            "8000": -6.166296,
+            "10000": -7.230217,
+            "12000": -8.758047
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -20.339835,
+            "7000": -23.301858,
+            "8000": -22.486272,
+            "10000": -21.7859,
+            "12000": -24.034016
+          },
+          "right": {
+            "5000": 12.856701,
+            "7000": 20.999436,
+            "8000": 17.208107,
+            "10000": 16.468442,
+            "12000": 9.1802
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -5.20833,
+            "7000": -3.357764,
+            "8000": 3.256617,
+            "10000": 3.010596,
+            "12000": 3.52041
+          },
+          "right": {
+            "5000": -1.360409,
+            "7000": 4.114567,
+            "8000": 5.595956,
+            "10000": 6.815647,
+            "12000": 2.482168
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 0.329249,
+            "7000": 4.496533,
+            "8000": 2.601959,
+            "10000": 0.988037,
+            "12000": -2.074927
+          },
+          "right": {
+            "5000": 3.449436,
+            "7000": 7.028722,
+            "8000": 2.942847,
+            "10000": -0.499839,
+            "12000": -5.446546
+          }
+        }
+      },
+      "right": {
+        "left_wall": {
+          "left": {
+            "5000": 13.657917,
+            "7000": 19.555488,
+            "8000": 16.898356,
+            "10000": 16.223726,
+            "12000": 12.694782
+          },
+          "right": {
+            "5000": -19.996456,
+            "7000": -24.603261,
+            "8000": -19.584402,
+            "10000": -23.307087,
+            "12000": -25.382804
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -5.045762,
+            "7000": -8.497276,
+            "8000": -8.420743,
+            "10000": -7.031916,
+            "12000": -9.658356
+          },
+          "right": {
+            "5000": 0.403319,
+            "7000": 3.180303,
+            "8000": 3.130809,
+            "10000": 1.722238,
+            "12000": -1.969773
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -1.884467,
+            "7000": 2.177058,
+            "8000": 4.769139,
+            "10000": 5.372928,
+            "12000": 2.642606
+          },
+          "right": {
+            "5000": -4.789938,
+            "7000": -3.135188,
+            "8000": 3.661104,
+            "10000": 3.452011,
+            "12000": 2.558629
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 3.855399,
+            "7000": 5.960618,
+            "8000": 1.939391,
+            "10000": -0.907476,
+            "12000": -5.064563
+          },
+          "right": {
+            "5000": 0.613787,
+            "7000": 3.312926,
+            "8000": 3.302227,
+            "10000": 1.055629,
+            "12000": -1.970001
+          }
+        }
+      }
+    },
+    "population_median_personal_scaled": {
+      "left": {
+        "left_wall": {
+          "left": {
+            "5000": 0.618378,
+            "7000": 3.550012,
+            "8000": 3.473553,
+            "10000": 1.588043,
+            "12000": -1.216217
+          },
+          "right": {
+            "5000": -5.664159,
+            "7000": -5.517017,
+            "8000": -6.967193,
+            "10000": -7.780845,
+            "12000": -8.126783
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -20.053985,
+            "7000": -23.688242,
+            "8000": -19.222074,
+            "10000": -24.558404,
+            "12000": -25.069389
+          },
+          "right": {
+            "5000": 13.319268,
+            "7000": 21.463008,
+            "8000": 15.892724,
+            "10000": 14.893651,
+            "12000": 11.506317
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -5.127312,
+            "7000": -3.987179,
+            "8000": 6.428389,
+            "10000": 1.658628,
+            "12000": 0.762036
+          },
+          "right": {
+            "5000": -2.23257,
+            "7000": 6.051184,
+            "8000": 5.616296,
+            "10000": 6.995214,
+            "12000": 3.319705
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 0.272848,
+            "7000": 3.835074,
+            "8000": 6.129976,
+            "10000": -0.090249,
+            "12000": -1.913537
+          },
+          "right": {
+            "5000": 2.830706,
+            "7000": 7.848784,
+            "8000": 2.89329,
+            "10000": -0.110024,
+            "12000": -4.758769
+          }
+        }
+      },
+      "right": {
+        "left_wall": {
+          "left": {
+            "5000": 13.233146,
+            "7000": 20.17643,
+            "8000": 16.231358,
+            "10000": 16.49979,
+            "12000": 13.85009
+          },
+          "right": {
+            "5000": -19.941749,
+            "7000": -23.925776,
+            "8000": -19.477077,
+            "10000": -25.243239,
+            "12000": -24.982521
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -5.909789,
+            "7000": -6.757008,
+            "8000": -8.831286,
+            "10000": -7.832406,
+            "12000": -9.743506
+          },
+          "right": {
+            "5000": 0.63576,
+            "7000": 3.493144,
+            "8000": 2.819171,
+            "10000": 0.830197,
+            "12000": -2.71672
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -1.956959,
+            "7000": 4.349349,
+            "8000": 4.847347,
+            "10000": 5.758154,
+            "12000": 1.500931
+          },
+          "right": {
+            "5000": -4.846752,
+            "7000": -3.009451,
+            "8000": 5.164735,
+            "10000": 2.511914,
+            "12000": 1.574162
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 3.739816,
+            "7000": 6.532419,
+            "8000": 2.414653,
+            "10000": -0.617372,
+            "12000": -5.337295
+          },
+          "right": {
+            "5000": 0.324707,
+            "7000": 3.285878,
+            "8000": 4.469899,
+            "10000": 0.051577,
+            "12000": -2.272427
+          }
+        }
+      }
+    },
+    "top_five_matches_personal_scaled": {
+      "left": {
+        "left_wall": {
+          "left": {
+            "5000": 0.715024,
+            "7000": 3.966092,
+            "8000": 2.30444,
+            "10000": 2.330286,
+            "12000": -2.014155
+          },
+          "right": {
+            "5000": -5.338036,
+            "7000": -5.673279,
+            "8000": -6.673466,
+            "10000": -11.526317,
+            "12000": -8.236415
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -19.642105,
+            "7000": -26.485729,
+            "8000": -20.450023,
+            "10000": -23.064872,
+            "12000": -27.368655
+          },
+          "right": {
+            "5000": 14.365023,
+            "7000": 14.657235,
+            "8000": 12.544565,
+            "10000": 14.73445,
+            "12000": 8.073281
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -5.000775,
+            "7000": -6.781716,
+            "8000": 7.946283,
+            "10000": 2.572729,
+            "12000": -0.089478
+          },
+          "right": {
+            "5000": -1.556312,
+            "7000": 3.095252,
+            "8000": 5.296321,
+            "10000": 6.854818,
+            "12000": -1.360943
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": -0.741324,
+            "7000": -0.838455,
+            "8000": -4.042048,
+            "10000": 0.758636,
+            "12000": -4.331873
+          },
+          "right": {
+            "5000": 2.499219,
+            "7000": -0.743169,
+            "8000": -2.052758,
+            "10000": -0.74882,
+            "12000": -2.876946
+          }
+        }
+      },
+      "right": {
+        "left_wall": {
+          "left": {
+            "5000": 12.997323,
+            "7000": 19.344568,
+            "8000": 13.603372,
+            "10000": 17.348178,
+            "12000": 13.957054
+          },
+          "right": {
+            "5000": -19.572131,
+            "7000": -22.475963,
+            "8000": -23.88981,
+            "10000": -26.507211,
+            "12000": -25.157856
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -7.252602,
+            "7000": -6.607891,
+            "8000": -10.045694,
+            "10000": -4.121406,
+            "12000": -8.606265
+          },
+          "right": {
+            "5000": 0.475302,
+            "7000": 0.665601,
+            "8000": 0.306222,
+            "10000": 0.06704,
+            "12000": -6.816395
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -0.463967,
+            "7000": 1.916455,
+            "8000": 3.136994,
+            "10000": 6.980821,
+            "12000": 2.409589
+          },
+          "right": {
+            "5000": -4.777202,
+            "7000": -0.292109,
+            "8000": 1.652978,
+            "10000": 0.413007,
+            "12000": -1.778795
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 3.437386,
+            "7000": -0.26436,
+            "8000": -2.503472,
+            "10000": -2.834207,
+            "12000": -7.077904
+          },
+          "right": {
+            "5000": -0.325835,
+            "7000": 1.761087,
+            "8000": -3.382509,
+            "10000": -1.698329,
+            "12000": -1.995046
+          }
+        }
+      }
+    },
+    "best_match_personal_scaled": {
+      "left": {
+        "left_wall": {
+          "left": {
+            "5000": 2.649812,
+            "7000": 4.238027,
+            "8000": 3.07588,
+            "10000": -1.752035,
+            "12000": -1.435824
+          },
+          "right": {
+            "5000": -4.517744,
+            "7000": -5.30023,
+            "8000": -5.316906,
+            "10000": -11.526317,
+            "12000": -10.087798
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -19.642105,
+            "7000": -33.397867,
+            "8000": -17.183006,
+            "10000": -25.924958,
+            "12000": -37.45868
+          },
+          "right": {
+            "5000": 12.963836,
+            "7000": 22.128419,
+            "8000": 12.544565,
+            "10000": 14.73445,
+            "12000": 8.087809
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -3.201016,
+            "7000": -17.733073,
+            "8000": 9.697872,
+            "10000": 3.369175,
+            "12000": -0.089478
+          },
+          "right": {
+            "5000": 0.376342,
+            "7000": 1.780743,
+            "8000": 11.393369,
+            "10000": 7.926487,
+            "12000": -1.360943
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": -0.820709,
+            "7000": -0.838455,
+            "8000": 8.031603,
+            "10000": -4.342402,
+            "12000": -18.303554
+          },
+          "right": {
+            "5000": 2.499219,
+            "7000": 10.457716,
+            "8000": 7.854879,
+            "10000": -12.714998,
+            "12000": -16.428363
+          }
+        }
+      },
+      "right": {
+        "left_wall": {
+          "left": {
+            "5000": 16.593481,
+            "7000": 21.971983,
+            "8000": 8.920254,
+            "10000": 17.348178,
+            "12000": 13.957054
+          },
+          "right": {
+            "5000": -22.496982,
+            "7000": -18.959609,
+            "8000": -21.33108,
+            "10000": -31.877748,
+            "12000": -36.587215
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -7.252602,
+            "7000": -21.071435,
+            "8000": -4.861672,
+            "10000": -7.923104,
+            "12000": -10.34799
+          },
+          "right": {
+            "5000": 0.306658,
+            "7000": 4.847962,
+            "8000": 7.254079,
+            "10000": -0.595564,
+            "12000": -6.847682
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": 4.321502,
+            "7000": -9.423834,
+            "8000": 2.285095,
+            "10000": 8.918405,
+            "12000": 2.409589
+          },
+          "right": {
+            "5000": -3.17015,
+            "7000": -0.292109,
+            "8000": 17.607318,
+            "10000": 4.825483,
+            "12000": -2.860989
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 3.437386,
+            "7000": 4.930951,
+            "8000": 5.463891,
+            "10000": -7.195357,
+            "12000": -14.421612
+          },
+          "right": {
+            "5000": -0.325835,
+            "7000": 6.018518,
+            "8000": 14.330272,
+            "10000": -14.518188,
+            "12000": -13.981736
+          }
+        }
+      }
+    }
+  },
+  "plots": [
+    "personal-direct-match.svg",
+    "left-speaker-elevation-deltas.svg",
+    "right-speaker-elevation-deltas.svg",
+    "left-speaker-wall-deltas.svg",
+    "right-speaker-wall-deltas.svg",
+    "ceiling-model-comparison.svg",
+    "floor-model-comparison.svg"
+  ],
+  "rendering_model": "directional-model.json"
+}

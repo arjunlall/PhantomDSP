@@ -116,6 +116,15 @@ class MidrangeNormalizedRoomTests(unittest.TestCase):
             self.assertLess(tail_db, -90.0)
         self.assertLess(self.summary["modeled_correlated_renderer_gain_db"], 4.0)
 
+    def test_full_spectrum_left_right_plot_is_recorded(self):
+        for plot in (
+            "j-left-right-full-spectrum.svg",
+            "j-left-components-full-spectrum.svg",
+            "j-right-components-full-spectrum.svg",
+        ):
+            self.assertIn(plot, self.summary["plots"])
+            self.assertTrue((ANALYSIS_DIRECTORY / plot).is_file())
+
 
 if __name__ == "__main__":
     unittest.main()

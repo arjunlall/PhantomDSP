@@ -1,0 +1,940 @@
+{
+  "schema_version": 1,
+  "status": "directional-HRTF screening analysis; no candidate K rendered",
+  "dataset": {
+    "name": "ARI in-the-ear directional transfer functions",
+    "source": "https://sofacoustics.org/data/database/ari/",
+    "subjects_analyzed": 24,
+    "selection_boundary": "deterministic 24-subject screening subset; not a population sample",
+    "files": [
+      {
+        "listener": "nh140",
+        "filename": "dtf_nh140.sofa",
+        "sha256": "8dfa85d028e6d4858af44e523e40c622ccd3a125145330aa52ba203de705e92f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.855,
+        "match_rms_db": 0.825638
+      },
+      {
+        "listener": "nh28",
+        "filename": "dtf_nh28.sofa",
+        "sha256": "acc83ef4357391095beaab482dff7a4f1c4f1064520e6874fe27a10c5d3baeb1",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.905,
+        "match_rms_db": 1.164151
+      },
+      {
+        "listener": "nh55",
+        "filename": "dtf_nh55.sofa",
+        "sha256": "56643cc59326a0a58db9f18580e83cf9e75a301352504c03a441c084db1c3118",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.02,
+        "match_rms_db": 1.165911
+      },
+      {
+        "listener": "nh60",
+        "filename": "dtf_nh60.sofa",
+        "sha256": "513563c8fdf3f72c1e26ee87c166ac855414526ef67181c37ba25cf45ec4d9b5",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.09,
+        "match_rms_db": 1.177339
+      },
+      {
+        "listener": "nh22",
+        "filename": "dtf_nh22.sofa",
+        "sha256": "bb6dfb439e7543ee86b19bd6368f1290711944ca8087108560192b37df5ff807",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.935,
+        "match_rms_db": 1.214432
+      },
+      {
+        "listener": "nh30",
+        "filename": "dtf_nh30.sofa",
+        "sha256": "00b72aac9614a0b75ab01b3a84ae1a3d62da9ea20efc8c77f83c685d492b35ac",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.310884
+      },
+      {
+        "listener": "nh8",
+        "filename": "dtf_nh8.sofa",
+        "sha256": "0d1c076ac57e4628af1def47cae166f683d4d7bdf29738f356894c728dc47cd5",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.865,
+        "match_rms_db": 1.448082
+      },
+      {
+        "listener": "nh63",
+        "filename": "dtf_nh63.sofa",
+        "sha256": "70a312419f8ed1996c4bbdad1ed3fe325330d0cb05a4a1a4f5ee63533c502d55",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.125,
+        "match_rms_db": 1.462028
+      },
+      {
+        "listener": "nh104",
+        "filename": "dtf_nh104.sofa",
+        "sha256": "2074c206005f962acc16c9bab475b265ef3954a917364a00aaed7fc9523f5e08",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.07,
+        "match_rms_db": 1.56334
+      },
+      {
+        "listener": "nh18",
+        "filename": "dtf_nh18.sofa",
+        "sha256": "e442c53f754202a7ce0bb8ef5b1819d408058eb69a79c9b2647790f795004dc0",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.11,
+        "match_rms_db": 1.567386
+      },
+      {
+        "listener": "nh42",
+        "filename": "dtf_nh42.sofa",
+        "sha256": "8bc6d442a21aea62b21df713204a211b9d71daad6337881e494efd6e2594990f",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.85,
+        "match_rms_db": 1.64896
+      },
+      {
+        "listener": "nh38",
+        "filename": "dtf_nh38.sofa",
+        "sha256": "570e02665ca5019f065c98d5f2701cfdb95ab87aa72e5f666f29d263cb0d54af",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.865,
+        "match_rms_db": 1.693632
+      },
+      {
+        "listener": "nh47",
+        "filename": "dtf_nh47.sofa",
+        "sha256": "59da5dab2338653e382c0d164e7f4569df985823fe238da4fe82100f36d5b17a",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.06,
+        "match_rms_db": 1.698283
+      },
+      {
+        "listener": "nh122",
+        "filename": "dtf_nh122.sofa",
+        "sha256": "7084c61ba9a225fc2eaacf37f183b9ee18628125ccba722a712b542020424c83",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.9,
+        "match_rms_db": 1.720162
+      },
+      {
+        "listener": "nh164",
+        "filename": "dtf_nh164.sofa",
+        "sha256": "34596495356cb37a4fc9f979bdfdf287316e422dc666fd1c595cf1e66d0c6210",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.125,
+        "match_rms_db": 1.720463
+      },
+      {
+        "listener": "nh15",
+        "filename": "dtf_nh15.sofa",
+        "sha256": "fc0949fee4ea515c8dedb25b796adb5ea3a1322bcf0e89ddf6c6919af59e79ce",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.08,
+        "match_rms_db": 1.779563
+      },
+      {
+        "listener": "nh143",
+        "filename": "dtf_nh143.sofa",
+        "sha256": "6a997fd578e6422e4d869702d7e4592f827d690c7a5092151c44d81169a4d9e8",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 1.833252
+      },
+      {
+        "listener": "nh159",
+        "filename": "dtf_nh159.sofa",
+        "sha256": "4df68e76d74c521174225d28942860868dbaeea9af529b364ef5eaf436b011a4",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.065,
+        "match_rms_db": 1.838305
+      },
+      {
+        "listener": "nh72",
+        "filename": "dtf_nh72.sofa",
+        "sha256": "71f4af6988f31d50268202342a77ab0cb832be087829844d348134595c4bc605",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.085,
+        "match_rms_db": 1.926534
+      },
+      {
+        "listener": "nh123",
+        "filename": "dtf_nh123.sofa",
+        "sha256": "fa247f71de5ae2d2bb64ecbba53cad80c89caacdefaa0007f760e85b80b72b6e",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 0.955,
+        "match_rms_db": 1.975726
+      },
+      {
+        "listener": "nh90",
+        "filename": "dtf_nh90.sofa",
+        "sha256": "17a3841857d33d3e8442a0543227391490d9e1a41720376afa958931cf3b9eca",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 2.172039
+      },
+      {
+        "listener": "nh93",
+        "filename": "dtf_nh93.sofa",
+        "sha256": "4a4d6ca94edd271a8197467a46ac1f4d698f375e5398f3f56651204b6f3afa20",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.14,
+        "match_rms_db": 2.260427
+      },
+      {
+        "listener": "nh158",
+        "filename": "dtf_nh158.sofa",
+        "sha256": "bfd6c1d54037b48dbfbca766c645e51e5dac4668ca4c80ce344f8059e29f77e5",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.15,
+        "match_rms_db": 2.291368
+      },
+      {
+        "listener": "nh2",
+        "filename": "dtf_nh2.sofa",
+        "sha256": "32dd118de89b4119e4e8693e3af6bd5f46824e7d96d9f77c45d5e81d78b6efa9",
+        "license": "Creative Commons Attribution-ShareAlike 3.0 Unported License",
+        "match_scale": 1.09,
+        "match_rms_db": 2.301364
+      }
+    ]
+  },
+  "method": {
+    "personal_anchor": "four personal \u00b130\u00b0 direct paths, direction-centered per ear",
+    "match_band_hz": [
+      4000.0,
+      12000.0
+    ],
+    "smoothing_fractional_octave": 6,
+    "frequency_scale_range": [
+      0.85,
+      1.15
+    ],
+    "directional_model": "H_personal(\u03a90) \u00d7 H_ARI(\u03a9) / H_ARI(\u03a90)",
+    "phase_or_hrir_rendering_performed": false
+  },
+  "best_match": {
+    "listener": "nh140",
+    "frequency_scale": 0.855,
+    "match_rms_db": 0.825638
+  },
+  "personal_direct_files": {
+    "left": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Left Speaker.wav",
+      "sha256": "86b5e99be8717815de09fa2282c7c602e351cc4a0e7dc858b7fc231e7aec4d86",
+      "frames": 8192,
+      "sample_width_bits": 24
+    },
+    "right": {
+      "path": "Synthetic Reference Room/IRs/direct/Personal Direct Right Speaker.wav",
+      "sha256": "e93255413410b195b9c0a80504ac4712bf58d3bb3fce6aa9dae0947344a4b912",
+      "frames": 8192,
+      "sample_width_bits": 24
+    }
+  },
+  "selected_directions": {
+    "left": {
+      "direct": {
+        "requested_room_degrees": [
+          -30.0,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          30.0,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          30.0,
+          0.0
+        ],
+        "angular_error_degrees": 0.0
+      },
+      "left_wall": {
+        "requested_room_degrees": [
+          -52.145209,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          52.145209,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          50.0,
+          0.0
+        ],
+        "angular_error_degrees": 2.145209
+      },
+      "right_wall": {
+        "requested_room_degrees": [
+          67.323641,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          292.676359,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          295.0,
+          0.0
+        ],
+        "angular_error_degrees": 2.323641
+      },
+      "floor": {
+        "requested_room_degrees": [
+          -30.0,
+          -39.739606
+        ],
+        "requested_sofa_degrees": [
+          30.0,
+          -39.739606
+        ],
+        "selected_sofa_degrees": [
+          30.0,
+          -30.0
+        ],
+        "angular_error_degrees": 9.739606
+      },
+      "ceiling": {
+        "requested_room_degrees": [
+          -30.0,
+          47.946072
+        ],
+        "requested_sofa_degrees": [
+          30.0,
+          47.946072
+        ],
+        "selected_sofa_degrees": [
+          27.5,
+          50.0
+        ],
+        "angular_error_degrees": 2.628677
+      }
+    },
+    "right": {
+      "direct": {
+        "requested_room_degrees": [
+          30.0,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          330.0,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          330.0,
+          0.0
+        ],
+        "angular_error_degrees": 0.0
+      },
+      "left_wall": {
+        "requested_room_degrees": [
+          -67.725533,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          67.725533,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          70.0,
+          0.0
+        ],
+        "angular_error_degrees": 2.274467
+      },
+      "right_wall": {
+        "requested_room_degrees": [
+          51.084996,
+          0.0
+        ],
+        "requested_sofa_degrees": [
+          308.915004,
+          0.0
+        ],
+        "selected_sofa_degrees": [
+          310.0,
+          0.0
+        ],
+        "angular_error_degrees": 1.084996
+      },
+      "floor": {
+        "requested_room_degrees": [
+          30.0,
+          -39.739606
+        ],
+        "requested_sofa_degrees": [
+          330.0,
+          -39.739606
+        ],
+        "selected_sofa_degrees": [
+          330.0,
+          -30.0
+        ],
+        "angular_error_degrees": 9.739606
+      },
+      "ceiling": {
+        "requested_room_degrees": [
+          30.0,
+          47.946072
+        ],
+        "requested_sofa_degrees": [
+          330.0,
+          47.946072
+        ],
+        "selected_sofa_degrees": [
+          327.5,
+          50.0
+        ],
+        "angular_error_degrees": 2.628677
+      }
+    }
+  },
+  "directional_delta_db": {
+    "population_median_unscaled": {
+      "left": {
+        "left_wall": {
+          "left": {
+            "5000": 0.950975,
+            "7000": 3.652923,
+            "8000": 2.056989,
+            "10000": 3.129334,
+            "12000": -2.515288
+          },
+          "right": {
+            "5000": -5.473976,
+            "7000": -5.882174,
+            "8000": -5.582584,
+            "10000": -6.661913,
+            "12000": -6.388243
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -19.152299,
+            "7000": -20.575531,
+            "8000": -20.837678,
+            "10000": -21.45417,
+            "12000": -19.582626
+          },
+          "right": {
+            "5000": 13.768568,
+            "7000": 18.550713,
+            "8000": 17.214006,
+            "10000": 16.101004,
+            "12000": 12.037153
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -2.692076,
+            "7000": -4.479789,
+            "8000": 3.329768,
+            "10000": -1.820765,
+            "12000": 3.163763
+          },
+          "right": {
+            "5000": -2.395568,
+            "7000": 0.805596,
+            "8000": 6.486839,
+            "10000": -1.308178,
+            "12000": 2.609126
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": -2.42784,
+            "7000": 3.818689,
+            "8000": 5.691559,
+            "10000": 2.007269,
+            "12000": -2.02068
+          },
+          "right": {
+            "5000": 3.478031,
+            "7000": 9.267293,
+            "8000": 9.591468,
+            "10000": 1.126392,
+            "12000": -3.06219
+          }
+        }
+      },
+      "right": {
+        "left_wall": {
+          "left": {
+            "5000": 12.306293,
+            "7000": 19.635996,
+            "8000": 19.592068,
+            "10000": 18.344775,
+            "12000": 13.27745
+          },
+          "right": {
+            "5000": -19.094168,
+            "7000": -21.288442,
+            "8000": -18.189276,
+            "10000": -21.904285,
+            "12000": -21.597412
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -5.345982,
+            "7000": -5.957521,
+            "8000": -5.712944,
+            "10000": -6.005751,
+            "12000": -6.24998
+          },
+          "right": {
+            "5000": 0.782266,
+            "7000": 3.416708,
+            "8000": 2.371509,
+            "10000": 2.981234,
+            "12000": -0.487516
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -1.74184,
+            "7000": -2.731758,
+            "8000": 4.756253,
+            "10000": 1.341186,
+            "12000": 3.153624
+          },
+          "right": {
+            "5000": -2.98322,
+            "7000": -3.133323,
+            "8000": 3.453468,
+            "10000": -0.892738,
+            "12000": 1.581479
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 1.187828,
+            "7000": 7.770378,
+            "8000": 9.483763,
+            "10000": 0.874791,
+            "12000": -2.886161
+          },
+          "right": {
+            "5000": -1.822622,
+            "7000": 4.351028,
+            "8000": 6.044364,
+            "10000": 0.379236,
+            "12000": -1.370328
+          }
+        }
+      }
+    },
+    "population_median_personal_scaled": {
+      "left": {
+        "left_wall": {
+          "left": {
+            "5000": 0.296617,
+            "7000": 3.600423,
+            "8000": 3.055279,
+            "10000": 2.09305,
+            "12000": -0.624519
+          },
+          "right": {
+            "5000": -4.06594,
+            "7000": -4.822694,
+            "8000": -6.656297,
+            "10000": -5.810058,
+            "12000": -6.113846
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -18.613426,
+            "7000": -18.294771,
+            "8000": -20.295285,
+            "10000": -24.448675,
+            "12000": -19.314959
+          },
+          "right": {
+            "5000": 12.725126,
+            "7000": 19.766418,
+            "8000": 15.783489,
+            "10000": 15.729054,
+            "12000": 12.863386
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -2.896745,
+            "7000": -5.001355,
+            "8000": 2.344291,
+            "10000": -1.871008,
+            "12000": 3.580343
+          },
+          "right": {
+            "5000": -2.640012,
+            "7000": 2.805164,
+            "8000": 4.191541,
+            "10000": 1.945817,
+            "12000": 1.896875
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": -2.227035,
+            "7000": 3.92332,
+            "8000": 7.102748,
+            "10000": 0.668525,
+            "12000": -1.197082
+          },
+          "right": {
+            "5000": 3.31715,
+            "7000": 9.512801,
+            "8000": 8.334555,
+            "10000": 2.138663,
+            "12000": -0.597663
+          }
+        }
+      },
+      "right": {
+        "left_wall": {
+          "left": {
+            "5000": 11.46371,
+            "7000": 17.837013,
+            "8000": 17.330193,
+            "10000": 17.327794,
+            "12000": 13.824949
+          },
+          "right": {
+            "5000": -19.569951,
+            "7000": -20.229785,
+            "8000": -20.381694,
+            "10000": -21.025961,
+            "12000": -21.57354
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -4.691827,
+            "7000": -5.015293,
+            "8000": -6.557376,
+            "10000": -4.906824,
+            "12000": -5.45602
+          },
+          "right": {
+            "5000": 0.358073,
+            "7000": 3.512774,
+            "8000": 2.832609,
+            "10000": 2.061818,
+            "12000": -0.085008
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -1.23502,
+            "7000": 1.687715,
+            "8000": 3.875184,
+            "10000": 1.495863,
+            "12000": 2.525252
+          },
+          "right": {
+            "5000": -3.132634,
+            "7000": -3.71818,
+            "8000": 3.329102,
+            "10000": -0.375868,
+            "12000": 1.140221
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 1.154794,
+            "7000": 8.9897,
+            "8000": 6.345879,
+            "10000": 2.621434,
+            "12000": -2.57672
+          },
+          "right": {
+            "5000": -1.890959,
+            "7000": 4.85244,
+            "8000": 7.384171,
+            "10000": 1.348498,
+            "12000": -2.597812
+          }
+        }
+      }
+    },
+    "top_five_matches_personal_scaled": {
+      "left": {
+        "left_wall": {
+          "left": {
+            "5000": 1.358275,
+            "7000": 3.6699,
+            "8000": -0.422796,
+            "10000": 3.843426,
+            "12000": -2.583428
+          },
+          "right": {
+            "5000": -4.594953,
+            "7000": -4.750274,
+            "8000": -6.442168,
+            "10000": -5.509921,
+            "12000": -10.028548
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -18.631499,
+            "7000": -15.905216,
+            "8000": -22.163644,
+            "10000": -21.120281,
+            "12000": -25.090826
+          },
+          "right": {
+            "5000": 14.579326,
+            "7000": 19.553726,
+            "8000": 13.835669,
+            "10000": 13.49955,
+            "12000": 6.598927
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -4.941634,
+            "7000": -0.082997,
+            "8000": -0.549538,
+            "10000": -1.557199,
+            "12000": -0.072045
+          },
+          "right": {
+            "5000": -1.587962,
+            "7000": 5.875056,
+            "8000": 4.940074,
+            "10000": 3.304086,
+            "12000": 2.184228
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": -1.256454,
+            "7000": 5.979551,
+            "8000": -0.739044,
+            "10000": -1.227426,
+            "12000": -3.004185
+          },
+          "right": {
+            "5000": 3.877868,
+            "7000": 9.574145,
+            "8000": 4.464858,
+            "10000": -1.192422,
+            "12000": -6.080067
+          }
+        }
+      },
+      "right": {
+        "left_wall": {
+          "left": {
+            "5000": 13.516436,
+            "7000": 21.422319,
+            "8000": 17.284941,
+            "10000": 18.300373,
+            "12000": 14.243078
+          },
+          "right": {
+            "5000": -20.145079,
+            "7000": -11.969409,
+            "8000": -18.518272,
+            "10000": -21.707931,
+            "12000": -25.531073
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -5.698878,
+            "7000": -5.212152,
+            "8000": -6.597093,
+            "10000": -5.155616,
+            "12000": -6.872563
+          },
+          "right": {
+            "5000": 0.637692,
+            "7000": 5.349612,
+            "8000": -1.472647,
+            "10000": -1.985577,
+            "12000": -4.497035
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -1.917549,
+            "7000": 4.860319,
+            "8000": 3.140512,
+            "10000": 3.612474,
+            "12000": 1.715031
+          },
+          "right": {
+            "5000": -3.761595,
+            "7000": 3.050709,
+            "8000": 7.127919,
+            "10000": 1.715144,
+            "12000": 0.495567
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 3.368767,
+            "7000": 10.545504,
+            "8000": 3.782234,
+            "10000": 0.385014,
+            "12000": -3.774405
+          },
+          "right": {
+            "5000": -1.881501,
+            "7000": 8.382948,
+            "8000": 7.363051,
+            "10000": -0.305898,
+            "12000": -4.050439
+          }
+        }
+      }
+    },
+    "best_match_personal_scaled": {
+      "left": {
+        "left_wall": {
+          "left": {
+            "5000": 3.666241,
+            "7000": 3.6699,
+            "8000": -0.967451,
+            "10000": -2.191293,
+            "12000": -4.086038
+          },
+          "right": {
+            "5000": -10.618183,
+            "7000": -9.498358,
+            "8000": -4.270479,
+            "10000": -4.715489,
+            "12000": -8.548527
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -20.628573,
+            "7000": -15.905216,
+            "8000": -23.254082,
+            "10000": -18.03016,
+            "12000": -30.289266
+          },
+          "right": {
+            "5000": 18.015611,
+            "7000": 20.199729,
+            "8000": 7.335148,
+            "10000": 6.670656,
+            "12000": 3.201627
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -4.941634,
+            "7000": -11.264095,
+            "8000": -1.872689,
+            "10000": 1.113626,
+            "12000": -0.072045
+          },
+          "right": {
+            "5000": 2.143514,
+            "7000": 4.209814,
+            "8000": 4.940074,
+            "10000": 2.187559,
+            "12000": -0.918206
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 0.825982,
+            "7000": 6.888027,
+            "8000": -0.739044,
+            "10000": -10.21177,
+            "12000": -15.35979
+          },
+          "right": {
+            "5000": 6.526198,
+            "7000": 8.885698,
+            "8000": -5.410725,
+            "10000": -5.112785,
+            "12000": -12.739704
+          }
+        }
+      },
+      "right": {
+        "left_wall": {
+          "left": {
+            "5000": 19.986951,
+            "7000": 24.881401,
+            "8000": 8.027639,
+            "10000": 14.585429,
+            "12000": -2.187484
+          },
+          "right": {
+            "5000": -25.114761,
+            "7000": -9.294413,
+            "8000": -20.797111,
+            "10000": -30.489026,
+            "12000": -30.548206
+          }
+        },
+        "right_wall": {
+          "left": {
+            "5000": -9.055838,
+            "7000": -4.833078,
+            "8000": -9.691592,
+            "10000": -5.615856,
+            "12000": -8.12096
+          },
+          "right": {
+            "5000": 2.065353,
+            "7000": 7.820866,
+            "8000": -4.456593,
+            "10000": -3.893906,
+            "12000": -4.497035
+          }
+        },
+        "floor": {
+          "left": {
+            "5000": -0.969084,
+            "7000": -1.211588,
+            "8000": 3.140512,
+            "10000": 4.617942,
+            "12000": -0.545801
+          },
+          "right": {
+            "5000": -6.149299,
+            "7000": -6.007813,
+            "8000": -1.627299,
+            "10000": -1.226744,
+            "12000": 0.495567
+          }
+        },
+        "ceiling": {
+          "left": {
+            "5000": 4.613984,
+            "7000": 12.30723,
+            "8000": -3.135153,
+            "10000": -9.746457,
+            "12000": -15.697094
+          },
+          "right": {
+            "5000": -0.297303,
+            "7000": 11.262722,
+            "8000": -0.223235,
+            "10000": -7.642614,
+            "12000": -13.605272
+          }
+        }
+      }
+    }
+  },
+  "plots": [
+    "personal-direct-match.svg",
+    "left-speaker-elevation-deltas.svg",
+    "right-speaker-elevation-deltas.svg",
+    "left-speaker-wall-deltas.svg",
+    "right-speaker-wall-deltas.svg",
+    "ceiling-model-comparison.svg",
+    "floor-model-comparison.svg"
+  ]
+}

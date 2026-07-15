@@ -130,7 +130,15 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Benchmark I on Windows; all three probes loaded only its intended 2×2 chain, with no clipping or configuration errors and 5.54 dB correlated-sweep headroom.
 - [x] Audition I; informal listening found it convincing and tonally successful with no reported spatial regression.
 - [x] Build and offline-validate candidate J from I: correct only the remaining broad 1–1.5 kHz coloration, use a short frequency-shaped release to unity by 1.8 kHz, and prohibit narrow iterative overfitting.
-- [ ] Benchmark J on Windows and audition it against I for reduced nasal/forward coloration without weakening the natural HRTF rise, center distance, or speaker placement.
+- [ ] Benchmark J on Windows; informal listening already found its tonality successful but suggested excessive apparent image height.
+- [x] Trace J's upper-treble complete-to-direct rise to synthetic early energy filling the personal 7–8 kHz direct-path notch; confirm the late field is not the dominant cause.
+- [x] Confirm that G–J calculate floor/ceiling elevation but apply only azimuthal head shadow, leaving elevation-dependent pinna filtering unmodeled.
+- [x] Analyze public measured HRTFs at the actual G geometry: ±30° direct, approximately ±51–68° side walls, −40° floor, and +48° ceiling.
+- [x] Compare population-median and personal-reference-matched directional deltas across 150 full-resolution ARI laboratory HRTFs using all four LL/LR/RL/RR direct paths.
+- [x] Trace the upper-treble branch energy: quiet specular paths are not the controlling variable; directionless microclusters dominate the 7–8 kHz direct-notch fill.
+- [x] Build candidate K as a controlled microcluster-only refinement using an 80% horizontal and 20% vertical matched-HRTF energy distribution; preserve each speaker's fused response and keep J byte-identical.
+- [ ] Benchmark K on Windows and confirm only its intended renderer, WAVs, and downstream filters load.
+- [ ] Audition J/K for image height, externalization, center distance, timbre, and focused left/right placement before promoting any directional model.
 - [ ] Parameterize speaker azimuth after direct ILD/HRTF and early-reflection direction models can change together; reuse the shared synthetic late field.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
 - [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.

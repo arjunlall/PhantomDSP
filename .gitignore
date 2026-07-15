@@ -53,3 +53,6 @@ __pycache__/
 
 # Local raw room measurements
 measurements/room/*.mdat
+
+# Downloaded public HRTF datasets (analysis outputs remain tracked)
+measurements/hrtf-datasets/

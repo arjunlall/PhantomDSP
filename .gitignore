@@ -52,7 +52,7 @@ __pycache__/
 .venv/
 
 # Local raw room measurements
-measurements/room/*.mdat
+measurements/room/
 
 # Downloaded public HRTF datasets (analysis outputs remain tracked)
 measurements/hrtf-datasets/

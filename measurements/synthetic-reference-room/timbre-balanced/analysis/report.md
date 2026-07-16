@@ -1,4 +1,4 @@
-# Timbre-Balanced Directional Room
+# Timbre-Balanced Room
 
 This opt-in candidate keeps K's personal direct sound, bass, treated specular field, late field, timing, and directional interaural ratios. It changes only the shared spectral envelope of each virtual speaker's deterministic microcluster branch.
 

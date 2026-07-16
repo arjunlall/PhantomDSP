@@ -106,4 +106,15 @@ Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames. K has passed offl
 | `IRs/timbre-balanced/Timbre Balanced Room Left Speaker.wav` | `fb414138f79df16065f6b152f14bf046eaba7f2e785355c9628c6d38f38034ab` | `c6e58e93b8f4c72c18cb9e1eb57120d71c34f8fdfea79d7ad2043fc89eec9fa0` |
 | `IRs/timbre-balanced/Timbre Balanced Room Right Speaker.wav` | `6bd9026e3f99f45caeb262818b6b2a7288975546c17471d7e9f96a27eefdc08a` | `3b454023a56eb9d050a3a326cefbe40d6e2c4b1f8367bcb1c840d3a5c4074efd` |
 
-Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames. The minimum-phase filters begin at sample zero but add no bulk delay; direct sound and every non-microcluster branch remain inherited from K. Offline validation passes with +2.62 dB modeled maximum correlated gain. Windows runtime validation and K/L listening remain pending. Exact filters, response deltas, and plots are in the [timbre-balanced analysis](../measurements/synthetic-reference-room/timbre-balanced/analysis/report.md).
+Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames. The minimum-phase filters begin at sample zero but add no bulk delay; direct sound and every non-microcluster branch remain inherited from K. Offline validation passes with +2.62 dB modeled maximum correlated gain. Windows runtime validation passed with no clipping or configuration errors and 5.07 dB correlated-sweep headroom. Listening found L substantially more natural than K. Exact filters, response deltas, and plots are in the [timbre-balanced analysis](../measurements/synthetic-reference-room/timbre-balanced/analysis/report.md).
+
+## Synthetic Candidate M
+
+`tools/measurement/render_presence_balanced_room.py` reuses Candidate L's verified treatment model but shifts only the low-frequency correction entrance from 4.5–6 kHz to 5.5–7.5 kHz. It verifies both K and L, preserves L above 7.5 kHz, and changes no direct, timing, bass, spatial-ratio, specular, or late-field branch.
+
+| File | Candidate L SHA-256 | Derived SHA-256 |
+| --- | --- | --- |
+| `IRs/presence-balanced/Presence Balanced Room Left Speaker.wav` | `c6e58e93b8f4c72c18cb9e1eb57120d71c34f8fdfea79d7ad2043fc89eec9fa0` | `d3c4b41e15c08edbb9cef737d1d92713ea73fddda1931f058c7d5e68c719dea7` |
+| `IRs/presence-balanced/Presence Balanced Room Right Speaker.wav` | `3b454023a56eb9d050a3a326cefbe40d6e2c4b1f8367bcb1c840d3a5c4074efd` | `d47c20d7eeb9fa5eab8dffc53382427bebe93d9dde69286a178f0437c4c41d56` |
+
+Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames and no normalization or bulk delay. Offline, M restores 0.44/0.52 dB from 5.5–6.5 kHz and 0.14/0.28 dB from 6.5–7.5 kHz relative to L, while changing L by less than 0.012 dB RMS from 7.5–9 kHz. Modeled maximum correlated gain is +2.63 dB. Exact filters, comparisons, and plots are in the [presence-balanced analysis](../measurements/synthetic-reference-room/presence-balanced/analysis/report.md).

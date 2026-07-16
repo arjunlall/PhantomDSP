@@ -22,6 +22,8 @@ Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
 # Include: Synthetic Reference Room\Directional Diffuse Room Renderer.txt
 # L — treatment-aware timbre refinement: disable A above before enabling.
 # Include: Synthetic Reference Room\Timbre Balanced Room Renderer.txt
+# M — articulation-preserving timbre refinement: disable A above before enabling.
+# Include: Synthetic Reference Room\Presence Balanced Room Renderer.txt
 # Known-good fallback; enable only after disabling Speaker Virtualization above.
 # Include: JBL M2 Binaural Convolution\Legacy Parallel Bass Reference.txt
 # Historical measurement routing; never enable alongside either playback renderer.

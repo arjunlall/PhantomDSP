@@ -1,6 +1,6 @@
 # Synthetic Mastering Room Plan
 
-Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidates H and I passed offline and Windows validation, and listening found I successful. Candidate J was preferred tonally but placed the image too high. Candidate K's microcluster-only directional-HRTF change lowered the image and improved the stereo and phantom presentation in informal listening. A treatment-aware timbre audit now supports one final microcluster-envelope candidate; Windows Benchmark and K/L listening are next.
+Status: Candidate G passed Windows Benchmark and listening established it as a strong reference. Candidates H and I passed offline and Windows validation, and listening found I successful. Candidate J was preferred tonally but placed the image too high. Candidate K's microcluster-only directional-HRTF change lowered the image and improved the stereo and phantom presentation. Candidate L passed Windows validation and sounded substantially more natural than K. Candidate M now tests a small presence-band restoration without changing L's upper-treble treatment.
 
 ## Objective
 
@@ -97,5 +97,13 @@ Informal listening found that K did lower the image slightly and made the stereo
 The [auditory-band timbre audit](../measurements/synthetic-reference-room/directional-diffuse/timbre-analysis/report.md) identifies a specific modeling omission: K preserves the old broad microcluster spectrum while changing only its ear allocation, so it includes directional HRTF behavior but not G's monitor-directivity and treated-surface high-frequency losses. From 6–10 kHz, K's microcluster branch is 11.57/11.30 dB above the full left/right theoretical target and 5.98/5.76 dB above a half-strength sensitivity target. Its net complete-response effect remains roughly +3.78/+4.22 dB from 7–10 kHz.
 
 Candidate L, exposed as `Timbre Balanced Room Renderer.txt`, changes only that microcluster envelope. The correction is attenuation-only, causal minimum phase, and shared within each speaker's two ear paths. It leaves K's personal direct response, bass, timing, specular and late fields, and directional ratios unchanged. Offline, the modeled microcluster residual is below 0.01 dB from 6–10 kHz; the complete response falls 3.10/3.33 dB in that band, 3–5 kHz changes by only 0.03/0.02 dB RMS, and modeled correlated gain is +2.62 dB. The [Candidate L report](../measurements/synthetic-reference-room/timbre-balanced/analysis/report.md) records filters, hashes, response deltas, and plots.
+
+L passed the Windows three-probe Benchmark with no clipping or configuration errors, 5.07 dB correlated-sweep headroom, and 0.61–0.69% single-core CPU. Informal listening found it substantially more natural than K while preserving the convincing stereo and phantom presentation. Longer comparison with physical monitors found that K remained too bright and sharp, while L could slightly understate the high-frequency articulation of a string pick.
+
+## Candidate M Presence-Band Diagnostic
+
+Candidate M, exposed as `Presence Balanced Room Renderer.txt`, changes one variable relative to L: the microcluster attenuation now fades in from 5.5–7.5 kHz instead of 4.5–6 kHz. Its requested curve is otherwise identical to L through 12 kHz and uses the same fade to unity by 14 kHz. Direct sound, bass, timing, interaural ratios, specular reflections, and the synthetic late field remain unchanged.
+
+Offline, M restores 0.44/0.52 dB from 5.5–6.5 kHz and 0.14/0.28 dB from 6.5–7.5 kHz relative to L for the left/right virtual speakers. From 7.5–9 kHz it differs from L by less than 0.012 dB RMS, so it does not broadly split the K/L difference. Modeled correlated gain remains +2.63 dB. The [Candidate M report](../measurements/synthetic-reference-room/presence-balanced/analysis/report.md) records the exact K/L/M comparison.
 
 Research basis: the [CIPIC HRTF Database](https://escholarship.org/uc/item/3d10j9jw), the [ARI HRTF Database](https://www.oeaw.ac.at/en/ari/outreach/software/hrtf-database), and Langendijk and Bronkhorst's study of [spectral localization cues](https://doi.org/10.1121/1.424945).

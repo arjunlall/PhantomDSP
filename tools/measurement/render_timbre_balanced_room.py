@@ -54,6 +54,10 @@ OUTPUT_FILES = {
     "right": "Timbre Balanced Room Right Speaker.wav",
 }
 DESIGN = {
+    "candidate_label": "L",
+    "candidate_display_name": "Timbre-Balanced Room",
+    "plot_prefix": "timbre-balanced",
+    "status": "opt-in treatment-aware timbre candidate",
     "sample_rate_hz": K_DESIGN["sample_rate_hz"],
     "output_length_samples": K_DESIGN["output_length_samples"],
     "nfft": K_DESIGN["nfft"],
@@ -175,7 +179,7 @@ def write_plots(output, frequencies, actual, k_spectra, l_spectra, residual):
     selected = (frequencies >= 4000.0) & (frequencies <= 15000.0)
     write_svg_plot(
         output / "microcluster-timbre-filters.svg",
-        "Treatment-Aware Microcluster Timbre Filters",
+        f"{DESIGN['candidate_display_name']} Microcluster Filters",
         [
             (
                 f"{speaker} actual",
@@ -230,9 +234,10 @@ def write_plots(output, frequencies, actual, k_spectra, l_spectra, residual):
     }
     audible = (frequencies >= 20.0) & (frequencies <= 20000.0)
     display_frequencies = np.geomspace(20.0, 20000.0, 1200)
+    comparison_plot = f"k-versus-{DESIGN['plot_prefix']}-full-spectrum.svg"
     write_svg_plot(
-        output / "k-versus-timbre-balanced-full-spectrum.svg",
-        "Candidate K versus Timbre-Balanced Room",
+        output / comparison_plot,
+        f"Candidate K versus {DESIGN['candidate_display_name']}",
         [
             (
                 f"{candidate} {speaker}",
@@ -246,9 +251,9 @@ def write_plots(output, frequencies, actual, k_spectra, l_spectra, residual):
             )
             for candidate, response, speaker, color in (
                 ("K", k_response, "left", "#93c5fd"),
-                ("balanced", l_response, "left", "#2563eb"),
+                (DESIGN["candidate_label"], l_response, "left", "#2563eb"),
                 ("K", k_response, "right", "#86efac"),
-                ("balanced", l_response, "right", "#059669"),
+                (DESIGN["candidate_label"], l_response, "right", "#059669"),
             )
         ],
         "Frequency (Hz)",
@@ -260,11 +265,12 @@ def write_plots(output, frequencies, actual, k_spectra, l_spectra, residual):
         [20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000],
         x_scale="log",
     )
-    plots.append("k-versus-timbre-balanced-full-spectrum.svg")
+    plots.append(comparison_plot)
 
+    delta_plot = f"{DESIGN['plot_prefix']}-minus-k.svg"
     write_svg_plot(
-        output / "timbre-balanced-minus-k.svg",
-        "Timbre-Balanced Room Minus Candidate K",
+        output / delta_plot,
+        f"{DESIGN['candidate_display_name']} Minus Candidate K",
         [
             (
                 f"{speaker} speaker",
@@ -279,7 +285,7 @@ def write_plots(output, frequencies, actual, k_spectra, l_spectra, residual):
             for speaker, color in (("left", "#2563eb"), ("right", "#059669"))
         ],
         "Frequency (Hz)",
-        "Balanced minus K (dB)",
+        f"{DESIGN['candidate_label']} minus K (dB)",
         20.0,
         20000.0,
         -6.0,
@@ -287,7 +293,7 @@ def write_plots(output, frequencies, actual, k_spectra, l_spectra, residual):
         [20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000],
         x_scale="log",
     )
-    plots.append("timbre-balanced-minus-k.svg")
+    plots.append(delta_plot)
     return plots
 
 
@@ -298,8 +304,9 @@ def parse_args():
     return parser.parse_args()
 
 
-def main():
-    args = parse_args()
+def main(args=None):
+    if args is None:
+        args = parse_args()
     direct_summary = load_verified_inputs(DIRECT_FILES, DIRECT_ANALYSIS.parent)
     h_summary = load_verified_inputs(H_FILES, H_ANALYSIS_DIRECTORY)
     k_summary = load_verified_inputs(K_FILES, K_ANALYSIS_DIRECTORY)
@@ -477,7 +484,7 @@ def main():
     )
     summary = {
         "schema_version": 1,
-        "status": "opt-in treatment-aware timbre candidate",
+        "status": DESIGN["status"],
         "design": DESIGN,
         "candidate_k_files": k_metadata,
         "candidate_k_rendered_hashes": {
@@ -518,14 +525,19 @@ def main():
         json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
     lines = [
-        "# Timbre-Balanced Directional Room",
+        f"# {DESIGN['candidate_display_name']}",
         "",
         "This opt-in candidate keeps K's personal direct sound, bass, treated specular field, late field, timing, and directional interaural ratios. It changes only the shared spectral envelope of each virtual speaker's deterministic microcluster branch.",
         "",
         "## Design",
         "",
         "- The ERB-smoothed K-minus-theoretical excess is converted to attenuation only; no deficient band is boosted.",
-        "- Correction fades in from 4.5-6 kHz, remains active through 12 kHz, and fades out by 14 kHz.",
+        (
+            f"- Correction fades in from {DESIGN['correction_support_hz'][0] / 1000:g}-"
+            f"{DESIGN['correction_full_strength_hz'][0] / 1000:g} kHz, remains active through "
+            f"{DESIGN['correction_full_strength_hz'][1] / 1000:g} kHz, and fades out by "
+            f"{DESIGN['correction_support_hz'][1] / 1000:g} kHz."
+        ),
         "- The same causal minimum-phase filter is applied to both ear paths from each speaker, preserving directional ratios and adding no bulk delay.",
         "",
         "## Offline Result",

@@ -141,8 +141,11 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Audition J/K for image height, externalization, center distance, timbre, and focused left/right placement; K lowered the image slightly and improved the stereo and phantom presentation.
 - [x] Audit K's direct, specular, microcluster, and late-field timbre with auditory-band integration and a treatment/directivity/HRTF-derived theoretical target.
 - [x] Confirm the 6–10 kHz microcluster excess survives half-strength directivity and absorption sensitivity cases, then build one attenuation-only treatment-aware candidate without changing K's directional ratios.
-- [ ] Benchmark the timbre-balanced renderer on Windows and confirm only its intended renderer, WAVs, and downstream filters load.
-- [ ] Audition K against the timbre-balanced renderer for tonal naturalness without losing K's image height, center distance, or externalization improvements.
+- [x] Benchmark the timbre-balanced renderer on Windows; only its intended renderer, WAVs, routing, and downstream filters loaded, with no clipping or configuration errors and 5.07 dB correlated-sweep headroom.
+- [x] Audition K against the timbre-balanced renderer; L sounded substantially more natural and retained K's spatial improvement, but longer monitor comparison suggested slightly reduced string-pick articulation.
+- [x] Build candidate M as a one-variable presence-band diagnostic: retain L above 7.5 kHz while shifting only the microcluster-correction entrance from 4.5–6 kHz to 5.5–7.5 kHz.
+- [ ] Benchmark candidate M on Windows and confirm only its intended renderer, WAVs, routing, and downstream filters load.
+- [ ] Audition L/M for restored string articulation without reintroducing K's broad brightness or sharpness.
 - [ ] Parameterize speaker azimuth after direct ILD/HRTF and early-reflection direction models can change together; reuse the shared synthetic late field.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
 - [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.

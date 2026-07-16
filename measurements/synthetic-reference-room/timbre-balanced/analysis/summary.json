@@ -21,6 +21,8 @@
     "attenuation_only": true,
     "base_candidate": "K directional diffuse mastering room",
     "bulk_delay_samples": 0,
+    "candidate_display_name": "Timbre-Balanced Room",
+    "candidate_label": "L",
     "changed_branch": "directional deterministic microclusters only",
     "correction_full_strength_hz": [
       6000.0,
@@ -38,7 +40,9 @@
     "maximum_attenuation_db": -18.0,
     "nfft": 65536,
     "output_length_samples": 32768,
+    "plot_prefix": "timbre-balanced",
     "sample_rate_hz": 48000,
+    "status": "opt-in treatment-aware timbre candidate",
     "unchanged_branches": [
       "personal direct and bass",
       "treated specular reflections",

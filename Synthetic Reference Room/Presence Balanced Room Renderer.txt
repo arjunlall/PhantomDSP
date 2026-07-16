@@ -1,0 +1,14 @@
+# Experimental articulation-preserving refinement of the treatment-aware room; not the production default.
+# Candidate L with a later 5.5-7.5 kHz entrance to the same upper-treble microcluster treatment.
+# Personal direct sound, bass, timing, specular and late fields, and directional ear ratios are unchanged.
+Channel: all
+Copy: LL=L LR=L RIL=R RIR=R
+
+Channel: LL LR
+Convolution: IRs\presence-balanced\Presence Balanced Room Left Speaker.wav
+
+Channel: RIL RIR
+Convolution: IRs\presence-balanced\Presence Balanced Room Right Speaker.wav
+
+Channel: L R
+Copy: L=LL+RIL R=LR+RIR

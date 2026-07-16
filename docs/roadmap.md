@@ -144,7 +144,7 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Benchmark the timbre-balanced renderer on Windows; only its intended renderer, WAVs, routing, and downstream filters loaded, with no clipping or configuration errors and 5.07 dB correlated-sweep headroom.
 - [x] Audition K against the timbre-balanced renderer; L sounded substantially more natural and retained K's spatial improvement, but longer monitor comparison suggested slightly reduced string-pick articulation.
 - [x] Build candidate M as a one-variable presence-band diagnostic: retain L above 7.5 kHz while shifting only the microcluster-correction entrance from 4.5–6 kHz to 5.5–7.5 kHz.
-- [ ] Benchmark candidate M on Windows and confirm only its intended renderer, WAVs, routing, and downstream filters load.
+- [x] Benchmark candidate M on Windows; only its intended renderer, WAVs, routing, and downstream filters loaded, with no clipping or configuration errors and 5.13 dB correlated-sweep headroom.
 - [ ] Audition L/M for restored string articulation without reintroducing K's broad brightness or sharpness.
 - [ ] Parameterize speaker azimuth after direct ILD/HRTF and early-reflection direction models can change together; reuse the shared synthetic late field.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.

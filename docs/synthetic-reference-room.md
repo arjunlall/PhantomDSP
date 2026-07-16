@@ -169,12 +169,12 @@ In `config - personalized.txt`, select exactly one renderer:
 Include: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, H, I, and L have passed Windows Benchmark. M has passed offline validation and awaits Windows Benchmark and listening. A remains the production default.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, H, I, L, and M have passed Windows Benchmark. M is active for L/M listening. A remains the production default.
 
 ## Next Stages
 
 - Keep D frozen as the measured hybrid control and E frozen as the accepted synthetic-late reference.
-- Benchmark Candidate M, then audition it directly against L for restored string articulation without reintroducing K's broad brightness or sharpness.
+- Audition Candidate M directly against L for restored string articulation without reintroducing K's broad brightness or sharpness.
 - Add a direct-only generic-HRTF control only if the remaining personal contribution needs to be isolated.
 - Parameterize speaker azimuth only after the direct ILD/HRTF and reflection directions can change with the theoretical geometry; the shared late field should remain reusable.
 - Validate each stage through Equalizer APO Benchmark and controlled listening before promotion.

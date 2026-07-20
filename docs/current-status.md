@@ -1,10 +1,10 @@
 # Current DSP Work
 
-This file is the short resume point for active experiments. Detailed measurements remain in the linked reports; normal playback directly includes the accepted `Speaker Virtualization.txt` renderer with no conditional routing.
+This file is the short resume point for active experiments. Detailed measurements remain in the linked reports; normal playback directly includes the accepted `Synthetic Reference Room/Presence Balanced Room Renderer.txt` renderer with no conditional routing.
 
 ## Synthetic Reference Room Experiment
 
-Thirteen mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is production; B through F isolate direct, early, and late mechanisms; G is the complete synthetic soffit-mastering-room candidate; H tests idealized lower-midrange reflection treatment; I and J normalize broad coloration through 1.5 kHz; K adds directional HRTF cues only to J's diffuse early field; L corrects K's microcluster timbre; and M tests a gentler entrance to that same correction. Production remains enabled by default.
+Thirteen mutually exclusive renderers are now documented in the [synthetic reference-room experiment](synthetic-reference-room.md): A is the prior measured-room production reference; B through F isolate direct, early, and late mechanisms; G is the complete synthetic soffit-mastering-room candidate; H tests idealized lower-midrange reflection treatment; I and J normalize broad coloration through 1.5 kHz; K adds directional HRTF cues only to J's diffuse early field; L corrects K's microcluster timbre; and M uses a gentler entrance to that same correction. Candidate M is now enabled by default as the accepted reference renderer.
 
 B was benchmarked cleanly on Windows and sounded like ordinary headphones despite its theoretical ITD and personal direct-HRTF magnitude. C restored four distinct +4 to +30 ms paths and A-like comb density, but sounded perceptually like B: frontal yet immediately in front of the listener. Switching either B or C to A moved the image back several feet. Offline analysis confirms C's early energy is already comparable to A; its decisive difference is the absence of energy after 30 ms.
 
@@ -14,7 +14,7 @@ Informal sighted listening with unchanged downstream filters found that D restor
 
 D's late field is now characterized as a broad target: 9.16 dB retained-C-to-late energy ratio, approximately 0.565 s decay, nearly equal late energy at both ears, low coherence above 500 Hz, and a smoothed at-ear spectral shape. Candidate E preserves C through the 25 ms boundary and generates a deterministic symmetric tail that matches those targets without copying D's late waveform. Its 20–80 Hz change from C is 0.00010 dB RMS and modeled correlated renderer gain is +3.43 dB.
 
-E passed Windows Benchmark with no clipping or configuration errors, 4.61 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Informal sighted comparison found no obvious difference between D and E; E sounded great and preserved the intended ±30° placement, while A sounded narrower at an estimated ±20–25°. E is now the accepted opt-in synthetic-late reference; A remains the production default.
+E passed Windows Benchmark with no clipping or configuration errors, 4.61 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Informal sighted comparison found no obvious difference between D and E; E sounded great and preserved the intended ±30° placement, while A sounded narrower at an estimated ±20–25°. E became the accepted synthetic-late reference; A remained the production default at that stage of the experiment.
 
 Candidate F replaces C's measured +4 to +30 ms early field with six theoretical first-order image sources per speaker while keeping B's direct/bass stage and E's synthetic late branch fixed. It models a symmetric treated room, removes common propagation delay, matches C's combined early energy at −9.695 dB relative to direct, and copies no measured early- or late-room waveform. Relative to E, its change is 0.015 dB RMS at 20–80 Hz and 0.363 dB RMS at 80–200 Hz; modeled correlated renderer gain is +2.56 dB.
 
@@ -24,7 +24,7 @@ Candidate G now combines mastering-room-inspired proportions, soffit-mounted ±3
 
 G passed the Windows three-probe Benchmark with no clipping or configuration errors, 5.55 dB correlated-sweep headroom, and 0.60–0.69% single-core CPU. Early sighted listening found G much better than F and competitive with E, with a potentially preferable timbre. Response inspection then identified a broad 200–300 Hz cancellation caused by coherent floor and side-wall reflections around the 250 Hz room-branch transition.
 
-Candidate H preserves G's geometry, direct/bass, diffuse microclusters, and late field while applying causal idealized treatment only to the already-calibrated specular branch. Offline, H reduces the worst smoothed 200–350 Hz direct-path null from −5.70 to −3.44 dB for LL and from −4.17 to −2.02 dB for RR. Its H-minus-G change is 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz; center IACC remains 0.168 and modeled correlated gain is +2.61 dB. H passed Windows Benchmark with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.62–0.70% single-core CPU. H is left active for comparison with G; listen for lower-midrange cleanliness without loss of apparent distance or spaciousness.
+Candidate H preserves G's geometry, direct/bass, diffuse microclusters, and late field while applying causal idealized treatment only to the already-calibrated specular branch. Offline, H reduces the worst smoothed 200–350 Hz direct-path null from −5.70 to −3.44 dB for LL and from −4.17 to −2.02 dB for RR. Its H-minus-G change is 0.012 dB RMS at 20–80 Hz and 0.069 dB RMS at 1–8 kHz; center IACC remains 0.168 and modeled correlated gain is +2.61 dB. H passed Windows Benchmark with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.62–0.70% single-core CPU. H was then left active for comparison with G to assess lower-midrange cleanliness without loss of apparent distance or spaciousness.
 
 Candidate I keeps H's complete temporal and spatial renderer, uses the direct-only paths as the unchanged tonal reference, and removes only the 1/6-octave-smoothed complete-to-direct coloration from 200 Hz to 1 kHz. Corrections are paired by virtual speaker—LL with LR and RL with RR—so neither speaker's interaural transfer ratio is independently changed. Raw comb-filter teeth remain untouched. I passed Windows Benchmark with no clipping or configuration errors, 5.54 dB correlated-sweep headroom, and 0.60–0.67% single-core CPU. Informal listening found it convincing and tonally successful.
 
@@ -38,7 +38,7 @@ The remaining timbre audit found that K's inherited microcluster spectrum effect
 
 Candidate L applies attenuation only to K's deterministic microclusters, using one shared minimum-phase filter for both ear paths from each speaker. It leaves direct sound, bass, specular and late fields, timing, and K's directional ratios unchanged. Offline, it matches the theoretical microcluster envelope within 0.01 dB from 6–10 kHz, lowers the complete response by 3.10/3.33 dB on average in that band, changes 3–5 kHz by only 0.03/0.02 dB RMS, and models +2.62 dB maximum correlated gain. Windows Benchmark passed with no clipping or configuration errors, 5.07 dB correlated-sweep headroom, and 0.61–0.69% single-core CPU. Listening found L substantially more natural than K while retaining the convincing spatial presentation.
 
-Longer comparison with physical monitors found a narrower residual tradeoff: K remained too bright and sharp overall, while L could slightly understate high-frequency string-pick articulation. Candidate M keeps L's correction effectively unchanged above 7.5 kHz but moves its fade-in from 4.5–6 kHz to 5.5–7.5 kHz. Relative to L, it restores 0.44/0.52 dB from 5.5–6.5 kHz and 0.14/0.28 dB from 6.5–7.5 kHz for the left/right virtual speakers; its 7.5–9 kHz difference is below 0.012 dB RMS. Direct sound, timing, bass, interaural ratios, and every other room branch remain unchanged. Windows Benchmark passed with no clipping or configuration errors, 5.13 dB correlated-sweep headroom, and 0.61–0.67% single-core CPU. M is active for direct L/M listening.
+Longer comparison with physical monitors found a narrower residual tradeoff: K remained too bright and sharp overall, while L could slightly understate high-frequency string-pick articulation. Candidate M keeps L's correction effectively unchanged above 7.5 kHz but moves its fade-in from 4.5–6 kHz to 5.5–7.5 kHz. Relative to L, it restores 0.44/0.52 dB from 5.5–6.5 kHz and 0.14/0.28 dB from 6.5–7.5 kHz for the left/right virtual speakers; its 7.5–9 kHz difference is below 0.012 dB RMS. Direct sound, timing, bass, interaural ratios, and every other room branch remain unchanged. Windows Benchmark passed with no clipping or configuration errors, 5.13 dB correlated-sweep headroom, and 0.61–0.67% single-core CPU. The owner selected M as the accepted reference renderer; L remains its immediate comparison control.
 
 ## Historical Bass Crossover Listening Decision
 
@@ -50,7 +50,7 @@ These historical labels belong only to the completed bass experiment; they are u
 
 The [measured comparison](../measurements/candidates/bass-crossover-comparison.md) shows that clean-path dominance does not explain B's weaker externalization: A contains more clean energy yet externalizes better. Frequency-dependent group delay and changed interaural response around 100–120 Hz are the stronger suspects.
 
-Decision: stop iterating the parallel LR4 crossover. The production Speaker Virtualization renderer replaces it with one unified 2×2 matrix while retaining the legacy reference's bass presentation and quantity closely enough to pass both measurement and listening.
+Decision: stop iterating the parallel LR4 crossover. The then-production Speaker Virtualization renderer replaced it with one unified 2×2 matrix while retaining the legacy reference's bass presentation and quantity closely enough to pass both measurement and listening.
 
 ## Latency Experiment
 
@@ -76,12 +76,12 @@ Controlled listening found no readily audible tonal or spatial difference betwee
 
 Resume sequence:
 
-1. Keep `Speaker Virtualization.txt` as the daily renderer and `Legacy Parallel Bass Reference.txt` as the fallback/reference.
+1. Keep `Presence Balanced Room Renderer.txt` as the daily reference renderer, `Speaker Virtualization.txt` as the prior measured-room production reference, and `Legacy Parallel Bass Reference.txt` as the older fallback.
 2. Keep the generated WAVs and DSP parameters locked; their hashes and Windows capture now define the accepted version.
 3. Use the precision de-embedded archive under `measurements/minimum-latency/legacy-reference/analysis` when reproducing the design target; do not infer it from headphone-compensated output.
 4. Treat D200 v1, A200, B, and C as historical findings only; their runnable files were removed after rejection and remain available in Git history.
 5. If latency work continues, measure the complete application-to-device path before modifying the accepted IRs. The remaining delay is no longer explained by BRIR direct arrival alone.
 
-To roll back, change only the first renderer include in `config - personalized.txt`: comment `Speaker Virtualization.txt` and uncomment `Legacy Parallel Bass Reference.txt`. Never enable both. Conditional benchmark routing lives separately under `tools/measurement/equalizerapo/` and is not part of normal playback.
+To return to the prior measured-room production reference, comment `Presence Balanced Room Renderer.txt` and uncomment `Speaker Virtualization.txt` in `config - personalized.txt`. To use the older fallback instead, enable `Legacy Parallel Bass Reference.txt`. Never enable more than one renderer. Conditional benchmark routing lives separately under `tools/measurement/equalizerapo/` and is not part of normal playback.
 
 Relative to the original renderer, Speaker Virtualization removes 200 samples (4.17 ms) of common BRIR direct-arrival time; it removes another 100 samples (2.08 ms) relative to the legacy fallback. The 200-sample value remains a documented implementation property, not the renderer's identity. These figures do not include application, driver, convolution-engine, mixer, or device-buffer latency.

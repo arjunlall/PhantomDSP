@@ -145,14 +145,14 @@ New measurements would strengthen validation but are not a blocker for the bass 
 - [x] Audition K against the timbre-balanced renderer; L sounded substantially more natural and retained K's spatial improvement, but longer monitor comparison suggested slightly reduced string-pick articulation.
 - [x] Build candidate M as a one-variable presence-band diagnostic: retain L above 7.5 kHz while shifting only the microcluster-correction entrance from 4.5–6 kHz to 5.5–7.5 kHz.
 - [x] Benchmark candidate M on Windows; only its intended renderer, WAVs, routing, and downstream filters loaded, with no clipping or configuration errors and 5.13 dB correlated-sweep headroom.
-- [ ] Audition L/M for restored string articulation without reintroducing K's broad brightness or sharpness.
+- [x] Audition L/M for restored string articulation without reintroducing K's broad brightness or sharpness; select M as the accepted reference renderer.
 - [ ] Parameterize speaker azimuth after direct ILD/HRTF and early-reflection direction models can change together; reuse the shared synthetic late field.
 - [ ] Test windowed BRIR variants that preserve direct and early spatial cues while shortening undesirable late decay.
 - [ ] Trim trailing digital silence for CPU/file efficiency; do not count it as acoustic-latency reduction.
 - [ ] Compare minimum-phase and hybrid renderers with the measured BRIR baseline.
 - [ ] Explore a runtime parametric/no-convolution implementation after the synthetic IR establishes which cues it must reproduce.
 
-Any experiment based on the legacy A renderer must re-run the bass-alignment analysis because its clean branch depends on BRIR timing. The accepted Speaker Virtualization renderer has no parallel runtime bass branch, but generated-asset closure and all four path relationships must still be revalidated after an IR change.
+Any experiment based on the legacy A renderer must re-run the bass-alignment analysis because its clean branch depends on BRIR timing. The prior production Speaker Virtualization renderer and active Candidate M renderer have no parallel runtime bass branch, but generated-asset closure and all four path relationships must still be revalidated after an IR change.
 
 ## Priority 3: Public Project Clarity
 

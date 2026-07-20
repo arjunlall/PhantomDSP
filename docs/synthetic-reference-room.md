@@ -1,6 +1,6 @@
 # Synthetic Reference Room
 
-This experiment works toward a speaker renderer that does not depend on the original JBL room response. The production `Speaker Virtualization.txt` remains the default; candidates C and D reuse measured room segments as diagnostic controls, E replaces D's measured late decay, F replaces the remaining measured early waveform, G redesigns the theoretical room around soffit mains and binaural diffusion, H adds idealized lower-midrange reflection treatment, I and J normalize broad coloration through 1.5 kHz, K gives J's diffuse early field a directional HRTF model, L adds the missing monitor-directivity and treated-surface spectral losses, and M tests a gentler entrance to L's correction.
+This experiment produced a speaker renderer that does not depend on the original JBL room waveform. Candidate M, `Presence Balanced Room Renderer.txt`, is now the default; candidates C and D reuse measured room segments as diagnostic controls, E replaces D's measured late decay, F replaces the remaining measured early waveform, G redesigns the theoretical room around soffit mains and binaural diffusion, H adds idealized lower-midrange reflection treatment, I and J normalize broad coloration through 1.5 kHz, K gives J's diffuse early field a directional HRTF model, L adds the missing monitor-directivity and treated-surface spectral losses, and M uses a gentler entrance to L's correction.
 
 ## Design Boundary
 
@@ -164,17 +164,17 @@ In `config - personalized.txt`, select exactly one renderer:
 # L: Synthetic Reference Room\Timbre Balanced Room Renderer.txt
 # M: Synthetic Reference Room\Presence Balanced Room Renderer.txt
 
-# Example: Candidate I active; every other renderer must be commented.
+# Example only: Candidate I active; every other renderer must be commented.
 # Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
 Include: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
 ```
 
-Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, H, I, L, and M have passed Windows Benchmark. M is active for L/M listening. A remains the production default.
+Never enable more than one renderer simultaneously. Keep the target, headphone compensation, and personal balance includes unchanged. D, E, G, H, I, L, and M have passed Windows Benchmark. M is the accepted active reference; A remains the prior measured-room production reference.
 
 ## Next Stages
 
 - Keep D frozen as the measured hybrid control and E frozen as the accepted synthetic-late reference.
-- Audition Candidate M directly against L for restored string articulation without reintroducing K's broad brightness or sharpness.
+- Keep Candidate L as the direct comparison control for the accepted M response.
 - Add a direct-only generic-HRTF control only if the remaining personal contribution needs to be isolated.
 - Parameterize speaker azimuth only after the direct ILD/HRTF and reflection directions can change with the theoretical geometry; the shared late field should remain reusable.
 - Validate each stage through Equalizer APO Benchmark and controlled listening before promotion.

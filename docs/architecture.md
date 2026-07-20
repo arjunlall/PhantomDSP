@@ -53,15 +53,15 @@ The approximation is imperfect:
 
 These limitations favor smoothed, regularized headphone compensation over exact inversion of every narrow peak or null. Harman's loudspeaker-derived headphone-target work used a related structure: headphones were first equalized toward a common measured baseline and then given an in-room loudspeaker target. Their method also averaged multiple headphone reseats and did not force narrow placement-dependent deviations perfectly flat. See [Olive, Welti, and McMullin (AES 2013)](https://www.researchgate.net/publication/287536305_Listener_preference_for_different_headphone_target_response_curves).
 
-The active BRIR files, channel assignments, hashes, and timing landmarks are recorded in the [Active IR Manifest](ir-manifest.md).
+The active renderer files, channel assignments, hashes, and timing landmarks are recorded in the [Renderer IR Manifest](ir-manifest.md).
 
 ## Active Processing Stages
 
 The active include order begins in `config.txt` and `config - personalized.txt`:
 
-1. **Load the production renderer.** `config - personalized.txt` directly includes `Speaker Virtualization.txt`; normal playback contains no experiment selector or benchmark branch.
+1. **Load the accepted reference renderer.** `config - personalized.txt` directly includes `Synthetic Reference Room/Presence Balanced Room Renderer.txt`; normal playback contains no benchmark selector or conditional branch.
 2. **Create virtual paths.** Stereo inputs are copied into `LL`, `LR`, `RIL`, and `RIR`.
-3. **Apply the unified convolution.** `Left Speaker to Both Ears.wav` and `Right Speaker to Both Ears.wav` provide all four paths. They bake in the minimized BRIR arrival, smooth extended bass, speaker-renderer EQ, and measured direct/cross timing relationships.
+3. **Apply the unified convolution.** `Presence Balanced Room Left Speaker.wav` and `Presence Balanced Room Right Speaker.wav` provide all four paths. They contain the accepted direct/bass lineage, synthetic early and late room, broad room-tonality normalization, directional diffuse allocation, and presence-balanced microcluster treatment.
 4. **Sum to headphone channels.** `LL + RIL` produces the left output; `LR + RIR` produces the right output.
 5. **Apply target and headphone compensation.** Macro preference adjustments, Elex flattening, and personal left/right balance complete the active digital chain.
 
@@ -91,7 +91,7 @@ A diagnostic 200-sample BRIR advance failed because the clean branch could advan
 
 ## Minimum-Latency 2×2 Bass Redesign
 
-The active design removes the parallel clean-bass branch and renders the full speaker-to-ear matrix in two stereo convolutions:
+The accepted measured-room redesign removes the parallel clean-bass branch and renders the full speaker-to-ear matrix in two stereo convolutions:
 
 ```text
 left output  = H_LL × left input + H_RL × right input
@@ -106,17 +106,17 @@ The first unified experiment—historically labeled D200 v1—used two generated
 
 The production revision—historically labeled D200 A-matched—keeps the common 200-sample BRIR advance but changes the synthetic branch to a first-order 90 Hz low-pass, +0.75 dB calibration, and the same 15-sample cross offset. Its direct low-model peak is sample 1, close to the legacy clean-before-convolved timing after the additional advance. A common −5 dB correction at 350 Hz, Q 2 is applied to all four paths after summation; because it is identical on every path, it corrects shared magnitude without changing ILD or IPD. Speaker-renderer EQ remains baked into the generated IRs; root target, headphone, and personal-balance stages remain separate.
 
-The first version is digitally rejected and retained only as a historical diagnostic. The production Speaker Virtualization renderer passes its Windows Benchmark capture, including a 0.83–1.17 dB RMS difference from the legacy reference at 80–200 Hz, a 2.47 dB worst smoothed point, zero clipping, and 0.67% maximum single-core CPU. Controlled listening found no readily audible tonal or spatial regression, while finger drumming revealed the latency improvement.
+The first version is digitally rejected and retained only as a historical diagnostic. The prior production Speaker Virtualization renderer passes its Windows Benchmark capture, including a 0.83–1.17 dB RMS difference from the legacy reference at 80–200 Hz, a 2.47 dB worst smoothed point, zero clipping, and 0.67% maximum single-core CPU. Controlled listening found no readily audible tonal or spatial regression, while finger drumming revealed the latency improvement.
 
 ## Synthetic Reference Room Experiment
 
-The opt-in [Synthetic Reference Room](synthetic-reference-room.md) is a parallel research renderer, not a revision of the production BRIR. Direct-only control B uses symmetrized personal magnitude cues from a 4 ms BRIR window, causal minimum-phase reconstruction, and a theoretical contralateral delay. It deliberately discards measured propagation time, measured left/right asymmetry, and all measured room decay.
+The [Synthetic Reference Room](synthetic-reference-room.md) began as a parallel research lineage and now supplies the active Candidate M renderer. Direct-only control B uses symmetrized personal magnitude cues from a 4 ms BRIR window, causal minimum-phase reconstruction, and a theoretical contralateral delay. It deliberately discards measured propagation time, measured left/right asymmetry, and all measured room decay.
 
 Candidate C keeps B's direct sound and adds four distinct personal early-reflection residuals from +4 to +30 ms. Each residual is aligned relative to B's theoretical direct peak, preserving measured reflection spacing without restoring old absolute latency. A reflection-only fourth-order high-pass at 250 Hz protects the synthetic low bass; measured late energy remains excluded. C is an empirical control for identifying the binaural room cues that B lacks, not the proposed final room.
 
 Candidate D preserves C through +25 ms, uses a complementary +25 to +30 ms transition, and restores the complete measured four-path decay. It retains C's room-only high-pass, gain, and theoretical direct alignment. Informal sighted listening found that D restored apparent monitor distance and sounded more spacious and preferable to production A. D then passed Windows Benchmark with no clipping or configuration errors. It is the frozen hybrid perceptual reference, not a proposal to retain the original room.
 
-Below 300 Hz, B uses only the active renderer's broad magnitude as a bass-quantity calibration; the resulting bass phase and impulse are synthesized anew. Root target, headphone compensation, and personal balance remain downstream exactly as in production. Candidate E retains C/D's direct, bass, and measured early stages while replacing only the post-25–30 ms measured decay with deterministic frequency-shaped binaural noise. It matches D's broad decay, level, spectrum, and coherence targets without copying late waveform samples. Benchmark and listening both passed: E was not obviously distinguishable from D and preserved the intended ±30° placement. E is therefore the accepted synthetic-late reference for replacing the measured early residual next.
+Below 300 Hz, B uses only the prior measured-room renderer's broad magnitude as a bass-quantity calibration; the resulting bass phase and impulse are synthesized anew. Root target, headphone compensation, and personal balance remain downstream exactly as in the prior production chain. Candidate E retains C/D's direct, bass, and measured early stages while replacing only the post-25–30 ms measured decay with deterministic frequency-shaped binaural noise. It matches D's broad decay, level, spectrum, and coherence targets without copying late waveform samples. Benchmark and listening both passed: E was not obviously distinguishable from D and preserved the intended ±30° placement. E is therefore the accepted synthetic-late reference for replacing the measured early residual next.
 
 Candidate F removes that last measured room waveform. It combines B's personalized direct stage, six first-order image-source reflections per speaker, and E's accepted synthetic late branch. The early arrivals use theoretical per-ear path lengths, distance loss, broad surface absorption, and generic azimuthal head shadow; a shared scalar matches C's total early-to-direct energy without copying measured timing or asymmetry. Common speaker propagation delay is omitted, the room branch remains high-passed at 250 Hz, and the direct/bass onset is unchanged. F is fully synthetic in its room waveform but not measurement-free: its direct HRTF remains personal, broad bass calibration comes from A, and the late statistics were characterized from D.
 

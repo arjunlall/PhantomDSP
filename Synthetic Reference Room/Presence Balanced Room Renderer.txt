@@ -1,4 +1,4 @@
-# Experimental articulation-preserving refinement of the treatment-aware room; not the production default.
+# Candidate M provenance; accepted presence-balanced reference renderer.
 # Candidate L with a later 5.5-7.5 kHz entrance to the same upper-treble microcluster treatment.
 # Personal direct sound, bass, timing, specular and late fields, and directional ear ratios are unchanged.
 Channel: all

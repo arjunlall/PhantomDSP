@@ -1,6 +1,6 @@
-# Active IR Manifest
+# Renderer IR Manifest
 
-This manifest records both the original BRIR parents and the generated files loaded by `Speaker Virtualization.txt`. It preserves asset lineage without using experimental names as production identifiers.
+This manifest records the active Presence Balanced renderer, its synthetic lineage, and the prior measured-room BRIR parents and generated reference files. It preserves asset lineage while distinguishing current selection from historical production state.
 
 ## Original BRIR Parents
 
@@ -15,7 +15,7 @@ The files reside in `JBL M2 Binaural Convolution/IRs/`. Equalizer APO assigns th
 
 ## Timing Landmarks
 
-Onsets are the first samples reaching the stated level relative to that channel's absolute peak. Effective peak positions include the explicit delays in the active configuration.
+Onsets are the first samples reaching the stated level relative to that channel's absolute peak. Effective peak positions include the explicit delays in the measured-room configuration.
 
 | Path | −60 dB onset | −40 dB onset | Raw peak | Runtime delay | Effective peak |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -53,9 +53,9 @@ The checked-in script `tools/measurement/render_ir_advances.py` verifies the par
 
 All six files are stereo 48 kHz, 24-bit PCM with 32,768 frames. They reside in `IRs/advanced/`. See the [BRIR advance analysis](../measurements/ir-advance/report.md) for prefix loss, transfer error, and the clean-bass integration constraint.
 
-## Active Generated Renderer
+## Prior Production Generated Renderer
 
-The active renderer uses a first-order 90 Hz clean model, +0.75 dB calibration, a 15-sample cross offset, one common −5 dB peaking correction at 350 Hz, Q 2, and a common 200-sample BRIR advance. The common correction cannot change interaural ratios.
+The prior measured-room production renderer uses a first-order 90 Hz clean model, +0.75 dB calibration, a 15-sample cross offset, one common −5 dB peaking correction at 350 Hz, Q 2, and a common 200-sample BRIR advance. The common correction cannot change interaural ratios.
 
 | File | Channel 1 | Channel 2 | SHA-256 |
 | --- | --- | --- | --- |
@@ -108,9 +108,9 @@ Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames. K has passed offl
 
 Both outputs are stereo 48 kHz, 24-bit PCM with 32,768 frames. The minimum-phase filters begin at sample zero but add no bulk delay; direct sound and every non-microcluster branch remain inherited from K. Offline validation passes with +2.62 dB modeled maximum correlated gain. Windows runtime validation passed with no clipping or configuration errors and 5.07 dB correlated-sweep headroom. Listening found L substantially more natural than K. Exact filters, response deltas, and plots are in the [timbre-balanced analysis](../measurements/synthetic-reference-room/timbre-balanced/analysis/report.md).
 
-## Synthetic Candidate M
+## Active Renderer: Presence Balanced Room
 
-`tools/measurement/render_presence_balanced_room.py` reuses Candidate L's verified treatment model but shifts only the low-frequency correction entrance from 4.5–6 kHz to 5.5–7.5 kHz. It verifies both K and L, preserves L above 7.5 kHz, and changes no direct, timing, bass, spatial-ratio, specular, or late-field branch.
+`config - personalized.txt` directly loads `Synthetic Reference Room/Presence Balanced Room Renderer.txt`, historically Candidate M. `tools/measurement/render_presence_balanced_room.py` reuses Candidate L's verified treatment model but shifts only the low-frequency correction entrance from 4.5–6 kHz to 5.5–7.5 kHz. It verifies both K and L, preserves L above 7.5 kHz, and changes no direct, timing, bass, spatial-ratio, specular, or late-field branch.
 
 | File | Candidate L SHA-256 | Derived SHA-256 |
 | --- | --- | --- |

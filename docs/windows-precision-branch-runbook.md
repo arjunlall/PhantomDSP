@@ -4,7 +4,7 @@ Open Codex at the PhantomDSP repository on the Windows playback PC and give it t
 
 > Capture the calibrated legacy-reference source branches described in `measurements/minimum-latency/README.md`. First read `AGENTS.md`, that README, `tools/measurement/run_eapo_precision_branches.ps1`, `tools/measurement/run_eapo_baseline.ps1`, and `tools/measurement/equalizerapo/bass-branch-output.txt`.
 >
-> Work on `codex/dsp-improvements` with a clean tree and pull the latest remote commit. Confirm this checkout is installed at `C:\Program Files\EqualizerAPO\config`. In `config - personalized.txt`, temporarily comment `Speaker Virtualization.txt` and uncomment only `tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt`. Do not alter DSP values, Windows audio settings, or existing captured references.
+> Work on `codex/dsp-improvements` with a clean tree and pull the latest remote commit. Confirm this checkout is installed at `C:\Program Files\EqualizerAPO\config`. In `config - personalized.txt`, temporarily comment `Presence Balanced Room Renderer.txt` and uncomment only `tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt`. Do not alter DSP values, Windows audio settings, or existing captured references.
 >
 > From the repository root run:
 >
@@ -15,4 +15,4 @@ Open Codex at the PhantomDSP repository on the Windows playback PC and give it t
 >
 > The runner must confirm the historical benchmark selector is the sole renderer include and create `measurements\minimum-latency\legacy-reference\raw\precision-branches\{convolved,clean}`. Verify each directory contains both input WAVs, both output WAVs, probe metadata, and a Benchmark log. The convolved log must show `PhantomDSP Precision Convolution`, a recorded +24 dB capture gain, and the `LL + RIL` / `LR + RIR` output. The clean log must show `PhantomDSP Precision CleanLow`, a recorded +48 dB capture gain, and the `LLLOW + RLLOW` / `LRLOW + RRLOW` output. Confirm both impulse runs in both logs have no clipped samples; expected peaks are roughly −10 dBFS for convolved and −17 dBFS for clean.
 >
-> Restore `Speaker Virtualization.txt` as the only renderer include before staging anything. Run `git diff --check`, commit only the new precision raw artifacts plus any strictly necessary tooling fix in a separate commit, and push `codex/dsp-improvements`. Do not run the macOS analyzer. Finish with routing evidence, peak levels, clipping status, output paths, exact commands, and commit hashes.
+> Restore `Presence Balanced Room Renderer.txt` as the only renderer include before staging anything. Run `git diff --check`, commit only the new precision raw artifacts plus any strictly necessary tooling fix in a separate commit, and push `codex/dsp-improvements`. Do not run the macOS analyzer. Finish with routing evidence, peak levels, clipping status, output paths, exact commands, and commit hashes.

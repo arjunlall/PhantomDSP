@@ -1,30 +1,30 @@
-# A — normal playback uses one condition-free production renderer.
-Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
-# B — synthetic direct-only control: disable A above before enabling.
+# A — prior measured-room production reference: disable active M below before enabling.
+# Include: JBL M2 Binaural Convolution\Speaker Virtualization.txt
+# B — synthetic direct-only control: disable active M below before enabling.
 # Include: Synthetic Reference Room\Personal Direct Renderer.txt
-# C — personal early-room candidate: disable A above before enabling.
+# C — personal early-room candidate: disable active M below before enabling.
 # Include: Synthetic Reference Room\Personal Early Room Renderer.txt
-# D — measured late-room control: disable A above before enabling.
+# D — measured late-room control: disable active M below before enabling.
 # Include: Synthetic Reference Room\Personal Late Room Control Renderer.txt
-# E — synthetic diffuse late field: disable A above before enabling.
+# E — synthetic diffuse late field: disable active M below before enabling.
 # Include: Synthetic Reference Room\Synthetic Late Field Renderer.txt
-# F — theoretical early room: disable A above before enabling.
+# F — theoretical early room: disable active M below before enabling.
 # Include: Synthetic Reference Room\Theoretical Early Room Renderer.txt
-# G — soffit mastering room: disable A above before enabling.
+# G — soffit mastering room: disable active M below before enabling.
 # Include: Synthetic Reference Room\Soffit Mastering Room Renderer.txt
-# H — idealized treated room: disable A above before enabling.
+# H — idealized treated room: disable active M below before enabling.
 # Include: Synthetic Reference Room\Idealized Treated Room Renderer.txt
-# I — tonally normalized treated room: disable A above before enabling.
+# I — tonally normalized treated room: disable active M below before enabling.
 # Include: Synthetic Reference Room\Tonally Normalized Room Renderer.txt
-# J — midrange-normalized treated room: disable A above before enabling.
+# J — midrange-normalized treated room: disable active M below before enabling.
 # Include: Synthetic Reference Room\Midrange Normalized Room Renderer.txt
-# K — directional diffuse-field refinement: disable A above before enabling.
+# K — directional diffuse-field refinement: disable active M below before enabling.
 # Include: Synthetic Reference Room\Directional Diffuse Room Renderer.txt
-# L — treatment-aware timbre refinement: disable A above before enabling.
+# L — treatment-aware timbre refinement: disable active M below before enabling.
 # Include: Synthetic Reference Room\Timbre Balanced Room Renderer.txt
-# M — articulation-preserving timbre refinement: disable A above before enabling.
-# Include: Synthetic Reference Room\Presence Balanced Room Renderer.txt
-# Known-good fallback; enable only after disabling Speaker Virtualization above.
+# M — accepted presence-balanced reference renderer for normal playback.
+Include: Synthetic Reference Room\Presence Balanced Room Renderer.txt
+# Known-good legacy fallback; enable only after disabling active M above.
 # Include: JBL M2 Binaural Convolution\Legacy Parallel Bass Reference.txt
 # Historical measurement routing; never enable alongside either playback renderer.
 # Include: tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt

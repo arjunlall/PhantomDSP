@@ -4,7 +4,7 @@ Open Codex at the PhantomDSP repository on the Windows playback PC and give it t
 
 > Complete the Equalizer APO bass-branch capture described in `measurements/bass-branches/README.md`. First read `AGENTS.md`, that README, `tools/measurement/run_eapo_bass_branches.ps1`, and `tools/measurement/equalizerapo/bass-branch-output.txt`.
 >
-> Work on `codex/dsp-improvements` with a clean tree and pull the latest remote commit. Confirm this checkout is the configuration installed at `C:\Program Files\EqualizerAPO\config`. In `config - personalized.txt`, temporarily comment `Speaker Virtualization.txt` and uncomment only `tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt`. Preserve all DSP values and WAV assets.
+> Work on `codex/dsp-improvements` with a clean tree and pull the latest remote commit. Confirm this checkout is the configuration installed at `C:\Program Files\EqualizerAPO\config`. In `config - personalized.txt`, temporarily comment `Presence Balanced Room Renderer.txt` and uncomment only `tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt`. Preserve all DSP values and WAV assets.
 >
 > Run from the repository root:
 >
@@ -19,4 +19,4 @@ Open Codex at the PhantomDSP repository on the Windows playback PC and give it t
 >
 > The runner must report that the combined outputs match the checked-in digital baseline. If they do not, stop and identify the configuration difference instead of committing misleading measurements. Do not run the macOS analyzer.
 >
-> Restore `Speaker Virtualization.txt` as the only renderer include. Once valid, run `git diff --check`, commit only `measurements/bass-branches/raw` plus any necessary tooling fix in a separate commit, and push `codex/dsp-improvements`. Finish with the exact commands, routing evidence, clipping status, output paths, and commit hashes.
+> Restore `Presence Balanced Room Renderer.txt` as the only renderer include. Once valid, run `git diff --check`, commit only `measurements/bass-branches/raw` plus any necessary tooling fix in a separate commit, and push `codex/dsp-improvements`. Finish with the exact commands, routing evidence, clipping status, output paths, and commit hashes.

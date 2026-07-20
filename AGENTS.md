@@ -2,7 +2,7 @@
 
 ## Project Structure & Signal Chain
 
-PhantomDSP is an EqualizerAPO configuration repository, not a compiled application. `config.txt` and `config - personalized.txt` are the entry points. Normal playback directly includes `JBL M2 Binaural Convolution/Speaker Virtualization.txt`; its generated assets live under `IRs/active/`. `Legacy Parallel Bass Reference.txt` is the known-good fallback. Measurement-only routing belongs under `tools/measurement/equalizerapo/` and must not be enabled during normal playback.
+PhantomDSP is an EqualizerAPO configuration repository, not a compiled application. `config.txt` and `config - personalized.txt` are the entry points. Normal playback directly includes `Synthetic Reference Room/Presence Balanced Room Renderer.txt`; its generated assets live under `Synthetic Reference Room/IRs/presence-balanced/`. `JBL M2 Binaural Convolution/Speaker Virtualization.txt` is the prior measured-room production reference and `Legacy Parallel Bass Reference.txt` is the known-good legacy fallback. Measurement-only routing belongs under `tools/measurement/equalizerapo/` and must not be enabled during normal playback.
 
 `docs/architecture.md` defines the intended transfer-function model and measurement assumptions. `docs/ir-manifest.md` fingerprints the active BRIR assets. `docs/roadmap.md` tracks validation, bass, EQ, and latency work. Update these documents when a change alters the signal-chain meaning, IR lineage, or project priorities.
 

@@ -74,4 +74,4 @@ python3 tools/measurement/analyze_baseline.py \
   --output-dir measurements/candidates/advance-196/analysis
 ```
 
-The runner copies the sole selected renderer configuration into the raw directory as `captured-renderer-config.txt` and records its SHA-256 hash in `benchmark.log`. For normal captures this is `Speaker Virtualization.txt`; historical reference captures instead record the temporary measurement-only selector.
+The runner copies the sole selected renderer configuration into the raw directory as `captured-renderer-config.txt` and records its SHA-256 hash in `benchmark.log`. For normal captures this is `Presence Balanced Room Renderer.txt`; historical reference captures instead record the temporary measurement-only selector.

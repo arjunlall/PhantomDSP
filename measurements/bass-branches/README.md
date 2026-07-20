@@ -1,6 +1,6 @@
 # Bass Branch Measurement
 
-This workflow measures the frozen legacy parallel-bass handoff without reproducing Equalizer APO's filters in another DSP engine. It captures the complete output, the convolved branch alone, the clean-low branch alone, and a downstream-only identity reference. The bass-branch analyzer uses the first three; the downstream capture supports renderer de-embedding. The accepted `Speaker Virtualization.txt` renderer has no separate clean-low branch.
+This workflow measures the frozen legacy parallel-bass handoff without reproducing Equalizer APO's filters in another DSP engine. It captures the complete output, the convolved branch alone, the clean-low branch alone, and a downstream-only identity reference. The bass-branch analyzer uses the first three; the downstream capture supports renderer de-embedding. The prior measured-room `Speaker Virtualization.txt` renderer has no separate clean-low branch.
 
 For this historical capture only, make `tools\measurement\equalizerapo\legacy-renderer-benchmark-selector.txt` the sole renderer include in `config - personalized.txt`. The measurement router activates branch isolation only when Benchmark uses the reserved names `PhantomDSP Bass Convolved` or `PhantomDSP Bass Clean`. The reserved `PhantomDSP Bass Downstream` device bypasses the renderer while retaining root-level target/headphone processing.
 
@@ -29,7 +29,7 @@ The base device name remains part of each reserved Benchmark name so the `Device
 
 The runner skips redundant stress sweeps and writes `measurements\bass-branches\raw\{combined,convolved,clean,downstream}`. It also requires the new combined outputs to match the checked-in digital baseline byte-for-byte. If an impulse capture clips, rerun all four with `-ProbeAmplitudeDbfs -6`.
 
-After capture, restore `JBL M2 Binaural Convolution\Speaker Virtualization.txt` as the sole renderer include. Do not leave the measurement router enabled for normal playback.
+After capture, restore `Synthetic Reference Room\Presence Balanced Room Renderer.txt` as the sole renderer include. Do not leave the measurement router enabled for normal playback.
 
 ## Analyze on macOS
 

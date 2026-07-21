@@ -25,8 +25,8 @@ Current anchors verified on 2026-07-21:
 
 | Repository | Role | Verified state |
 | --- | --- | --- |
-| `PhantomDSP` | Equalizer APO oracle and renderer evidence | `codex/dsp-improvements` at `1c8e2f6`; Candidate M activation was committed at `4b5a5a3` |
-| `phantom` | Portable product and calibration research | `main` at `4dfed9e` |
+| `PhantomDSP` | Equalizer APO oracle and renderer evidence | `codex/dsp-improvements` at `b75097a`; Candidate M activation was committed at `4b5a5a3` |
+| `phantom` | Portable product and calibration research | `main` at `4a247d6` |
 
 These commits are evidence anchors, not a substitute for checking the live HEAD
 and worktree before making changes.
@@ -281,7 +281,7 @@ EQ curve.
 | 3-14 kHz | Spatial renderer | Directional diffuse-field ear allocation; full strength is roughly 4-12 kHz |
 | 5.5-7.5 kHz | Spatial renderer | Presence-balanced entrance to microcluster attenuation so articulation is not over-damped |
 | 6-10 kHz | Spatial renderer | Treatment/directivity-aware diffuse-field timbre correction |
-| Above roughly 6-10 kHz | Headphone calibration | Increasing fixture, fit, and anatomy uncertainty; use broad confidence taper rather than narrow universal correction |
+| Above roughly 6-10 kHz | Headphone calibration | Preserve the complete compatible model response or robust population center; report fixture, fit, and anatomy limitations as evidence rather than a gain taper |
 | Approximately 4-25 ms | Spatial renderer | Distinct early reflections and diffuse energy |
 | Approximately 25-30 ms | Spatial renderer | Controlled transition from early field to late decay |
 | After approximately 30 ms | Spatial renderer | Sustained low-coherence late energy that supports apparent distance |
@@ -338,14 +338,18 @@ objects despite the notation collision.
 
 - `B_phantom` is the versioned translation from a compatible neutral fixture
   coordinate to the Phantom reference.
-- `Q_population,c` is a separate broad, low-Q correction for a declared
-  headphone cohort such as over-ear products.
+- `Q_population,c` is the separate full-band robust center of complete
+  compatible profile responses for a declared headphone cohort such as
+  over-ear products.
 
 The first five-product wireless over-ear population estimate is experimental,
-not a shipping default. It uses one-octave smoothing and a frequency-confidence
-policy that is 50% at 20 Hz, full from 40 Hz through 4 kHz, falls to 50% at
-6 kHz, and reaches zero at 10 kHz. This is a frequency-specific evidence policy,
-not a user-facing strength knob.
+not a shipping default. Its active identity is
+`phantom-population-prior-v1-experimental` under
+`phantom-population-prior-package-v2`. It evaluates every published OPRA filter
+from 20 Hz to 20 kHz, removes only arbitrary constant offset, and takes the
+equal-weight pointwise median. It applies no post-median smoothing, Q rejection,
+frequency taper, confidence multiplier, global strength factor, or magnitude
+cap. Cohort median absolute deviation and range are factual evidence only.
 
 ### Model-Aware
 
@@ -355,10 +359,12 @@ For a supported exact model and operating state:
 E_model,h,dB(f) = B_phantom,dB(f) + Q_model,h,dB(f)
 ```
 
-`Q_model,h` replaces `Q_population,c`; it is never stacked on top. Model
-correction is normally identical for both channels unless trustworthy
-channel-specific source data exists. Unit variation, pad wear, seal, position,
-ANC, firmware, codec, and wireless DSP remain limitations.
+`Q_model,h` replaces `Q_population,c`; it is never stacked on top. A compatible
+OPRA model profile preserves the complete published response, including upper-
+frequency and higher-Q filters, while excluding its constant gain. Model
+correction is normally identical for both channels unless trustworthy channel-
+specific source data exists. Unit variation, pad wear, seal, position, ANC,
+firmware, codec, and wireless DSP remain limitations.
 
 ### Personal
 
@@ -387,7 +393,8 @@ profile shares the coordinate or freeze Harman as the Phantom target.
 The current working research coordinate uses a passing `autoeq_oratory1990`
 family containing HD 800 S, HD 650, a provisional pre-2017 LCD-2 pairing, and
 measurement-era Elear. This is trusted estimator evidence, not independent
-validation. Independent holdouts and high-frequency regularization remain open.
+validation. `B_phantom` remains full-band with its existing 1/6-octave working
+smoothing; independent model/family checks remain open.
 
 Preference is simpler and later in the chain:
 
@@ -406,15 +413,16 @@ Preference is simpler and later in the chain:
 - Exact product variant and acoustic state matter: pads, revisions, ANC,
   connection, firmware, and wireless mode are not cosmetic metadata.
 - Raw measurements are research evidence. The user-facing catalog should expose
-  stable product identities, compatibility, confidence, and attribution rather
-  than raw database layout.
+  stable product identities, compatibility, factual evidence, and attribution
+  rather than raw database layout.
 - OPRA can anchor a portable derived-profile catalog. AutoEq remains useful for
   research and source discovery. HUTUBS provides population checks for HD 800 S
   and HD 650. None of these makes fixtures interchangeable.
 - Third-party redistribution rights must be recorded before raw data or profiles
   are bundled. Personal ear measurements are private by default.
-- Broad regularization is intentional. Reseat-sensitive notches, especially at
-  high frequencies, are uncertainty evidence, not invitations to high-Q boost.
+- Raw-measurement generation still must not blindly invert reseat-sensitive
+  notches. That guardrail does not justify deleting upper-frequency or higher-Q
+  filters from an already derived and regularized compatible OPRA profile.
 - A frequency-response curve alone cannot prove distortion, excursion,
   maximum SPL, or safe playback level.
 
@@ -552,8 +560,8 @@ These are intentionally unresolved:
 - dedicated raw Windows capture or recovery for the active Candidate M chain;
 - population generality of the personal direct-HRTF lineage and whether a later
   HRTF option/version is justified;
-- final `B_phantom` target manifest, independent holdouts, diffuse-field
-  comparison, and high-frequency regularization;
+- final `B_phantom` target manifest, independent holdouts, and diffuse-field
+  comparison;
 - validation of the over-ear `Q_population` before it becomes the unknown-mode
   default, plus separate future in-ear research;
 - exact model profiles and at least one physical closed-loop measurement;
@@ -617,8 +625,9 @@ Use this document for orientation, then consult the relevant source of truth:
 - `docs/renderer.md`: frozen renderer contract and generalization questions;
 - `docs/calibration.md`: target and personal/public measurement methodology;
 - `docs/population-prior.md` and
-  `docs/population-prior-v0-experimental.md`: unknown-headphone architecture and
-  current evidence;
+  `docs/population-prior-v1-experimental.md`: unknown-headphone architecture and
+  current evidence; `docs/population-prior-v0-experimental.md` is superseded
+  historical evidence;
 - `docs/low-frequency-policy-v0.md`: model correction below 100 Hz;
 - `docs/runtime-strategy.md`: core, package, plug-in, and host contract;
 - `docs/transition-inventory.md`: exact migration slices and source hashes;

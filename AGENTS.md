@@ -2,11 +2,15 @@
 
 ## Required Project Context
 
-Before changing DSP meaning, calibration, measurements, renderer assets,
-runtime behavior, or product-transition assumptions, read
-`PROJECT_CONTEXT.md`. It is the shared decision and invariant summary mirrored
-in PhantomDSP and the successor Phantom repository. Keep both copies
-byte-for-byte synchronized when its content changes.
+Before changing this repository's Equalizer APO behavior, measurements,
+renderer assets, hashes, Windows runtime evidence, or source provenance, read
+`PROJECT_CONTEXT.md`. It is a frozen oracle handoff snapshot, not the active
+portable-product context.
+
+For current product, runtime, profile, UI, packaging, or platform decisions,
+read `/Users/arjun/dev/phantom/PROJECT_CONTEXT.md`. Do not mirror ordinary
+Phantom changes into this repository. Update the local snapshot only when an
+oracle fact changes.
 
 ## Project Structure & Signal Chain
 

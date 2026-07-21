@@ -1,32 +1,38 @@
-# Phantom Project Context and DSP Invariants
+# PhantomDSP Oracle Handoff Snapshot
 
 ## Purpose and Authority
 
-Read this document before changing the renderer, headphone calibration,
-measurement research, runtime architecture, profile format, or product claims.
-It is the compact operating context for both repositories:
+Read this document before changing this repository's Equalizer APO behavior,
+measurements, renderer assets, hashes, Windows runtime evidence, or source
+provenance. It is the frozen handoff snapshot for the legacy oracle:
 
 - `/Users/arjun/dev/PhantomDSP`: the personalized Equalizer APO prototype,
   Windows runtime oracle, renderer-generation history, and forensic evidence;
-- `/Users/arjun/dev/phantom`: the portable product, research contracts,
-  generated-profile architecture, future DSP core, and plug-in work.
+- `/Users/arjun/dev/phantom`: the active portable product and authoritative
+  current product context.
 
 This is intentionally a decision document, not an experiment diary. Historical
 candidate letters are mentioned only where needed to identify the selected
 artifact. Detailed reports remain available in PhantomDSP when a result must be
 audited.
 
-This file is intentionally mirrored byte-for-byte in both repositories. Update
-both copies together. A newer accepted ADR may supersede part of this document;
-if so, update this synthesis rather than allowing it to become an attractive but
-stale source of truth.
+Do not mirror ordinary Phantom product changes into this file. For current
+runtime, profile, UI, packaging, or platform decisions, read
+`/Users/arjun/dev/phantom/PROJECT_CONTEXT.md` or the corresponding file in
+<https://github.com/arjunlall/phantom>. Update this snapshot only when the
+oracle itself changes: its active Equalizer APO chain, renderer assets or
+hashes, Windows runtime evidence, or source provenance.
+
+The detailed material below preserves the cross-repository handoff as of
+2026-07-21. It remains useful evidence, but ongoing Phantom implementation may
+supersede its product-status sections without requiring an Oracle commit.
 
 Current anchors verified on 2026-07-21:
 
-| Repository | Role | Verified state |
+| Repository | Role | Evidence anchor |
 | --- | --- | --- |
-| `PhantomDSP` | Equalizer APO oracle and renderer evidence | `codex/dsp-improvements` at `f9ecb60`; Candidate M activation was committed at `4b5a5a3` |
-| `phantom` | Portable product, calibration research, and technical runtime | Runtime slice began from `main` at `5461899` |
+| `PhantomDSP` | Frozen Equalizer APO oracle and renderer evidence | Candidate M activation commit `4b5a5a3`; later documentation-only commits do not change the renderer input |
+| `phantom` | Active portable product, calibration research, and technical runtime | Runtime MVP checkpoint `1d409f5` on `main`; consult Phantom for newer state |
 
 These commits are evidence anchors, not a substitute for checking the live HEAD
 and worktree before making changes.
@@ -576,8 +582,8 @@ Before changing anything:
    after historical captures.
 9. Run the relevant deterministic tests and distinguish macOS/offline evidence
    from Windows/host evidence.
-10. Update manifests, hashes, validation labels, ADRs, and both copies of this
-    document when a decision changes.
+10. Update oracle manifests, hashes, validation labels, and this snapshot when
+    an oracle fact changes. Record product decisions only in Phantom.
 
 Do not modify renderer v1 merely because a profile, target, or headphone sounds
 wrong. First bypass the headphone layer, preference layer, and renderer

@@ -25,8 +25,8 @@ Current anchors verified on 2026-07-21:
 
 | Repository | Role | Verified state |
 | --- | --- | --- |
-| `PhantomDSP` | Equalizer APO oracle and renderer evidence | `codex/dsp-improvements` at `b75097a`; Candidate M activation was committed at `4b5a5a3` |
-| `phantom` | Portable product and calibration research | `main` at `4a247d6` |
+| `PhantomDSP` | Equalizer APO oracle and renderer evidence | `codex/dsp-improvements` at `f9ecb60`; Candidate M activation was committed at `4b5a5a3` |
+| `phantom` | Portable product, calibration research, and technical runtime | Runtime slice began from `main` at `5461899` |
 
 These commits are evidence anchors, not a substitute for checking the live HEAD
 and worktree before making changes.
@@ -475,7 +475,40 @@ system-wide audio by itself. Audio Unit, a native Mac system-audio shell, and a
 Raspberry Pi or CamillaDSP backend are later adapters that must pass the same
 four-path conformance contract.
 
-The framework and implementation language are not yet accepted decisions.
+C++17, an owned 256-sample uniform-partitioned convolver, and iPlug2 are now
+accepted for the first technical VST3 in ADR 0011. The framework remains
+outside `PhantomDSPCore`; exact iPlug2 and Steinberg VST3 SDK revisions are
+pinned as ignored local build dependencies.
+
+An initial 48 kHz Python/NumPy offline auditioner now provides a listening path
+for local stereo PCM WAVs without a plug-in or system-audio component. It
+verifies and references the frozen
+Candidate M assets in PhantomDSP, then emits dry, renderer-only,
+renderer-plus-`B_phantom`, and renderer-plus-`B_phantom + Q_population` files,
+including level-matched comparisons and a machine-readable report. Because the
+two profile curves currently declare magnitude only, this tool realizes them as
+deterministic minimum-phase FIRs with measured magnitude closure. That phase
+choice is explicitly audition-only. The auditioner is not `PhantomDSPCore`, the
+core-backed conformance runner, a product runtime default, or complete-chain
+headroom validation. See
+`docs/offline-auditioner.md`.
+
+The first C++ runtime slice now implements `PhantomDSPCore`, a generated
+`phantom-runtime-package-v1` technical package, exact manifest and asset-hash
+verification, a core-backed offline conformance runner, and a contained arm64
+VST3. It pre-prepares renderer-only, renderer-plus-`B_phantom`, and experimental
+unknown-over-ear modes at exact 48 kHz. Renderer-only remains the technical
+default; the unknown mode has not been promoted to the product default.
+
+The current core path is offline validated for four-path impulse routing,
+changing block sizes, 256-sample latency, bypass, bounded mode switching,
+non-finite input protection, and real-time throughput. The VST3 passes the
+official Steinberg validator, but intended-DAW output closure, state restore,
+automation, acoustic validation, and attended listening remain open. The
+technical plug-in fails closed to silence outside 48 kHz. Its generic diagnostic
+states that requirement and package readiness but does not display the actual
+host rate, so it is not an external beta until dynamic status or additional
+rate assets are validated. See `docs/runtime-mvp.md`.
 
 The runtime minimum for the renderer is the two frozen WAVs plus a semantic
 manifest containing routing, format, latency, gain, hashes, and compatibility.
@@ -566,9 +599,9 @@ These are intentionally unresolved:
   default, plus separate future in-ear research;
 - exact model profiles and at least one physical closed-loop measurement;
 - complete-chain headroom and preference limits;
-- runtime-package schema, core lifecycle, convolution implementation, and
-  plug-in framework;
-- supported DAWs, sample rates, Audio Unit route, native Mac shell, head
+- runtime-package update/migration beyond the local v1 technical contract,
+  production profile phase realization, and adapter-to-core closure;
+- supported DAWs, additional sample rates, Audio Unit route, native Mac shell, head
   tracking, and hardware backend.
 
 Unresolved does not mean unconstrained. New work must preserve the invariants in
@@ -630,6 +663,10 @@ Use this document for orientation, then consult the relevant source of truth:
   historical evidence;
 - `docs/low-frequency-policy-v0.md`: model correction below 100 Hz;
 - `docs/runtime-strategy.md`: core, package, plug-in, and host contract;
+- `docs/runtime-mvp.md`: implemented C++ core, technical package, contained
+  VST3, local build, and current validation boundary;
+- `docs/offline-auditioner.md`: current local WAV audition path, provisional
+  FIR realization, output meanings, and validation boundary;
 - `docs/transition-inventory.md`: exact migration slices and source hashes;
 - `docs/decisions/`: accepted architectural decisions;
 - `docs/roadmap.md`: current gates and unresolved work.

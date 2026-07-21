@@ -1,5 +1,13 @@
 # Repository Guidelines
 
+## Required Project Context
+
+Before changing DSP meaning, calibration, measurements, renderer assets,
+runtime behavior, or product-transition assumptions, read
+`PROJECT_CONTEXT.md`. It is the shared decision and invariant summary mirrored
+in PhantomDSP and the successor Phantom repository. Keep both copies
+byte-for-byte synchronized when its content changes.
+
 ## Project Structure & Signal Chain
 
 PhantomDSP is an EqualizerAPO configuration repository, not a compiled application. `config.txt` and `config - personalized.txt` are the entry points. Normal playback directly includes `Synthetic Reference Room/Presence Balanced Room Renderer.txt`; its generated assets live under `Synthetic Reference Room/IRs/presence-balanced/`. `JBL M2 Binaural Convolution/Speaker Virtualization.txt` is the prior measured-room production reference and `Legacy Parallel Bass Reference.txt` is the known-good legacy fallback. Measurement-only routing belongs under `tools/measurement/equalizerapo/` and must not be enabled during normal playback.
